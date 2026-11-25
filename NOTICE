@@ -1,0 +1,74 @@
+riemann-masullo-diagrams
+Copyright 2026 William Scott Cochran
+
+riemann-masullo-diagrams is independent of riemann-masullo
+(https://github.com/mccorvie/riemann-masullo) and is not maintained,
+reviewed or endorsed by that project.
+
+This repository is dual-licensed by content type.
+
+Source code and tooling -- the poster generator and its modules
+(diagrams/gen-diagrams.py and diagrams/src/*.py), the tools (tools/),
+the CI workflow (.github/), and the repository's configuration
+(pyproject.toml, proof-posters.toml, .gitignore, .claude/) -- are
+licensed under the Apache License, Version 2.0. See LICENSE.
+
+Documentation -- the Markdown (.md) prose and the rendered posters
+(diagrams/*.svg), to the extent that they are this repository's own
+work -- is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0). See LICENSE-DOCS.
+
+  SPDX-License-Identifier: Apache-2.0      (code)
+  SPDX-License-Identifier: CC-BY-4.0       (documentation)
+
+Material taken from riemann-diagrams
+(https://github.com/scottcochran/riemann-diagrams), at its commit
+f87256e, copied and not imported: the drawing library
+diagrams/src/lib.py (itself from TOPAK, Apache-2.0, as its header
+says), diagrams/src/metrics.py, the font subsets in diagrams/src/fonts/,
+tools/build-fonts.py and tools/measure-page.py. They keep the licence
+they have there (Apache-2.0). LICENSE and LICENSE-DOCS are copied from
+it too.
+
+The fonts in diagrams/src/fonts/, which every poster embeds, are
+subsets of Noto Sans, Noto Sans Mono and Noto Sans Math, Copyright
+2022 The Noto Project Authors, licensed under the SIL Open Font
+License, Version 1.1 (diagrams/src/fonts/OFL.txt). They are not this
+repository's work and are covered by neither license above; the OFL
+applies to the fonts, not to the posters drawn with them.
+
+What the posters draw and quote from riemann-masullo is that project's,
+licensed by it under the Apache License, Version 2.0 (its LICENSE and
+README.md, "License"), and is used here under that licence, with this
+notice as its attribution:
+
+  * the Lean declaration names, files, lines, docstrings (their
+    Paper:, Gap: and Classical input: lines) and the dependencies
+    between declarations, read at a pinned commit from its compiled
+    library by its own scripts/progress/Deps.lean, and kept in
+    diagrams/src/deps.json, a file derived from that project;
+  * the text of ERRATA.md that the posters quote (items, entries,
+    what is missing, how a step was settled, Checked values), and the
+    targets and axioms of comparator.json.
+
+Code that riemann-masullo vendors under RiemannMasullo/External/ keeps
+its own licence and notices. diagrams/src/deps.json lists its
+declarations' names and dependencies; the posters count them and draw
+none of them.
+
+The manuscript, A. M. Masullo, The Music of the Primes (draft of
+2026-11-20), belongs to its author and is not covered by riemann-
+masullo's licence or by this repository's. This repository does not
+read, copy or quote it: the posters give item and page numbers as the
+Lean docstrings and ERRATA.md give them, and check only the
+manuscript's SHA-256 as riemann-masullo's paper/README.md states it.
+
+A poster here says what the Lean formalisation rests on, at one commit.
+It says nothing about whether the manuscript or the formalisation is
+correct.
+
+Third-party software is not part of this repository and is not covered
+by either license: the uv-managed Python the scripts run under, and,
+for the tools only, Lean, Lake, Mathlib, Pillow, fontTools, Brotli,
+rsvg-convert and Chrome, each under its own licence. The poster
+generator uses the Python standard library only.

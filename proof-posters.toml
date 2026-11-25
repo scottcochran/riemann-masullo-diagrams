@@ -1,0 +1,63 @@
+# Where the proof-posters skills (the plugin riemann-diagrams publishes) find this repository's parts. The skills
+# hold the method; this file holds the paths and names. Every path is relative to the root of this repository
+# unless it says otherwise.
+
+[project]
+name = "riemann-masullo-diagrams"
+custodian = "scottcochran"            # the only account whose release tags a release workflow will accept
+default_branch = "main"
+plan = "PLAN.md"                      # decisions, the release table (Phase 6), and a done note per phase
+docs = ["README.md", "diagrams/README.md", "tools/deps/README.md"]
+
+[build]
+regenerate = ["uv run python diagrams/gen-diagrams.py"]
+failure_markers = ["WARNING", "ERROR"]
+rerun_marker = "NOTE "                # never printed here: there is no map set, so no second run
+vary_env = [{ PYTHONHASHSEED = "0" }, { PYTHONHASHSEED = "1" }]
+outputs = ["diagrams/*.svg"]
+manifests = ["diagrams/manifest.json"]
+manifest_counts = ["cards", "arrows"]
+modules = "diagrams/src/d_*.py"       # one per poster; each records what it expects the sources to say
+ci = ".github/workflows/posters.yml"  # regenerates at the pins and fails on any byte that differs
+
+# Module-level names in the poster modules that record what the sources say. A pin move may change their values
+# to what the sources now say; it never removes a check or widens one.
+expected_names = ["TOTALS", "TARGETS", "FLOOR", "N_BELOW", "ROW", "CONE", "EXPECTED", "BY_CHAPTER", "AS_STRONG",
+                  "GAPS", "CLASSES", "CONES", "SETTLED", "UNNAMED", "CHAINS",
+                  "N_ITEMS", "EXPECTED_DEPTHS", "COUNTS", "CHAPTERS", "ERRATA", "UNPLACED"]
+# The expected_names whose change makes a release MINOR (PLAN.md, Phase 6: PATCH keeps "every EXPECTED and GAPS
+# unchanged"). FLOOR and CONE are what EXPECTED's edges are drawn between.
+minor_names = ["EXPECTED", "GAPS", "FLOOR", "CONE"]
+
+[pins]
+file = "diagrams/src/rm.py"
+
+[[pins.commit]]
+name = "MASULLO_COMMIT"
+what = "the riemann-masullo commit everything is read from, and deps.json was derived at"
+repo = "mccorvie/riemann-masullo"
+checkout_env = "RIEMANN_MASULLO"
+checkout_default = "../riemann-masullo"
+
+# The manuscript is not read; its hash, as paper/README.md at MASULLO_COMMIT states it, must be this one.
+[[pins.reread]]
+name = "PAPER_SHA256"
+source = "the sha256 line of paper/README.md in riemann-masullo at MASULLO_COMMIT"
+reread = "every Paper: reference the posters print: page numbers refer to this draft of the manuscript"
+
+[[pins.derived]]
+name = "DEPS_SHA256"
+file = "diagrams/src/deps.json"
+meta = "tools/deps/meta.json"
+
+[release]
+classification = "PLAN.md, Phase 6: the MAJOR / MINOR / PATCH table"
+tag = "vMAJOR.MINOR.PATCH, annotated and signed (git tag -s), on main, pushed by the custodian"
+tag_match = "v*"
+assets = ["diagrams/*.svg"]
+checksums = "SHA256SUMS"
+
+[lean]
+method = "tools/deps/README.md"       # the commands, in order, with timings and sizes
+tools = "tools/deps"
+data_dir = "outside the repository: the Mathlib cache (about 5 GB) and the build artifact (3.1 GB unpacked) in the riemann-masullo checkout's .lake/, and 30 MB of raw export"

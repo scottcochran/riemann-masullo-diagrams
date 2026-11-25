@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "riemann-diagrams": {
+      "source": { "source": "github", "repo": "scottcochran/riemann-diagrams" }
+    }
+  },
+  "enabledPlugins": {
+    "proof-posters@riemann-diagrams": true
+  }
+}
