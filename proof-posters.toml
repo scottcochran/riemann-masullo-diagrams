@@ -54,8 +54,14 @@ meta = "tools/deps/meta.json"
 classification = "PLAN.md, Phase 6: the MAJOR / MINOR / PATCH table"
 tag = "vMAJOR.MINOR.PATCH, annotated and signed (git tag -s), on main, pushed by the custodian"
 tag_match = "v*"
-assets = ["diagrams/*.svg"]
-checksums = "SHA256SUMS"
+workflow = ".github/workflows/release.yml"
+assets = ["diagrams/*.svg"]                       # each is in the release's checksum file under its file name
+generated_assets = ["pins.json"]                  # written by the workflow, not in the tree
+checksums = "SHA256SUMS"                          # the release asset with the SHA-256 of every other asset
+metadata = "pins.json"                            # the workflow's record of the release
+metadata_tag = "tag"                              # the key in metadata that names the release's tag
+done_note = "Phase 6's Done paragraph in PLAN.md: tag, commit, run id, asset count, checksums against the tree"
+# No pages_url: there is no Pages site (PLAN.md, Phase 6), so verify-release.py checks no site.
 
 [lean]
 method = "tools/deps/README.md"       # the commands, in order, with timings and sizes
