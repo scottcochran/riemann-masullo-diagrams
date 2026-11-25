@@ -10,12 +10,16 @@ What it records, compared both ways:
 
 - REFERENCES: every entry's id, in the order printed: its key, or `<key> (2)` for the second entry under a key;
 - CITED: key -> transcription file -> the pages that cite it;
-- UNCITED: the keys that no bracketed citation in the text names.
+- UNCITED: the keys that no bracketed citation in the text names;
+- SP_TAGS: the Stacks project's tags its citations name (`[SP, Tag 000B]`) -> the pages citing each. A tag of a
+  tag's form (four characters, digits and capital letters) opens its page on the Stacks project; any other is drawn
+  without a link, as not a tag.
 
 The papers file must give every entry exactly one id, and name no other.
 """
 import collections
 import pathlib
+import re
 import tomllib
 
 import chapter as CH
@@ -438,7 +442,85 @@ UNCITED = ['AB', 'ABR', 'Ara', 'Art-1', 'Aub', 'BB', 'BCR', 'BGV', 'BJ', 'Bl', '
  'Ke-b', 'Kob', 'TKYK', 'La', 'Lang-f', 'LR', 'Lee', 'LT', 'M', 'Mat-I', 'Mat-II', 'Mi', 'MLei', 'Mos', 'Mu', 'MZ',
  'Pinsky', 'Ro', 'RS', 'SGA1', 'SO', 'TsV', 'VK', 'Vogt-2', 'Vor', 'Weil-d', 'W', 'Wi', 'Wil', 'Wngr-1', 'Yos-2']
 
+# the Stacks project's tags its citations name -> the pages citing each, in the order first cited
+SP_TAGS = {'004O': [824],
+ '0405': [824],
+ '08ZD': [824],
+ '0059': [824],
+ '08ZQ': [824],
+ '005M': [824, 840],
+ '08ZW': [824],
+ '0908': [824],
+ '0406': [825],
+ '08ZK': [832],
+ '08ZT': [834],
+ '08ZI': [835],
+ '08ZJ': [835],
+ '005P': [847],
+ '046U': [868],
+ '000H': [868],
+ '05N1': [868],
+ '000B': [868, 869],
+ '00VG': [868],
+ '00UZ': [868],
+ '000I': [872],
+ '000J': [873, 874],
+ '000P': [874],
+ '00VH': [880, 881],
+ '000W': [881],
+ '00YW': [881],
+ '00YZ': [881, 882],
+ '00Z1': [881],
+ '00Z4': [882],
+ '00Z6': [882],
+ '02YB': [882],
+ '000X': [882],
+ '00VY': [882],
+ '00ZA': [882],
+ '00Z8': [882],
+ '00Z9': [882],
+ '022L': [883],
+ '0437': [883],
+ '00V1': [886],
+ '001O': [886],
+ '003G': [889, 900],
+ '003O': [889, 900],
+ '003D': [889, 892],
+ '001K': [894],
+ '003F': [894],
+ '003H': [898],
+ '003J': [898],
+ '02XG': [900],
+ '02XP': [900],
+ '02XQ': [900],
+ '003L': [900],
+ '003N': [906],
+ '0026F': [920],
+ '003V': [921],
+ '02Y2': [921, 924],
+ '02XW': [921],
+ '004A': [921],
+ '02ZB': [922],
+ '026F': [922],
+ '001P': [922],
+ '02Y1': [923],
+ '04S8': [923],
+ '04SF': [923],
+ '04Z2': [924],
+ '034I': [924],
+ '034H': [924, 926],
+ '042H': [925],
+ '04Z3': [925],
+ '06PB': [926],
+ '06NS': [926],
+ '046S': [929],
+ '044V': [929],
+ '046T': [929],
+ '046N': [929]}
+
 W = 2400
+STACKS = "SP"                       # the key of the Stacks project, whose citations name its tags
+TAG = re.compile(r"[0-9A-Z]{4}")
 PAPERS = pathlib.Path(__file__).resolve().parent / "papers.toml"
 HOSTS = [("https://doi.org/", "DOI"), ("https://zbmath.org/", "zbMATH"), ("https://arxiv.org/", "arXiv"),
          ("http://www.numdam.org/", "numdam"), ("https://www.numdam.org/", "numdam"), ("https://eudml.org/", "EuDML"),
@@ -469,7 +551,12 @@ def read():
     P = paper.load()
     pages = P.pages()
     return P, {"REFERENCES": [ident(r) for r in P.refs], "CITED": pages,
-               "UNCITED": [k for k in dict.fromkeys(r.key for r in P.refs) if k not in pages]}
+               "UNCITED": [k for k in dict.fromkeys(r.key for r in P.refs) if k not in pages],
+               "SP_TAGS": P.tags(STACKS)}
+
+
+def tag_url(t):
+    return f"https://stacks.math.columbia.edu/tag/{t}"
 
 
 def build():
@@ -478,6 +565,9 @@ def build():
     rm.require("REFERENCES", REFERENCES, got["REFERENCES"], "B1's rows against the transcription's bibliography")
     rm.require("CITED", CITED, got["CITED"], "B1's last column against the citations in the transcription's text")
     rm.require("UNCITED", UNCITED, got["UNCITED"], "B1's rows cited nowhere against the transcription's text")
+    rm.require("SP_TAGS", SP_TAGS, got["SP_TAGS"], f"B1's row of [{STACKS}] against its citations' tags")
+    if "Stacks Project" not in P.by_key[STACKS][0].plain:
+        raise ValueError(f"the bibliography's [{STACKS}] is no longer the Stacks project: re-read B1's STACKS")
     papers = tomllib.loads(PAPERS.read_text(encoding="utf-8"))
     ids = got["REFERENCES"]
     missing = [i for i in ids if i not in papers]
@@ -491,6 +581,7 @@ def build():
         if e["via"] in ("hand", "none") and not e.get("note"):
             raise ValueError(f"diagrams/src/papers.toml: [{i!r}] is via = {e['via']!r} and has no note")
     lib.PAPERS.update({i: e["url"] for i, e in papers.items() if "url" in e})
+    lib.PAPERS.update({f"{STACKS} tag {t}": tag_url(t) for t in got["SP_TAGS"] if TAG.fullmatch(t)})
 
     X = I.load()
     chapters = {it.chapter for it in X.items.values()}
@@ -529,7 +620,9 @@ def build():
                 f"{via['crossref']} found on Crossref and checked against the DOI's own record, {via['zbmath']} on "
                 f"zbMATH Open, {via['hand']} settled by hand, and {via['none']} found by neither, drawn without one. "
                 f"A link is to the work the entry names, matched on its title, first author and year; that it is the "
-                f"edition the manuscript used is not checked."
+                f"edition the manuscript used is not checked. The Stacks project's tags its citations name each open "
+                f"the tag's page there, a tag being stable by the project's design; that a tag says what the "
+                f"manuscript cites it for is not checked."
                 + (f" The bibliography prints two entries under each of {', '.join('[' + k + ']' for k in doubled)}; "
                    f"a citation cannot tell them apart, and is drawn under both." if doubled else ""),
                 size=14.5, color="muted") + 26
@@ -548,6 +641,11 @@ def build():
             label = paper.file_label(f)
             head = draw.to_poster(CH.poster_id(ch), label) if ch else label
             where.append(f"{head}: {'p.' if len(pgs) == 1 else 'pp.'} {', '.join(parts)}")
+        if r.key == STACKS and got["SP_TAGS"]:
+            tags = [(draw.to_url(tag_url(t), t) if TAG.fullmatch(t) else f"{t} (not a tag's form, so not a link)")
+                    + f" ({'p.' if len(pgs) == 1 else 'pp.'} {', '.join(map(str, pgs))})"
+                    for t, pgs in got["SP_TAGS"].items()]
+            where.append(f"the tags cited, each opening its page on the Stacks project: {', '.join(tags)}")
         e = papers[ident(r)]
         text, cut = draw.coverable(r.plain)
         rows.append({"cells": [f"[{r.key}]" + (f" ({r.n})" if r.n > 1 else ""),

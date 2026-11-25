@@ -27,7 +27,7 @@ expected_names = ["TOTALS", "TARGETS", "FLOOR", "N_BELOW", "ROW", "CONE", "EXPEC
                   "N_ITEMS", "EXPECTED_DEPTHS", "COUNTS", "CHAPTERS", "ERRATA", "UNPLACED",
                   "ITEMS", "OUTSIDE", "STATES", "DEVIATIONS", "MATRIX", "REFUTED", "SUMMARY", "LEAN_UNNAMED",
                   "DECLS", "DEVIATING", "OUTSIDE_ITEMS", "ERRATA_PAPERS",
-                  "REFERENCES", "CITED", "UNCITED", "CITES"]
+                  "REFERENCES", "CITED", "UNCITED", "CITES", "SP_TAGS"]
 # The expected_names whose change makes a release MINOR (PLAN.md, Phase 6: PATCH keeps "every EXPECTED and GAPS
 # unchanged"). FLOOR and CONE are what M1's EXPECTED edges are drawn between, ITEMS the cards a chapter poster's
 # EXPECTED edges join, REFUTED the rows of M5, and REFERENCES the rows of B1.
