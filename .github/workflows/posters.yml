@@ -1,0 +1,76 @@
+# Regenerate every poster from the pinned sources and fail if the committed SVGs differ.
+#
+# The pin is read from diagrams/src/rm.py (MASULLO_COMMIT). The generator checks that the checkout is at the pin,
+# that paper/README.md gives PAPER_SHA256, that diagrams/src/deps.json has DEPS_SHA256 and was read at the pin,
+# and that every poster draws what its recorded expectations say; any WARNING or ERROR line makes it exit 1. The
+# byte comparison then says whether the committed posters are the ones these sources produce. No Lean is built:
+# deps.json is derived outside the build (tools/deps/README.md) and committed.
+name: posters
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out riemann-masullo-diagrams
+        uses: actions/checkout@v5
+        with:
+          path: riemann-masullo-diagrams
+
+      - name: Read the pin
+        id: pins
+        shell: bash
+        run: |
+          cd riemann-masullo-diagrams
+          value=$(python3 -c "import re; print(re.search(r'^MASULLO_COMMIT = \"([0-9a-f]{40})\"', open('diagrams/src/rm.py').read(), re.M).group(1))")
+          echo "MASULLO_COMMIT=$value" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Check out riemann-masullo at its pin, only the files the generator reads
+        uses: actions/checkout@v5
+        with:
+          repository: mccorvie/riemann-masullo
+          ref: ${{ steps.pins.outputs.MASULLO_COMMIT }}
+          path: riemann-masullo
+          filter: blob:none
+          sparse-checkout: |
+            comparator.json
+            Main.lean
+            ERRATA.md
+            paper/README.md
+            lean-toolchain
+          sparse-checkout-cone-mode: false
+
+      - name: Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate the posters
+        shell: bash
+        env:
+          RIEMANN_MASULLO: ${{ github.workspace }}/riemann-masullo
+        run: |
+          cd riemann-masullo-diagrams
+          python3 diagrams/gen-diagrams.py | tee "$RUNNER_TEMP/gen.log"
+          if grep -qE '^ *(WARNING|ERROR)' "$RUNNER_TEMP/gen.log"; then exit 1; fi
+
+      - name: The committed posters are the regenerated ones
+        shell: bash
+        run: |
+          cd riemann-masullo-diagrams
+          git status --porcelain -- diagrams
+          if [ -n "$(git status --porcelain -- diagrams)" ]; then
+            echo "::error::a poster differs from its sources, or is not committed; regenerate and commit"
+            git diff --stat -- diagrams
+            git diff -- diagrams | grep -E '^[-+][^-+]' | cut -c1-300 | head -40
+            exit 1
+          fi
