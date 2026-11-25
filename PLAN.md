@@ -265,6 +265,14 @@ first two, since it was built and CI held it.
 - **The checksums match the tree at the tag.** `verify-release.py v0.1.0` found the 3 SVGs in `SHA256SUMS`
   matching it, and `pins.json` naming the tag. No site was checked, since there is none.
 
+**A Pages site, added after `v0.1.0`** (2026.11.25). The repository was made public, at the custodian's choice,
+so that Pages can serve it. Pages is set to deploy from GitHub Actions, and the `github-pages` environment allows
+`main` and tags matching `v*`. `.github/workflows/pages.yml` is adapted from riemann-diagrams'. It publishes one
+release at a time to https://scottcochran.github.io/riemann-masullo-diagrams/: the release's SVGs, its
+`pins.json`, and `diagrams/README.md` at the tag as the index. It first checks the files against the release's
+`SHA256SUMS`, and after deploying it checks that the site's `pins.json` names the tag. `release.yml` calls it on
+each new tag, and it can be run by hand for an existing one.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at
