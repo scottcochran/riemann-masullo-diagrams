@@ -14,7 +14,8 @@ the targets, and a fixed drawing that can be cited. `PLAN.md` says why, and what
 
 ## Posters
 
-Open them on their own and zoom in.
+Open them on their own and zoom in. The latest release's posters are served at
+https://scottcochran.github.io/riemann-masullo-diagrams/.
 
 - [M1, what the seven target theorems rest on](diagrams/M1-floor-2026.11.25.svg). All seven rest in Lean on one
   open declaration, `traceFormula_exteriorZeros`, the recorded gap for Theorem 12.5.1.1. The poster draws it,
