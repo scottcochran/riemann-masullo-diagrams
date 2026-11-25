@@ -528,6 +528,17 @@ file's links allowed.
   - Python's own certificate store lacks the root zbMATH's API is signed by, so the lookup was run with the
     macOS root certificates (`SSL_CERT_FILE`).
 
+**`v0.5.0`**, MAJOR by the table (rules 9 and 10 changed), taken as a MINOR before 1.0. B1 was added, and the
+chapter posters, M2 and M5 gained new expectations (`CITES`, `ERRATA_PAPERS`). The pins and every expected list of
+`v0.4.0` stay.
+
+- **The tag** is annotated and signed by the custodian, on `2205826`, the merge of PR #14.
+- **The run** is 45599264189. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+- **The release** has 48 assets: the 46 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.5.0` found the 46 SVGs matching it, and
+  `pins.json` and the site naming `v0.5.0`. Each SVG as the site serves it, under `diagrams/`, is byte-identical
+  to the tag's.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at
