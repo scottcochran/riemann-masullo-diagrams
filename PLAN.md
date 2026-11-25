@@ -244,7 +244,7 @@ custodian and never moved; a workflow that builds from the tag and publishes the
 
 The first release, `v0.1.0`, is M1 and M2 at one `MASULLO_COMMIT`, once CI holds them.
 
-**Written, not yet run** (2026.11.25): `.github/workflows/release.yml` and `tools/release-notes.py`, adapted from
+**Done** (2026.11.25): `.github/workflows/release.yml` and `tools/release-notes.py`, adapted from
 riemann-diagrams' at `f87256e`. On a pushed tag, the workflow does four things:
 
 1. It checks that the tag is the custodian's, `vMAJOR.MINOR.PATCH`, annotated, with a message, and on `main`.
@@ -254,9 +254,16 @@ riemann-diagrams' at `f87256e`. On a pushed tag, the workflow does four things:
 4. It sums the SVGs and `pins.json` into `SHA256SUMS`, and creates the release with notes that open with the tag
    message.
 
-There is no Pages site; the plan names none, and one needs a repository setting. The release, `v0.1.0`, will
-carry M3 as well, since M3 is built and CI holds it. This note becomes a done note once a release has been
-published and checked with `verify-release.py`.
+There is no Pages site; the plan names none, and one needs a repository setting.
+
+**`v0.1.0`**, the first release, MINOR: M1, M2 and M3 at `MASULLO_COMMIT` = `72a10ffc48c0`. M3 went out with the
+first two, since it was built and CI held it.
+
+- **The tag** is annotated and signed by the custodian, on `3ea625a` on `main`.
+- **The run** is 45548560871. Its `tag`, `check / regenerate` and `release` jobs passed.
+- **The release** has five assets: the three SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.1.0` found the 3 SVGs in `SHA256SUMS`
+  matching it, and `pins.json` naming the tag. No site was checked, since there is none.
 
 ## Risks
 
