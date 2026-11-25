@@ -192,7 +192,11 @@ ERRATA = {'eq:6.1.2.1': {'reviewed': ['I179']},
  'theorem:6.3.2.1': {'reviewed': ['F78', 'F80', 'F81', 'I191', 'I198', 'I199', 'I200', 'I201', 'I202', 'I203']},
  'theorem:6.3.2.2': {'reviewed': ['F78', 'F82', 'F83', 'F84']}}
 
+# item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
+ERRATA_PAPERS = {}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
-                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA)
+                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
+                         ERRATA_PAPERS=ERRATA_PAPERS)

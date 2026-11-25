@@ -45,16 +45,19 @@ Then each poster, against its literals:
 | | `SETTLED` | a settled row's "Steps since proved" names other theorems, or what they rest on moves |
 | | `UNNAMED` | another open declaration is named by no open row, or the lines naming one move; and each such must be a classical input |
 | | `CHAINS` | the shortest chain from an open step to the nearest target changes |
+| | `ERRATA_PAPERS` | a paper that an entry's row of ERRATA.md links, on a row's entries, appears, goes, moves to another address or to other entries |
 | M3 | `N_ITEMS`, `EXPECTED_DEPTHS`, `COUNTS`, `CHAPTERS` | the items, their depths, states or chapters move |
 | | `ERRATA`, `UNPLACED` | the entries placed on items, by Checked value, or those placed on none, move |
 | M4 | `TOTALS` | a directory's modules, items, declarations, open or resting items, deviating items, printed claims or errata entries change in number |
 | | `MATRIX` | the uses between two directories' items change in number |
 | M5 | `REFUTED` | a refutation appears or goes, the entries that name it or their Checked values change, or what is open below it moves |
 | | `SUMMARY`, `LEAN_UNNAMED` | the entries naming a refutation change by Checked value and state, or an entry checked "Lean" names none; and an entry checked "Lean" whose refutation rests on something open fails the build outright |
+| | `ERRATA_PAPERS` | a paper that an entry's row of ERRATA.md links, on the entries naming a refutation, appears, goes, moves to another address or to other entries |
 | C*, L1 | `ITEMS` | an item appears in, leaves or moves between the bands of the directory |
 | | `EXPECTED` | an edge between two items of the directory appears or goes, after the redundant ones are dropped |
 | | `OUTSIDE` | an item's direct uses of another directory's items change in number |
 | | `STATES`, `DEVIATIONS`, `ERRATA` | an item's state, its count of deviating declarations, or the entries on it change |
+| | `ERRATA_PAPERS` | a paper that an entry's row of ERRATA.md links, on the entries on an item, appears, goes, moves to another address or to other entries |
 | D*, DL | `DECLS` | a declaration appears in, leaves or moves between items, or changes its place in its file |
 | | `DEVIATING` | a declaration gains or loses its `Deviation:` line |
 | | `OUTSIDE_ITEMS` | an item's direct uses of another directory's items change |
@@ -78,6 +81,7 @@ Every poster links to the others, so that a reader can follow an item from any p
 | A card's "Uses" and "Used by" | the cards they name, on the same poster |
 | "From other directories" | the used item's card when it is one item; else that directory's row of the item's "Uses of other directories" on the declarations poster, whose items open their cards |
 | An errata entry id, or a row's line | its line of ERRATA.md at the pin |
+| An arXiv number after an entry, or a card's "Papers the errata link" | the paper, at the address the entry's row of ERRATA.md gives (unversioned: arXiv opens its latest version) |
 | "Printed claims kept" | that directory's part of M5 |
 | An open or resting item | the row of M2 that names its open declaration (or that declaration's card on M2), and M1's card of the floor where the floor is below it |
 | A declaration card on M1 or M2, a refutation on M5, a dot on M3 | the item's card on its chapter poster |
@@ -92,7 +96,8 @@ file; GitHub's file viewer shows an SVG as an image, without its links or this s
 keeps the frame hidden. A link
 to another poster is made only to an anchor the committed `manifest.json` lists, so a run that moves anchors
 updates the manifest, prints a `NOTE` and exits 1, and a second run makes the links follow. `Canvas.check` fails the
-build on a link to a poster, a card or an address that does not exist (an address must be at the pin), and the
+build on a link to a poster, a card or an address that does not exist (an address must be at the pin, or be a
+paper an entry's row of ERRATA.md links), and the
 generator fails on markup left unrendered.
 
 ## Kinds of text

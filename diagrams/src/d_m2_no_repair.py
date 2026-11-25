@@ -9,6 +9,8 @@ One row per row of ERRATA.md's "Where no repair is known yet", grouped by what t
 - open, and not stated in Lean: the row only, with the first sentence of what ERRATA.md says is missing;
 - settled: how, in ERRATA.md's words, and what the declarations it names rest on, read from the terms.
 
+Each row's entries carry the papers their own rows of ERRATA.md link (ERRATA_PAPERS), by arXiv number.
+
 Then the shortest chain from each open step that reaches a target up to the nearest target, and the open
 declarations no open row names. Every value is compared with the sources, both ways.
 """
@@ -141,6 +143,10 @@ CHAINS = {'RiemannMasullo.traceFormula_exteriorZeros': ['RiemannMasullo.traceFor
                                                'RiemannMasullo.LFunction_eq_zero_re_of_isPrimitive',
                                                'LFunction_eq_zero_re_of_isPrimitive']}
 
+# row -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
+ERRATA_PAPERS = {'Remark 10.2.1.5, p. 444, and Proposition 10.2.2.2, pp. 446–447': {'https://arxiv.org/pdf/1002.4127': ['F158']},
+ 'Theorems 10.4.2.1, 10.4.2.2 and 10.4.2.8, pp. 459–464, and Theorem 10.4.3.5, pp. 471–473': {'https://arxiv.org/pdf/1002.4127': ['F191']}}
+
 W = 2000
 GROUPS = [("targets", "Open, named in Lean, and the targets rest on it", "red"),
           ("named", "Open, named in Lean; no target rests on it", "amber"),
@@ -161,6 +167,11 @@ def first_sentence(text):
 
 def short_list(names):
     return ", ".join(f"`{n}`" for n in names)
+
+
+def entries_cell(r, papers):
+    """The row's entries, then each paper their rows of ERRATA.md link."""
+    return ", ".join(r.entries) + (f" · {draw.paper_links(papers[r.key])}" if r.key in papers else "")
 
 
 def build():
@@ -246,6 +257,8 @@ def build():
         if reach:
             chains[k] = [d.key for d in m.chain(by_key[k].i, tset)]
     rm.require("CHAINS", CHAINS, chains, "M2's chain band")
+    papers = {r.key: cited for r in m.rows if (cited := m.papers_of(r.entries))}
+    rm.require("ERRATA_PAPERS", ERRATA_PAPERS, papers, "M2's Entries column against the links in ERRATA.md")
 
     # -- drawing
     c = lib.Canvas(
@@ -260,7 +273,8 @@ def build():
     y += c.para(x0, y, x1 - x0,
                 "**How to read it.** The first three columns are ERRATA.md's, quoted: the item and its pages, the "
                 "entries of the errata the row gathers, and the first sentence of what it says is missing or how it "
-                "was settled. The last is read from the Lean at the pin. A cone is every declaration whose "
+                "was settled, with the papers ERRATA.md links for those entries, by their arXiv number (the papers "
+                "were not read here). The last is read from the Lean at the pin. A cone is every declaration whose "
                 "terms reach an open step, directly or not; the targets are the seven theorems of comparator.json. "
                 "The rows are the agents' assessment and their checking, not a specialist's: in ERRATA.md's words, "
                 "“No entry has been reviewed by a specialist.”", size=14.5, color="muted")
@@ -282,7 +296,7 @@ def build():
                 lean = (f"Named as proved: {short_list(by_key[k].show for k in below)}. "
                         + ("Nothing open below any of them." if not opens else
                            "They rest on " + short_list(by_key[o].show for o in opens) + " and nothing else open."))
-                trs.append({"cells": [item, ", ".join(r.entries), said_txt, lean], "anchor": f"row-{r.line}"})
+                trs.append({"cells": [item, entries_cell(r, papers), said_txt, lean], "anchor": f"row-{r.line}"})
                 continue
             ds = [by_key[k] for k in GAPS[r.key]]
             if not ds:
@@ -299,7 +313,7 @@ def build():
                         s_ += ", all in `_Isolated` files"
                     parts.append(s_)
                 lean = "; ".join(parts) + "."
-            trs.append({"cells": [item, ", ".join(r.entries), first_sentence(r.missing), lean],
+            trs.append({"cells": [item, entries_cell(r, papers), first_sentence(r.missing), lean],
                         "anchor": f"row-{r.line}"})
         y += c.table(x0, y, cols, trs, size=12.5, hsize=12.5, accent=acc)
         y += 30

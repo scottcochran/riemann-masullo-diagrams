@@ -30,7 +30,7 @@ errata by section. The posters here draw what it does not (`riemann-diagrams` wr
 | Source | What is read | Pinned by |
 |---|---|---|
 | `mccorvie/riemann-masullo` | `comparator.json`, `Main.lean`, `Statements.lean`, `Challenge.lean`, `ERRATA.md`, `lean-toolchain`, `lakefile.toml`, `lake-manifest.json`, `paper/README.md` | `MASULLO_COMMIT` |
-| The manuscript, 940 pp., as mirrored in `paper/` | Its hash only. Item and page numbers come from the Lean's `Paper:` lines and from `ERRATA.md`. The build never reads the PDF | `PAPER_SHA256`, `e039d3f6cf0a4b14f03c7edb85097752dd65c0a2fe543c76fe992be234f97bf5` |
+| The manuscript, 940 pp., as mirrored in `paper/` | Its hash. Item and page numbers come from the Lean's `Paper:` lines and from `ERRATA.md`. The build never reads the PDF. From Phase 8, `riemann-masullo`'s transcription of it, for its bibliography and citations (rule 9) | `PAPER_SHA256`, `e039d3f6cf0a4b14f03c7edb85097752dd65c0a2fe543c76fe992be234f97bf5` |
 | The dependency data: for every constant, its kind, module, range, docstring, the project constants in its type and in its body, and whether its body uses `sorryAx` directly | One derived file, written by the project's own `scripts/progress/Deps.lean` run at `MASULLO_COMMIT`, outside the build | `DEPS_SHA256`, and a `meta.json` holding the commit, toolchain and Mathlib revision it was read at |
 
 At `3ac04f8`:
@@ -74,12 +74,26 @@ and 4,069 vendored theorems, kept apart.
 8. **An erratum is drawn with its Checked value and no stronger claim.** A poster that shows errata says, in a
    sentence of its own, that they were reported and checked by AI agents, and quotes "No entry has been reviewed
    by a specialist". Only an entry whose Checked value is *Lean* may be drawn as a refutation.
-9. **The manuscript is not quoted.** Item numbers, page numbers, Lean names and `ERRATA.md`'s text may be
-   (Apache-2.0, with the attribution in `NOTICE`); the paper's own sentences may not. The paper belongs to its
-   author and is outside `riemann-masullo`'s licence (its `README.md`, "License").
-10. **A cone is of the formalisation, not of the paper.** The Lean states repaired forms where the print is
-    wrong, marked as deviations. So a cone shows what in the Lean rests on a gap; each poster says that the
-    paper's own argument may lean on the step differently.
+9. **The manuscript is read, and not quoted.** A poster may read it through `riemann-masullo`'s transcription
+   (`transcription/`), at the pin, once the build checks that the transcription names the PDF it was made from
+   by `PAPER_SHA256`. Its bibliography is followed: a reference's key, authors, title, venue and year are
+   bibliographic data and may be drawn, with where the manuscript cites it (chapter and page) and a link to the
+   work itself (the `proof-posters:linking-papers` method). The paper's own sentences are still not quoted. Item
+   numbers, page numbers, Lean names and `ERRATA.md`'s text may be (Apache-2.0, with the attribution in
+   `NOTICE`). The paper belongs to its author and is outside `riemann-masullo`'s licence (its `README.md`,
+   "License"), and so is the transcription (`transcription/README.md`). The PDF itself is not read.
+10. **A cone is of the formalisation; a citation is of the paper.** The Lean states repaired forms where the
+    print is wrong, marked as deviations. So a cone shows what in the Lean rests on a gap; each poster that draws
+    one says that the paper's own argument may lean on the step differently. A citation is where the manuscript
+    cites a work, read from the transcription: a poster that draws citations says they are the paper's, and that
+    the Lean does not cite them (at `72a10ff`, no docstring or comment of its 594 Lean files cites a key of the
+    bibliography in brackets; whether one names a work in other words was not checked). An item's
+    declarations and the works its pages cite may be drawn side by side, as two readings; no poster draws a cited
+    work as something the Lean rests on.
+
+Rules 9 and 10 read "The manuscript is not quoted" and "A cone is of the formalisation, not of the paper" until
+2026.11.25, when the custodian changed them so that the posters can follow the manuscript's bibliography (Phase
+8). Every poster drawn before then reads no part of the manuscript.
 
 ## What comes from riemann-diagrams
 
@@ -88,7 +102,7 @@ and 4,069 vendored theorems, kept apart.
   A fix there does not reach here until it is copied again, on purpose.
 - **The `proof-posters` plugin:** enabled through `.claude/settings.json` and configured by this repository's
   own `proof-posters.toml`. It provides `moving-pins`, `recording-expectations`, `extracting-lean-deps` and
-  `cutting-releases`. `linking-papers` has nothing to do until a poster draws the bibliography.
+  `cutting-releases`. `linking-papers` has nothing to do until a poster draws the bibliography (Phase 8).
 - **The same discipline:** pins, recorded expectations, CI regenerating at the pins, releases from signed tags
   that the custodian pushes, and the house style of `riemann-diagrams`' `CLAUDE.md`.
 - **Not carried over:** `bp.py`'s model, the twenty poster modules, `papers.toml` and `checks.toml`. The blueprint
@@ -416,6 +430,57 @@ posters carry the quoted line.
 - **The checksums match the tree at the tag.** `verify-release.py v0.4.0` found the 45 SVGs matching it, and
   `pins.json` and the site naming `v0.4.0`. Each SVG as the site serves it is byte-identical to the tag's.
 
+### The papers ERRATA.md links
+
+Added 2026.11.25 at the custodian's request. The posters linked no paper: the Lean cites none, and the manuscript's
+bibliography was out of bounds (rules 9 and 10 as they then read). `ERRATA.md` links four papers on arXiv from six
+entry rows: F152, F158, F180, F191, F247 and R24. The posters now carry those links wherever they draw one of the
+entries. A chapter card adds a line, "Papers the errata link:", with the paper in the row's own words, its
+arXiv number and the entries. M2's Entries column adds the arXiv number. M5's entries column adds it too.
+`rm.Model` reads each entry row's Markdown links to `https://arxiv.org/` and `https://doi.org/`
+(`rm.PAPER_HOSTS`). The 20 chapter modules, M2 and M5 each record `ERRATA_PAPERS`, compared both ways: the item,
+row or refutation, the paper's address, and the entries that link it. The library's link check admits these
+addresses and no others off the pin. So does `check-links.py`: `[links].allow` holds the arXiv and DOI prefixes.
+
+The addresses are `ERRATA.md`'s, unversioned: `arxiv.org/abs/2107.03269` opens the latest version of the paper,
+not the one the entry was checked against. The papers were not read here. R24 is on no poster. Its row is under
+"Reported from reading, beyond what has been formalized" and names Conjecture 14.1.2.1, which no item of the Lean
+formalises.
+
+**Done** (2026.11.25, not yet committed). 18 links to the papers, on C10 (9 cards), C13 (2), M2 (2 rows) and M5
+(5 refutations). `check-links.py`: 45 outputs, 50,767 links, 18 of them out to an allowed paper.
+`check-expectations.py`: 229 expectations under 33 names. A wrong `ERRATA_PAPERS` fails the build both ways, an
+entry dropped and an entry added, on C13, M2 and M5. All 46 outputs are byte-identical over two hash seeds. C13 was
+looked at in the light theme.
+
+### Phase 8: the bibliography
+
+Planned. It needs rules 9 and 10 as they read from 2026.11.25. A poster of the works the manuscript cites, read
+from `riemann-masullo`'s transcription at the pin, and of where it cites each one, beside the items the Lean
+formalises there.
+
+- **What is read.** `transcription/README.md`, which must name the PDF by `PAPER_SHA256` or the build stops. Also
+  `transcription/chapters/*.md`, whose `## PDF page N` markers give each citation its page. Both join `rm.READS`
+  and CI's sparse checkout.
+- **The bibliography.** `transcription/chapters/bibliography.md`, pp. 933–940: 319 entries under 317 keys at
+  `72a10ff`. `JL` and `Katzn` are printed twice each, and are recorded so.
+- **The citations.** A first count at `72a10ff`: 2,331 bracketed citations of 228 of the 317 keys, across 19
+  files. Appendix C has 421, Appendix E 415, Chapter 4 227, and Chapter 8 only 5. That leaves 89 keys that no
+  bracket cites. The parser is to be made exact, and what it cannot read listed, before any count is drawn.
+- **The links.** One stable link per reference, by `proof-posters:linking-papers`: a `[papers]` table in
+  `proof-posters.toml` and a papers file in `diagrams/src/`. Many entries are books with no DOI, and some have no
+  link at all; those are drawn without one, and say so.
+- **The poster, B1.** Each reference by key, with its authors, title, venue and year, and its link. Under it, the
+  chapters and pages that cite it, each page linked to the cards whose `Paper:` pages cover it, on the chapter
+  posters. Expectations: the references, the pages citing each, and the keys cited nowhere.
+- **What it does not say.** That the paper uses a cited work where it cites it, or uses it rightly. That the Lean
+  rests on it (rule 10). The transcription was checked against the PDF by scripts and by AI reviewers, "not by a
+  person" (`transcription/README.md`); a misread key is a misdrawn citation.
+- **NOTICE** changes with it. It now says this repository does not read the manuscript.
+
+**Done when** B1 builds at the pin, its expectations fail both ways, and `check-links.py` passes with the papers
+file's links allowed.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at
@@ -426,7 +491,8 @@ posters carry the quoted line.
   deliberate moves, not for a source that cannot be pinned (Open, 1).
 - **A drawing of errata looks like findings.** Rule 8 is the guard. A colour scale on errata counts reads as a
   verdict on the paper even when every entry is *reported*; M3 draws Checked values, not counts.
-- **A cone of the Lean is read as a cone of the paper.** Rule 10, on the poster and not only here.
+- **A cone of the Lean is read as a cone of the paper**, or a work the paper cites as one the Lean rests on.
+  Rule 10, on the poster and not only here.
 - **Scale.** About forty times as many declarations as `riemann-diagrams`' blueprint has statements, and about
   sixty times its 2,004 edges. No poster draws a declaration per card except along one chain.
 - **The name.** "riemann-masullo-diagrams" can be taken for part of `riemann-masullo`. The README's first line

@@ -15,6 +15,7 @@ with what the sources say and fails on a difference:
 - STATES: the items that are open, and those that rest on an open declaration;
 - DEVIATIONS: item -> (declarations with a `Deviation:` line, declarations), for the items that have one;
 - ERRATA: item -> Checked value -> the entries placed on it.
+- ERRATA_PAPERS: item -> the URL of each paper those entries' rows of ERRATA.md link -> the entries that link it.
 """
 import collections
 import re
@@ -84,15 +85,17 @@ def read(chapter):
     states = {s: [it.key for it in its if it.state == s] for s in ("open", "rests")}
     devs = {it.key: (it.deviations, len(it.decls)) for it in its if it.deviations}
     errata = {it.key: it.errata for it in its if it.errata}
+    m = rm.load()
+    papers = {k: cited for k, v in errata.items() if (cited := m.papers_of([i for ids in v.values() for i in ids]))}
     return its, {"ITEMS": {k: items[k] for k in sorted(items, key=I.natural)},
                  "EXPECTED": sorted((b, a) for a, b in edges), "OUTSIDE": outside, "STATES": states,
-                 "DEVIATIONS": devs, "ERRATA": errata}
+                 "DEVIATIONS": devs, "ERRATA": errata, "ERRATA_PAPERS": papers}
 
 
 def build(ident, chapter, **expected):
     m = rm.load()
     its, got = read(chapter)
-    for name in ("ITEMS", "EXPECTED", "OUTSIDE", "STATES", "DEVIATIONS", "ERRATA"):
+    for name in ("ITEMS", "EXPECTED", "OUTSIDE", "STATES", "DEVIATIONS", "ERRATA", "ERRATA_PAPERS"):
         rm.require(f"{ident} {name}", expected[name], got[name], f"{ident}'s cards for {chapter}")
     by_key = {it.key: it for it in its}
     uses = collections.defaultdict(list)
@@ -138,6 +141,9 @@ def build(ident, chapter, **expected):
         intro += (" Errata are ERRATA.md's entries, placed by the item numbers their “Where” column names, with "
                   "their Checked value and nothing stronger. They were reported and checked by AI agents; in "
                   "ERRATA.md's words, “No entry has been reviewed by a specialist.”")
+    if got["ERRATA_PAPERS"]:
+        intro += (" A paper named under the errata is one an entry's row of ERRATA.md links, named in that row's "
+                  "words; the linked paper was not read here.")
     y += c.para(x0, y, x1 - x0, intro, size=14.5, color="muted") + 26
     cw = (x1 - x0 - GAP * (COLS - 1)) / COLS
 
@@ -167,6 +173,8 @@ def build(ident, chapter, **expected):
             out.append("Errata: " + "; ".join(
                 ", ".join(draw.to_url(m.errata_url(entry_line[i]), i) for i in ids) + f" ({chk})"
                 for chk, ids in got["ERRATA"][it.key].items()))
+        if it.key in got["ERRATA_PAPERS"]:
+            out.append(draw.errata_papers(m, got["ERRATA_PAPERS"][it.key]))
         if uses[it.key]:
             out.append("**Uses:** " + ", ".join(draw.to_anchor(c, by_key[u].anchor, by_key[u].label, own)
                                                 for u in sorted(uses[it.key], key=I.natural)))

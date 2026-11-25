@@ -60,12 +60,15 @@ https://scottcochran.github.io/riemann-masullo-diagrams/.
 | Source | What is read | Pinned by |
 |---|---|---|
 | riemann-masullo | `comparator.json`, `Main.lean`, `ERRATA.md`, `paper/README.md`, `lean-toolchain` | `MASULLO_COMMIT` |
-| The manuscript | its hash only, as `paper/README.md` states it; never read | `PAPER_SHA256` |
+| The manuscript | its hash only, as `paper/README.md` states it; the PDF is never read. Rule 9 now allows reading riemann-masullo's transcription of it for its bibliography; no poster does yet (PLAN.md, Phase 8) | `PAPER_SHA256` |
 | The dependency data | `diagrams/src/deps.json`: 21,342 declarations, what each uses, and their `Paper:`, `Gap:`, `Classical input:` and `Deviation:` lines and docstring descriptions, read by riemann-masullo's own `Deps.lean` from its compiled library, outside the build ([tools/deps/README.md](tools/deps/README.md)) | `DEPS_SHA256` |
 
 The pins are in `diagrams/src/rm.py`. No Lean is built here. A dependency is what the elaborated terms reach: a
 fact about the Lean, not about the paper. The errata are reported and checked by AI agents. In ERRATA.md's words,
 "No entry has been reviewed by a specialist."
+
+The only links off the pin are the four arXiv papers that ERRATA.md's own rows link, on the entries that link
+them. The papers are not read here.
 
 ## Building
 

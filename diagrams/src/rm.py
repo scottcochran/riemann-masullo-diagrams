@@ -12,7 +12,8 @@ What is read, and from where:
 - **paper/README.md**: the manuscript's SHA-256, which must equal PAPER_SHA256. The PDF itself is never read.
 - **ERRATA.md**: the 28 rows of "Where no repair is known yet" (item, entries, what is missing, and whether and
   how the row says it was settled), the file's own count of settled and open rows, the tables of "Steps since
-  proved" (what is proved, by name), and every entry of the entry tables with its Checked value.
+  proved" (what is proved, by name), and every entry of the entry tables with its Checked value and the
+  papers its row links on arXiv or by DOI.
 - **deps.json**: every user-written declaration of `RiemannMasullo`, `Statements` and `Main`, with its kind,
   module, line, whether it is open (its term names `sorryAx`), its `Paper:` reference, its `Gap:`, `Classical
   input:` and `Deviation:` text, its docstring's own description, and its statement and proof dependencies.
@@ -45,6 +46,8 @@ CHECKOUT = pathlib.Path(os.environ.get("RIEMANN_MASULLO") or ROOT.parent / "riem
 READS = ["comparator.json", "Main.lean", "ERRATA.md", "paper/README.md", "lean-toolchain"]
 SHORT = MASULLO_COMMIT[:7]
 LIB = "RiemannMasullo"
+# The hosts of a paper ERRATA.md links, carried on the entries drawn (draw.errata_papers)
+PAPER_HOSTS = ("https://arxiv.org/", "https://doi.org/")
 CHECKED = ("Lean", "reviewed", "integrator", "reported")      # ERRATA.md's Checked values, most checked first
 SETTLED_KINDS = ("by another route", "from another step of this list", "from a published theorem")
 WORDS = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen "
@@ -323,8 +326,26 @@ class Model:
             if header[0] != "#" or "Checked" not in header or not re.fullmatch(r"[FIMR]\d+", cells[0]):
                 continue
             row = dict(zip(header, cells))
+            papers = [(t, u) for t, u in re.findall(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", ln) if u.startswith(PAPER_HOSTS)]
             self.entries.append({"id": cells[0], "where": row.get("Where", ""), "checked": row["Checked"],
-                                 "section": sec, "line": i + 1})
+                                 "section": sec, "line": i + 1, "papers": papers})
+        self.entry = {}
+        for e in self.entries:
+            self.entry.setdefault(e["id"], e)
+        # a paper an entry links -> the words ERRATA.md first links it with
+        self.paper_text = {}
+        for e in self.entries:
+            for t, u in e["papers"]:
+                self.paper_text.setdefault(u, " ".join(t.split()))
+
+    def papers_of(self, ids):
+        """Entry ids -> {the URL of a paper their rows link: the ids that link it}, in the order of the ids."""
+        out = {}
+        for i in ids:
+            for _, u in self.entry[i]["papers"] if i in self.entry else []:
+                if i not in out.setdefault(u, []):
+                    out[u].append(i)
+        return out
 
     def errata_url(self, line):
         return blob("ERRATA.md", line)
@@ -416,6 +437,9 @@ def load():
     if _MODEL is None:
         _MODEL = Model()
         lib.PINNED[:] = [f"{URL}/blob/{MASULLO_COMMIT}/"]
+        # the papers ERRATA.md's entries link, at the addresses it gives: the only links out not at the pin
+        lib.PAPERS.clear()
+        lib.PAPERS.update({u: u for u in _MODEL.paper_text})
         lib.EXTERNAL.clear()
         for show, ds in _MODEL.by_show.items():
             if len(ds) == 1:

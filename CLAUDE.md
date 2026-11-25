@@ -19,8 +19,9 @@ From `PLAN.md`, "Rules the design keeps". Read them there in full before changin
 7. The light page is the content's mean luminance (`diagrams/PAGE.md`).
 8. An erratum is drawn with its Checked value and no stronger claim, beside the quoted "No entry has been reviewed
    by a specialist".
-9. The manuscript is not quoted, and not read.
-10. A cone is of the formalisation, not of the paper, and each poster says so.
+9. The manuscript is read, through riemann-masullo's transcription checked against `PAPER_SHA256`, and its
+   bibliography is followed. Its sentences are not quoted.
+10. A cone is of the formalisation and a citation is of the paper, and each poster says which it draws.
 
 And:
 
@@ -54,4 +55,5 @@ by `proof-posters.toml`.
 | `proof-posters:cutting-releases` | a release is due (PLAN.md, Phase 6) |
 | `proof-posters:linking-posters` | posters are linked, a link lands on nothing, or a target is not framed when opened; `check-links.py` holds `[links]` in `proof-posters.toml` |
 
-`proof-posters:linking-papers` does not apply: there is no bibliography to link, and no `[papers]` table.
+`proof-posters:linking-papers` applies once a poster draws the manuscript's bibliography (PLAN.md, Phase 8);
+until then there is no `[papers]` table. The papers `ERRATA.md` itself links are carried as it gives them.
