@@ -3,7 +3,8 @@
 Each poster is a module `src/d_<id>_<slug>.py` with `ID`, `SLUG` and `build()`. It reads everything through
 `src/rm.py`'s `load()`, records what it expects the sources to say as module-level literals, and raises an error,
 with both values and what to re-read, when they say otherwise. `gen-diagrams.py` writes `<ID>-<slug>-<date>.svg`
-and `manifest.json`, parses every SVG as XML, and exits 1 on any `WARNING` or `ERROR`.
+and `manifest.json`, parses every SVG as XML, and exits 1 on any `WARNING` or `ERROR`, and once, with a `NOTE`,
+when a poster's anchors moved (see Links).
 
 | Poster | Shows | Reads |
 |---|---|---|
@@ -13,6 +14,7 @@ and `manifest.json`, parses every SVG as XML, and exits 1 on any `WARNING` or `E
 | [M4](M4-chapters-2026.11.25.svg) | the 20 module directories: their items, declarations, states, deviations, printed claims and errata, and which directories' items use which | ERRATA.md (every entry), deps.json |
 | [M5](M5-refuted-2026.11.25.svg) | the 312 refutations `Printed.<name>_false`, what each rests on, the entries that name them, and their Checked values against ERRATA.md's rule for "Lean" | ERRATA.md (every entry, every column), deps.json |
 | C1 to C14, CA to CE, L1 | one module directory each, item by item: a band per module, a card per item, with the items it uses and is used by | ERRATA.md (every entry), deps.json |
+| D1 to D14, DA to DE, DL | the same directories, declaration by declaration: every declaration of each item, with kind, file, line and state, and its `Deviation:` line quoted | deps.json |
 
 ## What the build checks
 
@@ -53,10 +55,45 @@ Then each poster, against its literals:
 | | `EXPECTED` | an edge between two items of the directory appears or goes, after the redundant ones are dropped |
 | | `OUTSIDE` | an item's direct uses of another directory's items change in number |
 | | `STATES`, `DEVIATIONS`, `ERRATA` | an item's state, its count of deviating declarations, or the entries on it change |
+| D*, DL | `DECLS` | a declaration appears in, leaves or moves between items, or changes its place in its file |
+| | `DEVIATING` | a declaration gains or loses its `Deviation:` line |
+| | `OUTSIDE_ITEMS` | an item's direct uses of another directory's items change |
 
-What is not checked: the counts in `README.md` and this file are written by hand, and no build compares them;
+What is not checked: a quotation cut before a character the fonts lack is marked as abridged, and its name opens the
+full text (one `Deviation:` line, which writes `⁻³ᐟ²`); the counts in `README.md` and this file are written by hand, and no build compares them;
 the page grey (`PAGE.md`) is measured, not enforced; and M2's grouping of a row rests on the declarations the row
 names in code, so a row that names its step only in prose is "not stated" here.
+
+## Links
+
+Every poster links to the others, so that a reader can follow an item from any poster to its card and to the source.
+
+| From | To |
+|---|---|
+| Every poster | the overviews, M1 to M5, by the line under the title; M4 lists every chapter poster |
+| A Lean name in code | its declaration's line in riemann-masullo at the pin |
+| A chapter card's title | the item's first declaration at the pin |
+| A chapter card's count of declarations, and of deviations | the item's table, and its quoted `Deviation:` lines, on the declarations poster |
+| A declarations block's heading | the item's card on the chapter poster |
+| A card's "Uses" and "Used by" | the cards they name, on the same poster |
+| "From other directories" | the used item's card when it is one item; else that directory's row of the item's "Uses of other directories" on the declarations poster, whose items open their cards |
+| An errata entry id, or a row's line | its line of ERRATA.md at the pin |
+| "Printed claims kept" | that directory's part of M5 |
+| An open or resting item | the row of M2 that names its open declaration (or that declaration's card on M2), and M1's card of the floor where the floor is below it |
+| A declaration card on M1 or M2, a refutation on M5, a dot on M3 | the item's card on its chapter poster |
+| A directory on M4, a row of M3 or M5, the line under a title | the poster's title block, `top` |
+
+A card is an anchor (`i-<kind>-<number>`, from `items.anchor`); a declarations poster's blocks are `d-…` and their
+deviations `v-…`; M5's directories are `refuted-<directory>`. Every link to a poster names a target on it, and the generator fails on one that does not. The target of a link
+stands out when it is opened: each anchored group has an amber frame behind it, and each anchored table row (M2's
+rows, `row-<line>`; the declarations posters' `o-<item>--<directory>`) is framed itself, hidden until the address names it (CSS `:target`), when it shows and
+pulses three times. It works where a browser opens the SVG itself, as on the Pages site, from a release or from a
+file; GitHub's file viewer shows an SVG as an image, without its links or this style, and a renderer without CSS
+keeps the frame hidden. A link
+to another poster is made only to an anchor the committed `manifest.json` lists, so a run that moves anchors
+updates the manifest, prints a `NOTE` and exits 1, and a second run makes the links follow. `Canvas.check` fails the
+build on a link to a poster, a card or an address that does not exist (an address must be at the pin), and the
+generator fails on markup left unrendered.
 
 ## Kinds of text
 
@@ -74,6 +111,7 @@ one interpretation, guarded by `FLOOR` and `AS_STRONG`, and M5 one, guarded by `
 | `src/draw.py` | the shared drawing: a declaration card, a layered graph, a chain, a quotation |
 | `src/items.py` | the paper items: declarations grouped as the progress map groups them, their state, deviations, errata and uses, and the dropping of redundant edges |
 | `src/chapter.py` | the chapter posters' layout and checks; each `src/d_c*.py` and `src/d_l1_formathlib.py` holds one directory's literals |
+| `src/declarations.py` | the declarations posters' layout and checks; each `src/d_d*.py` holds one directory's literals |
 | `src/lib.py`, `src/metrics.py`, `src/fonts/` | the drawing library, widths and fonts, from riemann-diagrams (NOTICE) |
 | `src/deps.json` | the derived dependency data, pinned by `DEPS_SHA256` |
 | `PAGE.md` | the light page's grey, and its measurement |

@@ -172,6 +172,7 @@ def build():
         W, rm.sources(m), state=rm.state(m))
     x0, x1 = c.x0, c.x1
     y = c.y
+    y += draw.nav(c, ID, y)
     h = c.para(x0, y, x1 - x0,
                f"**How to read it.** A declaration rests on another when its type or proof term names it, directly or "
                f"through other declarations: the closure riemann-masullo's own `scripts/progress/Deps.lean` reads "
@@ -207,14 +208,17 @@ def build():
     left_w = 900
     body = [f"`{g.where}`, at the pin", "Paper: " + draw.pages(g.paper),
             f"Its term uses `sorryAx`. Its statement rests on {len(m.below(g.i)):,} declarations, all proved; it has "
-            f"no proof."]
+            f"no proof."] + draw.item_line(c, g)
+    mark = draw.anchored(c, "floor")
     hl = c.card(x0, y, left_w, f"`{g.show}`", body, accent="red", dash="6 4", size=13.5, tsize=17, bullets=False)
     c.blocks[-1] = c.blocks[-1][:4] + ("node " + g.name,)
+    draw.close(c, mark, x0, y, left_w, hl)
     yy = y + hl + 16
     yy += c.para(x0, yy, left_w, "Its docstring, `Gap:` line (Lean source, quoted):", size=13, color="faint", bold=True)
     yy += draw.quote(c, x0 + 14, yy, left_w - 14, g.gap)
     yy += 14
-    yy += c.para(x0, yy, left_w, f"ERRATA.md, the row it stands for (line {row.line}, entries "
+    yy += c.para(x0, yy, left_w, f"ERRATA.md, the row it stands for "
+                 f"({draw.to_url(m.errata_url(row.line), f'line {row.line}')}, entries "
                  f"{', '.join(row.entries)}), quoted:", size=13, color="faint", bold=True)
     yy += draw.quote(c, x0 + 14, yy, left_w - 14, f"{row.item}. … {sentences_naming(row.missing, g.show)}")
     yy += 10
@@ -261,7 +265,8 @@ def build():
         lay(i)
     layers = [[m.decls[i] for i in sorted(drawn) if layer[i] == k] for k in range(max(layer.values()) + 1)]
     pairs = [(a, b) for b in sorted(drawn) for a in m.deps[b] if a in drawn]
-    y += draw.layered(c, y, layers, pairs, lambda d: draw.accent_of(d, tset))
+    y += draw.layered(c, y, layers, pairs, lambda d: draw.accent_of(d, tset),
+                      extra={d.i: draw.item_line(c, d) for L in layers for d in L})
     y += 26
     y += c.legend(x0, y, [("box", "red", "open: its term uses sorryAx", "6 4"),
                           ("box", "amber", "proved, and rests on the open step"),

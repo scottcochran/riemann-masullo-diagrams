@@ -13,12 +13,14 @@ coordinates.
 
 The checkout of riemann-masullo is ../riemann-masullo, or the directory in RIEMANN_MASULLO.
 
-Adapted from riemann-diagrams' generator at f87256e: no map set (PLAN.md, Open, 4), and so no second run to make
-links between posters follow.
+Adapted from riemann-diagrams' generator at f87256e, with no map set (PLAN.md, Open, 4). As there, a poster links to
+another's cards through the committed manifest: when a run moves a poster's anchors, it updates the manifest, prints
+a NOTE and exits 1, and a second run makes every link follow.
 """
 import importlib
 import json
 import pathlib
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -35,8 +37,10 @@ def main(argv):
     want = {a.upper() for a in argv if not a.startswith("--")}
     manifest_path = HERE / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
-    lib.load_registry(manifest)
-    failed = 0
+    lib.load_registry(manifest)     # the links between posters resolve against the committed manifest
+    before = {k: v.get("anchors") for k, v in manifest.items()}
+    manifest_files = {k: v.get("file") for k, v in manifest.items()}
+    failed, moved = 0, []
     for name in sorted(p.stem for p in (HERE / "src").glob("d_*.py")):
         if want and name.split("_")[1].upper() not in want:
             continue
@@ -46,6 +50,11 @@ def main(argv):
             canvas = m.build()
             svg = canvas.svg()
             ET.fromstring(svg)          # well-formed XML, or the poster is not written
+            if "[[" in svg:             # markup the library did not render, such as a link inside **bold**
+                raise ValueError(f"unrendered markup in the output: {svg[svg.index('[['):][:80]!r}")
+            bare = re.findall(r'<a href="([^"#:]+\.svg)"', svg)
+            if bare:                    # every link to a poster opens a target that lib's CSS frames
+                raise ValueError(f"a link to a whole poster, with no #target: {bare[0]}")
         except Exception as e:  # report and carry on, so one broken module cannot block the rest
             print(f"ERROR {name}: {e}")
             failed += 1
@@ -58,6 +67,8 @@ def main(argv):
         print(out.relative_to(HERE.parent))
         manifest[m.ID] = {"file": out.name, "title": canvas.title, **canvas.stats(), "anchors": sorted(canvas.anchors),
                           "links_ext": canvas.links_ext}
+        if sorted(canvas.anchors) != before.get(m.ID) or out.name != manifest_files.get(m.ID):
+            moved.append(m.ID)
         for w in canvas.warnings:
             print("  WARNING", w)
             failed += 1
@@ -65,6 +76,10 @@ def main(argv):
         manifest = {k: manifest[k] for k in sorted(manifest, key=lambda k: (k[0], (0, int(k[1:])) if k[1:].isdigit()
                                                                      else (1, k[1:])))}
         manifest_path.write_text(json.dumps(manifest, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+        if moved:
+            print(f"NOTE the anchors of {', '.join(moved)} moved: the links of every poster were resolved against the "
+                  f"previous diagrams/manifest.json, now updated. Run again so that they follow.")
+            return 1
     return 1 if failed else 0
 
 

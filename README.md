@@ -49,6 +49,10 @@ https://scottcochran.github.io/riemann-masullo-diagrams/.
   - [L1](diagrams/L1-formathlib-2026.11.25.svg), `ForMathlib`, file by file.
 
   M4 links to every one of them.
+- The declarations posters, D1 to D14, DA to DE and DL, one per directory: every one of the 17,054 declarations,
+  item by item, with its kind, file, line and state, and the 1,383 `Deviation:` lines quoted. They expand the
+  chapter cards: a card's count of declarations opens its item's table, and its count of deviations the quoted
+  lines.
 
 ## What it is drawn from
 

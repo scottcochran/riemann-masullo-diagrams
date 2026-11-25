@@ -84,6 +84,12 @@ def keys_named(where):
     return out
 
 
+def anchor(key, prefix="i"):
+    """An id for an item, valid as an SVG anchor: its card `i-theorem-5.2.1.1`; on the declarations poster, its block
+    `d-theorem-5.2.1.1` and its deviations `v-theorem-5.2.1.1`."""
+    return f"{prefix}-" + re.sub(r"[^\w.-]+", "_", key.replace(":", "-", 1))
+
+
 def natural(s):
     return [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", s)]
 
@@ -94,6 +100,16 @@ class Item:
     @property
     def label(self):
         return label(self.key)
+
+    @property
+    def anchor(self):
+        return anchor(self.key)
+
+    @property
+    def first(self):
+        """The declaration a card's title links to: the first, by file and line, that cites the item."""
+        cited = [d for d in self.decls if d.paper] or self.decls
+        return min(cited, key=lambda d: (natural(d.module), d.line))
 
 
 class Items:

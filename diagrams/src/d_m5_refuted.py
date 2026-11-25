@@ -10,6 +10,9 @@ rests on no statement still unproved". The terms say, for each refutation, wheth
 import collections
 import re
 
+import chapter as CH
+import draw
+import items as I
 import lib
 import rm
 
@@ -455,6 +458,7 @@ def build():
         f"an ERRATA.md entry, and {len(refs) - n_named} by none.", W, rm.sources(m), state=rm.state(m))
     x0, x1 = c.x0, c.x1
     y = c.y
+    y += draw.nav(c, ID, y)
     y += c.para(x0, y, x1 - x0,
                 "**How to read it.** A refutation is a theorem of the Lean whose statement is the negation of a printed "
                 "claim, kept beside it as `Printed.<name>`. That a refutation rests on nothing open is read from the "
@@ -487,23 +491,31 @@ def build():
                          "interpretation")
     y += max(left, ih) + 40
     y += c.heading(x0, y, f"2 · Every refutation: {len(refs)}, by directory and file")
-    cols = [("Refutation", 800), ("File and line", 500), ("Entries that name it, with Checked", 400),
+    cols = [("Refutation", 700), ("File and line", 440), ("Its item", 230), ("Entries that name it, with Checked", 330),
             ("What is below it", 588)]
+    X = I.load()
+    entry_line = {e["id"]: e["line"] for e in m.entries}
     groups = collections.defaultdict(list)
     for k, d in refs.items():
         groups[d.chapter].append(d)
     for n, ch in enumerate(sorted(groups, key=rm.chapter_order)):
         ds = sorted(groups[ch], key=lambda d: (d.module, d.line))
-        trs = [{"group": f"{rm.chapter_label(ch)} · {ch} · {len(ds)}", "accent": "grey"}]
+        trs = [{"group": f"{draw.to_poster(CH.poster_id(ch), rm.chapter_label(ch))} · {ch} · {len(ds)}",
+                "accent": "grey"}]
         for d in ds:
             ents, chks, below = refuted[d.key]
-            trs.append({"cells": [f"`{d.show}`", f"`{d.where}`",
-                                  ", ".join(f"{e} ({ck})" for e, ck in zip(ents, chks)) or "none",
+            card = draw.item_line(c, d)
+            trs.append({"cells": [f"`{d.show}`", f"`{d.where}`", card[0][len("Item: "):] if card else "none",
+                                  ", ".join(f"{draw.to_url(m.errata_url(entry_line[e]), e)} ({ck})"
+                                            for e, ck in zip(ents, chks)) or "none",
                                   "nothing open" if below == "clean" else
                                   "rests on " + ", ".join(f"`{rm.display_name(b.removeprefix('private '))}`"
                                                           for b in below)],
                         "accent": "amber" if below != "clean" else None})
-        y += c.table(x0, y, cols, trs, size=12, hsize=12.5, pad=6, header=n == 0)
+        mark = draw.anchored(c, f"refuted-{ch}")
+        th = c.table(x0, y, cols, trs, size=12, hsize=12.5, pad=6, header=n == 0)
+        draw.close(c, mark, x0, y, x1 - x0, th, pad=4)
+        y += th
         y += 8
     y += 20
     c.para(x0, y, x1 - x0,

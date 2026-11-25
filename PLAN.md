@@ -322,6 +322,59 @@ carry a `Deviation:` line.
 - **The checksums match the tree at the tag.** `verify-release.py v0.2.0` found the 25 SVGs matching it, and
   `pins.json` and the site naming `v0.2.0`. Each SVG as the site serves it is byte-identical to the tag's.
 
+### Links between the posters
+
+Added 2026.11.25 at the custodian's request: every card, item, entry and poster links to where it is drawn in full
+or to its source, as `diagrams/README.md`, "Links", lists. Every chapter card is an anchor. The generator runs twice
+when anchors move, as riemann-diagrams' does, and the build fails on a link that does not resolve and on markup left
+unrendered (the second caught 19 links set inside bold on M3).
+
+**Done** (2026.11.25, on `links`, not yet merged). There are 12,219 links in the 25 posters: 3,547 within a poster,
+5,574 to another poster's cards or to the poster itself, and 3,098 to riemann-masullo at the pin. Each of M3's 1,251
+dots opens its item's card. The posters are byte-identical over two hash seeds after the second run. No expectation
+changed.
+
+### The declarations posters
+
+Added 2026.11.25 at the custodian's request, so that a chapter card's counts open what they count. There is one
+poster per directory: D1–D14, DA–DE, and DL for `ForMathlib`. Each item is a block in the chapter poster's order,
+opened by the card: its count of declarations opens the item's table, and its count of deviations the quoted
+`Deviation:` lines. A table gives every declaration with its kind, file, line and state. Each block's heading
+opens the card.
+
+- **Fonts.** The `Deviation:` lines needed six characters the subsets lacked (`ᵥᵢᵃᶻᴺ𝔭`). The subsets were rebuilt
+  from the pinned Noto sources, each checked against its SHA-256, and no existing character's width changed.
+  One more, `ᐟ` in `⁻³ᐟ²`, is in none of the four faces. That one quotation is cut before its sentence and marked
+  as abridged, and its name opens the full text.
+- **Size.** The 20 posters come to 31 MB. D7 is 62,346 px tall, one row for each of its 1,983 declarations. Every
+  regeneration adds that much to the history, which a pin move makes worth weighing.
+
+**Done** (2026.11.25, on `links`, not yet merged). The posters list 17,054 declarations and 1,383 `Deviation:`
+lines (`DECLS`, `DEVIATING`). In memory on D8, a declaration leaving its item and a `Deviation:` line going each fail
+the build. `check-expectations.py` finds 187 literal expectations in 45 modules. All 46 output files are
+byte-identical over two hash seeds, and on Python 3.12 and 3.14.
+
+### Showing a link's target
+
+Added 2026.11.25 at the custodian's request. Every anchored group, 3,577 in all, now has a frame behind it: the
+1,463 chapter cards, the 1,463 declaration blocks, the 634 deviation lists and the 17 directories of M5. The frame
+is hidden until the address's `#fragment` names the group (CSS `:target`), then shows in amber and pulses three
+times (`lib.py`'s `.rd-target`, `draw.close`). It was tried in headless Chrome on C5 at `#i-theorem-5.2.4.1` and on
+D8 at `#v-eq-8.1.0.2`: the page scrolls to the target, and its frame shows. Those captures leave the part of the
+page above the target unpainted. That comes from the capture, not the frame: the posters from before the frame
+show the same, and a capture without a fragment is whole.
+
+Then, at the custodian's report that the links to other chapters framed nothing, every link was given a target. A
+chapter card's "From other directories" opens the used item's card when it uses one, and otherwise a row of a new
+list on the declarations poster: "Uses of other directories", one anchored row per directory, naming the items
+used, each opening its card. These lists are recorded as `OUTSIDE_ITEMS`, 13,136 uses. "Named on M2" opens M2's row
+for the open declaration, or its card there, and "M1" opens M1's card of the floor. A link to a whole poster opens
+its title block, `top`, which is framed too. The generator now fails on a link to a poster without a target.
+
+There are 29,157 links with a target, and each target id exists. A copy of D1 whose style frames the row
+`#o-text-1.4.6--Ch03_IdelicZeta` by its id was rendered whole: the row shows its frame. A headless capture opened at
+that address paints nothing, as before.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at

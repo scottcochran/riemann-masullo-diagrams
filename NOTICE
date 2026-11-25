@@ -27,7 +27,8 @@ f87256e, copied and not imported: the drawing library
 diagrams/src/lib.py (itself from TOPAK, Apache-2.0, as its header
 says), diagrams/src/metrics.py, the font subsets in diagrams/src/fonts/,
 tools/build-fonts.py and tools/measure-page.py. They keep the licence
-they have there (Apache-2.0). LICENSE and LICENSE-DOCS are copied from
+they have there (Apache-2.0). The font subsets were rebuilt here, from
+the same Noto sources, with six characters more (tools/build-fonts.py). LICENSE and LICENSE-DOCS are copied from
 it too.
 
 The fonts in diagrams/src/fonts/, which every poster embeds, are
@@ -43,7 +44,8 @@ README.md, "License"), and is used here under that licence, with this
 notice as its attribution:
 
   * the Lean declaration names, files, lines, docstrings (their
-    Paper:, Gap: and Classical input: lines) and the dependencies
+    Paper:, Gap:, Classical input: and Deviation: lines, the last
+    quoted on the declarations posters) and the dependencies
     between declarations, read at a pinned commit from its compiled
     library by its own scripts/progress/Deps.lean, and kept in
     diagrams/src/deps.json, a file derived from that project;

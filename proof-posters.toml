@@ -12,7 +12,7 @@ docs = ["README.md", "diagrams/README.md", "tools/deps/README.md"]
 [build]
 regenerate = ["uv run python diagrams/gen-diagrams.py"]
 failure_markers = ["WARNING", "ERROR"]
-rerun_marker = "NOTE "                # never printed here: there is no map set, so no second run
+rerun_marker = "NOTE "                # a run that moves a poster's anchors exits 1 with a NOTE: run it again
 vary_env = [{ PYTHONHASHSEED = "0" }, { PYTHONHASHSEED = "1" }]
 outputs = ["diagrams/*.svg"]
 manifests = ["diagrams/manifest.json"]
@@ -25,11 +25,12 @@ ci = ".github/workflows/posters.yml"  # regenerates at the pins and fails on any
 expected_names = ["TOTALS", "TARGETS", "FLOOR", "N_BELOW", "ROW", "CONE", "EXPECTED", "BY_CHAPTER", "AS_STRONG",
                   "GAPS", "CLASSES", "CONES", "SETTLED", "UNNAMED", "CHAINS",
                   "N_ITEMS", "EXPECTED_DEPTHS", "COUNTS", "CHAPTERS", "ERRATA", "UNPLACED",
-                  "ITEMS", "OUTSIDE", "STATES", "DEVIATIONS", "MATRIX", "REFUTED", "SUMMARY", "LEAN_UNNAMED"]
+                  "ITEMS", "OUTSIDE", "STATES", "DEVIATIONS", "MATRIX", "REFUTED", "SUMMARY", "LEAN_UNNAMED",
+                  "DECLS", "DEVIATING", "OUTSIDE_ITEMS"]
 # The expected_names whose change makes a release MINOR (PLAN.md, Phase 6: PATCH keeps "every EXPECTED and GAPS
 # unchanged"). FLOOR and CONE are what M1's EXPECTED edges are drawn between, ITEMS the cards a chapter poster's
 # EXPECTED edges join, and REFUTED the rows of M5.
-minor_names = ["EXPECTED", "GAPS", "FLOOR", "CONE", "ITEMS", "REFUTED"]
+minor_names = ["EXPECTED", "GAPS", "FLOOR", "CONE", "ITEMS", "REFUTED", "DECLS"]
 
 [pins]
 file = "diagrams/src/rm.py"

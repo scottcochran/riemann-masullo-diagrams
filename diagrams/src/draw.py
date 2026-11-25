@@ -31,12 +31,23 @@ def decl_card(c, x, y, d, accent, draw=True, w=None, extra=()):
         body.append("Paper: " + pages(d.paper))
     body += list(extra)
     w = w or max([230, lib.text_width(title, 13.5, bold=True) + 34] +
-                 [min(lib.text_width(b, 12.5) + 34, 420) for b in body])
+                 [min(lib.text_width(b, 12.5) + 34, 420) for b in body if not b.startswith("Item:")])
     h = c.card(x, y, w, title, body, accent=accent, size=12.5, tsize=13.5, bullets=False, draw=draw, pad=13,
                dash="6 4" if d.open else None)
     if draw:
         c.blocks[-1] = c.blocks[-1][:4] + ("node " + d.name,)
     return w, h
+
+
+def item_line(c, d):
+    """`Item: <its card>` for a declaration that belongs to a paper item, or nothing."""
+    import items as I
+    X = I.load()
+    k = X.item_of.get(d.i)
+    if k is None:
+        return []
+    it = X.items[k]
+    return [f"Item: {to_anchor(c, it.anchor, it.label)}"]
 
 
 def layered(c, y0, layers, edges, accent, extra=None):
@@ -143,3 +154,93 @@ def quote(c, x, y, w, s, size=14, color="ink"):
         c.add(lib.render_line(x, y + size + k * lead, ln, size, color, italic=True))
     c.ymax = max(c.ymax, y + size * 0.35 + (len(lines) - 1) * lead + size)
     return (len(lines) - 1) * lead + size * 1.35
+
+
+# -- links between posters. A link is made only to what exists: an anchor of the poster being drawn, an anchor the
+# committed manifest gives another poster, or a poster the manifest lists. Anything else stays plain text, and the
+# generator's second run (when anchors moved) makes the link. Canvas.check fails the build on a link that does
+# not resolve.
+
+def to_anchor(c, anchor, text, own=()):
+    """`text` linked to the card `anchor`, on this poster (`own`, the anchors it will draw) or on the poster that
+    draws it."""
+    if anchor in own:
+        return f"[[@#{anchor}|{text}]]"
+    if anchor in lib.REGISTRY:
+        return f"[[@{lib.REGISTRY[anchor]}#{anchor}|{text}]]"
+    return text
+
+
+def to_poster(pid, text, anchor=None):
+    """`text` linked to poster `pid`: to `anchor` on it, or else to its title block (`top`), so that every link has a
+    target to frame."""
+    f = lib.POSTERS.get(pid)
+    if not f:
+        return text
+    if anchor and anchor in lib.ANCHORS_OF.get(f, ()):
+        return f"[[@{f}#{anchor}|{text}]]"
+    if "top" in lib.ANCHORS_OF.get(f, ()):
+        return f"[[@{f}#top|{text}]]"
+    return f"[[@{f}|{text}]]"
+
+
+def to_url(url, text):
+    return f"[[@{url}|{text}]]"
+
+
+NAV = [("M1", "what the targets rest on"), ("M2", "the steps with no known repair"), ("M3", "the paper by depth"),
+       ("M4", "every chapter"), ("M5", "the refutations")]
+
+
+def nav(c, ident, y):
+    """The line under the title that links the overviews; M4 lists every chapter poster. Returns the height used.
+    Also makes the title block an anchor, `top`, which a link to the whole poster opens and frames."""
+    c.out.insert(0, '<g id="top">')
+    c.anchors.append("top")
+    close(c, 1, c.x0, c.pad - 10, c.x1 - c.x0, y - c.pad - 12, pad=10)
+    parts = [f"**{pid}**, {what}" if pid == ident else to_poster(pid, f"{pid}, {what}") for pid, what in NAV]
+    return c.para(c.x0, y, c.x1 - c.x0, "Posters: " + " · ".join(parts) + ". Names, items, files, entries and "
+                  "posters are links, underlined under the pointer: a card's title or a Lean name opens the source "
+                  "at the pin.", size=13.5, color="faint") + 16
+
+
+def anchored(c, anchor):
+    """Open a group with id `anchor` around what is drawn next. Returns the mark that `close` takes."""
+    c.add(f'<g id="{anchor}">')
+    c.anchors.append(anchor)
+    return len(c.out)
+
+
+def close(c, mark, x, y, w, h, pad=7):
+    """Close the group `anchored` opened, with its halo behind everything in it: a frame around the box (x, y, w, h)
+    that lib's CSS shows only while the group is the target of the address (`:target`), so that a link's
+    destination stands out when it is opened."""
+    c.out.insert(mark, f'<rect x="{x - pad:.1f}" y="{y - pad:.1f}" width="{w + 2 * pad:.1f}" '
+                       f'height="{h + 2 * pad:.1f}" rx="12" fill="{lib.light("amber-t")}" stroke="{lib.light("amber")}" '
+                       f'class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>')
+    c.add("</g>")
+
+
+def coverable(text):
+    """A quotation the embedded fonts can draw: the text, or, if it has a character the fonts lack, the text cut
+    before the sentence that holds the first one and marked ` …`. Returns (text, whether it was cut)."""
+    bad = [i for i, ch in enumerate(text) if ch not in lib.COVERED and ch != "\n"]
+    if not bad:
+        return text, False
+    start = max((i for i in range(bad[0]) if text[i - 1:i + 1] in (". ", ".\n")), default=0)
+    return (text[:start].rstrip() + " …") if start else "…", True
+
+
+def m2_card(d):
+    """The anchor of an open declaration's card on M2, for the ones no open row names."""
+    import re
+    return "open-" + re.sub(r"[^\w.-]+", "_", d.key)
+
+
+def m2_target(m, d):
+    """Where M2 names the open declaration `d`: the row of ERRATA.md's open rows that names it in code
+    (`row-<line>`), else its own card there."""
+    for r in m.rows:
+        if not r.settled and any((x := m.resolve(n)) is not None and x.i == d.i for n in r.names):
+            return f"row-{r.line}"
+    return m2_card(d)
