@@ -52,3 +52,6 @@ by `proof-posters.toml`.
 | `proof-posters:extracting-lean-deps` | `diagrams/src/deps.json` must be rebuilt (`tools/deps/README.md`) |
 | `proof-posters:recording-expectations` | a poster is added or changes what it reads, draws or says |
 | `proof-posters:cutting-releases` | a release is due (PLAN.md, Phase 6) |
+| `proof-posters:linking-posters` | posters are linked, a link lands on nothing, or a target is not framed when opened; `check-links.py` holds `[links]` in `proof-posters.toml` |
+
+`proof-posters:linking-papers` does not apply: there is no bibliography to link, and no `[papers]` table.

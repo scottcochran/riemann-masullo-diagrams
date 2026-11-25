@@ -53,6 +53,14 @@ name = "DEPS_SHA256"
 file = "diagrams/src/deps.json"
 meta = "tools/deps/meta.json"
 
+[links]
+# For linking-posters' check-links.py. Every link names a target, and every linked group is framed: a card's halo
+# (.rd-target) or a table row that frames itself (.rd-row), both in diagrams/src/lib.py.
+require_targets = true
+frame_classes = ["rd-target", "rd-row"]
+unrendered = ["[[@"]          # this library's link marker (lib.py): never left as text in an output
+allow = []                    # every link out is at a pinned commit; a link out anywhere else fails
+
 [release]
 classification = "PLAN.md, Phase 6: the MAJOR / MINOR / PATCH table"
 tag = "vMAJOR.MINOR.PATCH, annotated and signed (git tag -s), on main, pushed by the custodian"
