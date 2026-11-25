@@ -12,6 +12,7 @@ svg{--bg:#ffffff;--page:#e8e8e8;--ink:#1e2430;--muted:#4a5262;--faint:#7d8596;--
 @media (prefers-color-scheme: dark){svg:not([data-theme=light]){--bg:#12151b;--page:#12151b;--ink:#e6e9ef;--muted:#b0b8c6;--faint:#7f8898;--panel:#1a1e26;--line:#363d4a;--zebra:#161a21;--blue:#8fb0ec;--blue-t:#1a2540;--teal:#6cc7b0;--teal-t:#12302a;--amber:#f0b15c;--amber-t:#33260f;--violet:#b9a0e8;--violet-t:#261d38;--red:#f08a8f;--red-t:#3a1a1d;--grey:#a3abb9;--grey-t:#22262e;--brown:#e0a56b;--brown-t:#2f2215;--pink:#ec8cc2;--pink-t:#351a2a;--green:#85c98a;--green-t:#17291a;}}
 svg[data-theme=dark]{--bg:#12151b;--page:#12151b;--ink:#e6e9ef;--muted:#b0b8c6;--faint:#7f8898;--panel:#1a1e26;--line:#363d4a;--zebra:#161a21;--blue:#8fb0ec;--blue-t:#1a2540;--teal:#6cc7b0;--teal-t:#12302a;--amber:#f0b15c;--amber-t:#33260f;--violet:#b9a0e8;--violet-t:#261d38;--red:#f08a8f;--red-t:#3a1a1d;--grey:#a3abb9;--grey-t:#22262e;--brown:#e0a56b;--brown-t:#2f2215;--pink:#ec8cc2;--pink-t:#351a2a;--green:#85c98a;--green-t:#17291a;}
 a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect{stroke-width:3.4}
+.rd-target{opacity:0} g:target>.rd-target{opacity:1;animation:rd-pulse 0.9s ease-in-out 3} @keyframes rd-pulse{50%{stroke-width:9}} g[id]{scroll-margin-top:90px}
 .f-bg{fill:var(--bg)} .s-bg{stroke:var(--bg)}
 .f-page{fill:var(--page)} .s-page{stroke:var(--page)}
 .f-ink{fill:var(--ink)} .s-ink{stroke:var(--ink)}
@@ -41,8 +42,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="56.0" y="276.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14.5" fill="#4a5262" class="f-muted" text-anchor="start">pin. A declaration's state is read from the terms: open when it uses <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="13.3">sorryAx</tspan>, resting when something open is below it. That a declaration states what its <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="13.3">Deviation:</tspan> line says is the docstring's claim, not checked here.</text>
 <text x="56.0" y="324.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1.lean</tspan></text>
 <g id="d-eq-2.1.1.1">
+<rect x="47.0" y="331.4" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="355.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.1.1.1"><tspan font-weight="bold">(2.1.1.1)</tspan></a><tspan font-weight="bold"> · pp. 60–61 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-eq-2.1.1.1">
+<rect x="57.0" y="361.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="379.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L88"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">euclideanSchwartzWeightedDeriv</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:88</tspan></text>
 <text x="88.0" y="399.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">On smooth functions the mixed partial is evaluated by applying the iterated Fréchet derivative to the corresponding coordinate vectors.</text>
 </g>
@@ -62,6 +65,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="418.425" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-2.1.1.1">
+<rect x="47.0" y="486.9" width="2306.0" height="95.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="510.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-example-2.1.1.1"><tspan font-weight="bold">Example 2.1.1.1</tspan></a><tspan font-weight="bold"> · p. 59 · 1 declaration</tspan></text>
 <rect x="56" y="522.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="539.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -79,6 +83,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="522.175" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-text-2.1.1.3">
+<rect x="47.0" y="590.7" width="2306.0" height="292.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="614.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-text-2.1.1.3"><tspan font-weight="bold">§2.1.1.3</tspan></a><tspan font-weight="bold"> · p. 63 · 9 declarations</tspan></text>
 <rect x="56" y="625.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="643.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -136,8 +141,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="625.925" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-2.1.1.4">
+<rect x="47.0" y="891.2" width="2306.0" height="365.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="915.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-definition-2.1.1.4"><tspan font-weight="bold">Definition 2.1.1.4</tspan></a><tspan font-weight="bold"> · pp. 60–61 · 8 declarations, 2 deviating from the print</tspan></text>
 <g id="v-definition-2.1.1.4">
+<rect x="57.0" y="921.5" width="2292.0" height="93.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="939.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L204"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">schwartzMap_euclidean_iff</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:204</tspan></text>
 <text x="88.0" y="959.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The space uses Mathlib's equivalent norm and Fréchet-derivative formulation. Finiteness of (2.1.1.4) is expressed by boundedness.</text>
 <text x="70.0" y="985.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L229"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">schwartzMap_euclidean_tendsto_iff</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:229</tspan></text>
@@ -194,6 +201,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1024.025" width="2288" height="223.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.1.1.4">
+<rect x="47.0" y="1264.7" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1288.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.1.1.4"><tspan font-weight="bold">(2.1.1.4)</tspan></a><tspan font-weight="bold"> · p. 61 · 1 declaration</tspan></text>
 <rect x="56" y="1300.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="1317.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -211,6 +219,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1299.9749999999995" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-2.1.1.6">
+<rect x="47.0" y="1368.5" width="2306.0" height="1670.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1392.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.1.1.6"><tspan font-weight="bold">Proposition 2.1.1.6</tspan></a><tspan font-weight="bold"> · pp. 61–62 · 65 declarations</tspan></text>
 <rect x="56" y="1403.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="1421.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -548,6 +557,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1403.7249999999995" width="2288" height="1625.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-text-2.1.2.1">
+<rect x="47.0" y="3046.6" width="2306.0" height="267.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3070.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-text-2.1.2.1"><tspan font-weight="bold">§2.1.2.1</tspan></a><tspan font-weight="bold"> · p. 63 · 8 declarations</tspan></text>
 <rect x="56" y="3081.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3099.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -600,8 +610,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3081.8749999999936" width="2288" height="223.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.1.2.2">
+<rect x="47.0" y="3322.6" width="2306.0" height="270.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3346.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.1.2.2"><tspan font-weight="bold">(2.1.2.2)</tspan></a><tspan font-weight="bold"> · p. 65 · 6 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-2.1.2.2">
+<rect x="57.0" y="3352.8" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="3370.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L4283"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">schwartzBruhat_unitTranslate_mem</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:4283</tspan></text>
 <text x="88.0" y="3390.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The common membership check is stated for any commutative topological ring.</text>
 </g>
@@ -646,6 +658,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3409.599999999993" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-text-2.1.2.2">
+<rect x="47.0" y="3601.1" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3625.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-text-2.1.2.2"><tspan font-weight="bold">§2.1.2.2</tspan></a><tspan font-weight="bold"> · p. 63 · 1 declaration</tspan></text>
 <rect x="56" y="3636.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3653.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -663,6 +676,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3636.3499999999926" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-2.1.2.4">
+<rect x="47.0" y="3704.8" width="2306.0" height="440.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3728.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.1.2.4"><tspan font-weight="bold">Proposition 2.1.2.4</tspan></a><tspan font-weight="bold"> · p. 64 · 15 declarations</tspan></text>
 <rect x="56" y="3740.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3757.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -750,8 +764,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3740.0999999999926" width="2288" height="395.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-2.1.2.6">
+<rect x="47.0" y="4153.0" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="4177.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-example-2.1.2.6"><tspan font-weight="bold">Example 2.1.2.6</tspan></a><tspan font-weight="bold"> · p. 65 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-example-2.1.2.6">
+<rect x="57.0" y="4183.2" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="4201.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L3174"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finitePlaceSchwartz_sum_indicators</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:3174</tspan></text>
 <text x="88.0" y="4221.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The uniformizer is specified by its normalized valuation.</text>
 </g>
@@ -771,8 +787,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="4240.024999999992" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-2.1.2.8">
+<rect x="47.0" y="4308.5" width="2306.0" height="882.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="4332.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.1.2.8"><tspan font-weight="bold">Proposition 2.1.2.8</tspan></a><tspan font-weight="bold"> · p. 65 · 29 declarations, 2 deviating from the print</tspan></text>
 <g id="v-proposition-2.1.2.8">
+<rect x="57.0" y="4338.8" width="2292.0" height="93.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="4356.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L3279"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finiteAdeleTail_empty</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:3279</tspan></text>
 <text x="88.0" y="4376.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This is a sanity check for the restricted product over the complement.</text>
 <text x="70.0" y="4402.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L3310"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finitePlaceProduct_singleton</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:3310</tspan></text>
@@ -934,8 +952,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="4441.324999999993" width="2288" height="740.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.1.2.10">
+<rect x="47.0" y="5198.6" width="2306.0" height="435.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5222.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.1.2.10"><tspan font-weight="bold">Lemma 2.1.2.10</tspan></a><tspan font-weight="bold"> · p. 66 · 9 declarations, 3 deviating from the print</tspan></text>
 <g id="v-lemma-2.1.2.10">
+<rect x="57.0" y="5228.9" width="2292.0" height="139.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="5246.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L4403"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finitePlaceSchwartz_unitTranslate_tendsto</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:4403</tspan></text>
 <text x="88.0" y="5266.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Uniform convergence is expressed by its eventual epsilon bounds.</text>
 <text x="70.0" y="5292.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L4437"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finiteProductSchwartz_unitTranslate_tendsto</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:4437</tspan></text>
@@ -999,8 +1019,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5377.200000000005" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.1.3.2">
+<rect x="47.0" y="5642.5" width="2306.0" height="1201.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5666.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.1.3.2"><tspan font-weight="bold">Lemma 2.1.3.2</tspan></a><tspan font-weight="bold"> · p. 68 · 42 declarations, 2 deviating from the print</tspan></text>
 <g id="v-lemma-2.1.3.2">
+<rect x="57.0" y="5672.8" width="2292.0" height="93.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="5690.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L4650"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adeleSchwartz_strictLF</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:4650</tspan></text>
 <text x="88.0" y="5710.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The nuclearity statements below imply that every strict Fréchet presentation has nuclear stages by Remark C.1.5.12.</text>
 <text x="70.0" y="5736.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L5260"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adeleSchwartz_eq_sum_compactOpen_rectangles</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:5260</tspan></text>
@@ -1227,6 +1249,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5775.300000000009" width="2288" height="1060.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-2.1.3.3">
+<rect x="47.0" y="6852.4" width="2306.0" height="415.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="6876.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-remark-2.1.3.3"><tspan font-weight="bold">Remark 2.1.3.3</tspan></a><tspan font-weight="bold"> · pp. 68–69 · 14 declarations</tspan></text>
 <rect x="56" y="6887.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="6905.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1309,6 +1332,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="6887.650000000024" width="2288" height="371.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-2.1.3.4">
+<rect x="47.0" y="7276.0" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="7300.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-remark-2.1.3.4"><tspan font-weight="bold">Remark 2.1.3.4</tspan></a><tspan font-weight="bold"> · p. 70 · 2 declarations</tspan></text>
 <rect x="56" y="7311.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="7328.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1331,8 +1355,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="7311.200000000029" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-2.1.4.1">
+<rect x="47.0" y="7404.3" width="2306.0" height="1441.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="7428.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.1.4.1"><tspan font-weight="bold">Proposition 2.1.4.1</tspan></a><tspan font-weight="bold"> · p. 71 · 48 declarations, 4 deviating from the print</tspan></text>
 <g id="v-proposition-2.1.4.1">
+<rect x="57.0" y="7434.6" width="2292.0" height="185.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="7452.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L5900"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdeleSchwartz_inductiveTensor_equiv</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:5900</tspan></text>
 <text x="88.0" y="7472.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The finite tensor product uses its finest locally convex topology, which is its inductive tensor topology by Lemma C.2.5.2.</text>
 <text x="70.0" y="7498.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L5945"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdeleSchwartz_strictLF</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:5945</tspan></text>
@@ -1593,6 +1619,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="7628.6500000000315" width="2288" height="1207.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-corollary-2.1.4.2">
+<rect x="47.0" y="8853.4" width="2306.0" height="218.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="8877.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-corollary-2.1.4.2"><tspan font-weight="bold">Corollary 2.1.4.2</tspan></a><tspan font-weight="bold"> · p. 72 · 6 declarations</tspan></text>
 <rect x="56" y="8888.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="8906.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1635,6 +1662,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="8888.600000000048" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.1.4.2">
+<rect x="47.0" y="9080.1" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9104.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.1.4.2"><tspan font-weight="bold">(2.1.4.2)</tspan></a><tspan font-weight="bold"> · p. 71 · 1 declaration</tspan></text>
 <rect x="56" y="9115.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="9132.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1652,6 +1680,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9115.35000000005" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.1.4.3">
+<rect x="47.0" y="9183.9" width="2306.0" height="292.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9207.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.1.4.3"><tspan font-weight="bold">(2.1.4.3)</tspan></a><tspan font-weight="bold"> · p. 71 · 9 declarations</tspan></text>
 <rect x="56" y="9219.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="9236.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1709,8 +1738,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9219.10000000005" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.1.4.3">
+<rect x="47.0" y="9484.4" width="2306.0" height="344.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9508.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.1.4.3"><tspan font-weight="bold">Lemma 2.1.4.3</tspan></a><tspan font-weight="bold"> · p. 73 · 9 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-2.1.4.3">
+<rect x="57.0" y="9514.7" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="9532.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec1.lean#L6743"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdeleSchwartz_projection_compatible</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec1.lean:6743</tspan></text>
 <text x="88.0" y="9552.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The left side of (2.1.4.13) is composed with the transition to the larger codomain. This is the compatibility given by the factorization in part (2).</text>
 </g>
@@ -1770,6 +1801,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9571.425000000052" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-corollary-2.1.4.4">
+<rect x="47.0" y="9836.7" width="2306.0" height="218.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9860.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-corollary-2.1.4.4"><tspan font-weight="bold">Corollary 2.1.4.4</tspan></a><tspan font-weight="bold"> · p. 74 · 6 declarations</tspan></text>
 <rect x="56" y="9872.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="9889.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1812,6 +1844,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9871.975000000055" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.1.4.5">
+<rect x="47.0" y="10063.5" width="2306.0" height="317.2" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10087.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.1.4.5"><tspan font-weight="bold">(2.1.4.5)</tspan></a><tspan font-weight="bold"> · p. 71 · 10 declarations</tspan></text>
 <rect x="56" y="10098.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="10116.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1875,6 +1908,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="10424.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec2a.lean</tspan></text>
 <g id="d-eq-2.2.1.1">
+<rect x="47.0" y="10431.6" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10455.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.2.1.1"><tspan font-weight="bold">(2.2.1.1)</tspan></a><tspan font-weight="bold"> · p. 75 · 2 declarations</tspan></text>
 <rect x="56" y="10466.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="10484.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1897,6 +1931,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="10466.87500000006" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.2.1.1">
+<rect x="47.0" y="10560.0" width="2306.0" height="194.2" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10584.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.2.1.1"><tspan font-weight="bold">Lemma 2.2.1.1</tspan></a><tspan font-weight="bold"> · p. 75 · 5 declarations</tspan></text>
 <rect x="56" y="10595.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="10612.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1934,8 +1969,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="10595.22500000006" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.2.2.1">
+<rect x="47.0" y="10762.1" width="2306.0" height="1592.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10786.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.2.2.1"><tspan font-weight="bold">Lemma 2.2.2.1</tspan></a><tspan font-weight="bold"> · pp. 77–78 · 56 declarations, 3 deviating from the print</tspan></text>
 <g id="v-lemma-2.2.2.1">
+<rect x="57.0" y="10792.4" width="2292.0" height="139.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="10810.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec2a.lean#L918"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adelicAverage_stage_summable_norm</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec2a.lean:918</tspan></text>
 <text x="88.0" y="10830.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This isolates pointwise convergence on one stage of the defining submodule.</text>
 <text x="70.0" y="10856.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec2a.lean#L1081"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adelicAverage_at_zero_factorsThrough</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec2a.lean:1081</tspan></text>
@@ -2234,6 +2271,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="10940.70000000006" width="2288" height="1404.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-2.2.3.1">
+<rect x="47.0" y="12362.2" width="2306.0" height="145.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12386.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-definition-2.2.3.1"><tspan font-weight="bold">Definition 2.2.3.1</tspan></a><tspan font-weight="bold"> · pp. 81–82 · 3 declarations</tspan></text>
 <rect x="56" y="12397.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="12415.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2261,6 +2299,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12397.45000000008" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-2.2.3.2">
+<rect x="47.0" y="12515.2" width="2306.0" height="366.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12539.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-theorem-2.2.3.2"><tspan font-weight="bold">Theorem 2.2.3.2</tspan></a><tspan font-weight="bold"> · p. 82 · 12 declarations</tspan></text>
 <rect x="56" y="12550.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="12567.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2333,8 +2372,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12550.400000000081" width="2288" height="322.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-2.2.3.4">
+<rect x="47.0" y="12889.5" width="2306.0" height="611.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12913.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-theorem-2.2.3.4"><tspan font-weight="bold">Theorem 2.2.3.4</tspan></a><tspan font-weight="bold"> · pp. 83–85 · 18 declarations, 2 deviating from the print</tspan></text>
 <g id="v-theorem-2.2.3.4">
+<rect x="57.0" y="12919.8" width="2292.0" height="93.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="12937.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec2a.lean#L2907"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adelicTheta_normSum_decay_large</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec2a.lean:2907</tspan></text>
 <text x="88.0" y="12957.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The bound is for the series of absolute values, at every idele of norm at least one. Theorem 3.2.2.1(1), p. 124, needs it for absolute convergence.</text>
 <text x="70.0" y="12983.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec2a.lean#L2969"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adelicTheta_normSum_le_small</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec2a.lean:2969</tspan></text>
@@ -2441,6 +2482,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="13022.300000000085" width="2288" height="469.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-D.1.1.4">
+<rect x="47.0" y="13509.0" width="2306.0" height="243.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="13533.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-D.1.1.4"><tspan font-weight="bold">(D.1.1.4)</tspan></a><tspan font-weight="bold"> · p. 746 · 7 declarations</tspan></text>
 <rect x="56" y="13544.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="13561.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2489,6 +2531,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="13796.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec2a_Convergence_Printed.lean</tspan></text>
 <g id="d-proposition-2.2.1.3">
+<rect x="47.0" y="13803.4" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="13827.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.2.1.3"><tspan font-weight="bold">Proposition 2.2.1.3</tspan></a><tspan font-weight="bold"> · p. 76 · 2 declarations</tspan></text>
 <rect x="56" y="13838.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="13856.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2512,6 +2555,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="13967.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec2b.lean</tspan></text>
 <g id="d-lemma-2.2.4.1">
+<rect x="47.0" y="13974.7" width="2306.0" height="145.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="13998.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.2.4.1"><tspan font-weight="bold">Lemma 2.2.4.1</tspan></a><tspan font-weight="bold"> · p. 87 · 3 declarations</tspan></text>
 <rect x="56" y="14010.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="14027.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2539,8 +2583,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="14009.950000000093" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.2.4.2">
+<rect x="47.0" y="14127.7" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="14151.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.2.4.2"><tspan font-weight="bold">(2.2.4.2)</tspan></a><tspan font-weight="bold"> · p. 87 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-eq-2.2.4.2">
+<rect x="57.0" y="14157.9" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="14175.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec2b.lean#L618"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adeleDirectionalDeriv</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec2b.lean:618</tspan></text>
 <text x="88.0" y="14196.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The definition uses the equivalent parameter <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">t = exp s</tspan> at <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">s = 0</tspan>, as in (2.2.4.4).</text>
 </g>
@@ -2560,6 +2606,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="14214.675000000094" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.2.4.2">
+<rect x="47.0" y="14283.2" width="2306.0" height="612.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="14307.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.2.4.2"><tspan font-weight="bold">Lemma 2.2.4.2</tspan></a><tspan font-weight="bold"> · pp. 87–88 · 22 declarations</tspan></text>
 <rect x="56" y="14318.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="14335.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2682,6 +2729,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="14318.425000000094" width="2288" height="568.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.2.4.3">
+<rect x="47.0" y="14903.5" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="14927.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.2.4.3"><tspan font-weight="bold">Lemma 2.2.4.3</tspan></a><tspan font-weight="bold"> · p. 88 · 2 declarations</tspan></text>
 <rect x="56" y="14938.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="14956.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2704,6 +2752,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="14938.775000000101" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-2.2.4.4">
+<rect x="47.0" y="15031.9" width="2306.0" height="268.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="15055.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-definition-2.2.4.4"><tspan font-weight="bold">Definition 2.2.4.4</tspan></a><tspan font-weight="bold"> · p. 91 · 8 declarations</tspan></text>
 <rect x="56" y="15067.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="15084.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2756,6 +2805,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="15067.125000000102" width="2288" height="223.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.2.4.5">
+<rect x="47.0" y="15307.8" width="2306.0" height="366.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="15331.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.2.4.5"><tspan font-weight="bold">Lemma 2.2.4.5</tspan></a><tspan font-weight="bold"> · pp. 91–92 · 12 declarations</tspan></text>
 <rect x="56" y="15343.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="15360.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2828,6 +2878,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="15343.075000000104" width="2288" height="322.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-2.2.4.6">
+<rect x="47.0" y="15682.2" width="2306.0" height="464.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="15706.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-remark-2.2.4.6"><tspan font-weight="bold">Remark 2.2.4.6</tspan></a><tspan font-weight="bold"> · p. 92 · 16 declarations</tspan></text>
 <rect x="56" y="15717.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="15734.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2920,6 +2971,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="15717.425000000108" width="2288" height="420.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.2.4.25">
+<rect x="47.0" y="16154.9" width="2306.0" height="169.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="16178.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.2.4.25"><tspan font-weight="bold">(2.2.4.25)</tspan></a><tspan font-weight="bold"> · p. 91 · 4 declarations</tspan></text>
 <rect x="56" y="16190.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="16207.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2952,8 +3004,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="16190.175000000114" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.2.4.30">
+<rect x="47.0" y="16332.5" width="2306.0" height="393.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="16356.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.2.4.30"><tspan font-weight="bold">(2.2.4.30)</tspan></a><tspan font-weight="bold"> · p. 92 · 11 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-2.2.4.30">
+<rect x="57.0" y="16362.7" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="16380.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec2b.lean#L1827"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adeleDirectionalDeriv_fourier_integral</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec2b.lean:1827</tspan></text>
 <text x="88.0" y="16400.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The velocity is expressed using the complex embeddings of the local completions in the logarithmic parameter. The real trace counts complex places twice.</text>
 </g>
@@ -3023,6 +3077,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="16419.500000000113" width="2288" height="297.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-2.2.5.1">
+<rect x="47.0" y="16734.0" width="2306.0" height="218.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="16758.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-definition-2.2.5.1"><tspan font-weight="bold">Definition 2.2.5.1</tspan></a><tspan font-weight="bold"> · p. 95 · 6 declarations</tspan></text>
 <rect x="56" y="16769.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="16786.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3065,6 +3120,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="16769.2500000001" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.2.5.2">
+<rect x="47.0" y="16960.8" width="2306.0" height="390.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="16984.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.2.5.2"><tspan font-weight="bold">Lemma 2.2.5.2</tspan></a><tspan font-weight="bold"> · p. 95 · 13 declarations</tspan></text>
 <rect x="56" y="16996.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="17013.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3142,6 +3198,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="16996.00000000009" width="2288" height="346.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-2.2.5.4">
+<rect x="47.0" y="17359.7" width="2306.0" height="563.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="17383.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-theorem-2.2.5.4"><tspan font-weight="bold">Theorem 2.2.5.4</tspan></a><tspan font-weight="bold"> · pp. 97–98 · 20 declarations</tspan></text>
 <rect x="56" y="17395.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="17412.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3254,6 +3311,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="17394.950000000073" width="2288" height="518.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.2.5.10">
+<rect x="47.0" y="17930.9" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="17954.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.2.5.10"><tspan font-weight="bold">(2.2.5.10)</tspan></a><tspan font-weight="bold"> · p. 97 · 2 declarations</tspan></text>
 <rect x="56" y="17966.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="17983.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3277,6 +3335,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="18095.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3.lean</tspan></text>
 <g id="d-definition-2.3.1.1">
+<rect x="47.0" y="18102.2" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="18126.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-definition-2.3.1.1"><tspan font-weight="bold">Definition 2.3.1.1</tspan></a><tspan font-weight="bold"> · p. 99 · 2 declarations</tspan></text>
 <rect x="56" y="18137.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="18155.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3299,6 +3358,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="18137.450000000044" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.3.1.2">
+<rect x="47.0" y="18230.6" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="18254.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.3.1.2"><tspan font-weight="bold">(2.3.1.2)</tspan></a><tspan font-weight="bold"> · p. 99 · 1 declaration</tspan></text>
 <rect x="56" y="18265.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="18283.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3316,6 +3376,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="18265.800000000043" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-2.3.1.2">
+<rect x="47.0" y="18334.3" width="2306.0" height="833.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="18358.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.3.1.2"><tspan font-weight="bold">Proposition 2.3.1.2</tspan></a><tspan font-weight="bold"> · pp. 100–102 · 31 declarations</tspan></text>
 <rect x="56" y="18369.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="18387.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3483,8 +3544,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="18369.550000000043" width="2288" height="789.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-2.3.1.3">
+<rect x="47.0" y="19176.0" width="2306.0" height="172.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="19200.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-definition-2.3.1.3"><tspan font-weight="bold">Definition 2.3.1.3</tspan></a><tspan font-weight="bold"> · p. 104 · 2 declarations, 1 deviating from the print</tspan></text>
 <g id="v-definition-2.3.1.3">
+<rect x="57.0" y="19206.3" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="19224.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec3.lean#L1179"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHomogeneousAdelicTheta</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec3.lean:1179</tspan></text>
 <text x="88.0" y="19244.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The norm-one class Haar measure is an explicit parameter. In (2.3.1.13) an idele argument is read through its class, as required by (2.3.1.12).</text>
 </g>
@@ -3509,8 +3572,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="19263.074999999997" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-2.3.1.4">
+<rect x="47.0" y="19356.2" width="2306.0" height="390.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="19380.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.3.1.4"><tspan font-weight="bold">Proposition 2.3.1.4</tspan></a><tspan font-weight="bold"> · p. 105 · 9 declarations, 2 deviating from the print</tspan></text>
 <g id="v-proposition-2.3.1.4">
+<rect x="57.0" y="19386.4" width="2292.0" height="93.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="19404.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec3.lean#L1014"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHomogeneousAdelicTheta_integrand_bounded</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec3.lean:1014</tspan></text>
 <text x="88.0" y="19424.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Uniform absolute convergence is expressed by this integrable majorant.</text>
 <text x="70.0" y="19450.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec3.lean#L1255"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHomogeneousAdelicTheta_decay_bounded</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec3.lean:1255</tspan></text>
@@ -3572,6 +3637,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="19488.97499999999" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.3.1.13">
+<rect x="47.0" y="19754.3" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="19778.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.3.1.13"><tspan font-weight="bold">(2.3.1.13)</tspan></a><tspan font-weight="bold"> · p. 105 · 1 declaration</tspan></text>
 <rect x="56" y="19789.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="19807.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3589,8 +3655,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="19789.52499999998" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-2.3.2.1">
+<rect x="47.0" y="19858.0" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="19882.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-eq-2.3.2.1"><tspan font-weight="bold">(2.3.2.1)</tspan></a><tspan font-weight="bold"> · p. 105 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-eq-2.3.2.1">
+<rect x="57.0" y="19888.3" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="19906.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec3.lean#L1503"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdeleDirectionalDeriv</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec3.lean:1503</tspan></text>
 <text x="88.0" y="19926.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">As in the global definition, the derivative uses <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">t = exp s</tspan> at <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">s = 0</tspan>.</text>
 </g>
@@ -3610,6 +3678,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="19945.049999999977" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.3.2.1">
+<rect x="47.0" y="20013.5" width="2306.0" height="267.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="20037.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.3.2.1"><tspan font-weight="bold">Lemma 2.3.2.1</tspan></a><tspan font-weight="bold"> · pp. 105–106 · 8 declarations</tspan></text>
 <rect x="56" y="20048.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="20066.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3662,8 +3731,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="20048.799999999977" width="2288" height="223.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-2.3.2.2">
+<rect x="47.0" y="20289.5" width="2306.0" height="267.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="20313.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.3.2.2"><tspan font-weight="bold">Proposition 2.3.2.2</tspan></a><tspan font-weight="bold"> · p. 106 · 4 declarations, 2 deviating from the print</tspan></text>
 <g id="v-proposition-2.3.2.2">
+<rect x="57.0" y="20319.7" width="2292.0" height="93.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="20337.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec3.lean#L1643"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalAdelicTheta_directionalDeriv</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec3.lean:1643</tspan></text>
 <text x="88.0" y="20357.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Uses γ in (2.3.2.2), as specified by (2.3.2.4) and Lemma 2.3.2.1.</text>
 <text x="70.0" y="20383.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec3.lean#L1656"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHomogeneousAdelicTheta_directionalDeriv</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec3.lean:1656</tspan></text>
@@ -3701,8 +3772,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="20600.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec4.lean</tspan></text>
 <g id="d-proposition-2.4.1.1">
+<rect x="47.0" y="20607.6" width="2306.0" height="418.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="20631.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.4.1.1"><tspan font-weight="bold">Proposition 2.4.1.1</tspan></a><tspan font-weight="bold"> · p. 107 · 12 declarations, 1 deviating from the print</tspan></text>
 <g id="v-proposition-2.4.1.1">
+<rect x="57.0" y="20637.8" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="20655.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec4.lean#L451"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHomogeneousAdelicTheta_rat_log_growth</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec4.lean:451</tspan></text>
 <text x="88.0" y="20675.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">As in §2.3, the Haar measure on those classes is explicit.</text>
 </g>
@@ -3777,8 +3850,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="20694.624999999956" width="2288" height="322.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-2.4.1.2">
+<rect x="47.0" y="21033.7" width="2306.0" height="221.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="21057.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-lemma-2.4.1.2"><tspan font-weight="bold">Lemma 2.4.1.2</tspan></a><tspan font-weight="bold"> · p. 107 · 4 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-2.4.1.2">
+<rect x="57.0" y="21064.0" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="21082.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec4.lean#L169"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">summable_geometric_grid_log_bound</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec4.lean:169</tspan></text>
 <text x="88.0" y="21102.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Equation (2.4.1.3) uses the existentially quantified constant <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">Cφ</tspan>. The real-domain function is used only at positive arguments, and summability is explicit.</text>
 </g>
@@ -3813,6 +3888,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="21120.749999999938" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-2.4.2.1">
+<rect x="47.0" y="21263.0" width="2306.0" height="144.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="21287.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-theorem-2.4.2.1"><tspan font-weight="bold">Theorem 2.4.2.1</tspan></a><tspan font-weight="bold"> · p. 111 · 3 declarations</tspan></text>
 <rect x="56" y="21298.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="21315.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3840,8 +3916,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="21298.299999999934" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-2.4.3.1">
+<rect x="47.0" y="21416.0" width="2306.0" height="509.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="21440.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-proposition-2.4.3.1"><tspan font-weight="bold">Proposition 2.4.3.1</tspan></a><tspan font-weight="bold"> · p. 113 · 12 declarations, 3 deviating from the print</tspan></text>
 <g id="v-proposition-2.4.3.1">
+<rect x="57.0" y="21446.2" width="2292.0" height="139.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="21464.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec4.lean#L1002"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHomogeneousAdelicTheta_norm_pow_isBigO</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec4.lean:1002</tspan></text>
 <text x="88.0" y="21484.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">As in §2.3, the norm-one class Haar measure is explicit.</text>
 <text x="70.0" y="21510.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec4.lean#L1102"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHomogeneousAdelicTheta_norm_pow_bounded</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec4.lean:1102</tspan></text>
@@ -3920,8 +3998,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="21594.574999999924" width="2288" height="322.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-corollary-2.4.3.2">
+<rect x="47.0" y="21933.7" width="2306.0" height="196.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="21957.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C2-ch02-adelictheta-2026.11.25.svg#i-corollary-2.4.3.2"><tspan font-weight="bold">Corollary 2.4.3.2</tspan></a><tspan font-weight="bold"> · p. 115 · 3 declarations, 1 deviating from the print</tspan></text>
 <g id="v-corollary-2.4.3.2">
+<rect x="57.0" y="21963.9" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="21981.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch02_AdelicTheta/Sec4.lean#L1213"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHomogeneousAdelicTheta_norm_pow_tendsto_zero</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch02_AdelicTheta/Sec4.lean:1213</tspan></text>
 <text x="88.0" y="22002.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">As in §2.3, the norm-one class Haar measure is explicit.</text>
 </g>

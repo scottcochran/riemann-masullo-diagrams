@@ -12,6 +12,7 @@ svg{--bg:#ffffff;--page:#e8e8e8;--ink:#1e2430;--muted:#4a5262;--faint:#7d8596;--
 @media (prefers-color-scheme: dark){svg:not([data-theme=light]){--bg:#12151b;--page:#12151b;--ink:#e6e9ef;--muted:#b0b8c6;--faint:#7f8898;--panel:#1a1e26;--line:#363d4a;--zebra:#161a21;--blue:#8fb0ec;--blue-t:#1a2540;--teal:#6cc7b0;--teal-t:#12302a;--amber:#f0b15c;--amber-t:#33260f;--violet:#b9a0e8;--violet-t:#261d38;--red:#f08a8f;--red-t:#3a1a1d;--grey:#a3abb9;--grey-t:#22262e;--brown:#e0a56b;--brown-t:#2f2215;--pink:#ec8cc2;--pink-t:#351a2a;--green:#85c98a;--green-t:#17291a;}}
 svg[data-theme=dark]{--bg:#12151b;--page:#12151b;--ink:#e6e9ef;--muted:#b0b8c6;--faint:#7f8898;--panel:#1a1e26;--line:#363d4a;--zebra:#161a21;--blue:#8fb0ec;--blue-t:#1a2540;--teal:#6cc7b0;--teal-t:#12302a;--amber:#f0b15c;--amber-t:#33260f;--violet:#b9a0e8;--violet-t:#261d38;--red:#f08a8f;--red-t:#3a1a1d;--grey:#a3abb9;--grey-t:#22262e;--brown:#e0a56b;--brown-t:#2f2215;--pink:#ec8cc2;--pink-t:#351a2a;--green:#85c98a;--green-t:#17291a;}
 a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect{stroke-width:3.4}
+.rd-target{opacity:0} g:target>.rd-target{opacity:1;animation:rd-pulse 0.9s ease-in-out 3} @keyframes rd-pulse{50%{stroke-width:9}} g[id]{scroll-margin-top:90px}
 .f-bg{fill:var(--bg)} .s-bg{stroke:var(--bg)}
 .f-page{fill:var(--page)} .s-page{stroke:var(--page)}
 .f-ink{fill:var(--ink)} .s-ink{stroke:var(--ink)}
@@ -41,8 +42,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="56.0" y="276.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14.5" fill="#4a5262" class="f-muted" text-anchor="start">pin. A declaration's state is read from the terms: open when it uses <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="13.3">sorryAx</tspan>, resting when something open is below it. That a declaration states what its <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="13.3">Deviation:</tspan> line says is the docstring's claim, not checked here.</text>
 <text x="56.0" y="324.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1.lean</tspan></text>
 <g id="d-definition-A.1.1.1">
+<rect x="47.0" y="331.4" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="355.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.1.1.1"><tspan font-weight="bold">Definition A.1.1.1</tspan></a><tspan font-weight="bold"> · p. 539 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-definition-A.1.1.1">
+<rect x="57.0" y="361.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="379.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec1.lean#L58"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">restrictedProduct_description</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec1.lean:58</tspan></text>
 <text x="88.0" y="399.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The printed Cartesian product does not provide the two subsets used in the definition. We use a finite subset of exceptional indices and its complement.</text>
 </g>
@@ -62,6 +65,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="418.425" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.1.1.3">
+<rect x="47.0" y="486.9" width="2306.0" height="95.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="510.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.1.1.3"><tspan font-weight="bold">Definition A.1.1.3</tspan></a><tspan font-weight="bold"> · p. 540 · 1 declaration</tspan></text>
 <rect x="56" y="522.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="539.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -79,8 +83,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="522.175" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.1.2.1">
+<rect x="47.0" y="590.7" width="2306.0" height="688.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="614.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.1.2.1"><tspan font-weight="bold">Lemma A.1.2.1</tspan></a><tspan font-weight="bold"> · pp. 540–541 · 23 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.1.2.1">
+<rect x="57.0" y="620.9" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="638.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec1.lean#L224"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">integralAdelesOutside</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec1.lean:224</tspan></text>
 <text x="88.0" y="659.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We use the product of the local integer rings for the profinite completion.</text>
 </g>
@@ -210,6 +216,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="677.6999999999999" width="2288" height="592.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.1.3.1">
+<rect x="47.0" y="1287.4" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1311.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.1.3.1"><tspan font-weight="bold">Definition A.1.3.1</tspan></a><tspan font-weight="bold"> · p. 541 · 1 declaration</tspan></text>
 <rect x="56" y="1322.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="1340.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -227,6 +234,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1322.6499999999992" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.3.3">
+<rect x="47.0" y="1391.1" width="2306.0" height="144.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1415.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.3.3"><tspan font-weight="bold">(A.1.3.3)</tspan></a><tspan font-weight="bold"> · p. 541 · 3 declarations</tspan></text>
 <rect x="56" y="1426.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="1443.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -254,6 +262,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1426.3999999999992" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.1.3.3">
+<rect x="47.0" y="1544.1" width="2306.0" height="144.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1568.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.1.3.3"><tspan font-weight="bold">Lemma A.1.3.3</tspan></a><tspan font-weight="bold"> · p. 541 · 3 declarations</tspan></text>
 <rect x="56" y="1579.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="1596.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -281,6 +290,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1579.349999999999" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.1.3.4">
+<rect x="47.0" y="1697.0" width="2306.0" height="194.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1721.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.1.3.4"><tspan font-weight="bold">Lemma A.1.3.4</tspan></a><tspan font-weight="bold"> · p. 542 · 5 declarations</tspan></text>
 <rect x="56" y="1732.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="1749.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -318,6 +328,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1732.2999999999988" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.3.6">
+<rect x="47.0" y="1899.2" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1923.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.3.6"><tspan font-weight="bold">(A.1.3.6)</tspan></a><tspan font-weight="bold"> · p. 542 · 1 declaration</tspan></text>
 <rect x="56" y="1934.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="1951.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -335,6 +346,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1934.4499999999985" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.1.4.1">
+<rect x="47.0" y="2002.9" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="2026.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.1.4.1"><tspan font-weight="bold">Definition A.1.4.1</tspan></a><tspan font-weight="bold"> · p. 542 · 1 declaration</tspan></text>
 <rect x="56" y="2038.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="2055.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -352,6 +364,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="2038.1999999999985" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-A.1.4.2">
+<rect x="47.0" y="2106.7" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="2130.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-remark-A.1.4.2"><tspan font-weight="bold">Remark A.1.4.2</tspan></a><tspan font-weight="bold"> · p. 542 · 1 declaration</tspan></text>
 <rect x="56" y="2141.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="2159.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -369,6 +382,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="2141.9499999999985" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.1.4.3">
+<rect x="47.0" y="2210.4" width="2306.0" height="317.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="2234.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.1.4.3"><tspan font-weight="bold">Theorem A.1.4.3</tspan></a><tspan font-weight="bold"> · p. 542 · 10 declarations</tspan></text>
 <rect x="56" y="2245.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="2263.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -431,6 +445,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="2245.6999999999985" width="2288" height="272.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.5.1">
+<rect x="47.0" y="2535.6" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="2559.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.5.1"><tspan font-weight="bold">(A.1.5.1)</tspan></a><tspan font-weight="bold"> · p. 543 · 1 declaration</tspan></text>
 <rect x="56" y="2570.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="2588.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -448,8 +463,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="2570.8499999999976" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.1.5.1">
+<rect x="47.0" y="2639.3" width="2306.0" height="295.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="2663.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.1.5.1"><tspan font-weight="bold">Lemma A.1.5.1</tspan></a><tspan font-weight="bold"> · p. 543 · 7 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.1.5.1">
+<rect x="57.0" y="2669.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="2687.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec1.lean#L1904"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdele_additive_quotient</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec1.lean:1904</tspan></text>
 <text x="88.0" y="2707.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The final claim of a rational vector space structure is false.</text>
 </g>
@@ -499,6 +516,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="2726.3749999999977" width="2288" height="199.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.5.2">
+<rect x="47.0" y="2942.5" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="2966.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.5.2"><tspan font-weight="bold">(A.1.5.2)</tspan></a><tspan font-weight="bold"> · p. 543 · 1 declaration</tspan></text>
 <rect x="56" y="2977.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="2995.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -516,6 +534,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="2977.724999999997" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.1.5.2">
+<rect x="47.0" y="3046.2" width="2306.0" height="292.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3070.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.1.5.2"><tspan font-weight="bold">Theorem A.1.5.2</tspan></a><tspan font-weight="bold"> · p. 544 · 9 declarations</tspan></text>
 <rect x="56" y="3081.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3099.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -573,6 +592,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3081.474999999997" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.5.3">
+<rect x="47.0" y="3346.8" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3370.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.5.3"><tspan font-weight="bold">(A.1.5.3)</tspan></a><tspan font-weight="bold"> · p. 543 · 2 declarations</tspan></text>
 <rect x="56" y="3382.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3399.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -595,6 +615,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3382.0249999999965" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-A.1.5.3">
+<rect x="47.0" y="3475.1" width="2306.0" height="218.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3499.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-remark-A.1.5.3"><tspan font-weight="bold">Remark A.1.5.3</tspan></a><tspan font-weight="bold"> · pp. 544–545 · 6 declarations</tspan></text>
 <rect x="56" y="3510.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3527.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -637,6 +658,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3510.3749999999964" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.5.6">
+<rect x="47.0" y="3701.9" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3725.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.5.6"><tspan font-weight="bold">(A.1.5.6)</tspan></a><tspan font-weight="bold"> · p. 544 · 1 declaration</tspan></text>
 <rect x="56" y="3737.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3754.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -654,6 +676,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3737.124999999996" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.5.7">
+<rect x="47.0" y="3805.6" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3829.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.5.7"><tspan font-weight="bold">(A.1.5.7)</tspan></a><tspan font-weight="bold"> · p. 544 · 1 declaration</tspan></text>
 <rect x="56" y="3840.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3858.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -671,6 +694,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3840.874999999996" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.5.8">
+<rect x="47.0" y="3909.4" width="2306.0" height="194.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3933.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.5.8"><tspan font-weight="bold">(A.1.5.8)</tspan></a><tspan font-weight="bold"> · p. 544 · 5 declarations</tspan></text>
 <rect x="56" y="3944.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3962.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -708,6 +732,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3944.624999999996" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.1.5.9">
+<rect x="47.0" y="4111.5" width="2306.0" height="464.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="4135.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.1.5.9"><tspan font-weight="bold">(A.1.5.9)</tspan></a><tspan font-weight="bold"> · p. 544 · 16 declarations</tspan></text>
 <rect x="56" y="4146.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="4164.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -800,6 +825,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="4146.774999999996" width="2288" height="420.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.2.6">
+<rect x="47.0" y="4584.3" width="2306.0" height="169.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="4608.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.2.6"><tspan font-weight="bold">Lemma A.2.2.6</tspan></a><tspan font-weight="bold"> · p. 547 · 4 declarations</tspan></text>
 <rect x="56" y="4619.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="4637.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -833,8 +859,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="4797.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1_RestrictedProduct_Printed.lean</tspan></text>
 <g id="d-lemma-A.1.1.2">
+<rect x="47.0" y="4804.8" width="2306.0" height="267.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="4828.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.1.1.2"><tspan font-weight="bold">Lemma A.1.1.2</tspan></a><tspan font-weight="bold"> · pp. 539–540 · 4 declarations, 2 deviating from the print</tspan></text>
 <g id="v-lemma-A.1.1.2">
+<rect x="57.0" y="4835.1" width="2292.0" height="93.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="4853.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec1.lean#L117"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">restrictedProduct_topology</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec1.lean:117</tspan></text>
 <text x="88.0" y="4873.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We use the index partition of Definition A.1.1.1. In (5) we record the case where the distinguished subgroups outside the finite set are open.</text>
 <text x="70.0" y="4898.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec1_RestrictedProduct_Printed.lean#L19"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Printed.restrictedProduct_openBox</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec1_RestrictedProduct_Printed.lean:19</tspan></text>
@@ -872,8 +900,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="5115.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec2.lean</tspan></text>
 <g id="d-text-A.2.1">
+<rect x="47.0" y="5122.9" width="2306.0" height="245.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5146.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-text-A.2.1"><tspan font-weight="bold">§A.2.1</tspan></a><tspan font-weight="bold"> · p. 545 · 5 declarations, 1 deviating from the print</tspan></text>
 <g id="v-text-A.2.1">
+<rect x="57.0" y="5153.2" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="5171.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2_Printed.lean#L19"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Printed.ratAdeleFundamentalDomain_disjoint</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2_Printed.lean:19</tspan></text>
 <text x="88.0" y="5191.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This is the specialization to ℚ with integral basis 1 and its unique real place, using the absolute value in (A.2.1.1) on the real coefficient. The general formula does not specify the scalar domain of its coefficients. See ERRATA F4.</text>
 </g>
@@ -913,8 +943,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5209.950000000005" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.2.1.1">
+<rect x="47.0" y="5376.9" width="2306.0" height="312.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5400.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.1.1"><tspan font-weight="bold">Definition A.2.1.1</tspan></a><tspan font-weight="bold"> · p. 545 · 4 declarations, 3 deviating from the print</tspan></text>
 <g id="v-definition-A.2.1.1">
+<rect x="57.0" y="5407.1" width="2292.0" height="139.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="5425.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2.lean#L46"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">infiniteAdeleFundamentalDomain</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2.lean:46</tspan></text>
 <text x="88.0" y="5445.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We use the signed real coordinates and all the basis vectors specified on p. 554.</text>
 <text x="70.0" y="5470.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2.lean#L55"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">infiniteAdeleFundamentalDomain_basis_line</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2.lean:55</tspan></text>
@@ -953,6 +985,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5555.425000000008" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.1.2">
+<rect x="47.0" y="5697.7" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5721.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.1.2"><tspan font-weight="bold">Lemma A.2.1.2</tspan></a><tspan font-weight="bold"> · p. 545 · 2 declarations</tspan></text>
 <rect x="56" y="5733.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="5750.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -975,6 +1008,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5732.9750000000095" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-A.2.1.3">
+<rect x="47.0" y="5826.1" width="2306.0" height="194.2" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5850.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-example-A.2.1.3"><tspan font-weight="bold">Example A.2.1.3</tspan></a><tspan font-weight="bold"> · pp. 545–546 · 5 declarations</tspan></text>
 <rect x="56" y="5861.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="5878.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1012,6 +1046,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5861.32500000001" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.2.2.1">
+<rect x="47.0" y="6028.2" width="2306.0" height="464.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="6052.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.2.2.1"><tspan font-weight="bold">(A.2.2.1)</tspan></a><tspan font-weight="bold"> · p. 546 · 16 declarations</tspan></text>
 <rect x="56" y="6063.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="6081.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1104,8 +1139,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="6063.475000000011" width="2288" height="420.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.2.1">
+<rect x="47.0" y="6501.0" width="2306.0" height="221.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="6525.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.2.1"><tspan font-weight="bold">Lemma A.2.2.1</tspan></a><tspan font-weight="bold"> · p. 546 · 4 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.2.2.1">
+<rect x="57.0" y="6531.2" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="6549.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2.lean#L751"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">ratIdeleNormSection_class_rightInverse</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2.lean:751</tspan></text>
 <text x="88.0" y="6569.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The paper's class-valued statement requires composition with the quotient map.</text>
 </g>
@@ -1140,8 +1177,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="6588.000000000017" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.2.2">
+<rect x="47.0" y="6730.3" width="2306.0" height="934.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="6754.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.2.2"><tspan font-weight="bold">Lemma A.2.2.2</tspan></a><tspan font-weight="bold"> · p. 546 · 33 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.2.2.2">
+<rect x="57.0" y="6760.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="6778.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2.lean#L1179"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">rationalAdeleEmbedding_hasBasis</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2.lean:1179</tspan></text>
 <text x="88.0" y="6798.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This sanity check rules out the default determinant on modules without a finite basis.</text>
 </g>
@@ -1321,6 +1360,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="6817.325000000019" width="2288" height="838.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.2.2.3">
+<rect x="47.0" y="7673.0" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="7697.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.2.3"><tspan font-weight="bold">Definition A.2.2.3</tspan></a><tspan font-weight="bold"> · p. 547 · 1 declaration</tspan></text>
 <rect x="56" y="7708.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="7725.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1338,6 +1378,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="7708.275000000031" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.2.2.3">
+<rect x="47.0" y="7776.8" width="2306.0" height="218.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="7800.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.2.2.3"><tspan font-weight="bold">(A.2.2.3)</tspan></a><tspan font-weight="bold"> · p. 546 · 6 declarations</tspan></text>
 <rect x="56" y="7812.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="7829.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1380,6 +1421,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="7812.025000000031" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.2.4">
+<rect x="47.0" y="8003.5" width="2306.0" height="169.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="8027.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.2.4"><tspan font-weight="bold">Lemma A.2.2.4</tspan></a><tspan font-weight="bold"> · p. 547 · 4 declarations</tspan></text>
 <rect x="56" y="8038.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="8056.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1412,6 +1454,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="8038.775000000032" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.2.2.5">
+<rect x="47.0" y="8181.1" width="2306.0" height="145.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="8205.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.2.5"><tspan font-weight="bold">Definition A.2.2.5</tspan></a><tspan font-weight="bold"> · p. 547 · 3 declarations</tspan></text>
 <rect x="56" y="8216.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="8233.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1439,6 +1482,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="8216.325000000033" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.2.2.7">
+<rect x="47.0" y="8334.0" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="8358.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.2.7"><tspan font-weight="bold">Definition A.2.2.7</tspan></a><tspan font-weight="bold"> · p. 547 · 1 declaration</tspan></text>
 <rect x="56" y="8369.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="8386.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1456,6 +1500,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="8369.275000000034" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.2.8">
+<rect x="47.0" y="8437.8" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="8461.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.2.8"><tspan font-weight="bold">Lemma A.2.2.8</tspan></a><tspan font-weight="bold"> · p. 547 · 2 declarations</tspan></text>
 <rect x="56" y="8473.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="8490.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1478,8 +1523,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="8473.025000000034" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.2.9">
+<rect x="47.0" y="8566.1" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="8590.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.2.9"><tspan font-weight="bold">Lemma A.2.2.9</tspan></a><tspan font-weight="bold"> · p. 547 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.2.2.9">
+<rect x="57.0" y="8596.4" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="8614.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2.lean#L1900"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">ideleNormSection_product</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2.lean:1900</tspan></text>
 <text x="88.0" y="8634.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We use a homomorphic section, as in the introduction to §A.2.2.</text>
 </g>
@@ -1500,6 +1547,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="8757.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec2b.lean</tspan></text>
 <g id="d-definition-A.2.3.1">
+<rect x="47.0" y="8764.7" width="2306.0" height="218.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="8788.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.3.1"><tspan font-weight="bold">Definition A.2.3.1</tspan></a><tspan font-weight="bold"> · p. 548 · 6 declarations</tspan></text>
 <rect x="56" y="8799.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="8817.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1542,6 +1590,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="8799.900000000034" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.3.2">
+<rect x="47.0" y="8991.4" width="2306.0" height="268.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9015.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.3.2"><tspan font-weight="bold">Lemma A.2.3.2</tspan></a><tspan font-weight="bold"> · p. 548 · 8 declarations</tspan></text>
 <rect x="56" y="9026.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="9044.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1594,6 +1643,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9026.650000000036" width="2288" height="223.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.2.3.3">
+<rect x="47.0" y="9267.4" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9291.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.3.3"><tspan font-weight="bold">Definition A.2.3.3</tspan></a><tspan font-weight="bold"> · p. 548 · 1 declaration</tspan></text>
 <rect x="56" y="9302.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="9320.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1611,6 +1661,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9302.600000000039" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.3.4">
+<rect x="47.0" y="9371.1" width="2306.0" height="292.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9395.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.3.4"><tspan font-weight="bold">Lemma A.2.3.4</tspan></a><tspan font-weight="bold"> · p. 548 · 9 declarations</tspan></text>
 <rect x="56" y="9406.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="9423.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1668,8 +1719,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9406.350000000039" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.3.5">
+<rect x="47.0" y="9671.7" width="2306.0" height="245.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9695.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.3.5"><tspan font-weight="bold">Lemma A.2.3.5</tspan></a><tspan font-weight="bold"> · p. 549 · 5 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.2.3.5">
+<rect x="57.0" y="9701.9" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="9719.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2b.lean#L571"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">regulatorParallelotope_precompact</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2b.lean:571</tspan></text>
 <text x="88.0" y="9740.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We take F to be the number field of (A.2.3.5).</text>
 </g>
@@ -1709,6 +1762,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9758.675000000041" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.2.3.6">
+<rect x="47.0" y="9925.6" width="2306.0" height="292.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="9949.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.3.6"><tspan font-weight="bold">Definition A.2.3.6</tspan></a><tspan font-weight="bold"> · p. 549 · 9 declarations</tspan></text>
 <rect x="56" y="9960.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="9978.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1766,6 +1820,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="9960.825000000043" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.2.3.8">
+<rect x="47.0" y="10226.1" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10250.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.2.3.8"><tspan font-weight="bold">(A.2.3.8)</tspan></a><tspan font-weight="bold"> · p. 549 · 1 declaration</tspan></text>
 <rect x="56" y="10261.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="10278.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1783,8 +1838,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="10261.375000000045" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.3.8">
+<rect x="47.0" y="10329.9" width="2306.0" height="467.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10353.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.3.8"><tspan font-weight="bold">Lemma A.2.3.8</tspan></a><tspan font-weight="bold"> · p. 550 · 14 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.2.3.8">
+<rect x="57.0" y="10360.1" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="10378.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2b.lean#L1467"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">infiniteIdeleFundamentalDomain_finite_translates</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2b.lean:1467</tspan></text>
 <text x="88.0" y="10398.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We use K as in the preceding sentence and the proof on p. 551.</text>
 </g>
@@ -1869,6 +1926,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="10416.900000000045" width="2288" height="371.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.2.3.9">
+<rect x="47.0" y="10805.2" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10829.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.2.3.9"><tspan font-weight="bold">(A.2.3.9)</tspan></a><tspan font-weight="bold"> · p. 549 · 2 declarations</tspan></text>
 <rect x="56" y="10840.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="10858.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1891,8 +1949,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="10840.45000000005" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-A.2.3.9">
+<rect x="47.0" y="10933.6" width="2306.0" height="196.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10957.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-proposition-A.2.3.9"><tspan font-weight="bold">Proposition A.2.3.9</tspan></a><tspan font-weight="bold"> · p. 552 · 3 declarations, 1 deviating from the print</tspan></text>
 <g id="v-proposition-A.2.3.9">
+<rect x="57.0" y="10963.8" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="10981.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2b.lean#L1522"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">idele_principal_integral_exact</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2b.lean:1522</tspan></text>
 <text x="88.0" y="11001.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We order the factors as the discrete field units followed by the integral idele group. For the multiplication map the two copies of a kernel unit are inverse.</text>
 </g>
@@ -1922,6 +1982,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="11020.57500000005" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-A.2.3.10">
+<rect x="47.0" y="11138.3" width="2306.0" height="341.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11162.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-proposition-A.2.3.10"><tspan font-weight="bold">Proposition A.2.3.10</tspan></a><tspan font-weight="bold"> · p. 552 · 11 declarations</tspan></text>
 <rect x="56" y="11173.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="11191.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1989,6 +2050,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="11173.52500000005" width="2288" height="297.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.3.11">
+<rect x="47.0" y="11488.0" width="2306.0" height="169.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11512.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.3.11"><tspan font-weight="bold">Lemma A.2.3.11</tspan></a><tspan font-weight="bold"> · p. 553 · 4 declarations</tspan></text>
 <rect x="56" y="11523.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="11540.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2021,6 +2083,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="11523.275000000054" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.2.3.12">
+<rect x="47.0" y="11665.6" width="2306.0" height="169.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11689.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.2.3.12"><tspan font-weight="bold">(A.2.3.12)</tspan></a><tspan font-weight="bold"> · p. 549 · 4 declarations</tspan></text>
 <rect x="56" y="11700.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="11718.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2053,6 +2116,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="11700.825000000055" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.3.12">
+<rect x="47.0" y="11843.1" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11867.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.3.12"><tspan font-weight="bold">Lemma A.2.3.12</tspan></a><tspan font-weight="bold"> · p. 553 · 1 declaration</tspan></text>
 <rect x="56" y="11878.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="11895.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2070,6 +2134,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="11878.375000000056" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.3.13">
+<rect x="47.0" y="11946.9" width="2306.0" height="194.2" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11970.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.3.13"><tspan font-weight="bold">Lemma A.2.3.13</tspan></a><tspan font-weight="bold"> · p. 553 · 5 declarations</tspan></text>
 <rect x="56" y="11982.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="11999.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2107,6 +2172,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="11982.125000000056" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.2.4.1">
+<rect x="47.0" y="12149.0" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12173.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.4.1"><tspan font-weight="bold">Definition A.2.4.1</tspan></a><tspan font-weight="bold"> · p. 554 · 2 declarations</tspan></text>
 <rect x="56" y="12184.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="12201.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2129,6 +2195,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12184.275000000058" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.2.4.2">
+<rect x="47.0" y="12277.4" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12301.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.2.4.2"><tspan font-weight="bold">Lemma A.2.4.2</tspan></a><tspan font-weight="bold"> · p. 554 · 2 declarations</tspan></text>
 <rect x="56" y="12312.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="12330.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2151,6 +2218,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12312.625000000058" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-text-A.2.4.2">
+<rect x="47.0" y="12405.7" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12429.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-text-A.2.4.2"><tspan font-weight="bold">§A.2.4.2</tspan></a><tspan font-weight="bold"> · p. 554 · 1 declaration</tspan></text>
 <rect x="56" y="12441.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="12458.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2168,8 +2236,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12440.975000000059" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.2.4.3">
+<rect x="47.0" y="12509.5" width="2306.0" height="604.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12533.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.2.4.3"><tspan font-weight="bold">Definition A.2.4.3</tspan></a><tspan font-weight="bold"> · pp. 554–555 · 14 declarations, 4 deviating from the print</tspan></text>
 <g id="v-definition-A.2.4.3">
+<rect x="57.0" y="12539.7" width="2292.0" height="185.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="12557.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2b.lean#L2752"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sRegulatorParallelotope</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2b.lean:2752</tspan></text>
 <text x="88.0" y="12577.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The integral basis is of the S-units modulo torsion. We take representatives to evaluate their logarithms.</text>
 <text x="70.0" y="12603.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2b.lean#L2903"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sRegulatorParallelotope_basis_line</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2b.lean:2903</tspan></text>
@@ -2260,8 +2330,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12733.825000000057" width="2288" height="371.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-A.2.4.4">
+<rect x="47.0" y="13122.1" width="2306.0" height="801.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="13146.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-proposition-A.2.4.4"><tspan font-weight="bold">Proposition A.2.4.4</tspan></a><tspan font-weight="bold"> · p. 555 · 22 declarations, 4 deviating from the print</tspan></text>
 <g id="v-proposition-A.2.4.4">
+<rect x="57.0" y="13152.4" width="2292.0" height="185.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="13170.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2b.lean#L3477"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sIdeleFundamentalDomain_precompact</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2b.lean:3477</tspan></text>
 <text x="88.0" y="13190.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We state the case where the prescribed representatives exist.</text>
 <text x="70.0" y="13216.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2b.lean#L3487"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sIdeleFundamentalDomain_interior</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2b.lean:3487</tspan></text>
@@ -2392,8 +2464,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="13346.47500000006" width="2288" height="568.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-A.2.4.5">
+<rect x="47.0" y="13931.6" width="2306.0" height="245.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="13955.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-remark-A.2.4.5"><tspan font-weight="bold">Remark A.2.4.5</tspan></a><tspan font-weight="bold"> · p. 555 · 5 declarations, 1 deviating from the print</tspan></text>
 <g id="v-remark-A.2.4.5">
+<rect x="57.0" y="13961.8" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="13979.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec2b.lean#L3603"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">exists_rat_prime_idele_outside</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec2b.lean:3603</tspan></text>
 <text x="88.0" y="13999.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This gives a counterexample to the asserted cover inside the full norm-one group.</text>
 </g>
@@ -2434,6 +2508,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="14221.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3.lean</tspan></text>
 <g id="d-text-A.3.1">
+<rect x="47.0" y="14228.5" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="14252.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-text-A.3.1"><tspan font-weight="bold">§A.3.1</tspan></a><tspan font-weight="bold"> · p. 556 · 1 declaration</tspan></text>
 <rect x="56" y="14263.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="14281.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2451,8 +2526,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="14263.75000000007" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.3.1.1">
+<rect x="47.0" y="14332.3" width="2306.0" height="368.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="14356.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.3.1.1"><tspan font-weight="bold">Definition A.3.1.1</tspan></a><tspan font-weight="bold"> · p. 555 · 10 declarations, 1 deviating from the print</tspan></text>
 <g id="v-definition-A.3.1.1">
+<rect x="57.0" y="14362.5" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="14380.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L486"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdditiveCovolumeOneMeasure</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:486</tspan></text>
 <text x="88.0" y="14400.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The notation distinguishes it from the product measure of Definition A.3.4.1.</text>
 </g>
@@ -2517,6 +2594,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="14419.275000000069" width="2288" height="272.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-text-A.3.1.1">
+<rect x="47.0" y="14709.2" width="2306.0" height="145.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="14733.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-text-A.3.1.1"><tspan font-weight="bold">§A.3.1.1</tspan></a><tspan font-weight="bold"> · p. 557 · 3 declarations</tspan></text>
 <rect x="56" y="14744.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="14761.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2544,8 +2622,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="14744.425000000072" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.3.1.2">
+<rect x="47.0" y="14862.1" width="2306.0" height="245.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="14886.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.3.1.2"><tspan font-weight="bold">Definition A.3.1.2</tspan></a><tspan font-weight="bold"> · p. 556 · 5 declarations, 1 deviating from the print</tspan></text>
 <g id="v-definition-A.3.1.2">
+<rect x="57.0" y="14892.4" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="14910.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L669"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finiteLocalAdditiveTamagawaMeasure</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:669</tspan></text>
 <text x="88.0" y="14930.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The norm is computed using the corresponding exponent in the global different.</text>
 </g>
@@ -2585,8 +2665,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="14949.150000000072" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.3.1.3">
+<rect x="47.0" y="15116.1" width="2306.0" height="393.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="15140.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.3.1.3"><tspan font-weight="bold">Lemma A.3.1.3</tspan></a><tspan font-weight="bold"> · p. 556 · 11 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.3.1.3">
+<rect x="57.0" y="15146.3" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="15164.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L943"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">additiveTamagawaMeasure_restrictedProduct</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:943</tspan></text>
 <text x="88.0" y="15184.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The infinite places are grouped into a finite product measure.</text>
 </g>
@@ -2656,6 +2738,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="15203.075000000073" width="2288" height="297.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.3.1.4">
+<rect x="47.0" y="15517.6" width="2306.0" height="489.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="15541.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.3.1.4"><tspan font-weight="bold">Lemma A.3.1.4</tspan></a><tspan font-weight="bold"> · p. 556 · 17 declarations</tspan></text>
 <rect x="56" y="15552.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="15570.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2753,6 +2836,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="15552.825000000077" width="2288" height="445.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-A.3.1.5">
+<rect x="47.0" y="16014.9" width="2306.0" height="145.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="16038.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-example-A.3.1.5"><tspan font-weight="bold">Example A.3.1.5</tspan></a><tspan font-weight="bold"> · p. 557 · 3 declarations</tspan></text>
 <rect x="56" y="16050.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="16067.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2780,8 +2864,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="16050.175000000083" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-A.3.1.6">
+<rect x="47.0" y="16167.9" width="2306.0" height="848.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="16191.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-example-A.3.1.6"><tspan font-weight="bold">Example A.3.1.6</tspan></a><tspan font-weight="bold"> · p. 557 · 25 declarations, 3 deviating from the print</tspan></text>
 <g id="v-example-A.3.1.6">
+<rect x="57.0" y="16198.1" width="2292.0" height="158.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="16216.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L1848"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">padicStandardCharacter</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:1848</tspan></text>
 <text x="88.0" y="16236.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">the sign is opposite to the printed <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">exp(2πit)</tspan>. With the printed sign at the real place (Example A.3.1.5) and at the p-adic places, the product character of Example A.3.1.8 takes the value <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">exp(4πi/3)</tspan> on the rational number 1/3. It must be trivial on the rationals for Theorem 2.2.3.2 and Theorem 3.2.2.1, as in Tate's thesis, where the two kinds of place carry opposite signs. The</text>
 <text x="88.0" y="16255.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">real character keeps the printed sign.</text>
@@ -2926,6 +3012,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="16365.650000000081" width="2288" height="641.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-A.3.1.7">
+<rect x="47.0" y="17024.6" width="2306.0" height="144.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="17048.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-example-A.3.1.7"><tspan font-weight="bold">Example A.3.1.7</tspan></a><tspan font-weight="bold"> · pp. 557–558 · 3 declarations</tspan></text>
 <rect x="56" y="17059.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="17077.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2953,6 +3040,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="17059.800000000047" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-A.3.1.8">
+<rect x="47.0" y="17177.5" width="2306.0" height="710.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="17201.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-example-A.3.1.8"><tspan font-weight="bold">Example A.3.1.8</tspan></a><tspan font-weight="bold"> · p. 558 · 26 declarations</tspan></text>
 <rect x="56" y="17212.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="17230.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3095,8 +3183,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="17212.750000000044" width="2288" height="666.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-A.3.1.9">
+<rect x="47.0" y="17896.3" width="2306.0" height="344.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="17920.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-example-A.3.1.9"><tspan font-weight="bold">Example A.3.1.9</tspan></a><tspan font-weight="bold"> · p. 558 · 9 declarations, 1 deviating from the print</tspan></text>
 <g id="v-example-A.3.1.9">
+<rect x="57.0" y="17926.5" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="17944.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L3474"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">adeleStandardCharacter</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:3474</tspan></text>
 <text x="88.0" y="17964.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The displayed field trace is extended to the adele algebra as required by its domain.</text>
 </g>
@@ -3156,8 +3246,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="17983.275000000005" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-A.3.1.10">
+<rect x="47.0" y="18248.6" width="2306.0" height="1124.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="18272.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-example-A.3.1.10"><tspan font-weight="bold">Example A.3.1.10</tspan></a><tspan font-weight="bold"> · p. 558 · 37 declarations, 3 deviating from the print</tspan></text>
 <g id="v-example-A.3.1.10">
+<rect x="57.0" y="18278.8" width="2292.0" height="139.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="18296.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L4036"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finiteLocalStandardCharacter</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:4036</tspan></text>
 <text x="88.0" y="18316.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">It is expressed by restriction of the adelic trace, whose component is the local trace.</text>
 <text x="70.0" y="18342.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L5117"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finiteLocalStandardCharacter_annihilator_integers</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:5117</tspan></text>
@@ -3361,8 +3453,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="18427.149999999987" width="2288" height="937.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-A.3.1.11">
+<rect x="47.0" y="19381.2" width="2306.0" height="780.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="19405.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-example-A.3.1.11"><tspan font-weight="bold">Example A.3.1.11</tspan></a><tspan font-weight="bold"> · pp. 558–559 · 23 declarations, 3 deviating from the print</tspan></text>
 <g id="v-example-A.3.1.11">
+<rect x="57.0" y="19411.5" width="2292.0" height="139.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="19429.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L5259"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdeleStandardCharacter</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:5259</tspan></text>
 <text x="88.0" y="19449.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Each local character is expressed as a restriction of the global trace character.</text>
 <text x="70.0" y="19475.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L5434"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdeleStandardCharacter_sInteger</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:5434</tspan></text>
@@ -3496,6 +3590,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="19559.824999999928" width="2288" height="592.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.3.2.1">
+<rect x="47.0" y="20169.5" width="2306.0" height="587.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="20193.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.3.2.1"><tspan font-weight="bold">Definition A.3.2.1</tspan></a><tspan font-weight="bold"> · pp. 559–560 · 21 declarations</tspan></text>
 <rect x="56" y="20204.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="20222.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3613,6 +3708,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="20204.774999999896" width="2288" height="543.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.3.2.2">
+<rect x="47.0" y="20765.3" width="2306.0" height="243.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="20789.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.3.2.2"><tspan font-weight="bold">Definition A.3.2.2</tspan></a><tspan font-weight="bold"> · p. 560 · 7 declarations</tspan></text>
 <rect x="56" y="20800.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="20818.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3660,6 +3756,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="20800.524999999867" width="2288" height="199.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.3.2.3">
+<rect x="47.0" y="21016.6" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="21040.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.3.2.3"><tspan font-weight="bold">Lemma A.3.2.3</tspan></a><tspan font-weight="bold"> · p. 560 · 1 declaration</tspan></text>
 <rect x="56" y="21051.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="21069.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3677,6 +3774,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="21051.874999999858" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.3.2.4">
+<rect x="47.0" y="21120.4" width="2306.0" height="784.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="21144.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.3.2.4"><tspan font-weight="bold">Lemma A.3.2.4</tspan></a><tspan font-weight="bold"> · p. 560 · 29 declarations</tspan></text>
 <rect x="56" y="21155.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="21173.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3834,8 +3932,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="21155.624999999858" width="2288" height="740.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-text-A.3.3.1">
+<rect x="47.0" y="21912.9" width="2306.0" height="368.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="21936.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-text-A.3.3.1"><tspan font-weight="bold">§A.3.3.1</tspan></a><tspan font-weight="bold"> · p. 561 · 10 declarations, 1 deviating from the print</tspan></text>
 <g id="v-text-A.3.3.1">
+<rect x="57.0" y="21943.2" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="21961.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L7568"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">multiplicativeTamagawaMeasure_sectionStrip</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:7568</tspan></text>
 <text x="88.0" y="21981.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The formula uses <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">T ≥ 1</tspan> so that the logarithm equals the interval mass.</text>
 </g>
@@ -3900,6 +4000,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="21999.949999999815" width="2288" height="272.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.3.4.1">
+<rect x="47.0" y="22289.8" width="2306.0" height="390.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="22313.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.3.4.1"><tspan font-weight="bold">Definition A.3.4.1</tspan></a><tspan font-weight="bold"> · p. 561 · 13 declarations</tspan></text>
 <rect x="56" y="22325.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="22342.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3977,8 +4078,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="22325.099999999802" width="2288" height="346.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-A.3.4.2">
+<rect x="47.0" y="22688.8" width="2306.0" height="242.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="22712.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-remark-A.3.4.2"><tspan font-weight="bold">Remark A.3.4.2</tspan></a><tspan font-weight="bold"> · p. 562 · 3 declarations, 2 deviating from the print</tspan></text>
 <g id="v-remark-A.3.4.2">
+<rect x="57.0" y="22719.0" width="2292.0" height="93.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="22737.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L8281"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sAdditiveTamagawaMeasure_quotientVolume</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:8281</tspan></text>
 <text x="88.0" y="22757.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The prime-to-S part is taken over places of the number field.</text>
 <text x="70.0" y="22782.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec3.lean#L8313"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finiteLocalTamagawaFourier_fixes_integers_iff</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec3.lean:8313</tspan></text>
@@ -4011,8 +4114,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="22975.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec4.lean</tspan></text>
 <g id="d-theorem-A.4.1.1">
+<rect x="47.0" y="22982.3" width="2306.0" height="488.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="23006.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.4.1.1"><tspan font-weight="bold">Theorem A.4.1.1</tspan></a><tspan font-weight="bold"> · p. 562 · 13 declarations, 2 deviating from the print</tspan></text>
 <g id="v-theorem-A.4.1.1">
+<rect x="57.0" y="23012.5" width="2292.0" height="93.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="23030.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec4.lean#L126"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">continuousAt_sAdeleUnitBoxIndicator</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec4.lean:126</tspan></text>
 <text x="88.0" y="23050.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The continuity assertion specifies where the piecewise constant function is continuous by excluding the frontier of its support.</text>
 <text x="70.0" y="23076.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec4.lean#L249"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sUnit_unitBox_count_bound</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec4.lean:249</tspan></text>
@@ -4094,8 +4199,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="23115.099999999773" width="2288" height="346.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-claim-A.4.1.2">
+<rect x="47.0" y="23478.8" width="2306.0" height="196.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="23502.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-claim-A.4.1.2"><tspan font-weight="bold">Claim A.4.1.2</tspan></a><tspan font-weight="bold"> · p. 564 · 3 declarations, 1 deviating from the print</tspan></text>
 <g id="v-claim-A.4.1.2">
+<rect x="57.0" y="23509.0" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="23527.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec4.lean#L467"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sIdeleLog_basic_slice_subset_closedBall</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec4.lean:467</tspan></text>
 <text x="88.0" y="23547.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The representatives project from global norm-one ideles that are units outside S. A basic idele is the diagonal section times an archimedean domain point with finite components in the local unit groups.</text>
 </g>
@@ -4126,6 +4233,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="23719.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec5a.lean</tspan></text>
 <g id="d-eq-A.5.1.1">
+<rect x="47.0" y="23726.5" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="23750.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.1.1"><tspan font-weight="bold">(A.5.1.1)</tspan></a><tspan font-weight="bold"> · p. 566 · 1 declaration</tspan></text>
 <rect x="56" y="23761.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="23779.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4143,8 +4251,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="23761.77499999975" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.5.1.1">
+<rect x="47.0" y="23830.3" width="2306.0" height="221.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="23854.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.1.1"><tspan font-weight="bold">Theorem A.5.1.1</tspan></a><tspan font-weight="bold"> · p. 566 · 4 declarations, 1 deviating from the print</tspan></text>
 <g id="v-theorem-A.5.1.1">
+<rect x="57.0" y="23860.5" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="23878.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L119"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">realCenteredMaximal_measurable</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:119</tspan></text>
 <text x="88.0" y="23898.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The separate almost-everywhere finiteness claim fails for the all-radii operator.</text>
 </g>
@@ -4179,8 +4289,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="23917.29999999975" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.1.2">
+<rect x="47.0" y="24059.6" width="2306.0" height="172.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="24083.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.1.2"><tspan font-weight="bold">(A.5.1.2)</tspan></a><tspan font-weight="bold"> · p. 566 · 2 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-A.5.1.2">
+<rect x="57.0" y="24089.8" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="24107.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L63"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">realCenteredMaximal</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:63</tspan></text>
 <text x="88.0" y="24127.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The supremum over all radii expresses the intended operator behind the printed “lim sup”. Extended nonnegative integrals also define the formula on locally integrable inputs.</text>
 </g>
@@ -4205,6 +4317,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="24146.62499999974" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.5.1.3">
+<rect x="47.0" y="24239.7" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="24263.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.1.3"><tspan font-weight="bold">Theorem A.5.1.3</tspan></a><tspan font-weight="bold"> · p. 568 · 1 declaration</tspan></text>
 <rect x="56" y="24275.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="24292.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4222,6 +4335,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="24274.97499999974" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.1.8">
+<rect x="47.0" y="24343.5" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="24367.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.1.8"><tspan font-weight="bold">(A.5.1.8)</tspan></a><tspan font-weight="bold"> · p. 567 · 1 declaration</tspan></text>
 <rect x="56" y="24378.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="24396.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4239,6 +4353,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="24378.72499999974" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-definition-A.5.2.1">
+<rect x="47.0" y="24447.2" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="24471.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-definition-A.5.2.1"><tspan font-weight="bold">Definition A.5.2.1</tspan></a><tspan font-weight="bold"> · p. 569 · 2 declarations</tspan></text>
 <rect x="56" y="24482.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="24500.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4261,6 +4376,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="24482.47499999974" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-A.5.2.2">
+<rect x="47.0" y="24575.6" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="24599.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-remark-A.5.2.2"><tspan font-weight="bold">Remark A.5.2.2</tspan></a><tspan font-weight="bold"> · p. 569 · 1 declaration</tspan></text>
 <rect x="56" y="24610.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="24628.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4278,8 +4394,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="24610.82499999974" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-A.5.2.3">
+<rect x="47.0" y="24679.3" width="2306.0" height="245.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="24703.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-proposition-A.5.2.3"><tspan font-weight="bold">Proposition A.5.2.3</tspan></a><tspan font-weight="bold"> · p. 570 · 5 declarations, 1 deviating from the print</tspan></text>
 <g id="v-proposition-A.5.2.3">
+<rect x="57.0" y="24709.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="24727.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L407"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">exists_isDDoublePrimeSequence_of_totallyDisconnected</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:407</tspan></text>
 <text x="88.0" y="24747.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Local profiniteness is expressed by total disconnectedness together with the ambient Hausdorff local compactness. The stated comparison constant one is for the D″ condition. The proof's choice of doubling constant one violates strictness.</text>
 </g>
@@ -4319,6 +4437,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="24766.349999999737" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-A.5.2.4">
+<rect x="47.0" y="24933.2" width="2306.0" height="144.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="24957.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-remark-A.5.2.4"><tspan font-weight="bold">Remark A.5.2.4</tspan></a><tspan font-weight="bold"> · p. 570 · 3 declarations</tspan></text>
 <rect x="56" y="24968.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="24986.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4346,8 +4465,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="24968.49999999973" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.5.2.5">
+<rect x="47.0" y="25086.2" width="2306.0" height="270.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="25110.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.2.5"><tspan font-weight="bold">Lemma A.5.2.5</tspan></a><tspan font-weight="bold"> · p. 570 · 6 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.5.2.5">
+<rect x="57.0" y="25116.4" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="25134.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L602"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">IsDSequence.prod</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:602</tspan></text>
 <text x="88.0" y="25154.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The product Haar measure is specified by its values on Borel rectangles. This formulation also covers groups whose Haar measure is outside the scope of Mathlib's <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">Measure.prod</tspan> construction.</text>
 </g>
@@ -4392,6 +4513,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="25173.224999999726" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-proposition-A.5.2.6">
+<rect x="47.0" y="25364.7" width="2306.0" height="243.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="25388.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-proposition-A.5.2.6"><tspan font-weight="bold">Proposition A.5.2.6</tspan></a><tspan font-weight="bold"> · pp. 570–574 · 7 declarations</tspan></text>
 <rect x="56" y="25400.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="25417.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4439,6 +4561,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="25399.97499999972" width="2288" height="199.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.5.2.8">
+<rect x="47.0" y="25616.1" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="25640.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.2.8"><tspan font-weight="bold">Theorem A.5.2.8</tspan></a><tspan font-weight="bold"> · p. 571 · 1 declaration</tspan></text>
 <rect x="56" y="25651.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="25668.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4456,8 +4579,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="25651.32499999971" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.5.2.10">
+<rect x="47.0" y="25719.8" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="25743.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.2.10"><tspan font-weight="bold">Lemma A.5.2.10</tspan></a><tspan font-weight="bold"> · p. 572 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.5.2.10">
+<rect x="57.0" y="25750.1" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="25768.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L944"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">exists_borel_orbit_transversal</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:944</tspan></text>
 <text x="88.0" y="25788.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The group acts on X, as specified by the quotient and proof.</text>
 </g>
@@ -4477,8 +4602,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="25806.849999999708" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.11">
+<rect x="47.0" y="25875.3" width="2306.0" height="172.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="25899.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.11"><tspan font-weight="bold">(A.5.2.11)</tspan></a><tspan font-weight="bold"> · p. 574 · 2 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-A.5.2.11">
+<rect x="57.0" y="25905.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="25923.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L1029"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">centeredRegulatorParallelotope</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:1029</tspan></text>
 <text x="88.0" y="25943.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">As in §A.2.3, logarithmic coordinates omit one infinite place.</text>
 </g>
@@ -4503,6 +4630,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="25962.374999999705" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.5.2.12">
+<rect x="47.0" y="26055.5" width="2306.0" height="292.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="26079.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.2.12"><tspan font-weight="bold">Lemma A.5.2.12</tspan></a><tspan font-weight="bold"> · p. 575 · 9 declarations</tspan></text>
 <rect x="56" y="26090.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="26108.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4560,6 +4688,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="26090.724999999704" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.13">
+<rect x="47.0" y="26356.0" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="26380.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.13"><tspan font-weight="bold">(A.5.2.13)</tspan></a><tspan font-weight="bold"> · p. 575 · 2 declarations</tspan></text>
 <rect x="56" y="26391.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="26408.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4582,8 +4711,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="26391.274999999692" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.14">
+<rect x="47.0" y="26484.4" width="2306.0" height="196.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="26508.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.14"><tspan font-weight="bold">(A.5.2.14)</tspan></a><tspan font-weight="bold"> · p. 575 · 3 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-A.5.2.14">
+<rect x="57.0" y="26514.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="26532.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L1066"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">inCenteredTorsionSector</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:1066</tspan></text>
 <text x="88.0" y="26552.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">We use the principal argument, so the two intervals in the paper are one half-open interval centered at zero.</text>
 </g>
@@ -4613,6 +4744,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="26571.39999999969" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.15">
+<rect x="47.0" y="26689.1" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="26713.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.15"><tspan font-weight="bold">(A.5.2.15)</tspan></a><tspan font-weight="bold"> · p. 575 · 2 declarations</tspan></text>
 <rect x="56" y="26724.3" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="26741.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4635,8 +4767,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="26724.349999999686" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.18">
+<rect x="47.0" y="26817.4" width="2306.0" height="245.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="26841.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.18"><tspan font-weight="bold">(A.5.2.18)</tspan></a><tspan font-weight="bold"> · p. 575 · 5 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-A.5.2.18">
+<rect x="57.0" y="26847.7" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="26865.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L1151"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">centeredSRegulatorParallelotope</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:1151</tspan></text>
 <text x="88.0" y="26885.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">As in §A.2.4, the integral basis is taken modulo torsion.</text>
 </g>
@@ -4676,6 +4810,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="26904.474999999682" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.19">
+<rect x="47.0" y="27071.4" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="27095.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.19"><tspan font-weight="bold">(A.5.2.19)</tspan></a><tspan font-weight="bold"> · p. 576 · 2 declarations</tspan></text>
 <rect x="56" y="27106.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="27124.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4698,8 +4833,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="27106.624999999676" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.21">
+<rect x="47.0" y="27199.7" width="2306.0" height="172.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="27223.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.21"><tspan font-weight="bold">(A.5.2.21)</tspan></a><tspan font-weight="bold"> · p. 576 · 2 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-A.5.2.21">
+<rect x="57.0" y="27230.0" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="27248.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L2307"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalIdeleLogNeighborhood</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:2307</tspan></text>
 <text x="88.0" y="27268.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The finite sets are supplied via their images in the units at the finite places of S.</text>
 </g>
@@ -4724,8 +4861,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="27286.749999999673" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.22">
+<rect x="47.0" y="27379.8" width="2306.0" height="172.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="27403.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.22"><tspan font-weight="bold">(A.5.2.22)</tspan></a><tspan font-weight="bold"> · p. 577 · 2 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-A.5.2.22">
+<rect x="57.0" y="27410.1" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="27428.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L2396"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">normSectionNeighborhood</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:2396</tspan></text>
 <text x="88.0" y="27448.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The formula is defined only at positive indices.</text>
 </g>
@@ -4750,6 +4889,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="27466.87499999967" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.2.23">
+<rect x="47.0" y="27560.0" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="27584.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.2.23"><tspan font-weight="bold">(A.5.2.23)</tspan></a><tspan font-weight="bold"> · p. 577 · 2 declarations</tspan></text>
 <rect x="56" y="27595.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="27612.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4773,6 +4913,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="27724.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec5a_Printed.lean</tspan></text>
 <g id="d-lemma-A.5.2.13">
+<rect x="47.0" y="27731.3" width="2306.0" height="513.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="27755.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.2.13"><tspan font-weight="bold">Lemma A.5.2.13</tspan></a><tspan font-weight="bold"> · p. 576 · 18 declarations</tspan></text>
 <rect x="56" y="27766.6" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="27784.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -4875,8 +5016,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="27766.574999999666" width="2288" height="469.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.5.2.14">
+<rect x="47.0" y="28253.3" width="2306.0" height="270.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="28277.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.2.14"><tspan font-weight="bold">Lemma A.5.2.14</tspan></a><tspan font-weight="bold"> · p. 576 · 6 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.5.2.14">
+<rect x="57.0" y="28283.5" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="28301.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L2328"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">inv_sLocalIdeleLogNeighborhood</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:2328</tspan></text>
 <text x="88.0" y="28321.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The D′ condition fails for the printed sequence.</text>
 </g>
@@ -4921,8 +5064,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="28340.29999999964" width="2288" height="174.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.5.2.15">
+<rect x="47.0" y="28531.8" width="2306.0" height="172.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="28555.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.2.15"><tspan font-weight="bold">Lemma A.5.2.15</tspan></a><tspan font-weight="bold"> · p. 577 · 2 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.5.2.15">
+<rect x="57.0" y="28562.0" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="28580.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a_Printed.lean#L720"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Printed.inv_sLocalNormSectionNeighborhood</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a_Printed.lean:720</tspan></text>
 <text x="88.0" y="28600.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This records the symmetry clause at positive indices using <a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L2396"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">normSectionNeighborhood</tspan></a>. The printed formula divides by zero at index zero. The finite factor is the one at S in (A.5.2.21), which this lemma cites. Its introductory sentence on p. 577 names the full finite unit group.</text>
 </g>
@@ -4947,8 +5092,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="28618.82499999963" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.5.2.16">
+<rect x="47.0" y="28711.9" width="2306.0" height="196.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="28735.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.2.16"><tspan font-weight="bold">Lemma A.5.2.16</tspan></a><tspan font-weight="bold"> · p. 577 · 3 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.5.2.16">
+<rect x="57.0" y="28742.2" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="28760.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L2373"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">inv_ideleLogNeighborhood</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a.lean:2373</tspan></text>
 <text x="88.0" y="28780.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The D′ condition fails for the printed sequence.</text>
 </g>
@@ -4978,8 +5125,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="28798.949999999626" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.5.2.17">
+<rect x="47.0" y="28916.6" width="2306.0" height="172.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="28940.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.2.17"><tspan font-weight="bold">Lemma A.5.2.17</tspan></a><tspan font-weight="bold"> · p. 577 · 2 declarations, 1 deviating from the print</tspan></text>
 <g id="v-lemma-A.5.2.17">
+<rect x="57.0" y="28946.9" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="28964.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a_Printed.lean#L816"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Printed.inv_ideleNormSectionNeighborhood</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5a_Printed.lean:816</tspan></text>
 <text x="88.0" y="28984.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This records the symmetry clause at positive indices using <a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5a.lean#L2396"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">normSectionNeighborhood</tspan></a>. The printed formula divides by zero at index zero.</text>
 </g>
@@ -5005,6 +5154,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="29132.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec5b.lean</tspan></text>
 <g id="d-eq-A.5.3.2">
+<rect x="47.0" y="29139.8" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="29163.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.3.2"><tspan font-weight="bold">(A.5.3.2)</tspan></a><tspan font-weight="bold"> · p. 579 · 2 declarations</tspan></text>
 <rect x="56" y="29175.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="29192.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -5027,6 +5177,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="29175.02499999962" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-A.5.3.3">
+<rect x="47.0" y="29268.1" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="29292.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-lemma-A.5.3.3"><tspan font-weight="bold">Lemma A.5.3.3</tspan></a><tspan font-weight="bold"> · p. 579 · 1 declaration</tspan></text>
 <rect x="56" y="29303.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="29320.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -5044,8 +5195,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="29303.374999999618" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.5.3.4">
+<rect x="47.0" y="29371.9" width="2306.0" height="411.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="29395.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.3.4"><tspan font-weight="bold">Theorem A.5.3.4</tspan></a><tspan font-weight="bold"> · pp. 579–580 · 8 declarations, 3 deviating from the print</tspan></text>
 <g id="v-theorem-A.5.3.4">
+<rect x="57.0" y="29402.1" width="2292.0" height="139.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="29420.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5b.lean#L165"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">dSequenceMeasureMaximal_weak_strict</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5b.lean:165</tspan></text>
 <text x="88.0" y="29440.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Products of sets are measured by outer measure.</text>
 <text x="70.0" y="29465.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5b.lean#L230"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">dSequenceMeasureMaximal_weak</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5b.lean:230</tspan></text>
@@ -5104,8 +5257,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="29550.44999999961" width="2288" height="223.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.5.3.5">
+<rect x="47.0" y="29791.1" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="29815.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.3.5"><tspan font-weight="bold">Theorem A.5.3.5</tspan></a><tspan font-weight="bold"> · p. 580 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-theorem-A.5.3.5">
+<rect x="57.0" y="29821.4" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="29839.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5b.lean#L543"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">dSequenceMeasureMaximal_weak_compact</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5b.lean:543</tspan></text>
 <text x="88.0" y="29859.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Formula (A.5.3.5) is identical to (A.5.3.2) and uses the same operator.</text>
 </g>
@@ -5125,8 +5280,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="29878.1749999996" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.5.3.6">
+<rect x="47.0" y="29946.7" width="2306.0" height="439.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="29970.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.3.6"><tspan font-weight="bold">Theorem A.5.3.6</tspan></a><tspan font-weight="bold"> · pp. 581–582 · 11 declarations, 2 deviating from the print</tspan></text>
 <g id="v-theorem-A.5.3.6">
+<rect x="57.0" y="29976.9" width="2292.0" height="93.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="29994.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5b.lean#L773"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">dSequenceMaximal_tail_bound</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5b.lean:773</tspan></text>
 <text x="88.0" y="30015.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This uses the input level set as in (A.5.3.15), with a margin between the maximal function threshold and the cutoff.</text>
 <text x="70.0" y="30040.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5b.lean#L1489"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">dSequenceMaximal_strong_local</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5b.lean:1489</tspan></text>
@@ -5198,6 +5355,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="30079.474999999595" width="2288" height="297.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.5.3.7">
+<rect x="47.0" y="30394.0" width="2306.0" height="144.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="30418.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.3.7"><tspan font-weight="bold">Theorem A.5.3.7</tspan></a><tspan font-weight="bold"> · p. 582 · 3 declarations</tspan></text>
 <rect x="56" y="30429.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="30446.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -5225,6 +5383,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="30429.22499999958" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.3.8">
+<rect x="47.0" y="30546.9" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="30570.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.3.8"><tspan font-weight="bold">(A.5.3.8)</tspan></a><tspan font-weight="bold"> · p. 581 · 2 declarations</tspan></text>
 <rect x="56" y="30582.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="30599.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -5247,8 +5406,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="30582.174999999577" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.3.15">
+<rect x="47.0" y="30675.3" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="30699.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.3.15"><tspan font-weight="bold">(A.5.3.15)</tspan></a><tspan font-weight="bold"> · p. 582 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-eq-A.5.3.15">
+<rect x="57.0" y="30705.5" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="30723.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5b.lean#L1334"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">dSequenceMaximal_weak_truncation</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5b.lean:1334</tspan></text>
 <text x="88.0" y="30743.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The estimate is global, obtained by applying the compact weak bound for the truncated density on a compact exhaustion.</text>
 </g>
@@ -5268,6 +5429,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="30762.299999999574" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-A.5.4.1">
+<rect x="47.0" y="30830.8" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="30854.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-eq-A.5.4.1"><tspan font-weight="bold">(A.5.4.1)</tspan></a><tspan font-weight="bold"> · p. 582 · 2 declarations</tspan></text>
 <rect x="56" y="30866.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="30883.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -5290,6 +5452,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="30866.049999999574" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-terminology-A.5.4.1">
+<rect x="47.0" y="30959.1" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="30983.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-terminology-A.5.4.1"><tspan font-weight="bold">Terminology A.5.4.1</tspan></a><tspan font-weight="bold"> · p. 583 · 2 declarations</tspan></text>
 <rect x="56" y="30994.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="31011.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -5312,6 +5475,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="30994.399999999572" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-A.5.4.1">
+<rect x="47.0" y="31087.5" width="2306.0" height="464.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="31111.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.4.1"><tspan font-weight="bold">Theorem A.5.4.1</tspan></a><tspan font-weight="bold"> · pp. 582–583 · 16 declarations</tspan></text>
 <rect x="56" y="31122.7" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="31140.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -5405,8 +5569,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="31596.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec5b_Printed.lean</tspan></text>
 <g id="d-theorem-A.5.3.1">
+<rect x="47.0" y="31603.2" width="2306.0" height="196.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="31627.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-theorem-A.5.3.1"><tspan font-weight="bold">Theorem A.5.3.1</tspan></a><tspan font-weight="bold"> · pp. 578–579 · 3 declarations, 1 deviating from the print</tspan></text>
 <g id="v-theorem-A.5.3.1">
+<rect x="57.0" y="31633.5" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="31651.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/AppA_AlgebraicNT/Sec5b.lean#L40"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">exists_disjoint_dSequence_translates</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">AppA_AlgebraicNT/Sec5b.lean:40</tspan></text>
 <text x="88.0" y="31671.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The strict comparison requires <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">B</tspan> to be nonempty. The finiteness condition on <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.4">B * U 0</tspan> uses outer measure, as in Remark A.5.3.2.</text>
 </g>
@@ -5436,6 +5602,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="31690.274999999547" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-corollary-A.5.4.3">
+<rect x="47.0" y="31808.0" width="2306.0" height="120.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="31832.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg#i-corollary-A.5.4.3"><tspan font-weight="bold">Corollary A.5.4.3</tspan></a><tspan font-weight="bold"> · p. 585 · 2 declarations</tspan></text>
 <rect x="56" y="31843.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="31860.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>

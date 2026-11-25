@@ -65,13 +65,13 @@ def build(ident, chapter, **expected):
             if it.pages:
                 p0, p1 = it.pages
                 pages = f" · p. {p0}" if p0 == p1 else f" · pp. {p0}–{p1}"
-            draw.anchored(c, I.anchor(k, "d"))
+            dmark, dy = draw.anchored(c, I.anchor(k, "d")), y
             y += c.para(x0, y, x1 - x0, draw.to_anchor(c, it.anchor, it.label)
                         + f"{pages} · {CH.plural(len(ds), 'declaration')}"
                         + (f", {it.deviations} deviating from the print" if it.deviations else ""), size=15,
                         bold=True) + 6
             if it.deviations:
-                draw.anchored(c, I.anchor(k, "v"))
+                vmark, vy = draw.anchored(c, I.anchor(k, "v")), y
                 for d in ds:
                     if not d.deviation:
                         continue
@@ -82,7 +82,7 @@ def build(ident, chapter, **expected):
                         y += c.para(x0 + 32, y, x1 - x0 - 32, "Abridged here: the rest uses a character the posters' "
                                     "fonts lack. The name opens the full text at the pin.", size=12, color="faint")
                     y += 8
-                c.add("</g>")
+                draw.close(c, vmark, x0 + 6, vy, x1 - x0 - 6, y - vy - 8, pad=5)
                 y += 6
             rows = []
             for d in ds:
@@ -91,7 +91,7 @@ def build(ident, chapter, **expected):
                 rows.append({"cells": [f"`{d.show}`", d.kind, f"`{d.where}`", shown],
                              "accent": "red" if d.open else "amber" if state else None})
             y += c.table(x0, y, cols, rows, size=12, hsize=12.5, pad=6, header=True)
-            c.add("</g>")
+            draw.close(c, dmark, x0, dy, x1 - x0, y - dy, pad=9)
             y += 26
         y += 10
     c.para(x0, y, x1 - x0,

@@ -512,9 +512,10 @@ def build():
                                   "rests on " + ", ".join(f"`{rm.display_name(b.removeprefix('private '))}`"
                                                           for b in below)],
                         "accent": "amber" if below != "clean" else None})
-        draw.anchored(c, f"refuted-{ch}")
-        y += c.table(x0, y, cols, trs, size=12, hsize=12.5, pad=6, header=n == 0)
-        c.add("</g>")
+        mark = draw.anchored(c, f"refuted-{ch}")
+        th = c.table(x0, y, cols, trs, size=12, hsize=12.5, pad=6, header=n == 0)
+        draw.close(c, mark, x0, y, x1 - x0, th, pad=4)
+        y += th
         y += 8
     y += 20
     c.para(x0, y, x1 - x0,

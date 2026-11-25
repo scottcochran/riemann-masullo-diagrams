@@ -82,7 +82,12 @@ Every poster links to the others, so that a reader can follow an item from any p
 | A declaration card on M1 or M2, a refutation on M5, a dot on M3 | the item's card on its chapter poster |
 | A directory on M4, a row of M3 or M5 | its chapter poster |
 
-A card is an anchor (`i-<kind>-<number>`, from `items.anchor`); M5's directories are `refuted-<directory>`. A link
+A card is an anchor (`i-<kind>-<number>`, from `items.anchor`); a declarations poster's blocks are `d-…` and their
+deviations `v-…`; M5's directories are `refuted-<directory>`. The target of a link stands out when it is opened: each
+anchored group has an amber frame behind it, hidden until the address names it (CSS `:target`), when it shows and
+pulses three times. It works where a browser opens the SVG itself, as on the Pages site, from a release or from a
+file; GitHub's file viewer shows an SVG as an image, without its links or this style, and a renderer without CSS
+keeps the frame hidden. A link
 to another poster is made only to an anchor the committed `manifest.json` lists, so a run that moves anchors
 updates the manifest, prints a `NOTE` and exits 1, and a second run makes the links follow. `Canvas.check` fails the
 build on a link to a poster, a card or an address that does not exist (an address must be at the pin), and the

@@ -12,6 +12,7 @@ svg{--bg:#ffffff;--page:#e8e8e8;--ink:#1e2430;--muted:#4a5262;--faint:#7d8596;--
 @media (prefers-color-scheme: dark){svg:not([data-theme=light]){--bg:#12151b;--page:#12151b;--ink:#e6e9ef;--muted:#b0b8c6;--faint:#7f8898;--panel:#1a1e26;--line:#363d4a;--zebra:#161a21;--blue:#8fb0ec;--blue-t:#1a2540;--teal:#6cc7b0;--teal-t:#12302a;--amber:#f0b15c;--amber-t:#33260f;--violet:#b9a0e8;--violet-t:#261d38;--red:#f08a8f;--red-t:#3a1a1d;--grey:#a3abb9;--grey-t:#22262e;--brown:#e0a56b;--brown-t:#2f2215;--pink:#ec8cc2;--pink-t:#351a2a;--green:#85c98a;--green-t:#17291a;}}
 svg[data-theme=dark]{--bg:#12151b;--page:#12151b;--ink:#e6e9ef;--muted:#b0b8c6;--faint:#7f8898;--panel:#1a1e26;--line:#363d4a;--zebra:#161a21;--blue:#8fb0ec;--blue-t:#1a2540;--teal:#6cc7b0;--teal-t:#12302a;--amber:#f0b15c;--amber-t:#33260f;--violet:#b9a0e8;--violet-t:#261d38;--red:#f08a8f;--red-t:#3a1a1d;--grey:#a3abb9;--grey-t:#22262e;--brown:#e0a56b;--brown-t:#2f2215;--pink:#ec8cc2;--pink-t:#351a2a;--green:#85c98a;--green-t:#17291a;}
 a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect{stroke-width:3.4}
+.rd-target{opacity:0} g:target>.rd-target{opacity:1;animation:rd-pulse 0.9s ease-in-out 3} @keyframes rd-pulse{50%{stroke-width:9}} g[id]{scroll-margin-top:90px}
 .f-bg{fill:var(--bg)} .s-bg{stroke:var(--bg)}
 .f-page{fill:var(--page)} .s-page{stroke:var(--page)}
 .f-ink{fill:var(--ink)} .s-ink{stroke:var(--ink)}
@@ -41,8 +42,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="56.0" y="276.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14.5" fill="#4a5262" class="f-muted" text-anchor="start">pin. A declaration's state is read from the terms: open when it uses <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="13.3">sorryAx</tspan>, resting when something open is below it. That a declaration states what its <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="13.3">Deviation:</tspan> line says is the docstring's claim, not checked here.</text>
 <text x="56.0" y="324.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1.lean</tspan></text>
 <g id="d-eq-6.1.2.1">
+<rect x="47.0" y="331.4" width="2306.0" height="196.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="355.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.1.2.1"><tspan font-weight="bold">(6.1.2.1)</tspan></a><tspan font-weight="bold"> · p. 288 · 3 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-6.1.2.1">
+<rect x="57.0" y="361.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="379.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec1.lean#L99"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">relativeIntegralIdeleUnits</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec1.lean:99</tspan></text>
 <text x="88.0" y="399.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The insertion lands in the T-ideles, as required by Theorem 6.1.2.1(1).</text>
 </g>
@@ -72,6 +75,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="418.425" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-6.1.2.1">
+<rect x="47.0" y="536.1" width="2306.0" height="563.2" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="560.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-theorem-6.1.2.1"><tspan font-weight="bold">Theorem 6.1.2.1</tspan></a><tspan font-weight="bold"> · p. 288 · 20 declarations</tspan></text>
 <rect x="56" y="571.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="588.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -184,8 +188,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="571.375" width="2288" height="518.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.1.2.2">
+<rect x="47.0" y="1107.3" width="2306.0" height="245.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1131.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.1.2.2"><tspan font-weight="bold">(6.1.2.2)</tspan></a><tspan font-weight="bold"> · p. 288 · 5 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-6.1.2.2">
+<rect x="57.0" y="1137.5" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="1155.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec1.lean#L74"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">outsideIntegralIdeleUnits</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec1.lean:74</tspan></text>
 <text x="88.0" y="1175.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">In (6.1.2.2) the ambient outside multiplicative factors form a restricted product. The full product of integer units embeds in the ideles.</text>
 </g>
@@ -225,8 +231,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1194.3" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-6.1.2.2">
+<rect x="47.0" y="1361.2" width="2306.0" height="1989.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="1385.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-lemma-6.1.2.2"><tspan font-weight="bold">Lemma 6.1.2.2</tspan></a><tspan font-weight="bold"> · pp. 288–289 · 74 declarations, 2 deviating from the print</tspan></text>
 <g id="v-lemma-6.1.2.2">
+<rect x="57.0" y="1391.4" width="2292.0" height="93.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="1409.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec1.lean#L1082"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finitePlaceSchwartz_invariants_laurent_free</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec1.lean:1082</tspan></text>
 <text x="88.0" y="1429.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">A complex linear equivalence spells out the Laurent action by the generator and the image of the free generator, without installing an extra module instance.</text>
 <text x="70.0" y="1455.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec1.lean#L2567"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalSchwartz_invariants_laurent_equiv</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec1.lean:2567</tspan></text>
@@ -613,6 +621,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="1493.9999999999993" width="2288" height="1847.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-6.1.2.3">
+<rect x="47.0" y="3358.3" width="2306.0" height="169.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3382.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-remark-6.1.2.3"><tspan font-weight="bold">Remark 6.1.2.3</tspan></a><tspan font-weight="bold"> · p. 289 · 4 declarations</tspan></text>
 <rect x="56" y="3393.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="3411.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -645,8 +654,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3393.549999999993" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-6.1.2.4">
+<rect x="47.0" y="3535.8" width="2306.0" height="977.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="3559.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-lemma-6.1.2.4"><tspan font-weight="bold">Lemma 6.1.2.4</tspan></a><tspan font-weight="bold"> · pp. 291–292 · 31 declarations, 3 deviating from the print</tspan></text>
 <g id="v-lemma-6.1.2.4">
+<rect x="57.0" y="3566.1" width="2292.0" height="139.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="3584.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec1.lean#L2631"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finitePlaceSchwartz_unitRelations_closure_eq</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec1.lean:2631</tspan></text>
 <text x="88.0" y="3604.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The closure equality states both conclusions on the relation submodule.</text>
 <text x="70.0" y="3629.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec1.lean#L2997"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finiteProductSchwartz_unitInvariants_isClosed</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec1.lean:2997</tspan></text>
@@ -820,6 +831,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="3714.424999999993" width="2288" height="789.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.1.2.14">
+<rect x="47.0" y="4520.9" width="2306.0" height="145.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="4544.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.1.2.14"><tspan font-weight="bold">(6.1.2.14)</tspan></a><tspan font-weight="bold"> · p. 292 · 3 declarations</tspan></text>
 <rect x="56" y="4556.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="4573.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -848,6 +860,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="4709.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1_Printed.lean</tspan></text>
 <g id="d-text-6.1.2">
+<rect x="47.0" y="4716.9" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="4740.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-text-6.1.2"><tspan font-weight="bold">§6.1.2</tspan></a><tspan font-weight="bold"> · p. 288 · 2 declarations</tspan></text>
 <rect x="56" y="4752.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="4769.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -871,6 +884,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="4881.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec2.lean</tspan></text>
 <g id="d-eq-6.2.1.1">
+<rect x="47.0" y="4888.2" width="2306.0" height="341.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="4912.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.2.1.1"><tspan font-weight="bold">(6.2.1.1)</tspan></a><tspan font-weight="bold"> · p. 297 · 11 declarations</tspan></text>
 <rect x="56" y="4923.5" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="4941.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -938,6 +952,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="4923.4749999999985" width="2288" height="297.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-6.2.1.1">
+<rect x="47.0" y="5238.0" width="2306.0" height="317.2" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5262.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-theorem-6.2.1.1"><tspan font-weight="bold">Theorem 6.2.1.1</tspan></a><tspan font-weight="bold"> · p. 295 · 10 declarations</tspan></text>
 <rect x="56" y="5273.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="5290.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1000,6 +1015,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5273.225000000002" width="2288" height="272.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-corollary-6.2.1.2">
+<rect x="47.0" y="5563.1" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5587.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-corollary-6.2.1.2"><tspan font-weight="bold">Corollary 6.2.1.2</tspan></a><tspan font-weight="bold"> · p. 295 · 1 declaration</tspan></text>
 <rect x="56" y="5598.4" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="5615.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1017,6 +1033,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5598.3750000000055" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-lemma-6.2.1.3">
+<rect x="47.0" y="5666.9" width="2306.0" height="145.0" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5690.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-lemma-6.2.1.3"><tspan font-weight="bold">Lemma 6.2.1.3</tspan></a><tspan font-weight="bold"> · p. 296 · 3 declarations</tspan></text>
 <rect x="56" y="5702.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="5719.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1044,8 +1061,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="5702.1250000000055" width="2288" height="100.7" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-remark-6.2.1.4">
+<rect x="47.0" y="5819.8" width="2306.0" height="1367.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="5843.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-remark-6.2.1.4"><tspan font-weight="bold">Remark 6.2.1.4</tspan></a><tspan font-weight="bold"> · pp. 297–298 · 45 declarations, 4 deviating from the print</tspan></text>
 <g id="v-remark-6.2.1.4">
+<rect x="57.0" y="5850.1" width="2292.0" height="185.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="5868.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec2.lean#L1009"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalThetaIsotypeSum_dense</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec2.lean:1009</tspan></text>
 <text x="88.0" y="5888.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The topology of the direct sum is the locally convex final topology. The strict comparison in the remark fails in general.</text>
 <text x="70.0" y="5913.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec2.lean#L1035"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">globalThetaIsotypeSum_dense</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec2.lean:1035</tspan></text>
@@ -1291,8 +1310,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="6044.175000000008" width="2288" height="1133.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-6.2.2.1">
+<rect x="47.0" y="7195.1" width="2306.0" height="3226.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="7219.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-theorem-6.2.2.1"><tspan font-weight="bold">Theorem 6.2.2.1</tspan></a><tspan font-weight="bold"> · pp. 298–301 · 115 declarations, 7 deviating from the print</tspan></text>
 <g id="v-theorem-6.2.2.1">
+<rect x="57.0" y="7225.3" width="2292.0" height="322.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="7243.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec2.lean#L3036"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalStandardThetaTensor</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec2.lean:3036</tspan></text>
 <text x="88.0" y="7263.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The tensor identification uses the inductive topology of §2.1.4.</text>
 <text x="70.0" y="7289.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec2.lean#L4237"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">exists_infiniteStandardThetaMellinAverage</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec2.lean:4237</tspan></text>
@@ -1894,6 +1915,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="7556.750000000028" width="2288" height="2855.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-example-6.2.2.2">
+<rect x="47.0" y="10429.7" width="2306.0" height="120.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10453.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-example-6.2.2.2"><tspan font-weight="bold">Example 6.2.2.2</tspan></a><tspan font-weight="bold"> · p. 299 · 2 declarations</tspan></text>
 <rect x="56" y="10464.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="10482.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -1916,8 +1938,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="10464.900000000069" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.2.2.3">
+<rect x="47.0" y="10558.0" width="2306.0" height="762.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="10582.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.2.2.3"><tspan font-weight="bold">(6.2.2.3)</tspan></a><tspan font-weight="bold"> · p. 298 · 26 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-6.2.2.3">
+<rect x="57.0" y="10588.3" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="10606.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec2.lean#L4023"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">infiniteStandardThetaAverage</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec2.lean:4023</tspan></text>
 <text x="88.0" y="10626.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The analytic formula works for arbitrary entries. To obtain the printed sum, choose ideal class representatives with the identity representing the principal class.</text>
 </g>
@@ -2062,6 +2086,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="10645.025000000069" width="2288" height="666.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.2.2.4">
+<rect x="47.0" y="11328.5" width="2306.0" height="292.6" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11352.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.2.2.4"><tspan font-weight="bold">(6.2.2.4)</tspan></a><tspan font-weight="bold"> · p. 299 · 9 declarations</tspan></text>
 <rect x="56" y="11363.8" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="11381.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2119,8 +2144,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="11363.775000000078" width="2288" height="248.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.2.2.11">
+<rect x="47.0" y="11629.1" width="2306.0" height="147.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11653.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.2.2.11"><tspan font-weight="bold">(6.2.2.11)</tspan></a><tspan font-weight="bold"> · p. 301 · 1 declaration, 1 deviating from the print</tspan></text>
 <g id="v-eq-6.2.2.11">
+<rect x="57.0" y="11659.3" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="11677.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec2.lean#L4183"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">finiteStandardThetaAverage_eq_character_mul_integral</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec2.lean:4183</tspan></text>
 <text x="88.0" y="11697.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">On the test χ times the unit indicator, the coefficient is the integer-unit mass.</text>
 </g>
@@ -2140,6 +2167,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="11716.10000000008" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.2.2.12">
+<rect x="47.0" y="11784.6" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11808.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.2.2.12"><tspan font-weight="bold">(6.2.2.12)</tspan></a><tspan font-weight="bold"> · p. 302 · 1 declaration</tspan></text>
 <rect x="56" y="11819.9" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="11837.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2158,8 +2186,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="11924.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3.lean</tspan></text>
 <g id="d-terminology-6.3.1.1">
+<rect x="47.0" y="11931.4" width="2306.0" height="221.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="11955.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-terminology-6.3.1.1"><tspan font-weight="bold">Terminology 6.3.1.1</tspan></a><tspan font-weight="bold"> · p. 303 · 4 declarations, 1 deviating from the print</tspan></text>
 <g id="v-terminology-6.3.1.1">
+<rect x="57.0" y="11961.6" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="11979.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec3.lean#L230"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">sLocalHeckeL_poleOrder_eq</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec3.lean:230</tspan></text>
 <text x="88.0" y="11999.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">This local comparison applies to every unitary character of the S-idèle quotient.</text>
 </g>
@@ -2194,8 +2224,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12018.37500000008" width="2288" height="125.3" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.3.1.2">
+<rect x="47.0" y="12160.7" width="2306.0" height="172.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12184.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.3.1.2"><tspan font-weight="bold">(6.3.1.2)</tspan></a><tspan font-weight="bold"> · p. 303 · 2 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-6.3.1.2">
+<rect x="57.0" y="12190.9" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="12208.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec3.lean#L82"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">unramifiedHeckeCharacter_existsUnique_phase</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec3.lean:82</tspan></text>
 <text x="88.0" y="12229.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The phase is specified by exponentiating the logarithm identity with the chosen period. The logarithm is of the uniformizer value.</text>
 </g>
@@ -2220,6 +2252,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12247.70000000008" width="2288" height="76.1" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.3.1.4">
+<rect x="47.0" y="12340.8" width="2306.0" height="95.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12364.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.3.1.4"><tspan font-weight="bold">(6.3.1.4)</tspan></a><tspan font-weight="bold"> · p. 303 · 1 declaration</tspan></text>
 <rect x="56" y="12376.1" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="12393.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -2237,8 +2270,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12376.050000000081" width="2288" height="51.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-eq-6.3.1.6">
+<rect x="47.0" y="12444.6" width="2306.0" height="245.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12468.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-eq-6.3.1.6"><tspan font-weight="bold">(6.3.1.6)</tspan></a><tspan font-weight="bold"> · p. 303 · 5 declarations, 1 deviating from the print</tspan></text>
 <g id="v-eq-6.3.1.6">
+<rect x="57.0" y="12474.8" width="2292.0" height="47.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="12492.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec3.lean#L285"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">heckeEulerProductOutside</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec3.lean:285</tspan></text>
 <text x="88.0" y="12512.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">Normal form fills in removable singularities of the quotient. Restriction and this product are defined for every S outside which the character is unramified.</text>
 </g>
@@ -2278,8 +2313,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12531.57500000008" width="2288" height="149.9" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-6.3.2.1">
+<rect x="47.0" y="12698.5" width="2306.0" height="2621.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="12722.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-theorem-6.3.2.1"><tspan font-weight="bold">Theorem 6.3.2.1</tspan></a><tspan font-weight="bold"> · pp. 304–309 · 96 declarations, 4 deviating from the print</tspan></text>
 <g id="v-theorem-6.3.2.1">
+<rect x="57.0" y="12728.7" width="2292.0" height="185.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="12746.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec3.lean#L477"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">homogeneousTheta_classMellin_eq_mass_mul</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec3.lean:477</tspan></text>
 <text x="88.0" y="12766.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The component Mellin transform in (5.2.3.14) uses the norm-section integral with dt/t. Dividing the displayed full class integral by the mass gives that transform on its half-plane of absolute convergence. The same convention applies after (6.3.2.22).</text>
 <text x="70.0" y="12792.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec3.lean#L2960"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">globalConverse_normTwist</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec3.lean:2960</tspan></text>
@@ -2780,8 +2817,10 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <rect x="56" y="12922.82500000008" width="2288" height="2388.5" fill="none" stroke="#5f6878" class="s-grey" stroke-width="1.4"/>
 </g>
 <g id="d-theorem-6.3.2.2">
+<rect x="47.0" y="15328.3" width="2306.0" height="1511.4" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="15352.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-theorem-6.3.2.2"><tspan font-weight="bold">Theorem 6.3.2.2</tspan></a><tspan font-weight="bold"> · pp. 309–310 · 49 declarations, 5 deviating from the print</tspan></text>
 <g id="v-theorem-6.3.2.2">
+<rect x="57.0" y="15358.6" width="2292.0" height="230.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="70.0" y="15376.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec3.lean#L4183"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">globalPrincipalValueConverse_normTwist_residues</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec3.lean:4183</tspan></text>
 <text x="88.0" y="15396.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13.5" font-style="italic" fill="#1e2430" class="f-ink" text-anchor="start">The multipliers are evaluated in the norm-twist chart, retaining the local phases.</text>
 <text x="70.0" y="15422.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch06_LocalGlobal/Sec3.lean#L4237"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">globalPrincipalValueConverse_mellin</tspan></a> · <tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="12.0">Ch06_LocalGlobal/Sec3.lean:4237</tspan></text>
@@ -3055,6 +3094,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="16883.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3_Burnol.lean</tspan></text>
 <g id="d-helpers-RiemannMasullo.Ch06_LocalGlobal.Sec3_Burnol">
+<rect x="47.0" y="16890.8" width="2306.0" height="194.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="16914.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-helpers-RiemannMasullo.Ch06_LocalGlobal.Sec3_Burnol"><tspan font-weight="bold">Helper lemmas</tspan></a><tspan font-weight="bold"> · 5 declarations</tspan></text>
 <rect x="56" y="16926.0" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="16943.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>
@@ -3093,6 +3133,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="17128.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3_Printed.lean</tspan></text>
 <g id="d-theorems-6.3.2.1">
+<rect x="47.0" y="17135.9" width="2306.0" height="366.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <text x="56.0" y="17159.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" fill="#1e2430" class="f-ink" text-anchor="start"><a href="C6-ch06-localglobal-2026.11.25.svg#i-theorems-6.3.2.1"><tspan font-weight="bold">Theorems 6.3.2.1</tspan></a><tspan font-weight="bold"> · p. 304 · 12 declarations</tspan></text>
 <rect x="56" y="17171.2" width="2288" height="26.9" fill="#5f6878" stroke="#5f6878" class="f-grey s-grey" stroke-width="1"/>
 <text x="62.0" y="17188.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#ffffff" class="f-bg" text-anchor="start"><tspan font-weight="bold">Declaration</tspan></text>

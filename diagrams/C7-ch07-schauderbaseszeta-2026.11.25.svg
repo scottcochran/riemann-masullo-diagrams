@@ -12,6 +12,7 @@ svg{--bg:#ffffff;--page:#e8e8e8;--ink:#1e2430;--muted:#4a5262;--faint:#7d8596;--
 @media (prefers-color-scheme: dark){svg:not([data-theme=light]){--bg:#12151b;--page:#12151b;--ink:#e6e9ef;--muted:#b0b8c6;--faint:#7f8898;--panel:#1a1e26;--line:#363d4a;--zebra:#161a21;--blue:#8fb0ec;--blue-t:#1a2540;--teal:#6cc7b0;--teal-t:#12302a;--amber:#f0b15c;--amber-t:#33260f;--violet:#b9a0e8;--violet-t:#261d38;--red:#f08a8f;--red-t:#3a1a1d;--grey:#a3abb9;--grey-t:#22262e;--brown:#e0a56b;--brown-t:#2f2215;--pink:#ec8cc2;--pink-t:#351a2a;--green:#85c98a;--green-t:#17291a;}}
 svg[data-theme=dark]{--bg:#12151b;--page:#12151b;--ink:#e6e9ef;--muted:#b0b8c6;--faint:#7f8898;--panel:#1a1e26;--line:#363d4a;--zebra:#161a21;--blue:#8fb0ec;--blue-t:#1a2540;--teal:#6cc7b0;--teal-t:#12302a;--amber:#f0b15c;--amber-t:#33260f;--violet:#b9a0e8;--violet-t:#261d38;--red:#f08a8f;--red-t:#3a1a1d;--grey:#a3abb9;--grey-t:#22262e;--brown:#e0a56b;--brown-t:#2f2215;--pink:#ec8cc2;--pink-t:#351a2a;--green:#85c98a;--green-t:#17291a;}
 a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect{stroke-width:3.4}
+.rd-target{opacity:0} g:target>.rd-target{opacity:1;animation:rd-pulse 0.9s ease-in-out 3} @keyframes rd-pulse{50%{stroke-width:9}} g[id]{scroll-margin-top:90px}
 .f-bg{fill:var(--bg)} .s-bg{stroke:var(--bg)}
 .f-page{fill:var(--page)} .s-page{stroke:var(--page)}
 .f-ink{fill:var(--ink)} .s-ink{stroke:var(--ink)}
@@ -42,6 +43,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="56.0" y="296.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14.5" fill="#4a5262" class="f-muted" text-anchor="start">value and nothing stronger. They were reported and checked by AI agents; in ERRATA.md's words, “No entry has been reviewed by a specialist.”</text>
 <text x="56.0" y="345.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1a.lean</tspan><tspan font-weight="bold"> · 4 items</tspan></text>
 <g id="i-lemma-7.1.1.1">
+<rect x="49.0" y="354.0" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="361.0" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="385.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1a.lean#L139"><tspan font-weight="bold">Lemma 7.1.1.1</tspan></a></text>
 <text x="68.0" y="402.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 313</text>
@@ -52,6 +54,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="509.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-lemma-7.1.2.2">Lemma 7.1.2.2</a></text>
 </g>
 <g id="i-definition-7.1.2.1">
+<rect x="434.0" y="354.0" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="361.0" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="385.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1a.lean#L229"><tspan font-weight="bold">Definition 7.1.2.1</tspan></a></text>
 <text x="453.0" y="402.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 316</text>
@@ -63,6 +66,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="530.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.1.2.3">Theorem 7.1.2.3</a>, <a href="#i-theorem-7.2.1.4">Theorem 7.2.1.4</a></text>
 </g>
 <g id="i-lemma-7.1.2.2">
+<rect x="819.0" y="354.0" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="361.0" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="385.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1a.lean#L1090"><tspan font-weight="bold">Lemma 7.1.2.2</tspan></a></text>
 <text x="838.0" y="402.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 316–317</text>
@@ -75,6 +79,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="548.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.2.1.4">Theorem 7.2.1.4</a></text>
 </g>
 <g id="i-remark-7.1.2.4">
+<rect x="1204.0" y="354.0" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="361.0" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="385.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1a.lean#L1369"><tspan font-weight="bold">Remark 7.1.2.4</tspan></a></text>
 <text x="1223.0" y="402.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 318</text>
@@ -84,6 +89,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="621.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1a_Printed.lean</tspan><tspan font-weight="bold"> · 1 item</tspan></text>
 <g id="i-theorem-7.1.2.3">
+<rect x="49.0" y="630.7" width="377.0" height="253.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="637.7" width="363.0" height="239.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="661.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1a.lean#L1268"><tspan font-weight="bold">Theorem 7.1.2.3</tspan></a></text>
 <text x="68.0" y="679.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 317–323</text>
@@ -99,6 +105,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="934.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1b.lean</tspan><tspan font-weight="bold"> · 11 items</tspan></text>
 <g id="i-text-7.1.3">
+<rect x="49.0" y="943.0" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="950.0" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="974.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L53"><tspan font-weight="bold">§7.1.3</tspan></a></text>
 <text x="68.0" y="991.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 323</text>
@@ -107,6 +114,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="1060.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-remark-7.1.3.1">Remark 7.1.3.1</a></text>
 </g>
 <g id="i-remark-7.1.3.1">
+<rect x="434.0" y="943.0" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="950.0" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="974.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L66"><tspan font-weight="bold">Remark 7.1.3.1</tspan></a></text>
 <text x="453.0" y="991.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 323–324</text>
@@ -119,6 +127,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="1137.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.1.3.2">Theorem 7.1.3.2</a>, <a href="#i-theorem-7.1.4.3">Theorem 7.1.4.3</a></text>
 </g>
 <g id="i-theorem-7.1.3.2">
+<rect x="819.0" y="943.0" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="950.0" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="974.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1a_Isolated.lean#L572"><tspan font-weight="bold">Theorem 7.1.3.2</tspan></a></text>
 <text x="838.0" y="991.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 324</text>
@@ -132,6 +141,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="1155.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-corollary-7.1.3.3">Corollary 7.1.3.3</a>, <a href="#i-eq-7.1.4.22">(7.1.4.22)</a>, <a href="#i-theorem-7.1.2.3">Theorem 7.1.2.3</a></text>
 </g>
 <g id="i-corollary-7.1.3.3">
+<rect x="1204.0" y="943.0" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="950.0" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="974.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L1759"><tspan font-weight="bold">Corollary 7.1.3.3</tspan></a></text>
 <text x="1223.0" y="991.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 325–326</text>
@@ -143,6 +153,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="1116.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg">Appendix A</a> (4), <a href="CD-appd-schwartzbruhat-2026.11.25.svg">Appendix D</a> (1)</text>
 </g>
 <g id="i-text-7.1.4">
+<rect x="1589.0" y="943.0" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="950.0" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1608.0" y="974.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L2018"><tspan font-weight="bold">§7.1.4</tspan></a></text>
 <text x="1608.0" y="991.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 326</text>
@@ -150,6 +161,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1608.0" y="1039.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.1.4.4">(7.1.4.4)</a>, <a href="#i-remark-7.1.3.1">Remark 7.1.3.1</a></text>
 </g>
 <g id="i-situation-7.1.4.1">
+<rect x="1974.0" y="943.0" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1981.0" y="950.0" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1993.0" y="974.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L1957"><tspan font-weight="bold">Situation 7.1.4.1</tspan></a></text>
 <text x="1993.0" y="991.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 326</text>
@@ -160,6 +172,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1993.0" y="1095.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.1.4.3">Theorem 7.1.4.3</a></text>
 </g>
 <g id="i-theorem-7.1.4.2">
+<rect x="49.0" y="1186.5" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="1193.5" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="1217.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L2061"><tspan font-weight="bold">Theorem 7.1.4.2</tspan></a></text>
 <text x="68.0" y="1235.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 326–328</text>
@@ -175,6 +188,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="1434.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.1.4.24">(7.1.4.24)</a>, <a href="#i-eq-7.4.0.1">(7.4.0.1)</a>, <a href="#i-proposition-7.2.2.1">Proposition 7.2.2.1</a></text>
 </g>
 <g id="i-eq-7.1.4.3">
+<rect x="434.0" y="1186.5" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="1193.5" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="1217.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L2239"><tspan font-weight="bold">(7.1.4.3)</tspan></a></text>
 <text x="453.0" y="1235.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 326</text>
@@ -183,6 +197,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="1303.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.1.4.3">Theorem 7.1.4.3</a></text>
 </g>
 <g id="i-theorem-7.1.4.3">
+<rect x="819.0" y="1186.5" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="1193.5" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="1217.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L3989"><tspan font-weight="bold">Theorem 7.1.4.3</tspan></a></text>
 <text x="838.0" y="1235.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 331–332</text>
@@ -196,6 +211,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="1398.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.1.4.2">Theorem 7.1.4.2</a></text>
 </g>
 <g id="i-eq-7.1.4.4">
+<rect x="1204.0" y="1186.5" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="1193.5" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="1217.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L2197"><tspan font-weight="bold">(7.1.4.4)</tspan></a></text>
 <text x="1223.0" y="1235.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 326</text>
@@ -204,6 +220,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="1303.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.1.4.3">(7.1.4.3)</a></text>
 </g>
 <g id="i-eq-7.1.4.6">
+<rect x="1589.0" y="1186.5" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="1193.5" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1608.0" y="1217.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b.lean#L3934"><tspan font-weight="bold">(7.1.4.6)</tspan></a></text>
 <text x="1608.0" y="1235.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 327</text>
@@ -214,6 +231,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="1507.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec1b_Printed.lean</tspan><tspan font-weight="bold"> · 2 items</tspan></text>
 <g id="i-eq-7.1.4.22">
+<rect x="49.0" y="1516.6" width="377.0" height="182.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="1523.6" width="363.0" height="168.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="1547.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b_Printed.lean#L1167"><tspan font-weight="bold">(7.1.4.22)</tspan></a></text>
 <text x="68.0" y="1565.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 330</text>
@@ -223,6 +241,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="1654.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start">From other directories: <a href="CD-appd-schwartzbruhat-2026.11.25.svg">Appendix D</a> (1)</text>
 </g>
 <g id="i-eq-7.1.4.24">
+<rect x="434.0" y="1516.6" width="377.0" height="182.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="1523.6" width="363.0" height="168.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="1547.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec1b_Printed.lean#L1257"><tspan font-weight="bold">(7.1.4.24)</tspan></a></text>
 <text x="453.0" y="1565.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 331</text>
@@ -234,6 +253,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="1748.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec2.lean</tspan><tspan font-weight="bold"> · 11 items</tspan></text>
 <g id="i-theorem-7.2.1.1">
+<rect x="49.0" y="1757.7" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="1764.7" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="1788.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L169"><tspan font-weight="bold">Theorem 7.2.1.1</tspan></a></text>
 <text x="68.0" y="1806.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 334</text>
@@ -248,6 +268,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="1987.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="#i-eq-7.2.1.12">(7.2.1.12)</a>, <a href="#i-remark-7.2.1.3">Remark 7.2.1.3</a></text>
 </g>
 <g id="i-remark-7.2.1.3">
+<rect x="434.0" y="1757.7" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="1764.7" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="1788.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L1430"><tspan font-weight="bold">Remark 7.2.1.3</tspan></a></text>
 <text x="453.0" y="1806.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 335</text>
@@ -261,6 +282,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="1969.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorems-7.3.1.6">Theorems 7.3.1.6</a></text>
 </g>
 <g id="i-theorem-7.2.1.4">
+<rect x="819.0" y="1757.7" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="1764.7" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="1788.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L1201"><tspan font-weight="bold">Theorem 7.2.1.4</tspan></a></text>
 <text x="838.0" y="1806.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 336–337</text>
@@ -276,6 +298,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="2005.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="#i-theorem-7.2.1.1">Theorem 7.2.1.1</a></text>
 </g>
 <g id="i-eq-7.2.1.6">
+<rect x="1204.0" y="1757.7" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="1764.7" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="1788.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L640"><tspan font-weight="bold">(7.2.1.6)</tspan></a></text>
 <text x="1223.0" y="1806.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 334</text>
@@ -286,6 +309,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="1913.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.2.1.1">Theorem 7.2.1.1</a></text>
 </g>
 <g id="i-eq-7.2.1.9">
+<rect x="1589.0" y="1757.7" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="1764.7" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1608.0" y="1788.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L681"><tspan font-weight="bold">(7.2.1.9)</tspan></a></text>
 <text x="1608.0" y="1806.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 334</text>
@@ -296,6 +320,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1608.0" y="1913.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.2.1.4">Theorem 7.2.1.4</a></text>
 </g>
 <g id="i-eq-7.2.1.11">
+<rect x="1974.0" y="1757.7" width="377.0" height="271.1" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1981.0" y="1764.7" width="363.0" height="257.1" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1993.0" y="1788.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L808"><tspan font-weight="bold">(7.2.1.11)</tspan></a></text>
 <text x="1993.0" y="1806.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 335</text>
@@ -306,6 +331,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1993.0" y="1913.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.2.1.4">Theorem 7.2.1.4</a></text>
 </g>
 <g id="i-eq-7.2.1.12">
+<rect x="49.0" y="2036.8" width="377.0" height="253.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="2043.8" width="363.0" height="239.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="2067.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L1812"><tspan font-weight="bold">(7.2.1.12)</tspan></a></text>
 <text x="68.0" y="2085.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 336–337</text>
@@ -318,6 +344,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="2231.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.2.1.4">Theorem 7.2.1.4</a></text>
 </g>
 <g id="i-eq-7.2.2.1">
+<rect x="434.0" y="2036.8" width="377.0" height="253.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="2043.8" width="363.0" height="239.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="2067.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L1262"><tspan font-weight="bold">(7.2.2.1)</tspan></a></text>
 <text x="453.0" y="2085.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 338–339</text>
@@ -327,6 +354,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="2174.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-remark-7.2.1.2">Remark 7.2.1.2</a></text>
 </g>
 <g id="i-proposition-7.2.2.1">
+<rect x="819.0" y="2036.8" width="377.0" height="253.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="2043.8" width="363.0" height="239.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="2067.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L3489"><tspan font-weight="bold">Proposition 7.2.2.1</tspan></a></text>
 <text x="838.0" y="2085.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 339</text>
@@ -341,6 +369,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="2266.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-corollary-7.2.2.2">Corollary 7.2.2.2</a>, <a href="#i-theorem-7.3.1.2">Theorem 7.3.1.2</a></text>
 </g>
 <g id="i-corollary-7.2.2.2">
+<rect x="1204.0" y="2036.8" width="377.0" height="253.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="2043.8" width="363.0" height="239.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="2067.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L3556"><tspan font-weight="bold">Corollary 7.2.2.2</tspan></a></text>
 <text x="1223.0" y="2085.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 340</text>
@@ -354,6 +383,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="2249.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.5.0.8">(7.5.0.8)</a>, <a href="#i-proposition-7.3.2.2">Proposition 7.3.2.2</a></text>
 </g>
 <g id="i-eq-7.2.2.3">
+<rect x="1589.0" y="2036.8" width="377.0" height="253.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="2043.8" width="363.0" height="239.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1608.0" y="2067.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L3526"><tspan font-weight="bold">(7.2.2.3)</tspan></a></text>
 <text x="1608.0" y="2085.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 340</text>
@@ -365,6 +395,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="2340.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec2_Printed.lean</tspan><tspan font-weight="bold"> · 5 items</tspan></text>
 <g id="i-remark-7.2.1.2">
+<rect x="49.0" y="2349.1" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="2356.1" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="2380.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2.lean#L1322"><tspan font-weight="bold">Remark 7.2.1.2</tspan></a></text>
 <text x="68.0" y="2397.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 335</text>
@@ -377,6 +408,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="2543.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.2.1.4">Theorem 7.2.1.4</a></text>
 </g>
 <g id="i-eq-7.2.1.8">
+<rect x="434.0" y="2349.1" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="2356.1" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="2380.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2_Printed.lean#L67"><tspan font-weight="bold">(7.2.1.8)</tspan></a></text>
 <text x="453.0" y="2397.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 334</text>
@@ -389,6 +421,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="2543.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.2.1.4">Theorem 7.2.1.4</a></text>
 </g>
 <g id="i-eq-7.2.1.13">
+<rect x="819.0" y="2349.1" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="2356.1" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="2380.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2_Printed.lean#L1439"><tspan font-weight="bold">(7.2.1.13)</tspan></a></text>
 <text x="838.0" y="2397.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 336</text>
@@ -402,6 +435,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="2561.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.2.1.14">(7.2.1.14)</a>, <a href="#i-eq-7.2.1.17">(7.2.1.17)</a></text>
 </g>
 <g id="i-eq-7.2.1.14">
+<rect x="1204.0" y="2349.1" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="2356.1" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="2380.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2_Printed.lean#L1996"><tspan font-weight="bold">(7.2.1.14)</tspan></a></text>
 <text x="1223.0" y="2397.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 337</text>
@@ -412,6 +446,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="2501.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg">Appendix A</a> (2), <a href="CB-appb-analyticnt-2026.11.25.svg">Appendix B</a> (1), <a href="CD-appd-schwartzbruhat-2026.11.25.svg">Appendix D</a> (1)</text>
 </g>
 <g id="i-eq-7.2.1.17">
+<rect x="1589.0" y="2349.1" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="2356.1" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1608.0" y="2380.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec2_Printed.lean#L2189"><tspan font-weight="bold">(7.2.1.17)</tspan></a></text>
 <text x="1608.0" y="2397.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 337</text>
@@ -423,6 +458,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="2634.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3a.lean</tspan><tspan font-weight="bold"> · 10 items</tspan></text>
 <g id="i-situation-7.3.1.1">
+<rect x="49.0" y="2643.6" width="377.0" height="309.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="2650.6" width="363.0" height="295.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="2674.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L61"><tspan font-weight="bold">Situation 7.3.1.1</tspan></a></text>
 <text x="68.0" y="2692.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 340</text>
@@ -430,6 +466,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="2740.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.3.2.2">(7.3.2.2)</a>, <a href="#i-theorem-7.3.1.2">Theorem 7.3.1.2</a></text>
 </g>
 <g id="i-theorem-7.3.1.2">
+<rect x="434.0" y="2643.6" width="377.0" height="309.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="2650.6" width="363.0" height="295.7" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="453.0" y="2674.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L110"><tspan font-weight="bold">Theorem 7.3.1.2</tspan></a></text>
 <text x="453.0" y="2692.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 341–342</text>
@@ -447,6 +484,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="2930.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="#i-helpers-RiemannMasullo.Ch07_SchauderBasesZeta.Sec3b_Isolated">lemmas</a></text>
 </g>
 <g id="i-definition-7.3.1.3">
+<rect x="819.0" y="2643.6" width="377.0" height="309.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="2650.6" width="363.0" height="295.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="2674.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L1461"><tspan font-weight="bold">Definition 7.3.1.3</tspan></a></text>
 <text x="838.0" y="2692.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 343</text>
@@ -457,6 +495,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="2799.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.3.1.2">Theorem 7.3.1.2</a></text>
 </g>
 <g id="i-lemma-7.3.1.5">
+<rect x="1204.0" y="2643.6" width="377.0" height="309.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="2650.6" width="363.0" height="295.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="2674.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L1574"><tspan font-weight="bold">Lemma 7.3.1.5</tspan></a></text>
 <text x="1223.0" y="2692.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 343–344</text>
@@ -465,6 +504,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="2757.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="L1-formathlib-2026.11.25.svg">ForMathlib</a> (1)</text>
 </g>
 <g id="i-theorem-7.3.1.6">
+<rect x="1589.0" y="2643.6" width="377.0" height="309.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="2650.6" width="363.0" height="295.7" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="1608.0" y="2674.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L2221"><tspan font-weight="bold">Theorem 7.3.1.6</tspan></a></text>
 <text x="1608.0" y="2692.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 345–346</text>
@@ -478,6 +518,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1608.0" y="2858.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorems-7.3.1.6">Theorems 7.3.1.6</a></text>
 </g>
 <g id="i-definition-7.3.1.7">
+<rect x="1974.0" y="2643.6" width="377.0" height="309.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1981.0" y="2650.6" width="363.0" height="295.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1993.0" y="2674.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L5553"><tspan font-weight="bold">Definition 7.3.1.7</tspan></a></text>
 <text x="1993.0" y="2692.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 350</text>
@@ -487,6 +528,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1993.0" y="2778.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg">Appendix A</a> (1), <a href="CD-appd-schwartzbruhat-2026.11.25.svg">Appendix D</a> (1)</text>
 </g>
 <g id="i-corollary-7.3.1.8">
+<rect x="49.0" y="2961.3" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="2968.3" width="363.0" height="203.7" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="68.0" y="2992.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L5639"><tspan font-weight="bold">Corollary 7.3.1.8</tspan></a></text>
 <text x="68.0" y="3009.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 350</text>
@@ -499,6 +541,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="3155.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start">(8), <a href="CD-appd-schwartzbruhat-2026.11.25.svg">Appendix D</a> (1), <a href="L1-formathlib-2026.11.25.svg">ForMathlib</a> (1)</text>
 </g>
 <g id="i-eq-7.3.1.10">
+<rect x="434.0" y="2961.3" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="2968.3" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="2992.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L1700"><tspan font-weight="bold">(7.3.1.10)</tspan></a></text>
 <text x="453.0" y="3009.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 344</text>
@@ -507,6 +550,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="3078.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.3.3.4">Theorem 7.3.3.4</a></text>
 </g>
 <g id="i-eq-7.3.1.13">
+<rect x="819.0" y="2961.3" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="2968.3" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="2992.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L2203"><tspan font-weight="bold">(7.3.1.13)</tspan></a></text>
 <text x="838.0" y="3009.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 344</text>
@@ -517,6 +561,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="3117.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-corollary-7.3.1.8">Corollary 7.3.1.8</a>, <a href="#i-definition-7.3.1.7">Definition 7.3.1.7</a>, <a href="#i-eq-7.3.1.14">(7.3.1.14)</a></text>
 </g>
 <g id="i-eq-7.3.1.14">
+<rect x="1204.0" y="2961.3" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="2968.3" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="2992.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L2049"><tspan font-weight="bold">(7.3.1.14)</tspan></a></text>
 <text x="1223.0" y="3009.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 344</text>
@@ -528,6 +573,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="3229.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3a_Printed.lean</tspan><tspan font-weight="bold"> · 2 items</tspan></text>
 <g id="i-definition-7.3.1.4">
+<rect x="49.0" y="3238.0" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="3245.0" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="3269.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L1514"><tspan font-weight="bold">Definition 7.3.1.4</tspan></a></text>
 <text x="68.0" y="3286.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 343</text>
@@ -539,6 +585,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="3414.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.3.1.6">Theorem 7.3.1.6</a></text>
 </g>
 <g id="i-eq-7.3.1.11">
+<rect x="434.0" y="3238.0" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="3245.0" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="3269.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3a.lean#L1797"><tspan font-weight="bold">(7.3.1.11)</tspan></a></text>
 <text x="453.0" y="3286.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 344</text>
@@ -552,6 +599,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="3505.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3b.lean</tspan><tspan font-weight="bold"> · 10 items</tspan></text>
 <g id="i-theorems-7.3.1.6">
+<rect x="49.0" y="3514.7" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="3521.7" width="363.0" height="242.3" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="68.0" y="3545.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L6930"><tspan font-weight="bold">Theorems 7.3.1.6</tspan></a></text>
 <text x="68.0" y="3563.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 345</text>
@@ -564,6 +612,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="3709.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.3.3.4">Theorem 7.3.3.4</a>, <a href="#i-theorem-7.3.4.1">Theorem 7.3.4.1</a></text>
 </g>
 <g id="i-definition-7.3.2.1">
+<rect x="434.0" y="3514.7" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="3521.7" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="3545.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L68"><tspan font-weight="bold">Definition 7.3.2.1</tspan></a></text>
 <text x="453.0" y="3563.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 351</text>
@@ -577,6 +626,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="3726.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-definition-7.3.2.3">Definition 7.3.2.3</a>, <a href="#i-remark-7.5.0.2">Remark 7.5.0.2</a></text>
 </g>
 <g id="i-proposition-7.3.2.2">
+<rect x="819.0" y="3514.7" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="3521.7" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="3545.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L628"><tspan font-weight="bold">Proposition 7.3.2.2</tspan></a></text>
 <text x="838.0" y="3563.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 352–354</text>
@@ -590,6 +640,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="3726.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-proposition-7.3.2.4">Proposition 7.3.2.4</a></text>
 </g>
 <g id="i-definition-7.3.2.3">
+<rect x="1204.0" y="3514.7" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="3521.7" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="3545.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L1481"><tspan font-weight="bold">Definition 7.3.2.3</tspan></a></text>
 <text x="1223.0" y="3563.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 354–355</text>
@@ -601,6 +652,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="3691.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.3.2.2">(7.3.2.2)</a></text>
 </g>
 <g id="i-proposition-7.3.2.4">
+<rect x="1589.0" y="3514.7" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="3521.7" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1608.0" y="3545.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L1511"><tspan font-weight="bold">Proposition 7.3.2.4</tspan></a></text>
 <text x="1608.0" y="3563.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 355–356</text>
@@ -613,6 +665,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1608.0" y="3709.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-proposition-7.3.3.2">Proposition 7.3.3.2</a></text>
 </g>
 <g id="i-proposition-7.3.3.2">
+<rect x="1974.0" y="3514.7" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1981.0" y="3521.7" width="363.0" height="242.3" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="1993.0" y="3545.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L2624"><tspan font-weight="bold">Proposition 7.3.3.2</tspan></a></text>
 <text x="1993.0" y="3563.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 357–358</text>
@@ -627,6 +680,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1993.0" y="3747.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-definition-7.3.3.3">Definition 7.3.3.3</a></text>
 </g>
 <g id="i-theorem-7.3.3.4">
+<rect x="49.0" y="3779.0" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="3786.0" width="363.0" height="242.3" rx="8" fill="#fcefef" stroke="#a4262c" class="ft-red s-red" stroke-width="1.6" stroke-dasharray="6 4"/>
 <text x="68.0" y="3810.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a4262c" class="f-red" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L3296"><tspan font-weight="bold">Theorem 7.3.3.4</tspan></a></text>
 <text x="68.0" y="3827.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 360–363</text>
@@ -641,6 +695,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="4012.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.3.1.6">Theorem 7.3.1.6</a></text>
 </g>
 <g id="i-eq-7.3.3.18">
+<rect x="434.0" y="3779.0" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="3786.0" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="3810.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L3156"><tspan font-weight="bold">(7.3.3.18)</tspan></a></text>
 <text x="453.0" y="3827.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 361</text>
@@ -651,6 +706,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="3934.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.3.3.4">Theorem 7.3.3.4</a></text>
 </g>
 <g id="i-eq-7.3.3.25">
+<rect x="819.0" y="3779.0" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="3786.0" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="3810.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L719"><tspan font-weight="bold">(7.3.3.25)</tspan></a></text>
 <text x="838.0" y="3827.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 363</text>
@@ -661,6 +717,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="3934.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-proposition-7.3.2.2">Proposition 7.3.2.2</a></text>
 </g>
 <g id="i-theorem-7.3.4.1">
+<rect x="1204.0" y="3779.0" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="3786.0" width="363.0" height="242.3" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="1223.0" y="3810.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L8248"><tspan font-weight="bold">Theorem 7.3.4.1</tspan></a></text>
 <text x="1223.0" y="3827.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 364–366</text>
@@ -676,6 +733,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="4085.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3b_Isolated.lean</tspan><tspan font-weight="bold"> · 1 item</tspan></text>
 <g id="i-helpers-RiemannMasullo.Ch07_SchauderBasesZeta.Sec3b_Isolated">
+<rect x="49.0" y="4094.3" width="377.0" height="178.8" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="4101.3" width="363.0" height="164.8" rx="8" fill="#fcefef" stroke="#a4262c" class="ft-red s-red" stroke-width="1.6" stroke-dasharray="6 4"/>
 <text x="68.0" y="4125.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a4262c" class="f-red" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b_Isolated.lean#L46"><tspan font-weight="bold">Helper lemmas</tspan></a></text>
 <text x="68.0" y="4151.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="D7-ch07-schauderbaseszeta-2026.11.25.svg#d-helpers-RiemannMasullo.Ch07_SchauderBasesZeta.Sec3b_Isolated">174 declarations</a></text>
@@ -687,6 +745,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="4323.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec3b_Printed.lean</tspan><tspan font-weight="bold"> · 3 items</tspan></text>
 <g id="i-eq-7.3.2.2">
+<rect x="49.0" y="4332.1" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="4339.1" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="4363.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b_Printed.lean#L42"><tspan font-weight="bold">(7.3.2.2)</tspan></a></text>
 <text x="68.0" y="4380.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 351</text>
@@ -699,6 +758,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="4526.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-definition-7.3.2.1">Definition 7.3.2.1</a>, <a href="#i-proposition-7.3.2.2">Proposition 7.3.2.2</a></text>
 </g>
 <g id="i-definition-7.3.3.3">
+<rect x="434.0" y="4332.1" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="4339.1" width="363.0" height="242.3" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="453.0" y="4363.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L3121"><tspan font-weight="bold">Definition 7.3.3.3</tspan></a></text>
 <text x="453.0" y="4380.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 359</text>
@@ -713,6 +773,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="4565.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.3.3.18">(7.3.3.18)</a></text>
 </g>
 <g id="i-notation-7.3.4.1">
+<rect x="819.0" y="4332.1" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="4339.1" width="363.0" height="242.3" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="838.0" y="4363.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec3b.lean#L7872"><tspan font-weight="bold">Notation 7.3.4.1</tspan></a></text>
 <text x="838.0" y="4380.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 364</text>
@@ -728,6 +789,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="4638.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec4.lean</tspan><tspan font-weight="bold"> · 12 items</tspan></text>
 <g id="i-eq-7.4.0.1">
+<rect x="49.0" y="4647.4" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="4654.4" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="4678.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L272"><tspan font-weight="bold">(7.4.0.1)</tspan></a></text>
 <text x="68.0" y="4695.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 366</text>
@@ -739,6 +801,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="4821.0" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.5.0.2">(7.5.0.2)</a>, <a href="#i-theorem-7.4.1.1">Theorem 7.4.1.1</a></text>
 </g>
 <g id="i-eq-7.4.0.2">
+<rect x="434.0" y="4647.4" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="4654.4" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="4678.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L4584"><tspan font-weight="bold">(7.4.0.2)</tspan></a></text>
 <text x="453.0" y="4695.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 366</text>
@@ -749,6 +812,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="4803.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.4.3.1">(7.4.3.1)</a>, <a href="#i-theorem-7.4.2.1">Theorem 7.4.2.1</a>, <a href="#i-theorem-7.5.0.1">Theorem 7.5.0.1</a></text>
 </g>
 <g id="i-eq-7.4.1.1">
+<rect x="819.0" y="4647.4" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="4654.4" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="4678.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L85"><tspan font-weight="bold">(7.4.1.1)</tspan></a></text>
 <text x="838.0" y="4695.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 366</text>
@@ -759,6 +823,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="4803.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.4.0.1">(7.4.0.1)</a>, <a href="#i-eq-7.4.0.2">(7.4.0.2)</a></text>
 </g>
 <g id="i-theorem-7.4.1.1">
+<rect x="1204.0" y="4647.4" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="4654.4" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="4678.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L130"><tspan font-weight="bold">Theorem 7.4.1.1</tspan></a></text>
 <text x="1223.0" y="4695.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 366–367</text>
@@ -773,6 +838,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="4877.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.4.2.1">Theorem 7.4.2.1</a>, <a href="#i-theorem-7.4.3.1">Theorem 7.4.3.1</a></text>
 </g>
 <g id="i-theorem-7.4.2.1">
+<rect x="1589.0" y="4647.4" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="4654.4" width="363.0" height="242.3" rx="8" fill="#fdf3e4" stroke="#a35a00" class="ft-amber s-amber" stroke-width="1.6"/>
 <text x="1608.0" y="4678.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#a35a00" class="f-amber" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L4560"><tspan font-weight="bold">Theorem 7.4.2.1</tspan></a></text>
 <text x="1608.0" y="4695.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 367</text>
@@ -787,6 +853,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1608.0" y="4880.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-remark-7.4.3.3">Remark 7.4.3.3</a>, <a href="#i-theorem-7.4.3.2">Theorem 7.4.3.2</a></text>
 </g>
 <g id="i-eq-7.4.3.1">
+<rect x="1974.0" y="4647.4" width="377.0" height="256.3" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1981.0" y="4654.4" width="363.0" height="242.3" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1993.0" y="4678.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L6095"><tspan font-weight="bold">(7.4.3.1)</tspan></a></text>
 <text x="1993.0" y="4695.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 368</text>
@@ -800,6 +867,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1993.0" y="4859.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.4.3.1">Theorem 7.4.3.1</a></text>
 </g>
 <g id="i-eq-7.4.3.2">
+<rect x="49.0" y="4911.7" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="4918.7" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="4942.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L6934"><tspan font-weight="bold">(7.4.3.2)</tspan></a></text>
 <text x="68.0" y="4960.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 368</text>
@@ -809,6 +877,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="5046.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.4.3.1">Theorem 7.4.3.1</a></text>
 </g>
 <g id="i-theorem-7.4.3.2">
+<rect x="434.0" y="4911.7" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="4918.7" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="4942.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L9715"><tspan font-weight="bold">Theorem 7.4.3.2</tspan></a></text>
 <text x="453.0" y="4960.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 372–373</text>
@@ -822,6 +891,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="5120.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CD-appd-schwartzbruhat-2026.11.25.svg">D</a> (6)</text>
 </g>
 <g id="i-remark-7.4.3.3">
+<rect x="819.0" y="4911.7" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="4918.7" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="4942.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L10253"><tspan font-weight="bold">Remark 7.4.3.3</tspan></a></text>
 <text x="838.0" y="4960.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 373</text>
@@ -834,6 +904,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="5103.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start">(5)</text>
 </g>
 <g id="i-eq-7.4.3.4">
+<rect x="1204.0" y="4911.7" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="4918.7" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="4942.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L7334"><tspan font-weight="bold">(7.4.3.4)</tspan></a></text>
 <text x="1223.0" y="4960.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 368</text>
@@ -847,6 +918,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="5123.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.4.3.1">Theorem 7.4.3.1</a></text>
 </g>
 <g id="i-eq-7.4.3.5">
+<rect x="1589.0" y="4911.7" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="4918.7" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1608.0" y="4942.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L7597"><tspan font-weight="bold">(7.4.3.5)</tspan></a></text>
 <text x="1608.0" y="4960.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 368</text>
@@ -857,6 +929,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1608.0" y="5067.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.4.3.1">Theorem 7.4.3.1</a></text>
 </g>
 <g id="i-eq-7.4.3.13">
+<rect x="1974.0" y="4911.7" width="377.0" height="235.5" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1981.0" y="4918.7" width="363.0" height="221.5" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1993.0" y="4942.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L6879"><tspan font-weight="bold">(7.4.3.13)</tspan></a></text>
 <text x="1993.0" y="4960.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 372</text>
@@ -870,6 +943,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="5197.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec4_Printed.lean</tspan><tspan font-weight="bold"> · 2 items</tspan></text>
 <g id="i-theorem-7.4.3.1">
+<rect x="49.0" y="5206.2" width="377.0" height="306.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="5213.2" width="363.0" height="292.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="5237.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4.lean#L7257"><tspan font-weight="bold">Theorem 7.4.3.1</tspan></a></text>
 <text x="68.0" y="5254.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 368–371</text>
@@ -887,6 +961,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="5489.6" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="#i-remark-7.4.3.3">7.4.3.3</a></text>
 </g>
 <g id="i-eq-7.4.3.14">
+<rect x="434.0" y="5206.2" width="377.0" height="306.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="5213.2" width="363.0" height="292.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="5237.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec4_Printed.lean#L1177"><tspan font-weight="bold">(7.4.3.14)</tspan></a></text>
 <text x="453.0" y="5254.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 373</text>
@@ -900,6 +975,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 </g>
 <text x="56.0" y="5562.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="17" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-family="'RD Noto Sans Mono', 'RD Noto Sans Math', 'Noto Sans Mono', Menlo, Consolas, monospace" font-size="15.6">Sec5.lean</tspan><tspan font-weight="bold"> · 10 items</tspan></text>
 <g id="i-eq-7.5.0.1">
+<rect x="49.0" y="5571.9" width="377.0" height="288.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="5578.9" width="363.0" height="274.9" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="5602.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L857"><tspan font-weight="bold">(7.5.0.1)</tspan></a></text>
 <text x="68.0" y="5620.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 374</text>
@@ -911,6 +987,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="5748.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.5.0.1">Theorem 7.5.0.1</a></text>
 </g>
 <g id="i-theorem-7.5.0.1">
+<rect x="434.0" y="5571.9" width="377.0" height="288.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="5578.9" width="363.0" height="274.9" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="5602.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L746"><tspan font-weight="bold">Theorem 7.5.0.1</tspan></a></text>
 <text x="453.0" y="5620.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 374–377</text>
@@ -927,6 +1004,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="5837.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="#i-remark-7.5.0.2">Remark 7.5.0.2</a></text>
 </g>
 <g id="i-eq-7.5.0.2">
+<rect x="819.0" y="5571.9" width="377.0" height="288.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="5578.9" width="363.0" height="274.9" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="5602.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L70"><tspan font-weight="bold">(7.5.0.2)</tspan></a></text>
 <text x="838.0" y="5620.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 374</text>
@@ -939,6 +1017,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="5763.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.5.0.13">(7.5.0.13)</a></text>
 </g>
 <g id="i-remark-7.5.0.2">
+<rect x="1204.0" y="5571.9" width="377.0" height="288.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="5578.9" width="363.0" height="274.9" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="5602.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L2569"><tspan font-weight="bold">Remark 7.5.0.2</tspan></a></text>
 <text x="1223.0" y="5620.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 378–379</text>
@@ -952,6 +1031,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1223.0" y="5784.1" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.5.0.1">Theorem 7.5.0.1</a></text>
 </g>
 <g id="i-corollary-7.5.0.3">
+<rect x="1589.0" y="5571.9" width="377.0" height="288.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1596.0" y="5578.9" width="363.0" height="274.9" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1608.0" y="5602.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L4647"><tspan font-weight="bold">Corollary 7.5.0.3</tspan></a></text>
 <text x="1608.0" y="5620.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 379</text>
@@ -963,6 +1043,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1608.0" y="5742.5" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="L1-formathlib-2026.11.25.svg">ForMathlib</a> (2)</text>
 </g>
 <g id="i-eq-7.5.0.3">
+<rect x="1974.0" y="5571.9" width="377.0" height="288.9" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1981.0" y="5578.9" width="363.0" height="274.9" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1993.0" y="5602.9" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L788"><tspan font-weight="bold">(7.5.0.3)</tspan></a></text>
 <text x="1993.0" y="5620.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 375</text>
@@ -973,6 +1054,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="1993.0" y="5727.7" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-theorem-7.5.0.1">Theorem 7.5.0.1</a></text>
 </g>
 <g id="i-eq-7.5.0.4">
+<rect x="49.0" y="5868.8" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="56.0" y="5875.8" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="68.0" y="5899.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L2203"><tspan font-weight="bold">(7.5.0.4)</tspan></a></text>
 <text x="68.0" y="5917.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 375</text>
@@ -982,6 +1064,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="68.0" y="6003.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><a href="CA-appa-algebraicnt-2026.11.25.svg">Appendix A</a> (3), <a href="CC-appc-lctvs-2026.11.25.svg">Appendix C</a> (3), <a href="CD-appd-schwartzbruhat-2026.11.25.svg">Appendix D</a> (1)</text>
 </g>
 <g id="i-eq-7.5.0.8">
+<rect x="434.0" y="5868.8" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="441.0" y="5875.8" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="453.0" y="5899.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L2271"><tspan font-weight="bold">(7.5.0.8)</tspan></a></text>
 <text x="453.0" y="5917.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 377–378</text>
@@ -994,6 +1077,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="453.0" y="6063.2" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start"><tspan font-weight="bold">Used by:</tspan> <a href="#i-eq-7.5.0.9">(7.5.0.9)</a>, <a href="#i-remark-7.5.0.2">Remark 7.5.0.2</a></text>
 </g>
 <g id="i-eq-7.5.0.9">
+<rect x="819.0" y="5868.8" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="826.0" y="5875.8" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="838.0" y="5899.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L3233"><tspan font-weight="bold">(7.5.0.9)</tspan></a></text>
 <text x="838.0" y="5917.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">pp. 377–378</text>
@@ -1005,6 +1089,7 @@ a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect
 <text x="838.0" y="6042.4" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#1e2430" class="f-ink" text-anchor="start">(1), <a href="CD-appd-schwartzbruhat-2026.11.25.svg">Appendix D</a> (1)</text>
 </g>
 <g id="i-eq-7.5.0.13">
+<rect x="1204.0" y="5868.8" width="377.0" height="217.7" rx="12" fill="#fdf3e4" stroke="#a35a00" class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>
 <rect x="1211.0" y="5875.8" width="363.0" height="203.7" rx="8" fill="#e8f5f1" stroke="#166b5b" class="ft-teal s-teal" stroke-width="1.6"/>
 <text x="1223.0" y="5899.8" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#166b5b" class="f-teal" text-anchor="start"><a href="https://github.com/mccorvie/riemann-masullo/blob/72a10ffc48c00276d45acb98b24a10816b253c54/RiemannMasullo/Ch07_SchauderBasesZeta/Sec5.lean#L2460"><tspan font-weight="bold">(7.5.0.13)</tspan></a></text>
 <text x="1223.0" y="5917.3" font-family="'RD Noto Sans', 'RD Noto Sans Math', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" fill="#4a5262" class="f-muted" text-anchor="start">p. 378</text>

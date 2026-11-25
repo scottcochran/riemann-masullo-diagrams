@@ -197,9 +197,20 @@ def nav(c, ident, y):
 
 
 def anchored(c, anchor):
-    """Open a group with id `anchor` around what is drawn next; close it with c.add("</g>")."""
+    """Open a group with id `anchor` around what is drawn next. Returns the mark that `close` takes."""
     c.add(f'<g id="{anchor}">')
     c.anchors.append(anchor)
+    return len(c.out)
+
+
+def close(c, mark, x, y, w, h, pad=7):
+    """Close the group `anchored` opened, with its halo behind everything in it: a frame around the box (x, y, w, h)
+    that lib's CSS shows only while the group is the target of the address (`:target`), so that a link's
+    destination stands out when it is opened."""
+    c.out.insert(mark, f'<rect x="{x - pad:.1f}" y="{y - pad:.1f}" width="{w + 2 * pad:.1f}" '
+                       f'height="{h + 2 * pad:.1f}" rx="12" fill="{lib.light("amber-t")}" stroke="{lib.light("amber")}" '
+                       f'class="rd-target ft-amber s-amber" stroke-width="3.5" opacity="0"/>')
+    c.add("</g>")
 
 
 def coverable(text):

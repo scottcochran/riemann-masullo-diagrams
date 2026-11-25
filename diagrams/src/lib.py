@@ -3,8 +3,8 @@
 Taken from the TOPAK diagram family (Apache-2.0, same author) by way of riemann-diagrams, whose copy this is, at
 riemann-diagrams f87256e (NOTICE). There, the brand, date, generator and state line differ from TOPAK's, the fonts
 are embedded Noto where TOPAK names system fonts, and the light theme's page is a grey matched to the content.
-Here, only BRAND, DATE, HOME_ORDER and the light page (`page`, measured again here: diagrams/PAGE.md) differ
-from that copy. A fix in riemann-diagrams reaches this copy only when
+Here, only BRAND, DATE, HOME_ORDER, the light page (`page`, measured again here: diagrams/PAGE.md) and the style
+that shows a link's target (`.rd-target`) differ from that copy. A fix in riemann-diagrams reaches this copy only when
 it is copied again, on purpose.
 
 Dependency-free. Every diagram is a Canvas; primitives measure their own text with the advance
@@ -122,6 +122,10 @@ def _css():
     lines.append("@media (prefers-color-scheme: dark){svg:not([data-theme=light]){" + block(1, 2, 3) + "}}")
     lines.append("svg[data-theme=dark]{" + block(1, 2, 3) + "}")
     lines.append("a:hover tspan,a:focus tspan,a:hover>text{text-decoration:underline} a:hover>rect{stroke-width:3.4}")
+    # The card or block a link opened: its halo (drawn hidden, behind it) shows while it is the address's #fragment,
+    # and pulses three times. A renderer without CSS keeps it hidden.
+    lines.append(".rd-target{opacity:0} g:target>.rd-target{opacity:1;animation:rd-pulse 0.9s ease-in-out 3}"
+                 " @keyframes rd-pulse{50%{stroke-width:9}} g[id]{scroll-margin-top:90px}")
     for k in BASE:
         lines.append(f".f-{k}{{fill:var(--{k})}} .s-{k}{{stroke:var(--{k})}}")
     for k in ACCENTS:

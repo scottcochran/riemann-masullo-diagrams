@@ -354,6 +354,16 @@ lines (`DECLS`, `DEVIATING`). In memory on D8, a declaration leaving its item an
 the build. `check-expectations.py` finds 187 literal expectations in 45 modules. All 46 output files are
 byte-identical over two hash seeds, and on Python 3.12 and 3.14.
 
+### Showing a link's target
+
+Added 2026.11.25 at the custodian's request. Every anchored group, 3,577 in all, now has a frame behind it: the
+1,463 chapter cards, the 1,463 declaration blocks, the 634 deviation lists and the 17 directories of M5. The frame
+is hidden until the address's `#fragment` names the group (CSS `:target`), then shows in amber and pulses three
+times (`lib.py`'s `.rd-target`, `draw.close`). It was tried in headless Chrome on C5 at `#i-theorem-5.2.4.1` and on
+D8 at `#v-eq-8.1.0.2`: the page scrolls to the target, and its frame shows. Those captures leave the part of the
+page above the target unpainted. That comes from the capture, not the frame: the posters from before the frame
+show the same, and a capture without a fragment is whole.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at

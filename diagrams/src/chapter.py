@@ -192,11 +192,12 @@ def build(ident, chapter, **expected):
                          bullets=False, draw=False, pad=12) for it in row]
             h = max(hs)
             for k, it in enumerate(row):
-                draw.anchored(c, it.anchor)
-                c.card(x0 + k * (cw + GAP), y, cw, title(it), body(it), accent=ACCENT[it.state], sub=sub(it),
+                mark = draw.anchored(c, it.anchor)
+                cx = x0 + k * (cw + GAP)
+                c.card(cx, y, cw, title(it), body(it), accent=ACCENT[it.state], sub=sub(it),
                        size=12.5, tsize=14, bullets=False, pad=12, h=h, dash="6 4" if it.state == "open" else None)
                 c.blocks[-1] = c.blocks[-1][:4] + ("node " + it.key,)
-                c.add("</g>")
+                draw.close(c, mark, cx, y, cw, h)
             y += h + GAP
         y += 18
     y += 10
