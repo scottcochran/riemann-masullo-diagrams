@@ -148,14 +148,18 @@ def build(ident, chapter, **expected):
                                             anchor=I.anchor(it.key, "v")) if it.deviations else "")
                    + (", " + draw.to_poster("M5", printed, anchor=f"refuted-{chapter}") if printed else ""))
         if it.state != "proved":
-            own_open = sum(1 for d in it.decls if d.open)
-            below = {o.key for d in it.decls for o in m.open_below(d.i)}
-            floor = any(o.key == "RiemannMasullo.traceFormula_exteriorZeros" for d in it.decls
-                        for o in ([d] if d.open else []) + m.open_below(d.i))
-            words = (f"{plural(own_open, 'declaration')} of the item {'is' if own_open == 1 else 'are'} open"
+            opened = sorted((d for d in it.decls if d.open), key=lambda d: d.key)
+            below = sorted({o.key: o for d in it.decls for o in m.open_below(d.i)}.values(), key=lambda d: d.key)
+            opens = opened if it.state == "open" else below
+            floor = any(o.key == "RiemannMasullo.traceFormula_exteriorZeros" for o in opened + below)
+            words = (f"{plural(len(opened), 'declaration')} of the item {'is' if len(opened) == 1 else 'are'} open"
                      if it.state == "open" else f"rests on {plural(len(below), 'open declaration')}")
-            out.append(words[0].upper() + words[1:] + ", named on " + draw.to_poster("M2", "M2")
-                       + (" and " + draw.to_poster("M1", "M1") if floor else ""))
+            # each open declaration opens where M2 names it: its row, or its card
+            targets = sorted({draw.m2_target(m, o) for o in opens}, key=I.natural)
+            m2 = ", ".join(draw.to_poster("M2", "M2" if len(targets) == 1 else f"M2 ({n + 1})", anchor=t)
+                           for n, t in enumerate(targets))
+            out.append(words[0].upper() + words[1:] + ", named on " + m2
+                       + (" and " + draw.to_poster("M1", "M1", anchor="floor") if floor else ""))
         if it.key in got["ERRATA"]:
             out.append("Errata: " + "; ".join(
                 ", ".join(draw.to_url(m.errata_url(entry_line[i]), i) for i in ids) + f" ({chk})"
@@ -164,9 +168,14 @@ def build(ident, chapter, **expected):
             out.append("**Uses:** " + ", ".join(draw.to_anchor(c, by_key[u].anchor, by_key[u].label, own)
                                                 for u in sorted(uses[it.key], key=I.natural)))
         if it.key in got["OUTSIDE"]:
-            out.append("From other directories: " + ", ".join(
-                draw.to_poster(poster_id(k), rm.chapter_label(k)) + f" ({n})"
-                for k, n in got["OUTSIDE"][it.key].items()))
+            # one item used there: its card; more: the list of them on the declarations poster, row by directory
+            X = I.load()
+            def outside(k, n):
+                if n == 1:
+                    u = next(u for u in it.uses if X.items[u].chapter == k)
+                    return draw.to_anchor(c, X.items[u].anchor, rm.chapter_label(k)) + " (1)"
+                return draw.to_poster(decl_poster, rm.chapter_label(k), anchor=f"{I.anchor(it.key, 'o')}--{k}") + f" ({n})"
+            out.append("From other directories: " + ", ".join(outside(k, n) for k, n in got["OUTSIDE"][it.key].items()))
         if used_by[it.key]:
             out.append("**Used by:** " + ", ".join(draw.to_anchor(c, by_key[u].anchor, by_key[u].label, own)
                                                    for u in sorted(used_by[it.key], key=I.natural)))

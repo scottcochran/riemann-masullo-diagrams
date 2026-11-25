@@ -20,6 +20,7 @@ a NOTE and exits 1, and a second run makes every link follow.
 import importlib
 import json
 import pathlib
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -51,6 +52,9 @@ def main(argv):
             ET.fromstring(svg)          # well-formed XML, or the poster is not written
             if "[[" in svg:             # markup the library did not render, such as a link inside **bold**
                 raise ValueError(f"unrendered markup in the output: {svg[svg.index('[['):][:80]!r}")
+            bare = re.findall(r'<a href="([^"#:]+\.svg)"', svg)
+            if bare:                    # every link to a poster opens a target that lib's CSS frames
+                raise ValueError(f"a link to a whole poster, with no #target: {bare[0]}")
         except Exception as e:  # report and carry on, so one broken module cannot block the rest
             print(f"ERROR {name}: {e}")
             failed += 1

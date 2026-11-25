@@ -209,8 +209,10 @@ def build():
     body = [f"`{g.where}`, at the pin", "Paper: " + draw.pages(g.paper),
             f"Its term uses `sorryAx`. Its statement rests on {len(m.below(g.i)):,} declarations, all proved; it has "
             f"no proof."] + draw.item_line(c, g)
+    mark = draw.anchored(c, "floor")
     hl = c.card(x0, y, left_w, f"`{g.show}`", body, accent="red", dash="6 4", size=13.5, tsize=17, bullets=False)
     c.blocks[-1] = c.blocks[-1][:4] + ("node " + g.name,)
+    draw.close(c, mark, x0, y, left_w, hl)
     yy = y + hl + 16
     yy += c.para(x0, yy, left_w, "Its docstring, `Gap:` line (Lean source, quoted):", size=13, color="faint", bold=True)
     yy += draw.quote(c, x0 + 14, yy, left_w - 14, g.gap)

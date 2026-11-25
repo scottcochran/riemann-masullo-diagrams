@@ -282,7 +282,7 @@ def build():
                 lean = (f"Named as proved: {short_list(by_key[k].show for k in below)}. "
                         + ("Nothing open below any of them." if not opens else
                            "They rest on " + short_list(by_key[o].show for o in opens) + " and nothing else open."))
-                trs.append([item, ", ".join(r.entries), said_txt, lean])
+                trs.append({"cells": [item, ", ".join(r.entries), said_txt, lean], "anchor": f"row-{r.line}"})
                 continue
             ds = [by_key[k] for k in GAPS[r.key]]
             if not ds:
@@ -299,7 +299,8 @@ def build():
                         s_ += ", all in `_Isolated` files"
                     parts.append(s_)
                 lean = "; ".join(parts) + "."
-            trs.append([item, ", ".join(r.entries), first_sentence(r.missing), lean])
+            trs.append({"cells": [item, ", ".join(r.entries), first_sentence(r.missing), lean],
+                        "anchor": f"row-{r.line}"})
         y += c.table(x0, y, cols, trs, size=12.5, hsize=12.5, accent=acc)
         y += 30
 
@@ -323,11 +324,13 @@ def build():
             raise ValueError(f"{d.show} is open, named by no open row, and not a classical input: re-read M2")
         where = (f"ERRATA.md names it on line{'s' if len(lines) > 1 else ''} {', '.join(map(str, lines))}"
                  if lines else "ERRATA.md does not name it")
+        mark = draw.anchored(c, draw.m2_card(d))
         hh = c.card(x0, y, x1 - x0, f"`{d.show}`", [f"`{d.where}` · {where} · cone {len(m.above(d.i))}, "
                     f"reaching {len(m.above(d.i) & tset)} targets"] + draw.item_line(c, d), accent="grey", size=13,
                     tsize=14,
                     bullets=False, dash="6 4")
         c.blocks[-1] = c.blocks[-1][:4] + ("node " + d.name,)
+        draw.close(c, mark, x0, y, x1 - x0, hh)
         y += hh + 8
         y += draw.quote(c, x0 + 16, y, x1 - x0 - 16, d.classical, size=13.5) + 16
     y += 20

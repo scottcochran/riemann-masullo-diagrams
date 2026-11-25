@@ -364,6 +364,17 @@ D8 at `#v-eq-8.1.0.2`: the page scrolls to the target, and its frame shows. Thos
 page above the target unpainted. That comes from the capture, not the frame: the posters from before the frame
 show the same, and a capture without a fragment is whole.
 
+Then, at the custodian's report that the links to other chapters framed nothing, every link was given a target. A
+chapter card's "From other directories" opens the used item's card when it uses one, and otherwise a row of a new
+list on the declarations poster: "Uses of other directories", one anchored row per directory, naming the items
+used, each opening its card. These lists are recorded as `OUTSIDE_ITEMS`, 13,136 uses. "Named on M2" opens M2's row
+for the open declaration, or its card there, and "M1" opens M1's card of the floor. A link to a whole poster opens
+its title block, `top`, which is framed too. The generator now fails on a link to a poster without a target.
+
+There are 29,157 links with a target, and each target id exists. A copy of D1 whose style frames the row
+`#o-text-1.4.6--Ch03_IdelicZeta` by its id was rendered whole: the row shows its frame. A headless capture opened at
+that address paints nothing, as before.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at

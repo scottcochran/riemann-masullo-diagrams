@@ -73,7 +73,11 @@ DEVIATING = {'text:14.2': ['RiemannMasullo.curveZeta_closedPointsOfDegree_finite
                'RiemannMasullo.curveZeta_pointCount_weil_bound',
                'RiemannMasullo.curveZeta_closedPointsOfDegree_asymptotic'],
  'eq:14.2.0.1': ['RiemannMasullo.curveZetaEulerProduct', 'RiemannMasullo.hasProd_curveZetaEulerProduct']}
+OUTSIDE_ITEMS = {'text:14.2': {'ForMathlib': ['file:RiemannMasullo/ForMathlib/AlgebraicGeometry/CurvePoints.lean',
+                              'file:RiemannMasullo/ForMathlib/AlgebraicGeometry/SmoothCurve.lean',
+                              'file:RiemannMasullo/ForMathlib/NumberTheory/WeilBound/EtaleChart.lean']}}
 
 
 def build():
-    return declarations.build(ID, CHAPTER, DECLS=DECLS, DEVIATING=DEVIATING)
+    return declarations.build(ID, CHAPTER, DECLS=DECLS, DEVIATING=DEVIATING,
+                              OUTSIDE_ITEMS=OUTSIDE_ITEMS)

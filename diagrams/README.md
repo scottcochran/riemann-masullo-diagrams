@@ -57,6 +57,7 @@ Then each poster, against its literals:
 | | `STATES`, `DEVIATIONS`, `ERRATA` | an item's state, its count of deviating declarations, or the entries on it change |
 | D*, DL | `DECLS` | a declaration appears in, leaves or moves between items, or changes its place in its file |
 | | `DEVIATING` | a declaration gains or loses its `Deviation:` line |
+| | `OUTSIDE_ITEMS` | an item's direct uses of another directory's items change |
 
 What is not checked: a quotation cut before a character the fonts lack is marked as abridged, and its name opens the
 full text (one `Deviation:` line, which writes `⁻³ᐟ²`); the counts in `README.md` and this file are written by hand, and no build compares them;
@@ -75,16 +76,17 @@ Every poster links to the others, so that a reader can follow an item from any p
 | A chapter card's count of declarations, and of deviations | the item's table, and its quoted `Deviation:` lines, on the declarations poster |
 | A declarations block's heading | the item's card on the chapter poster |
 | A card's "Uses" and "Used by" | the cards they name, on the same poster |
-| "From other directories" | those directories' chapter posters |
+| "From other directories" | the used item's card when it is one item; else that directory's row of the item's "Uses of other directories" on the declarations poster, whose items open their cards |
 | An errata entry id, or a row's line | its line of ERRATA.md at the pin |
 | "Printed claims kept" | that directory's part of M5 |
-| An open or resting item | M2, and M1 where the floor is below it |
+| An open or resting item | the row of M2 that names its open declaration (or that declaration's card on M2), and M1's card of the floor where the floor is below it |
 | A declaration card on M1 or M2, a refutation on M5, a dot on M3 | the item's card on its chapter poster |
-| A directory on M4, a row of M3 or M5 | its chapter poster |
+| A directory on M4, a row of M3 or M5, the line under a title | the poster's title block, `top` |
 
 A card is an anchor (`i-<kind>-<number>`, from `items.anchor`); a declarations poster's blocks are `d-…` and their
-deviations `v-…`; M5's directories are `refuted-<directory>`. The target of a link stands out when it is opened: each
-anchored group has an amber frame behind it, hidden until the address names it (CSS `:target`), when it shows and
+deviations `v-…`; M5's directories are `refuted-<directory>`. Every link to a poster names a target on it, and the generator fails on one that does not. The target of a link
+stands out when it is opened: each anchored group has an amber frame behind it, and each anchored table row (M2's
+rows, `row-<line>`; the declarations posters' `o-<item>--<directory>`) is framed itself, hidden until the address names it (CSS `:target`), when it shows and
 pulses three times. It works where a browser opens the SVG itself, as on the Pages site, from a release or from a
 file; GitHub's file viewer shows an SVG as an image, without its links or this style, and a renderer without CSS
 keeps the frame hidden. A link

@@ -172,11 +172,15 @@ def to_anchor(c, anchor, text, own=()):
 
 
 def to_poster(pid, text, anchor=None):
+    """`text` linked to poster `pid`: to `anchor` on it, or else to its title block (`top`), so that every link has a
+    target to frame."""
     f = lib.POSTERS.get(pid)
     if not f:
         return text
     if anchor and anchor in lib.ANCHORS_OF.get(f, ()):
         return f"[[@{f}#{anchor}|{text}]]"
+    if "top" in lib.ANCHORS_OF.get(f, ()):
+        return f"[[@{f}#top|{text}]]"
     return f"[[@{f}|{text}]]"
 
 
@@ -189,7 +193,11 @@ NAV = [("M1", "what the targets rest on"), ("M2", "the steps with no known repai
 
 
 def nav(c, ident, y):
-    """The line under the title that links the overviews; M4 lists every chapter poster. Returns the height used."""
+    """The line under the title that links the overviews; M4 lists every chapter poster. Returns the height used.
+    Also makes the title block an anchor, `top`, which a link to the whole poster opens and frames."""
+    c.out.insert(0, '<g id="top">')
+    c.anchors.append("top")
+    close(c, 1, c.x0, c.pad - 10, c.x1 - c.x0, y - c.pad - 12, pad=10)
     parts = [f"**{pid}**, {what}" if pid == ident else to_poster(pid, f"{pid}, {what}") for pid, what in NAV]
     return c.para(c.x0, y, c.x1 - c.x0, "Posters: " + " · ".join(parts) + ". Names, items, files, entries and "
                   "posters are links, underlined under the pointer: a card's title or a Lean name opens the source "
@@ -221,3 +229,18 @@ def coverable(text):
         return text, False
     start = max((i for i in range(bad[0]) if text[i - 1:i + 1] in (". ", ".\n")), default=0)
     return (text[:start].rstrip() + " …") if start else "…", True
+
+
+def m2_card(d):
+    """The anchor of an open declaration's card on M2, for the ones no open row names."""
+    import re
+    return "open-" + re.sub(r"[^\w.-]+", "_", d.key)
+
+
+def m2_target(m, d):
+    """Where M2 names the open declaration `d`: the row of ERRATA.md's open rows that names it in code
+    (`row-<line>`), else its own card there."""
+    for r in m.rows:
+        if not r.settled and any((x := m.resolve(n)) is not None and x.i == d.i for n in r.names):
+            return f"row-{r.line}"
+    return m2_card(d)

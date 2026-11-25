@@ -7,7 +7,9 @@ each with that line quoted; and `d-<item>`, every declaration of the item, with 
 Each module `d_d*.py` records, and `build()` compares both ways:
 
 - DECLS: item -> every declaration of it, by its key, in file and line order;
-- DEVIATING: item -> the declarations of it with a `Deviation:` line.
+- DEVIATING: item -> the declarations of it with a `Deviation:` line;
+- OUTSIDE_ITEMS: item -> directory -> the items of that directory it uses directly, for the uses the chapter card
+  counts under "From other directories". Each directory is a row, `o-<item>--<directory>`, that the card's count opens.
 """
 import chapter as CH
 import draw
@@ -22,17 +24,31 @@ def order(d):
     return (I.natural(d.module), d.line, d.name)
 
 
+def outside_anchor(key, directory):
+    return f"{I.anchor(key, 'o')}--{directory}"
+
+
 def read(chapter):
     its, got = CH.read(chapter)
+    X = I.load()
+    keys = {it.key for it in its}
     decls = {it.key: [d.key for d in sorted(it.decls, key=order)] for it in its}
     deviating = {it.key: [d.key for d in sorted(it.decls, key=order) if d.deviation] for it in its if it.deviations}
-    return its, got, {"DECLS": decls, "DEVIATING": deviating}
+    outside = {}
+    for it in its:
+        by_dir = {}
+        for u in it.uses:
+            if u not in keys:
+                by_dir.setdefault(X.items[u].chapter, []).append(u)
+        if by_dir:
+            outside[it.key] = {k: sorted(by_dir[k], key=I.natural) for k in sorted(by_dir, key=rm.chapter_order)}
+    return its, got, {"DECLS": decls, "DEVIATING": deviating, "OUTSIDE_ITEMS": outside}
 
 
 def build(ident, chapter, **expected):
     m = rm.load()
     its, got, lits = read(chapter)
-    for name in ("DECLS", "DEVIATING"):
+    for name in ("DECLS", "DEVIATING", "OUTSIDE_ITEMS"):
         rm.require(f"{ident} {name}", expected[name], lits[name], f"{ident}'s blocks for {chapter}")
     by_key = {it.key: it for it in its}
     n_decls = sum(len(v) for v in lits["DECLS"].values())
@@ -42,7 +58,8 @@ def build(ident, chapter, **expected):
         ident, f"{CH.chapter_title(chapter)}, declaration by declaration",
         f"riemann-masullo at {rm.SHORT}: the {CH.plural(n_decls, 'declaration')} of the "
         f"{CH.plural(len(its), 'file' if chapter == 'ForMathlib' else 'item')} on {card_poster}, each with its kind, "
-        f"file, line and state; {CH.plural(n_dev, 'declaration')} with a `Deviation:` line, quoted.",
+        f"file, line and state; {CH.plural(n_dev, 'declaration')} with a `Deviation:` line, quoted; and the items of "
+        f"other directories each item uses.",
         W, rm.sources(m), state=rm.state(m))
     x0, x1 = c.x0, c.x1
     y = c.y
@@ -91,6 +108,14 @@ def build(ident, chapter, **expected):
                 rows.append({"cells": [f"`{d.show}`", d.kind, f"`{d.where}`", shown],
                              "accent": "red" if d.open else "amber" if state else None})
             y += c.table(x0, y, cols, rows, size=12, hsize=12.5, pad=6, header=True)
+            if k in lits["OUTSIDE_ITEMS"]:
+                X = I.load()
+                orows = [{"cells": [draw.to_poster(CH.poster_id(dk), rm.chapter_label(dk)),
+                                    ", ".join(draw.to_anchor(c, X.items[u].anchor, X.items[u].label) for u in us)],
+                          "anchor": outside_anchor(k, dk)} for dk, us in lits["OUTSIDE_ITEMS"][k].items()]
+                y += 8
+                y += c.table(x0, y, [("Uses of other directories", 320), ("Items it uses there directly", 1968)],
+                             orows, size=12, hsize=12.5, pad=6, zebra=False)
             draw.close(c, dmark, x0, dy, x1 - x0, y - dy, pad=9)
             y += 26
         y += 10

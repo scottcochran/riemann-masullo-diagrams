@@ -3,8 +3,8 @@
 Taken from the TOPAK diagram family (Apache-2.0, same author) by way of riemann-diagrams, whose copy this is, at
 riemann-diagrams f87256e (NOTICE). There, the brand, date, generator and state line differ from TOPAK's, the fonts
 are embedded Noto where TOPAK names system fonts, and the light theme's page is a grey matched to the content.
-Here, only BRAND, DATE, HOME_ORDER, the light page (`page`, measured again here: diagrams/PAGE.md) and the style
-that shows a link's target (`.rd-target`) differ from that copy. A fix in riemann-diagrams reaches this copy only when
+Here, only BRAND, DATE, HOME_ORDER, the light page (`page`, measured again here: diagrams/PAGE.md) the style
+that shows a link's target (`.rd-target`, `.rd-row`), and `table`'s optional row anchors differ from that copy. A fix in riemann-diagrams reaches this copy only when
 it is copied again, on purpose.
 
 Dependency-free. Every diagram is a Canvas; primitives measure their own text with the advance
@@ -125,7 +125,9 @@ def _css():
     # The card or block a link opened: its halo (drawn hidden, behind it) shows while it is the address's #fragment,
     # and pulses three times. A renderer without CSS keeps it hidden.
     lines.append(".rd-target{opacity:0} g:target>.rd-target{opacity:1;animation:rd-pulse 0.9s ease-in-out 3}"
-                 " @keyframes rd-pulse{50%{stroke-width:9}} g[id]{scroll-margin-top:90px}")
+                 " @keyframes rd-pulse{50%{stroke-width:9}} g[id]{scroll-margin-top:90px}"
+                 " g.rd-row:target>rect:first-child{fill:var(--amber-t);stroke:var(--amber);stroke-width:3;"
+                 "animation:rd-pulse 0.9s ease-in-out 3}")
     for k in BASE:
         lines.append(f".f-{k}{{fill:var(--{k})}} .s-{k}{{stroke:var(--{k})}}")
     for k in ACCENTS:
@@ -590,12 +592,15 @@ class Canvas:
                         parts.append(render_line(x + pad, cy + pad + size - 2 + i * lead, ln, size, gacc, bold=True))
                 cy += gh
                 continue
-            racc, rdash = None, False
+            racc, rdash, ranchor = None, False, None
             if isinstance(r, dict):
-                racc, rdash, r = r.get("accent"), r.get("dash", False), r["cells"]
+                racc, rdash, ranchor, r = r.get("accent"), r.get("dash", False), r.get("anchor"), r["cells"]
             ls = [cell_lines(s, c[1], c[2] if len(c) > 2 else {}) for s, c in zip(r, cols)]
             rh = max(max(len(l), 1) for l in ls) * lead + 2 * pad - 4
             if draw:
+                if ranchor:                 # a row a link can open: lib's CSS frames it while it is the target
+                    parts.append(f'<g id="{ranchor}" class="rd-row">')
+                    self.anchors.append(ranchor)
                 bgtok = f"{racc}-t" if racc else ("zebra" if zebra and ri % 2 else "bg")
                 parts.append(f'<rect x="{x}" y="{cy:.1f}" width="{tw}" height="{rh:.1f}" {fs(bgtok, "line")} '
                              f'stroke-width="1"/>')
@@ -609,6 +614,8 @@ class Canvas:
                         parts.append(render_line(cx + pad, cy + pad + size - 2 + i * lead, ln, size, col,
                                                  bold=opt.get("bold", False)))
                     cx += c[1]
+                if ranchor:
+                    parts.append("</g>")
             cy += rh
         if draw:
             self.blocks.append((x, y, x + tw, cy, "table " + cols[0][0][:30]))

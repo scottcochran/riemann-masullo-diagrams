@@ -74,7 +74,9 @@ DEVIATING = {'definition:E.1.1.1': ['RiemannMasullo.IsKClosed', 'RiemannMasullo.
  'remark:E.1.1.8': ['RiemannMasullo.uCompactlyGeneratedSpace_iff_eq_compactlyGenerated'],
  'example:E.1.1.9': ['RiemannMasullo.compactlyGenerated_cocountableTopology_eq_bot',
                      'RiemannMasullo.not_uCompactlyGeneratedSpace_cocountableTopology']}
+OUTSIDE_ITEMS = {}
 
 
 def build():
-    return declarations.build(ID, CHAPTER, DECLS=DECLS, DEVIATING=DEVIATING)
+    return declarations.build(ID, CHAPTER, DECLS=DECLS, DEVIATING=DEVIATING,
+                              OUTSIDE_ITEMS=OUTSIDE_ITEMS)
