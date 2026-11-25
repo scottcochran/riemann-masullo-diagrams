@@ -321,8 +321,14 @@ ERRATA = {}
 # item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
 ERRATA_PAPERS = {}
 
+# item -> the keys of the bibliography the manuscript cites on its pages (B1)
+CITES = {'file:RiemannMasullo/ForMathlib/Analysis/Fourier/PaleyWiener.lean': ['Kal', 'Ru-2', 'Sch-a', 'Scha'],
+ 'file:RiemannMasullo/ForMathlib/Analysis/LocallyConvex/TensorProduct/Bounded.lean': ['Gro-b', 'Scha', 'Tre'],
+ 'file:RiemannMasullo/ForMathlib/NumberTheory/NumberField/DedekindZeta/MultipleZero.lean': ['Jar', 'NB'],
+ 'file:RiemannMasullo/ForMathlib/Topology/Algebra/RestrictedProduct/TopologicalSpace.lean': ['CF', 'DE', 'RV']}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
                          DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
-                         ERRATA_PAPERS=ERRATA_PAPERS)
+                         ERRATA_PAPERS=ERRATA_PAPERS, CITES=CITES)

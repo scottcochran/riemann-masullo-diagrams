@@ -1,0 +1,1305 @@
+# The works the manuscript's bibliography lists, one entry per bibliography entry: the url a reader is sent to from
+# the entry on B1. This is the posters' own data, not riemann-masullo's: the transcription prints authors, title,
+# venue and year, and no link. Written by tools/link-papers.py on 2026.11.25 (the proof-posters:linking-papers method):
+# `via = "crossref"`, Crossref's match on the entry's title, first author and year, checked against the DOI's own
+# record; `via = "zbmath"`, zbMATH Open's record for the author and year with the same title, linking its DOI, an
+# arXiv, numdam or EuDML copy, or the record itself; `via = "hand"`, settled by hand, with a note; `via = "none"`,
+# found by neither on those terms, drawn without a link. A DOI is given as a doi.org url. An entry's id is its key;
+# the second entry printed under one key is `<key> (2)`. B1 fails if an id here is not an entry of the
+# bibliography, or an entry has no id here (diagrams/src/d_b1_bibliography.py).
+
+
+["AB"]
+url = "https://doi.org/10.1007/978-3-662-03961-8"
+via = "crossref"
+
+["ABM"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["ABR"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Ac"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Ahl"]
+url = "https://zbmath.org/3613366"
+via = "zbmath"
+
+["Al-B"]
+url = "https://doi.org/10.2977/prims/1195178930"
+via = "crossref"
+
+["Apiola"]
+url = "https://doi.org/10.1007/bf01235382"
+via = "crossref"
+
+["Ara"]
+url = "https://doi.org/10.14492/hokmj/1381757775"
+via = "crossref"
+
+["Arm"]
+url = "https://doi.org/10.1007/bf01404125"
+via = "crossref"
+
+["Art-1"]
+url = "https://zbmath.org/3186964"
+via = "zbmath"
+
+["Art-2"]
+url = "https://doi.org/10.1007/bf01448095"
+via = "crossref"
+
+["Arthur"]
+url = "https://doi.org/10.2307/1971076"
+via = "crossref"
+
+["AS"]
+url = "https://arxiv.org/abs/math/0407054"
+via = "zbmath"
+
+["AT"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["AtChe"]
+url = "https://doi.org/10.1093/imrn/rnt003"
+via = "crossref"
+
+["Au"]
+url = "https://doi.org/10.5802/jolt.301"
+via = "crossref"
+
+["Aub"]
+url = "https://doi.org/10.1007/978-1-4612-5734-9"
+via = "crossref"
+
+["Ba"]
+url = "https://doi.org/10.1080/00029890.1955.11988688"
+via = "crossref"
+
+["Ba1"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Ba2"]
+url = "https://doi.org/10.1007/bf01161980"
+via = "crossref"
+
+["Bar"]
+url = "https://doi.org/10.1515/crll.1981.323.139"
+via = "zbmath"
+
+["BB"]
+url = "https://doi.org/10.1142/s1793042120500700"
+via = "crossref"
+
+["BCR"]
+url = "https://zbmath.org/1201576"
+via = "zbmath"
+
+["BCZ"]
+url = "https://doi.org/10.1515/crll.2001.049"
+via = "crossref"
+
+["Be"]
+url = "https://zbmath.org/3220364"
+via = "zbmath"
+
+["BG"]
+url = "https://zbmath.org/3504093"
+via = "zbmath"
+
+["BGV"]
+url = "https://doi.org/10.1007/978-3-642-58088-8"
+via = "crossref"
+
+["Birkhoff"]
+url = "http://www.numdam.org/item?id=CM_1936__3__427_0"
+via = "zbmath"
+
+["BJ"]
+url = "https://doi.org/10.2307/2371057"
+via = "crossref"
+
+["BJL"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["BJM"]
+url = "https://doi.org/10.1007/pl00012457"
+via = "crossref"
+
+["BKMcK"]
+url = "https://doi.org/10.1155/s0161171283000174"
+via = "crossref"
+
+["BL"]
+url = "https://zbmath.org/2617074"
+via = "zbmath"
+
+["Bl"]
+url = "https://doi.org/10.1016/0022-1236(77)90073-8"
+via = "crossref"
+
+["Bo"]
+url = "https://zbmath.org/1846845"
+via = "zbmath"
+
+["Bog"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Bohr"]
+url = "https://doi.org/10.1007/bf02418541"
+via = "crossref"
+
+["Bohr1"]
+url = "https://doi.org/10.1007/BF02395468"
+via = "zbmath"
+
+["Bohr2"]
+url = "https://doi.org/10.1007/bf02543859"
+via = "crossref"
+
+["Bohr3"]
+url = "https://doi.org/10.1007/bf02543846"
+via = "crossref"
+
+["Bohr4"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Bor1"]
+url = "https://doi.org/10.1017/cbo9780511525858"
+via = "crossref"
+
+["Bor2"]
+url = "https://doi.org/10.1017/cbo9780511525872"
+via = "crossref"
+
+["Bou"]
+url = "https://doi.org/10.1007/978-3-642-61701-0"
+via = "crossref"
+
+["Bou-GT"]
+url = "https://doi.org/10.1007/978-3-642-59312-3"
+via = "crossref"
+
+["Bou-I"]
+url = "https://doi.org/10.1007/978-3-642-59312-3"
+via = "crossref"
+
+["Bou-II"]
+url = "https://doi.org/10.1007/978-3-642-59312-3"
+via = "crossref"
+
+["Bou-TVS"]
+url = "https://doi.org/10.1007/978-3-642-59312-3"
+via = "crossref"
+
+["Br1"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Br2"]
+url = "https://doi.org/10.1093/qmath/14.1.303"
+via = "crossref"
+
+["Br3"]
+url = "https://doi.org/10.1093/qmath/15.1.238"
+via = "crossref"
+
+["Br4"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Bris-a"]
+url = "https://doi.org/10.2140/pjm.1991.150.229"
+via = "crossref"
+
+["Bris-b"]
+url = "https://doi.org/10.1090/s0002-9939-1988-0929421-x"
+via = "crossref"
+
+["Bru"]
+url = "https://doi.org/10.24033/bsmf.1559"
+via = "crossref"
+
+["BT"]
+url = "https://doi.org/10.1007/978-1-4757-3951-0"
+via = "crossref"
+
+["Car"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Carleson"]
+url = "https://doi.org/10.1007/bf02392815"
+via = "crossref"
+
+["CdSW"]
+url = "https://zbmath.org/1515267"
+via = "zbmath"
+
+["CF"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["CFSS"]
+url = "https://doi.org/10.1007/978-1-4615-6927-5"
+via = "crossref"
+
+["Ch"]
+url = "https://doi.org/10.1016/0022-1236(73)90003-7"
+via = "crossref"
+
+["Cha"]
+url = "https://doi.org/10.1016/j.topol.2015.02.002"
+via = "crossref"
+
+["CHR"]
+url = "https://doi.org/10.1007/s10485-010-9240-1"
+via = "crossref"
+
+["Cl"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Cnw-a"]
+url = "https://doi.org/10.1007/978-1-4757-3828-5"
+via = "hand"
+note = "Conway's A Course in Functional Analysis: the entry reads \"A first Course\", which no work of Conway's is titled. Checked against the DOI's own record"
+
+["Cnw-b"]
+url = "https://doi.org/10.1007/978-1-4612-6313-5"
+via = "hand"
+note = "volume I, the entry's; Crossref's match was volume II. Checked against the DOI's own record"
+
+["Cnw-c"]
+url = "https://doi.org/10.1090/gsm/021"
+via = "crossref"
+
+["Co"]
+url = "https://doi.org/10.1007/s000290050042"
+via = "crossref"
+
+["Coh"]
+url = "https://doi.org/10.1007/978-1-4614-6956-8"
+via = "zbmath"
+
+["Conrad"]
+url = "https://doi.org/10.4171/lem/58-1-3"
+via = "crossref"
+
+["CPS"]
+url = "https://doi.org/10.1007/BF02698889"
+via = "zbmath"
+
+["Davenport-1"]
+url = "https://doi.org/10.1112/jlms/s1-26.3.179"
+via = "crossref"
+
+["Davenport-2"]
+url = "https://doi.org/10.1112/jlms/s1-39.1.580-t"
+via = "zbmath"
+
+["DE"]
+url = "https://doi.org/10.1007/978-3-319-05792-7"
+via = "crossref"
+
+["De"]
+url = "https://doi.org/10.1090/pspum/055.1/1265547"
+via = "crossref"
+
+["De2"]
+url = "https://zbmath.org/1054984"
+via = "zbmath"
+
+["De3"]
+url = "https://arxiv.org/abs/math/0505354"
+via = "zbmath"
+
+["De4"]
+url = "https://doi.org/10.1007/978-1-4757-3675-5_7"
+via = "crossref"
+
+["Del"]
+url = "https://doi.org/10.1007/978-3-540-37855-6_7"
+via = "zbmath"
+
+["Den"]
+url = "https://doi.org/10.1515/crll.1993.441.1"
+via = "zbmath"
+
+["DiM"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Dix"]
+url = "https://zbmath.org/3135894"
+via = "zbmath"
+
+["DS"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["DU"]
+url = "https://doi.org/10.1090/surv/015"
+via = "crossref"
+
+["Du"]
+url = "https://zbmath.org/3232606"
+via = "zbmath"
+
+["Dunford"]
+url = "https://doi.org/10.1090/s0002-9947-1938-1501971-x"
+via = "crossref"
+
+["Dur"]
+url = "https://zbmath.org/3341573"
+via = "zbmath"
+
+["DyM"]
+url = "https://zbmath.org/3169711"
+via = "zbmath"
+
+["E"]
+url = "https://zbmath.org/5202341"
+via = "zbmath"
+
+["EGAI"]
+url = "https://doi.org/10.1007/bf02684778"
+via = "crossref"
+
+["EGAII"]
+url = "https://doi.org/10.1007/bf02699291"
+via = "crossref"
+
+["EGAIII$_1$"]
+url = "https://doi.org/10.1007/bf02684273"
+via = "crossref"
+
+["EGAIII$_2$"]
+url = "https://doi.org/10.1007/bf02684890"
+via = "crossref"
+
+["EGAIV$_1$"]
+url = "https://doi.org/10.1007/bf02684747"
+via = "crossref"
+
+["EGAIV$_2$"]
+url = "https://doi.org/10.1007/bf02684322"
+via = "crossref"
+
+["EGAIV$_3$"]
+url = "https://doi.org/10.1007/bf02684343"
+via = "crossref"
+
+["EGAIV$_4$"]
+url = "https://doi.org/10.1007/bf02732123"
+via = "crossref"
+
+["Ehr1"]
+url = "https://zbmath.org/3214578"
+via = "zbmath"
+
+["Ehr2"]
+url = "https://doi.org/10.24033/asens.1125"
+via = "crossref"
+
+["EK"]
+url = "https://doi.org/10.1007/978-3-642-99902-4_22"
+via = "crossref"
+
+["ELS"]
+url = "https://doi.org/10.1016/j.topol.2004.02.011"
+via = "crossref"
+
+["EU"]
+url = "https://arxiv.org/abs/1407.1869"
+via = "zbmath"
+
+["FG"]
+url = "https://doi.org/10.1155/s0161171290000758"
+via = "crossref"
+
+["FGT"]
+url = "https://doi.org/10.1006/jnth.1997.2148"
+via = "crossref"
+
+["FK"]
+url = "https://doi.org/10.1007/978-1-4684-9930-8"
+via = "hand"
+note = "the book; Crossref's match was one of its chapters. Checked against the DOI's own record"
+
+["FlM"]
+url = "https://doi.org/10.2140/pjm.1985.119.103"
+via = "crossref"
+
+["Flo"]
+url = "https://doi.org/10.1016/s0304-0208(08)70809-0"
+via = "crossref"
+
+["FM"]
+url = "https://doi.org/10.4153/cjm-1983-022-8"
+via = "crossref"
+
+["Fol"]
+url = "https://zbmath.org/1324223"
+via = "zbmath"
+
+["Fol-2"]
+url = "https://zbmath.org/432614"
+via = "zbmath"
+
+["For"]
+url = "https://doi.org/10.1007/978-1-4612-5961-9"
+via = "crossref"
+
+["Fr"]
+url = "https://doi.org/10.4064/fm-57-1-107-115"
+via = "crossref"
+
+["FSt"]
+url = "https://doi.org/10.2307/2373992"
+via = "crossref"
+
+["FujKa"]
+url = "https://doi.org/10.4171/135"
+via = "crossref"
+
+["Ga"]
+url = "https://doi.org/10.1090/s0002-9939-1950-0036503-x"
+via = "crossref"
+
+["Ga-1"]
+url = "https://doi.org/10.1017/9781108571814"
+via = "crossref"
+
+["Ga-2"]
+url = "https://doi.org/10.1017/9781108571814"
+via = "crossref"
+
+["Gao"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Gdm"]
+url = "https://zbmath.org/3131597"
+via = "zbmath"
+
+["GE"]
+url = "https://doi.org/10.1017/s1446788700037198"
+via = "crossref"
+
+["GL"]
+url = "https://doi.org/10.1007/s11139-021-00435-6"
+via = "crossref"
+
+["Gle"]
+url = "https://doi.org/10.1215/ijm/1255454110"
+via = "crossref"
+
+["GNar"]
+url = "https://doi.org/10.1007/bf01360812"
+via = "crossref"
+
+["GoKre"]
+url = "https://doi.org/10.1090/mmono/018"
+via = "crossref"
+
+["Goss"]
+url = "https://zbmath.org/1095850"
+via = "zbmath"
+
+["GR"]
+url = "https://arxiv.org/abs/1208.3053"
+via = "hand"
+note = "the arXiv number the entry prints; its title there agrees"
+
+["GRa"]
+url = "https://arxiv.org/abs/math/0409584"
+via = "hand"
+note = "the arXiv number the entry prints, Foundations for almost ring theory; Crossref's match was the authors' Almost Ring Theory, another work"
+
+["GrM"]
+url = "https://doi.org/10.1090/conm/094/1012985"
+via = "crossref"
+
+["Gro-a"]
+url = "https://doi.org/10.1515/crll.1953.192.35"
+via = "crossref"
+
+["Gro-b"]
+url = "https://doi.org/10.1090/memo/0016"
+via = "hand"
+note = "Memoirs of the AMS no. 16, the entry's; checked against the DOI's own record"
+
+["Gro-c"]
+url = "https://doi.org/10.1090/memo/0016"
+via = "crossref"
+
+["Gro-d"]
+url = "https://doi.org/10.2748/tmj/1178244774"
+via = "crossref"
+
+["Gro-e"]
+url = "https://zbmath.org/3092845"
+via = "zbmath"
+
+["Gro-f"]
+url = "https://zbmath.org/3432917"
+via = "zbmath"
+
+["GS"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["H"]
+url = "https://zbmath.org/2601351"
+via = "zbmath"
+
+["Ha"]
+url = "https://doi.org/10.1007/978-3-662-59155-0"
+via = "crossref"
+
+["Hig"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["HK"]
+url = "https://doi.org/10.1017/cbo9780511998188"
+via = "crossref"
+
+["HKZ"]
+url = "https://doi.org/10.1007/978-1-4612-0497-8"
+via = "crossref"
+
+["HL"]
+url = "https://doi.org/10.1007/bf00247684"
+via = "crossref"
+
+["HN"]
+url = "https://zbmath.org/3560151"
+via = "zbmath"
+
+["Hor"]
+url = "https://zbmath.org/3230708"
+via = "zbmath"
+
+["Horm"]
+url = "https://zbmath.org/3824308"
+via = "zbmath"
+
+["HP"]
+url = "https://zbmath.org/3127846"
+via = "zbmath"
+
+["HR-1"]
+url = "https://doi.org/10.1007/978-3-662-40409-6"
+via = "crossref"
+
+["HR-2"]
+url = "https://zbmath.org/3338817"
+via = "zbmath"
+
+["HS"]
+url = "https://doi.org/10.4064/fm-73-3-199-218"
+via = "crossref"
+
+["HSS"]
+url = "https://doi.org/10.1090/s0894-0347-99-00320-3"
+via = "crossref"
+
+["HSt"]
+url = "https://zbmath.org/3480894"
+via = "zbmath"
+
+["Hu1"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Hu2"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Hunt"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["HuWe"]
+url = "https://doi.org/10.1090/s0002-9939-1964-0169038-4"
+via = "crossref"
+
+["HW"]
+url = "https://zbmath.org/3141365"
+via = "zbmath"
+
+["IK"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Ingh1"]
+url = "https://doi.org/10.1093/qmath/os-11.1.201"
+via = "crossref"
+
+["Ingh2"]
+url = "https://doi.org/10.1093/qmath/os-8.1.255"
+via = "crossref"
+
+["Ingh3"]
+url = "https://zbmath.org/3009067"
+via = "hand"
+note = "zbMATH Open's record of the 1932 original; the entry cites the 1964 reprint"
+
+["Iw"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Iwaniec"]
+url = "https://doi.org/10.1090/gsm/053"
+via = "crossref"
+
+["Jar"]
+url = "https://doi.org/10.1007/978-3-322-90559-8"
+via = "crossref"
+
+["Jech"]
+url = "https://doi.org/10.1007/3-540-44761-X"
+via = "hand"
+note = "Crossref's record of the Third Millennium Edition names no author; its title, series and year agree"
+
+["JL"]
+url = "https://doi.org/10.1007/BFb0058988"
+via = "zbmath"
+
+["JL (2)"]
+url = "https://doi.org/10.1007/bfb0077196"
+via = "crossref"
+
+["Jor-a"]
+url = "https://doi.org/10.1017/s1446788700008089"
+via = "crossref"
+
+["Jor-b"]
+url = "https://doi.org/10.36045/bbms/1113318125"
+via = "crossref"
+
+["JPP"]
+url = "https://doi.org/10.1016/j.jfa.2012.11.016"
+via = "crossref"
+
+["Ka"]
+url = "https://doi.org/10.1007/bf01113560"
+via = "crossref"
+
+["Kakutani"]
+url = "https://doi.org/10.3792/pia/1195580206"
+via = "crossref"
+
+["Kal"]
+url = "https://doi.org/10.1112/plms/s3-22.1.91"
+via = "crossref"
+
+["Katzn"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Katzn (2)"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Ke"]
+url = "https://zbmath.org/3112450"
+via = "hand"
+note = "zbMATH Open's record for Kelley's General Topology, 1955"
+
+["Ke-a"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Ke-b"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Kech"]
+url = "https://doi.org/10.1007/978-1-4612-4190-4"
+via = "crossref"
+
+["Kel"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["KG"]
+url = "https://doi.org/10.1007/978-1-4613-8153-2"
+via = "crossref"
+
+["Klee"]
+url = "https://doi.org/10.1090/s0002-9939-1952-0047250-4"
+via = "crossref"
+
+["KleMo"]
+url = "https://doi.org/10.1134/s0081543817010114"
+via = "crossref"
+
+["Kn"]
+url = "https://doi.org/10.1515/9781400883974"
+via = "hand"
+note = "Knapp's Representation Theory of Semisimple Groups (Princeton University Press), the entry's publisher; Crossref's match was a chapter of another volume. Checked against the DOI's own record"
+
+["Kob"]
+url = "https://doi.org/10.2140/pjm.1983.106.129"
+via = "crossref"
+
+["Kol"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Kothe-I"]
+url = "https://doi.org/10.1007/978-3-642-64988-2"
+via = "crossref"
+
+["Kothe-II"]
+url = "https://doi.org/10.1007/978-1-4684-9409-9"
+via = "crossref"
+
+["Kruse"]
+url = "https://doi.org/10.7169/facm/1861"
+via = "crossref"
+
+["KS"]
+url = "https://doi.org/10.1007/3-540-27950-4"
+via = "crossref"
+
+["Kub"]
+url = "https://doi.org/10.1515/conop-2022-0127"
+via = "crossref"
+
+["Kubota"]
+url = "https://zbmath.org/3422461"
+via = "zbmath"
+
+["Kudla"]
+url = "https://doi.org/10.1007/978-0-8176-8226-2_6"
+via = "crossref"
+
+["Kunen"]
+url = "https://zbmath.org/3691316"
+via = "hand"
+note = "zbMATH Open's record for Kunen's Set Theory, 1980, North-Holland"
+
+["La"]
+url = "https://zbmath.org/3611598"
+via = "zbmath"
+
+["Lang-a"]
+url = "https://zbmath.org/3335235"
+via = "zbmath"
+
+["Lang-b"]
+url = "https://doi.org/10.1007/978-1-4684-0296-4"
+via = "crossref"
+
+["Lang-c"]
+url = "https://doi.org/10.1007/978-1-4757-1871-3"
+via = "crossref"
+
+["Lang-d"]
+url = "https://doi.org/10.1007/978-1-4612-0897-6"
+via = "crossref"
+
+["Lang-e"]
+url = "https://zbmath.org/3232021"
+via = "zbmath"
+
+["Lang-f"]
+url = "https://zbmath.org/1703931"
+via = "zbmath"
+
+["Langlands"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Lee"]
+url = "https://doi.org/10.1007/978-0-387-21752-9"
+via = "hand"
+note = "the book; Crossref's match was its first chapter. Checked against the DOI's own record"
+
+["Les"]
+url = "https://arxiv.org/abs/1909.03384"
+via = "hand"
+note = "the arXiv number the entry prints as math/1909.03384v1; its title there agrees"
+
+["LGL"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Lit-I"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Lit-II"]
+url = "https://doi.org/10.1007/bf01076447"
+via = "crossref"
+
+["LM"]
+url = "https://doi.org/10.1007/bf02194829"
+via = "crossref"
+
+["LMS"]
+url = "https://doi.org/10.1007/BFb0075778"
+via = "zbmath"
+
+["LR"]
+url = "https://doi.org/10.2140/pjm.1971.37.409"
+via = "crossref"
+
+["LT"]
+url = "https://doi.org/10.1016/0022-1236(91)90048-a"
+via = "crossref"
+
+["M"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["MacL"]
+url = "https://doi.org/10.1007/978-1-4757-4721-8"
+via = "crossref"
+
+["MacL2"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Mar"]
+url = "https://doi.org/10.4153/cjm-1965-076-0"
+via = "crossref"
+
+["Mat-I"]
+url = "https://zbmath.org/3687501"
+via = "zbmath"
+
+["Mat-II"]
+url = "https://doi.org/10.1017/cbo9781139171762"
+via = "crossref"
+
+["May"]
+url = "https://doi.org/10.1007/bfb0067491"
+via = "crossref"
+
+["McAr"]
+url = "https://doi.org/10.1090/s0002-9904-1972-13048-9"
+via = "crossref"
+
+["McC"]
+url = "https://doi.org/10.1090/s0002-9947-1969-0251719-4"
+via = "crossref"
+
+["Me"]
+url = "https://arxiv.org/abs/math/0306176"
+via = "zbmath"
+
+["Me1"]
+url = "https://doi.org/10.1215/s0012-7094-04-12734-4"
+via = "crossref"
+
+["Me2"]
+url = "https://doi.org/10.1090/conm/363/06656"
+via = "crossref"
+
+["Me3"]
+url = "https://doi.org/10.1016/j.bulsci.2003.12.002"
+via = "crossref"
+
+["Meg"]
+url = "https://doi.org/10.1007/978-1-4612-0603-3"
+via = "crossref"
+
+["Mi"]
+url = "https://zbmath.org/747049"
+via = "zbmath"
+
+["Mit"]
+url = "https://doi.org/10.1134/s0001434620030189"
+via = "crossref"
+
+["MLei"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Moroz"]
+url = "https://doi.org/10.1007/bfb0076403"
+via = "crossref"
+
+["Mos"]
+url = "https://doi.org/10.2307/1994421"
+via = "crossref"
+
+["MS"]
+url = "https://doi.org/10.1007/978-1-4613-9592-8"
+via = "crossref"
+
+["Mu"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Murty"]
+url = "https://zbmath.org/1771883"
+via = "zbmath"
+
+["MV"]
+url = "https://doi.org/10.1093/oso/9780198514855.001.0001"
+via = "crossref"
+
+["MV-2"]
+url = "https://doi.org/10.1002/mana.19851220114"
+via = "crossref"
+
+["MVa"]
+url = "https://doi.org/10.1017/cbo9780511618314"
+via = "crossref"
+
+["MVe"]
+url = "https://doi.org/10.1007/s10240-010-0025-8"
+via = "crossref"
+
+["MZ"]
+url = "https://doi.org/10.2307/2309426"
+via = "crossref"
+
+["N"]
+url = "https://arxiv.org/abs/math/0503247"
+via = "hand"
+note = "Noohi's Foundations of Topological Stacks I on arXiv, as its title there reads; Crossref's match was another paper of Noohi's"
+
+["NB"]
+url = "https://doi.org/10.1201/9781584888673"
+via = "crossref"
+
+["Neu"]
+url = "https://doi.org/10.1007/978-3-662-03983-0"
+via = "crossref"
+
+["Ng"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Nik"]
+url = "https://doi.org/10.1017/9781316882108"
+via = "crossref"
+
+["nLab1"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Oes"]
+url = "https://doi.org/10.1007/BF01388714"
+via = "zbmath"
+
+["Omar"]
+url = "https://doi.org/10.1080/10586458.2001.10504445"
+via = "crossref"
+
+["Pa"]
+url = "https://doi.org/10.1070/rm1971v026n01abeh003815"
+via = "crossref"
+
+["PB"]
+url = "https://topology.pi-base.org/"
+via = "hand"
+note = "the pi-Base's own site; the entry names no version"
+
+["Pinsky"]
+url = "https://zbmath.org/2133821"
+via = "zbmath"
+
+["QQ"]
+url = "https://doi.org/10.1007/978-93-86279-61-3"
+via = "crossref"
+
+["Quer"]
+url = "https://zbmath.org/4008558"
+via = "zbmath"
+
+["Ret"]
+url = "https://zbmath.org/3337966"
+via = "zbmath"
+
+["Rezk"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Riemann"]
+url = "https://www.claymath.org/collections/riemanns-1859-manuscript/"
+via = "hand"
+note = "the Clay Mathematics Institute's collection of Riemann's 1859 paper"
+
+["Ro"]
+url = "https://doi.org/10.1307/mmj/1114021093"
+via = "crossref"
+
+["RS"]
+url = "https://zbmath.org/3719745"
+via = "zbmath"
+
+["Ru"]
+url = "https://zbmath.org/3174732"
+via = "zbmath"
+
+["Ru-2"]
+url = "https://doi.org/10.2307/2348852"
+via = "crossref"
+
+["Ru-3"]
+url = "https://zbmath.org/1022519"
+via = "zbmath"
+
+["Ru-Sa"]
+url = "https://doi.org/10.1080/10586458.1994.10504289"
+via = "crossref"
+
+["Rud-Sa"]
+url = "https://doi.org/10.1215/s0012-7094-96-08115-6"
+via = "crossref"
+
+["RV"]
+url = "https://doi.org/10.1007/978-1-4757-3085-2"
+via = "crossref"
+
+["Ryan"]
+url = "https://doi.org/10.1007/978-1-4471-3903-4"
+via = "crossref"
+
+["Sarnak"]
+url = "https://doi.org/10.1002/cpa.3160340602"
+via = "crossref"
+
+["Sch-a"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Sch-b"]
+url = "https://doi.org/10.1007/bf02787718"
+via = "crossref"
+
+["Scha"]
+url = "https://doi.org/10.1007/978-1-4684-9928-5"
+via = "hand"
+note = "the book; Crossref's match was its first chapter. Checked against the DOI's own record"
+
+["Schm"]
+url = "https://doi.org/10.4064/aa-70-4-343-375"
+via = "crossref"
+
+["Se"]
+url = "https://doi.org/10.1007/978-1-4757-5673-9"
+via = "crossref"
+
+["Series"]
+url = "https://doi.org/10.1112/jlms/s2-31.1.69"
+via = "crossref"
+
+["SGA1"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["SGA3"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["SGA4"]
+url = "https://doi.org/10.1007/bfb0081551"
+via = "crossref"
+
+["Shi"]
+url = "https://doi.org/10.3792/pja/1195524458"
+via = "crossref"
+
+["Silverman"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Simon"]
+url = "https://doi.org/10.1063/1.1665472"
+via = "crossref"
+
+["Sm"]
+url = "https://doi.org/10.1080/00029890.1957.11988994"
+via = "crossref"
+
+["SN"]
+url = "https://doi.org/10.4064/sm-93-1-1-16"
+via = "crossref"
+
+["SO"]
+url = "https://doi.org/10.1016/0022-1236(75)90005-1"
+via = "crossref"
+
+["SP"]
+url = "https://stacks.math.columbia.edu/"
+via = "hand"
+note = "the Stacks project's own site; the entry names no version"
+
+["Ste"]
+url = "https://doi.org/10.1307/mmj/1028999711"
+via = "crossref"
+
+["Str"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Struble"]
+url = "http://www.numdam.org/item?id=CM_1974__28_3_217_0"
+via = "zbmath"
+
+["StSe"]
+url = "https://doi.org/10.1007/978-1-4612-6290-9"
+via = "crossref"
+
+["StSha-III"]
+url = "https://doi.org/10.1515/9781400835560"
+via = "crossref"
+
+["StStr"]
+url = "https://doi.org/10.1007/bf02384314"
+via = "crossref"
+
+["SW"]
+url = "https://doi.org/10.4064/aa-23-2-127-135"
+via = "crossref"
+
+["T1"]
+url = "https://zbmath.org/2510488"
+via = "zbmath"
+
+["T2"]
+url = "https://zbmath.org/3968684"
+via = "zbmath"
+
+["Tate"]
+url = "https://doi.org/10.1090/pspum/033.2/546607"
+via = "crossref"
+
+["TKYK"]
+url = "https://doi.org/10.1007/BF01360917"
+via = "zbmath"
+
+["Tre"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["TsV"]
+url = "https://doi.org/10.1007/978-94-011-3810-9"
+via = "crossref"
+
+["Val-a"]
+url = "https://doi.org/10.1007/bf01215650"
+via = "crossref"
+
+["Val-b"]
+url = "https://doi.org/10.1002/1522-2616(200111)231:1%3C169::aid-mana169%3E3.0.co;2-f"
+via = "crossref"
+
+["VK"]
+url = "https://doi.org/10.1515/9783110886146"
+via = "crossref"
+
+["VLH"]
+url = "https://doi.org/10.7146/math.scand.a-11031"
+via = "crossref"
+
+["vO"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Vogt"]
+url = "https://doi.org/10.1007/bf01222616"
+via = "crossref"
+
+["Vogt-1"]
+url = "https://doi.org/10.1016/s0304-0208(08)70311-6"
+via = "crossref"
+
+["Vogt-2"]
+url = "https://doi.org/10.1016/s0304-0208(08)70531-0"
+via = "crossref"
+
+["Voigt"]
+url = "https://doi.org/10.1007/978-3-030-32945-7"
+via = "crossref"
+
+["Vor"]
+url = "https://doi.org/10.1070/im1975v009n03abeh001485"
+via = "crossref"
+
+["W"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Wa"]
+url = "https://doi.org/10.4064/cm-19-2-305-318"
+via = "crossref"
+
+["Weil-a"]
+url = "http://www.numdam.org/item/SB_1964-1966__9__523_0/"
+via = "hand"
+note = "numdam's copy of Séminaire Bourbaki exposé 312"
+
+["Weil-b"]
+url = "https://zbmath.org/3076708"
+via = "zbmath"
+
+["Weil-c"]
+url = "https://doi.org/10.1007/978-1-4684-9156-2"
+via = "crossref"
+
+["Weil-d"]
+url = "https://doi.org/10.1007/bf02391012"
+via = "crossref"
+
+["Weil-e"]
+url = "https://doi.org/10.1070/im1972v006n01abeh001866"
+via = "crossref"
+
+["Weil-f"]
+url = "https://doi.org/10.2969/jmsj/00310001"
+via = "crossref"
+
+["Wi"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Wil"]
+url = "https://zbmath.org/3326329"
+via = "zbmath"
+
+["Wngr-1"]
+url = "https://doi.org/10.1007/b80165"
+via = "crossref"
+
+["Wngr-2"]
+url = "https://doi.org/10.4064/sm-120-3-247-258"
+via = "crossref"
+
+["Wrn"]
+url = "https://doi.org/10.1007/978-1-4757-1799-0"
+via = "crossref"
+
+["Yos"]
+url = "https://zbmath.org/426389"
+via = "zbmath"
+
+["Yos-2"]
+url = "https://doi.org/10.1007/978-3-662-11791-0"
+via = "crossref"
+
+["Za"]
+via = "none"
+note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+
+["Zagier"]
+url = "https://doi.org/10.1007/978-3-662-00734-1_10"
+via = "crossref"

@@ -61,10 +61,21 @@ none of them.
 
 The manuscript, A. M. Masullo, The Music of the Primes (draft of
 2026-11-20), belongs to its author and is not covered by riemann-
-masullo's licence or by this repository's. This repository does not
-read, copy or quote it: the posters give item and page numbers as the
-Lean docstrings and ERRATA.md give them, and check only the
-manuscript's SHA-256 as riemann-masullo's paper/README.md states it.
+masullo's licence or by this repository's; nor is riemann-masullo's
+transcription of it (its transcription/README.md). This repository
+does not copy or quote the manuscript's text. Poster B1 reads the
+transcription's bibliography and draws each entry, the authors,
+title, venue and year of a work as the transcription prints them,
+with the pages whose text cites it by its key; the chapter posters
+name the keys cited on an item's pages. The other posters give item
+and page numbers as the Lean docstrings and ERRATA.md give them. The
+build checks the manuscript's SHA-256 as riemann-masullo's
+paper/README.md states it, and that the transcription names the same
+file. The PDF is not read.
+
+The works the bibliography lists belong to their authors and
+publishers. B1 links to them (diagrams/src/papers.toml, this
+repository's own data); none is copied or read here.
 
 A poster here says what the Lean formalisation rests on, at one commit.
 It says nothing about whether the manuscript or the formalisation is

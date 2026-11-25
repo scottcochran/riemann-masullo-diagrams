@@ -102,7 +102,7 @@ Rules 9 and 10 read "The manuscript is not quoted" and "A cone is of the formali
   A fix there does not reach here until it is copied again, on purpose.
 - **The `proof-posters` plugin:** enabled through `.claude/settings.json` and configured by this repository's
   own `proof-posters.toml`. It provides `moving-pins`, `recording-expectations`, `extracting-lean-deps` and
-  `cutting-releases`. `linking-papers` has nothing to do until a poster draws the bibliography (Phase 8).
+  `cutting-releases`, and, since Phase 8, `linking-papers` for the links B1 draws.
 - **The same discipline:** pins, recorded expectations, CI regenerating at the pins, releases from signed tags
   that the custodian pushes, and the house style of `riemann-diagrams`' `CLAUDE.md`.
 - **Not carried over:** `bp.py`'s model, the twenty poster modules, `papers.toml` and `checks.toml`. The blueprint
@@ -455,7 +455,7 @@ looked at in the light theme.
 
 ### Phase 8: the bibliography
 
-Planned. It needs rules 9 and 10 as they read from 2026.11.25. A poster of the works the manuscript cites, read
+It needs rules 9 and 10 as they read from 2026.11.25. A poster of the works the manuscript cites, read
 from `riemann-masullo`'s transcription at the pin, and of where it cites each one, beside the items the Lean
 formalises there.
 
@@ -480,6 +480,53 @@ formalises there.
 
 **Done when** B1 builds at the pin, its expectations fail both ways, and `check-links.py` passes with the papers
 file's links allowed.
+
+**Done** (2026.11.25, not yet committed).
+
+- **The reader.** `diagrams/src/paper.py` reads the transcription at `72a10ff`. Its README names the PDF by
+  `PAPER_SHA256`, and the build stops if it names another. `rm.READS` and CI's sparse checkout add
+  `transcription/README.md` and `transcription/chapters/`.
+- **The bibliography.** 319 entries under 317 keys. `JL` (Jacquet and Langlands; Jorgenson and Lang) and `Katzn`
+  (two printings of Katznelson) are printed twice. A citation of either is drawn under both entries.
+- **The citations.** 2,369 bracketed groups, read outside `$…$`, give 2,381 citations of 229 keys, on 557
+  pages. The first count, which read inside formulas too, gave 2,331 of 228. 88 keys are cited nowhere in
+  brackets, among them the eight EGA volumes. Appendix C has 431 citations, Appendix E 416, Chapter 4 235, and
+  Chapter 13 none.
+- **The links.** `diagrams/src/papers.toml` gives 270 of the 319 entries a link, written by
+  `tools/link-papers.py`:
+  - 186 via Crossref, each checked against the DOI's own record. Of these, 15 were matched on the whole entry,
+    where the parse misread the authors or the title.
+  - 65 via zbMATH Open.
+  - 19 by hand, each with a note:
+    - eight matches set right: `Cnw-a`, `Cnw-b`, `N`, `Kn` and `GRa` had matched another work or title, and
+      `Scha`, `FK` and `Lee` a chapter of the book;
+    - two arXiv numbers the entries print (`GR`, `Les`);
+    - two DOIs checked by hand against their records (`Jech`, `Gro-b`);
+    - three books on zbMATH (`Kunen`, `Ke`, `Ingh3`);
+    - the Stacks project, the pi-Base, the Clay Institute's Riemann 1859, and numdam's Weil.
+  - 49 found by neither: theses, "available online" notes, entries that print only an author (`Cl`, `IK`, `Iw`,
+    `Ke-a`, `Ke-b`, `Za`), and books with no record on those terms. These are drawn without a link.
+  - The 80 matches whose title scored below 1, was much longer than the entry's, was short, or was a chapter were
+    each read against the entry.
+- **B1.** One row per entry, anchored `ref-<key>`. Each cited page opens the card on its chapter poster whose
+  `Paper:` pages cover it, the one with the fewest pages where several do. 165 of the 557 pages are covered by no
+  card, and are not links.
+- **The chapter cards.** 842 cards add "Its pages cite", whose keys open B1's rows (`CITES`, in the 20 chapter
+  modules). B1 joins the overview line under every poster's title.
+- **The checks.**
+  - B1 records `REFERENCES`, `CITED` and `UNCITED`. Each fails the build when shortened or lengthened, and so do
+    a dropped `CITES` on C4 and a misnamed id in the papers file.
+  - `check-expectations.py`: 252 expectations under 37 names.
+  - `check-links.py`: 46 outputs, 54,368 links, 288 of them out to an allowed address.
+  - All 47 outputs are byte-identical over two hash seeds.
+  - A sparse checkout of the seven entries of `rm.READS` builds the same bytes as the full checkout.
+  - B1 was looked at in both themes, and C4, C13 and C14 in the light theme.
+- **Not checked.**
+  - That a linked work is the edition the manuscript used.
+  - That the paper uses a work where it cites it.
+  - Any citation made in words rather than a bracketed key.
+  - Python's own certificate store lacks the root zbMATH's API is signed by, so the lookup was run with the
+    macOS root certificates (`SSL_CERT_FILE`).
 
 ## Risks
 

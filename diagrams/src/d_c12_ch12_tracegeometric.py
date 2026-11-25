@@ -337,8 +337,22 @@ ERRATA = {'definition:12.1.1.1': {'Lean': ['F171']},
 # item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
 ERRATA_PAPERS = {}
 
+# item -> the keys of the bibliography the manuscript cites on its pages (B1)
+CITES = {'definition:12.1.1.1': ['HR-2'],
+ 'remark:12.1.1.4': ['Bou-I', 'Bou-II', 'Bris-b', 'Fol'],
+ 'lemma:12.2.1.1': ['Bou-I', 'Bou-II', 'Bris-b', 'DE', 'Fol'],
+ 'corollary:12.2.1.2': ['Bou-I', 'Bou-II', 'Fol'],
+ 'definition:12.2.1.3': ['Bou-I', 'Bou-II', 'Fol'],
+ 'remark:12.2.1.4': ['Bou-II', 'Bou-GT', 'DE'],
+ 'eq:12.2.1.5': ['Bou-I', 'Bou-II', 'DE', 'Fol'],
+ 'eq:12.2.1.6': ['Bou-I', 'Bou-II', 'Fol'],
+ 'eq:12.2.1.8': ['Bou-I', 'Bou-II', 'Fol'],
+ 'proposition:12.2.2.4': ['Bou-I', 'Bou-II', 'DE'],
+ 'eq:12.2.2.26': ['Bou-I', 'Bou-II', 'DE'],
+ 'proposition:12.2.2.2': ['Bou-I', 'Bou-II', 'Fol']}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
                          DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
-                         ERRATA_PAPERS=ERRATA_PAPERS)
+                         ERRATA_PAPERS=ERRATA_PAPERS, CITES=CITES)

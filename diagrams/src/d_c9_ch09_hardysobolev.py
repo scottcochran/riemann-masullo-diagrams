@@ -272,8 +272,35 @@ ERRATA = {'definition:9.1.1.1': {'reviewed': ['I93']},
 # item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
 ERRATA_PAPERS = {}
 
+# item -> the keys of the bibliography the manuscript cites on its pages (B1)
+CITES = {'definition:9.1.1.1': ['Co', 'Coh', 'FG', 'Fol', 'GR'],
+ 'lemma:9.1.1.2': ['Co', 'Coh', 'FG', 'Fol', 'GR'],
+ 'proposition:9.1.1.3': ['Co', 'Coh', 'DE', 'FG', 'Fol', 'GR', 'Ru'],
+ 'lemma:9.1.1.5': ['DE', 'GR', 'Ru'],
+ 'definition:9.1.2.1': ['Fol'],
+ 'eq:9.1.2.1': ['Fol'],
+ 'lemma:9.1.2.2': ['DE', 'NB'],
+ 'proposition:9.1.2.6': ['CF', 'KG', 'Weil-e'],
+ 'remark:9.2.0.1': ['CF', 'KG', 'Weil-e'],
+ 'theorem:9.2.1.2': ['Cnw-a', 'DE', 'Fol'],
+ 'corollary:9.2.1.4': ['DE', 'Fol'],
+ 'proposition:9.2.1.8': ['Bou-TVS', 'Fol'],
+ 'definition:9.3.1.1': ['Bru'],
+ 'eq:9.3.1.2': ['Bru'],
+ 'remark:9.3.1.2': ['Bru'],
+ 'lemma:9.3.1.3': ['Bru'],
+ 'lemma:9.3.2.1': ['Co', 'Horm', 'HR-1', 'Ru-2', 'Scha'],
+ 'corollary:9.3.2.3': ['DE', 'Horm', 'Lang-b'],
+ 'remark:9.3.3.2': ['Cnw-a'],
+ 'definition:9.3.3.3': ['Cnw-a'],
+ 'eq:9.3.3.4': ['Cnw-a'],
+ 'theorem:9.3.3.5': ['Bris-a', 'Bris-b', 'Scha'],
+ 'eq:9.3.3.6': ['Cnw-a'],
+ 'remark:9.3.3.4': ['Cnw-a'],
+ 'lemma:9.3.1.5': ['Ru-2']}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
                          DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
-                         ERRATA_PAPERS=ERRATA_PAPERS)
+                         ERRATA_PAPERS=ERRATA_PAPERS, CITES=CITES)

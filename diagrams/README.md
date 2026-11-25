@@ -15,6 +15,7 @@ when a poster's anchors moved (see Links).
 | [M5](M5-refuted-2026.11.25.svg) | the 312 refutations `Printed.<name>_false`, what each rests on, the entries that name them, and their Checked values against ERRATA.md's rule for "Lean" | ERRATA.md (every entry, every column), deps.json |
 | C1 to C14, CA to CE, L1 | one module directory each, item by item: a band per module, a card per item, with the items it uses and is used by | ERRATA.md (every entry), deps.json |
 | D1 to D14, DA to DE, DL | the same directories, declaration by declaration: every declaration of each item, with kind, file, line and state, and its `Deviation:` line quoted | deps.json |
+| [B1](B1-bibliography-2026.11.25.svg) | the manuscript's bibliography, entry by entry, with a link to each work and the pages that cite it, each opening the card that covers it | transcription/README.md, transcription/chapters/ (the bibliography and every chapter), deps.json, src/papers.toml |
 
 ## What the build checks
 
@@ -57,7 +58,11 @@ Then each poster, against its literals:
 | | `EXPECTED` | an edge between two items of the directory appears or goes, after the redundant ones are dropped |
 | | `OUTSIDE` | an item's direct uses of another directory's items change in number |
 | | `STATES`, `DEVIATIONS`, `ERRATA` | an item's state, its count of deviating declarations, or the entries on it change |
+| | `CITES` | the works the manuscript cites on an item's pages change |
 | | `ERRATA_PAPERS` | a paper that an entry's row of ERRATA.md links, on the entries on an item, appears, goes, moves to another address or to other entries |
+| B1 | `REFERENCES` | an entry of the bibliography appears, goes, or moves in the order printed |
+| | `CITED`, `UNCITED` | a work is cited on other pages or chapters, or by no bracketed key |
+| | (papers.toml) | an entry has no id in the papers file, an id names no entry, or an entry lacks a url, a via, or the note `hand` and `none` need |
 | D*, DL | `DECLS` | a declaration appears in, leaves or moves between items, or changes its place in its file |
 | | `DEVIATING` | a declaration gains or loses its `Deviation:` line |
 | | `OUTSIDE_ITEMS` | an item's direct uses of another directory's items change |
@@ -81,6 +86,10 @@ Every poster links to the others, so that a reader can follow an item from any p
 | A card's "Uses" and "Used by" | the cards they name, on the same poster |
 | "From other directories" | the used item's card when it is one item; else that directory's row of the item's "Uses of other directories" on the declarations poster, whose items open their cards |
 | An errata entry id, or a row's line | its line of ERRATA.md at the pin |
+| A key in a card's "Its pages cite" | that work's row on B1 |
+| A page in B1's "Where the text cites it" | the card on that chapter's poster whose `Paper:` pages cover it, the one with fewest pages where several do |
+| A chapter in B1's "Where the text cites it" | that chapter's poster |
+| A link in B1's Link column | the work, at the address `src/papers.toml` gives |
 | An arXiv number after an entry, or a card's "Papers the errata link" | the paper, at the address the entry's row of ERRATA.md gives (unversioned: arXiv opens its latest version) |
 | "Printed claims kept" | that directory's part of M5 |
 | An open or resting item | the row of M2 that names its open declaration (or that declaration's card on M2), and M1's card of the floor where the floor is below it |
@@ -96,8 +105,8 @@ file; GitHub's file viewer shows an SVG as an image, without its links or this s
 keeps the frame hidden. A link
 to another poster is made only to an anchor the committed `manifest.json` lists, so a run that moves anchors
 updates the manifest, prints a `NOTE` and exits 1, and a second run makes the links follow. `Canvas.check` fails the
-build on a link to a poster, a card or an address that does not exist (an address must be at the pin, or be a
-paper an entry's row of ERRATA.md links), and the
+build on a link to a poster, a card or an address that does not exist (an address must be at the pin, be a
+paper an entry's row of ERRATA.md links, or be one of `src/papers.toml`), and the
 generator fails on markup left unrendered.
 
 ## Kinds of text
@@ -106,7 +115,9 @@ Each sentence on a poster is one of four kinds: quoted (in italics, or a table c
 the footer names; a chapter card's italic line is the first sentence of its first declaration's docstring, after the
 `Paper:` reference, and is the Lean's, not the manuscript's), computed (a template filled at build time), framing (titles, keys, "How to read it", "What this
 does not say"), or an interpretation, in an amber card headed as the poster's own and guarded by a check. M1 has
-one interpretation, guarded by `FLOOR` and `AS_STRONG`, and M5 one, guarded by `SUMMARY` and `LEAN_UNNAMED`.
+one interpretation, guarded by `FLOOR` and `AS_STRONG`, and M5 one, guarded by `SUMMARY` and `LEAN_UNNAMED`. B1's
+entries are the bibliography's, as riemann-masullo's transcription prints them: a work's authors, title, venue
+and year, drawn as bibliographic data under rule 9 (PLAN.md), not the manuscript's prose, which no poster quotes.
 
 ## Files
 
@@ -117,6 +128,8 @@ one interpretation, guarded by `FLOOR` and `AS_STRONG`, and M5 one, guarded by `
 | `src/draw.py` | the shared drawing: a declaration card, a layered graph, a chain, a quotation |
 | `src/items.py` | the paper items: declarations grouped as the progress map groups them, their state, deviations, errata and uses, and the dropping of redundant edges |
 | `src/chapter.py` | the chapter posters' layout and checks; each `src/d_c*.py` and `src/d_l1_formathlib.py` holds one directory's literals |
+| `src/paper.py` | the transcription of the manuscript: its bibliography, and where its text cites each entry |
+| `src/papers.toml` | the link to each work of the bibliography, and how it was found, written by `tools/link-papers.py` |
 | `src/declarations.py` | the declarations posters' layout and checks; each `src/d_d*.py` holds one directory's literals |
 | `src/lib.py`, `src/metrics.py`, `src/fonts/` | the drawing library, widths and fonts, from riemann-diagrams (NOTICE) |
 | `src/deps.json` | the derived dependency data, pinned by `DEPS_SHA256` |

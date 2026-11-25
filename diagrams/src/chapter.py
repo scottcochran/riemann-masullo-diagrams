@@ -15,6 +15,7 @@ with what the sources say and fails on a difference:
 - STATES: the items that are open, and those that rest on an open declaration;
 - DEVIATIONS: item -> (declarations with a `Deviation:` line, declarations), for the items that have one;
 - ERRATA: item -> Checked value -> the entries placed on it.
+- CITES: item -> the keys of the bibliography the manuscript cites on the item's pages (diagrams/src/paper.py).
 - ERRATA_PAPERS: item -> the URL of each paper those entries' rows of ERRATA.md link -> the entries that link it.
 """
 import collections
@@ -23,6 +24,7 @@ import re
 import draw
 import items as I
 import lib
+import paper
 import rm
 
 W = 2400
@@ -87,15 +89,18 @@ def read(chapter):
     errata = {it.key: it.errata for it in its if it.errata}
     m = rm.load()
     papers = {k: cited for k, v in errata.items() if (cited := m.papers_of([i for ids in v.values() for i in ids]))}
+    P = paper.load()
+    cites = {it.key: ks for it in its if it.pages and (ks := P.keys_on(*it.pages))}
     return its, {"ITEMS": {k: items[k] for k in sorted(items, key=I.natural)},
                  "EXPECTED": sorted((b, a) for a, b in edges), "OUTSIDE": outside, "STATES": states,
-                 "DEVIATIONS": devs, "ERRATA": errata, "ERRATA_PAPERS": papers}
+                 "DEVIATIONS": devs, "ERRATA": errata, "ERRATA_PAPERS": papers,
+                 "CITES": cites}
 
 
 def build(ident, chapter, **expected):
     m = rm.load()
     its, got = read(chapter)
-    for name in ("ITEMS", "EXPECTED", "OUTSIDE", "STATES", "DEVIATIONS", "ERRATA", "ERRATA_PAPERS"):
+    for name in ("ITEMS", "EXPECTED", "OUTSIDE", "STATES", "DEVIATIONS", "ERRATA", "ERRATA_PAPERS", "CITES"):
         rm.require(f"{ident} {name}", expected[name], got[name], f"{ident}'s cards for {chapter}")
     by_key = {it.key: it for it in its}
     uses = collections.defaultdict(list)
@@ -141,6 +146,11 @@ def build(ident, chapter, **expected):
         intro += (" Errata are ERRATA.md's entries, placed by the item numbers their “Where” column names, with "
                   "their Checked value and nothing stronger. They were reported and checked by AI agents; in "
                   "ERRATA.md's words, “No entry has been reviewed by a specialist.”")
+    if got["CITES"]:
+        intro += (" “Its pages cite” names the works the manuscript cites, by their keys in its bibliography, on the "
+                  "pages of the card's `Paper:` references, read from riemann-masullo's transcription of it; each "
+                  "opens the work's row on B1. They are the paper's citations, not the Lean's, which cites none of "
+                  "them, and say nothing of what the Lean rests on.")
     if got["ERRATA_PAPERS"]:
         intro += (" A paper named under the errata is one an entry's row of ERRATA.md links, named in that row's "
                   "words; the linked paper was not read here.")
@@ -175,6 +185,10 @@ def build(ident, chapter, **expected):
                 for chk, ids in got["ERRATA"][it.key].items()))
         if it.key in got["ERRATA_PAPERS"]:
             out.append(draw.errata_papers(m, got["ERRATA_PAPERS"][it.key]))
+        if it.key in got["CITES"]:
+            P = paper.load()
+            out.append("Its pages cite: " + ", ".join(draw.to_poster("B1", k, anchor=P.by_key[k][0].anchor)
+                                                      for k in got["CITES"][it.key]))
         if uses[it.key]:
             out.append("**Uses:** " + ", ".join(draw.to_anchor(c, by_key[u].anchor, by_key[u].label, own)
                                                 for u in sorted(uses[it.key], key=I.natural)))

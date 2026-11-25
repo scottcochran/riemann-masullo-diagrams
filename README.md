@@ -54,21 +54,28 @@ https://scottcochran.github.io/riemann-masullo-diagrams/.
   item by item, with its kind, file, line and state, and the 1,383 `Deviation:` lines quoted. They expand the
   chapter cards: a card's count of declarations opens its item's table, and its count of deviations the quoted
   lines.
+- [B1, the works the manuscript cites](diagrams/B1-bibliography-2026.11.25.svg). The manuscript's bibliography, as
+  riemann-masullo transcribes it: 319 entries under 317 keys, 270 of them with a link to the work,
+  and the pages whose text cites it, 2,381 bracketed citations of 229 keys. A cited page opens the card that covers
+  it; a chapter card's "Its pages cite" opens the works' rows. These are the paper's citations: the Lean cites none
+  of these works.
 
 ## What it is drawn from
 
 | Source | What is read | Pinned by |
 |---|---|---|
-| riemann-masullo | `comparator.json`, `Main.lean`, `ERRATA.md`, `paper/README.md`, `lean-toolchain` | `MASULLO_COMMIT` |
-| The manuscript | its hash only, as `paper/README.md` states it; the PDF is never read. Rule 9 now allows reading riemann-masullo's transcription of it for its bibliography; no poster does yet (PLAN.md, Phase 8) | `PAPER_SHA256` |
+| riemann-masullo | `comparator.json`, `Main.lean`, `ERRATA.md`, `paper/README.md`, `lean-toolchain`, `transcription/README.md`, `transcription/chapters/` | `MASULLO_COMMIT` |
+| The manuscript | its hash, as `paper/README.md` states it; the PDF is never read | `PAPER_SHA256` |
+| riemann-masullo's transcription of it | `transcription/README.md`, which must name the PDF by `PAPER_SHA256`, and `transcription/chapters/`: the bibliography, and the bracketed citations in the text (B1, and the chapter cards' "Its pages cite") | `MASULLO_COMMIT`, `PAPER_SHA256` |
+| The links to the works | `diagrams/src/papers.toml`, this repository's, written by `tools/link-papers.py` | the file itself |
 | The dependency data | `diagrams/src/deps.json`: 21,342 declarations, what each uses, and their `Paper:`, `Gap:`, `Classical input:` and `Deviation:` lines and docstring descriptions, read by riemann-masullo's own `Deps.lean` from its compiled library, outside the build ([tools/deps/README.md](tools/deps/README.md)) | `DEPS_SHA256` |
 
 The pins are in `diagrams/src/rm.py`. No Lean is built here. A dependency is what the elaborated terms reach: a
 fact about the Lean, not about the paper. The errata are reported and checked by AI agents. In ERRATA.md's words,
 "No entry has been reviewed by a specialist."
 
-The only links off the pin are the four arXiv papers that ERRATA.md's own rows link, on the entries that link
-them. The papers are not read here.
+The links off the pin are the four arXiv papers that ERRATA.md's own rows link, on the entries that link them,
+and B1's links to the works of the bibliography. None of the linked works is read here.
 
 ## Building
 
