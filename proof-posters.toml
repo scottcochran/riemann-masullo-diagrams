@@ -26,11 +26,12 @@ expected_names = ["TOTALS", "TARGETS", "FLOOR", "N_BELOW", "ROW", "CONE", "EXPEC
                   "GAPS", "CLASSES", "CONES", "SETTLED", "UNNAMED", "CHAINS",
                   "N_ITEMS", "EXPECTED_DEPTHS", "COUNTS", "CHAPTERS", "ERRATA", "UNPLACED",
                   "ITEMS", "OUTSIDE", "STATES", "DEVIATIONS", "MATRIX", "REFUTED", "SUMMARY", "LEAN_UNNAMED",
-                  "DECLS", "DEVIATING", "OUTSIDE_ITEMS", "ERRATA_PAPERS"]
+                  "DECLS", "DEVIATING", "OUTSIDE_ITEMS", "ERRATA_PAPERS",
+                  "REFERENCES", "CITED", "UNCITED", "CITES"]
 # The expected_names whose change makes a release MINOR (PLAN.md, Phase 6: PATCH keeps "every EXPECTED and GAPS
 # unchanged"). FLOOR and CONE are what M1's EXPECTED edges are drawn between, ITEMS the cards a chapter poster's
-# EXPECTED edges join, and REFUTED the rows of M5.
-minor_names = ["EXPECTED", "GAPS", "FLOOR", "CONE", "ITEMS", "REFUTED", "DECLS"]
+# EXPECTED edges join, REFUTED the rows of M5, and REFERENCES the rows of B1.
+minor_names = ["EXPECTED", "GAPS", "FLOOR", "CONE", "ITEMS", "REFUTED", "DECLS", "REFERENCES"]
 
 [pins]
 file = "diagrams/src/rm.py"
@@ -53,15 +54,30 @@ name = "DEPS_SHA256"
 file = "diagrams/src/deps.json"
 meta = "tools/deps/meta.json"
 
+[papers]
+file = "diagrams/src/papers.toml"
+references = "transcription/chapters/bibliography.md in the riemann-masullo checkout: one entry per line, [KEY] authors, title, venue and year, read by diagrams/src/paper.py; an entry's id is its key, or `<key> (2)` for a second entry under one"
+checked_by = "diagrams/src/d_b1_bibliography.py"   # fails on an entry with no id in the file, or an id naming no entry
+regenerate = "uv run python diagrams/gen-diagrams.py"
+lookup = "uv run python tools/link-papers.py [KEY ...]"   # this repository's batch of the method; keeps via = "hand"
+entry = """
+["<key>"]
+url = "https://doi.org/..."   # absent when via = "none"
+via = "crossref"              # or "zbmath", "hand" (with a note), "none" (with a note)
+"""
+
 [links]
 # For linking-posters' check-links.py. Every link names a target, and every linked group is framed: a card's halo
 # (.rd-target) or a table row that frames itself (.rd-row), both in diagrams/src/lib.py.
 require_targets = true
 frame_classes = ["rd-target", "rd-row"]
 unrendered = ["[[@"]          # this library's link marker (lib.py): never left as text in an output
-# Every link out is at a pinned commit, or is a paper an entry's row of ERRATA.md links, at the address it gives
-# there (rm.PAPER_HOSTS; each poster records them as ERRATA_PAPERS). A link out anywhere else fails.
-allow = ["https://arxiv.org/abs/", "https://arxiv.org/pdf/", "https://doi.org/"]
+# Every link out is at a pinned commit, is a paper an entry's row of ERRATA.md links, at the address it gives
+# there (rm.PAPER_HOSTS; each poster records them as ERRATA_PAPERS), or is a work of the bibliography, at the
+# address diagrams/src/papers.toml gives (B1, whose HOSTS names each of these). A link out anywhere else fails.
+allow = ["https://arxiv.org/abs/", "https://arxiv.org/pdf/", "https://doi.org/", "https://zbmath.org/",
+         "http://www.numdam.org/item", "https://stacks.math.columbia.edu/", "https://topology.pi-base.org/",
+         "https://www.claymath.org/collections/riemanns-1859-manuscript/"]
 
 [release]
 classification = "PLAN.md, Phase 6: the MAJOR / MINOR / PATCH table"

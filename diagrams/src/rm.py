@@ -10,6 +10,8 @@ What is read, and from where:
 - **comparator.json**: the seven target theorems and the permitted axioms. Each target must be a theorem of
   `Main.lean` (in deps.json, module `Main`), and `Main` must declare nothing else.
 - **paper/README.md**: the manuscript's SHA-256, which must equal PAPER_SHA256. The PDF itself is never read.
+- **transcription/**: riemann-masullo's transcription of the manuscript, read by paper.py for B1 and the chapter
+  cards' citations, once its README names the PDF by PAPER_SHA256 (rule 9). Its text is not quoted.
 - **ERRATA.md**: the 28 rows of "Where no repair is known yet" (item, entries, what is missing, and whether and
   how the row says it was settled), the file's own count of settled and open rows, the tables of "Steps since
   proved" (what is proved, by name), and every entry of the entry tables with its Checked value and the
@@ -43,7 +45,8 @@ DEPS = HERE / "deps.json"
 META = ROOT / "tools" / "deps" / "meta.json"
 CHECKOUT = pathlib.Path(os.environ.get("RIEMANN_MASULLO") or ROOT.parent / "riemann-masullo").resolve()
 # The files the posters read from the checkout. CI's sparse checkout holds exactly these.
-READS = ["comparator.json", "Main.lean", "ERRATA.md", "paper/README.md", "lean-toolchain"]
+READS = ["comparator.json", "Main.lean", "ERRATA.md", "paper/README.md", "lean-toolchain", "transcription/README.md",
+         "transcription/chapters/"]
 SHORT = MASULLO_COMMIT[:7]
 LIB = "RiemannMasullo"
 # The hosts of a paper ERRATA.md links, carried on the entries drawn (draw.errata_papers)

@@ -210,7 +210,7 @@ def errata_papers(m, cited):
 
 
 NAV = [("M1", "what the targets rest on"), ("M2", "the steps with no known repair"), ("M3", "the paper by depth"),
-       ("M4", "every chapter"), ("M5", "the refutations")]
+       ("M4", "every chapter"), ("M5", "the refutations"), ("B1", "the works the manuscript cites")]
 
 
 def nav(c, ident, y):

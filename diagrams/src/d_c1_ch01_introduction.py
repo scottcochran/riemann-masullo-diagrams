@@ -100,8 +100,11 @@ ERRATA = {'text:1.4.1': {'reviewed': ['F250', 'F251', 'F252', 'F253', 'F254', 'I
 # item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
 ERRATA_PAPERS = {}
 
+# item -> the keys of the bibliography the manuscript cites on its pages (B1)
+CITES = {}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
                          DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
-                         ERRATA_PAPERS=ERRATA_PAPERS)
+                         ERRATA_PAPERS=ERRATA_PAPERS, CITES=CITES)

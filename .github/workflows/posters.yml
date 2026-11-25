@@ -47,6 +47,8 @@ jobs:
             ERRATA.md
             paper/README.md
             lean-toolchain
+            transcription/README.md
+            transcription/chapters/
           sparse-checkout-cone-mode: false
 
       - name: Python 3.12

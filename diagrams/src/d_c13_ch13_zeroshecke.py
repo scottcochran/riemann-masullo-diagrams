@@ -41,8 +41,11 @@ ERRATA = {'eq:13.3.1.1': {'reviewed': ['F247', 'I371']},
 ERRATA_PAPERS = {'eq:13.3.1.1': {'https://arxiv.org/abs/math/0208056': ['F247']},
  'theorem:13.3.1.1': {'https://arxiv.org/abs/math/0208056': ['F247']}}
 
+# item -> the keys of the bibliography the manuscript cites on its pages (B1)
+CITES = {}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
                          DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
-                         ERRATA_PAPERS=ERRATA_PAPERS)
+                         ERRATA_PAPERS=ERRATA_PAPERS, CITES=CITES)

@@ -40,8 +40,32 @@ ERRATA = {}
 # item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
 ERRATA_PAPERS = {}
 
+# item -> the keys of the bibliography the manuscript cites on its pages (B1)
+CITES = {'terminology:E.0.0.2': ['BG',
+                         'Bou-GT',
+                         'Br1',
+                         'Br2',
+                         'Br3',
+                         'Br4',
+                         'Du',
+                         'Ke',
+                         'LGL',
+                         'LMS',
+                         'May',
+                         'Rezk',
+                         'SP',
+                         'Ste',
+                         'Str'],
+ 'definition:E.1.1.1': ['ELS', 'LGL', 'McC', 'Rezk', 'Ste', 'Str'],
+ 'remark:E.1.1.2': ['ELS', 'LGL', 'McC', 'Rezk', 'Ste', 'Str'],
+ 'lemma:E.1.1.3': ['ELS', 'Jech', 'Kunen', 'LGL', 'McC', 'Rezk', 'Ste', 'Str'],
+ 'remark:E.1.1.6': ['Bou-GT', 'Jech', 'SP'],
+ 'definition:E.1.1.7': ['Bou-GT', 'Jech', 'SP'],
+ 'remark:E.1.1.8': ['Bou-GT', 'Jech', 'SP'],
+ 'example:E.1.1.9': ['Bou-GT', 'Jech', 'SP']}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
                          DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
-                         ERRATA_PAPERS=ERRATA_PAPERS)
+                         ERRATA_PAPERS=ERRATA_PAPERS, CITES=CITES)

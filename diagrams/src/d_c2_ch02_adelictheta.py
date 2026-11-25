@@ -238,8 +238,48 @@ ERRATA = {'text:2.1.1.3': {'reviewed': ['I57']},
 # item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
 ERRATA_PAPERS = {}
 
+# item -> the keys of the bibliography the manuscript cites on its pages (B1)
+CITES = {'eq:2.1.1.1': ['Fol', 'Gro-f', 'Jar', 'KG', 'Kothe-I', 'NB', 'Scha', 'Tre'],
+ 'example:2.1.1.1': ['Jar', 'Sch-a', 'Scha', 'Shi'],
+ 'text:2.1.1.3': ['Bru'],
+ 'definition:2.1.1.4': ['Fol', 'Gro-f', 'Jar', 'KG', 'Kothe-I', 'NB', 'Scha', 'Tre'],
+ 'eq:2.1.1.4': ['Fol', 'Jar', 'KG', 'Kothe-I', 'NB', 'Scha', 'Tre'],
+ 'proposition:2.1.1.6': ['Bru', 'DE', 'Fol', 'Jar', 'KG', 'Kothe-I', 'NB', 'Sch-a', 'Scha', 'Tre'],
+ 'text:2.1.2.1': ['Bru'],
+ 'text:2.1.2.2': ['Bru'],
+ 'lemma:2.1.3.2': ['Scha'],
+ 'remark:2.1.3.3': ['Bou-GT', 'Bru', 'Gro-b', 'Gro-c', 'Jar', 'Scha', 'Tre'],
+ 'remark:2.1.3.4': ['Gro-b', 'Jar', 'Scha', 'Tre'],
+ 'proposition:2.1.4.1': ['Jar', 'Scha'],
+ 'corollary:2.1.4.2': ['Gro-b', 'MV', 'NB', 'Scha'],
+ 'eq:2.1.4.2': ['Jar', 'Scha'],
+ 'eq:2.1.4.3': ['Jar', 'Scha'],
+ 'lemma:2.1.4.3': ['NB'],
+ 'corollary:2.1.4.4': ['CF', 'Scha'],
+ 'eq:2.1.4.5': ['Jar', 'Scha'],
+ 'eq:2.2.1.1': ['Davenport-1', 'Gao', 'Schm'],
+ 'lemma:2.2.1.1': ['Davenport-1', 'Gao', 'Schm'],
+ 'lemma:2.2.2.1': ['RV'],
+ 'definition:2.2.3.1': ['CF', 'Co'],
+ 'theorem:2.2.3.2': ['CF', 'Co'],
+ 'theorem:2.2.3.4': ['Jar', 'NB', 'Scha'],
+ 'eq:D.1.1.4': ['Ru'],
+ 'lemma:2.2.4.2': ['Scha'],
+ 'lemma:2.2.4.3': ['Scha'],
+ 'lemma:2.2.4.5': ['RV', 'Scha'],
+ 'remark:2.2.4.6': ['RV', 'Scha'],
+ 'eq:2.2.4.30': ['RV', 'Scha'],
+ 'theorem:2.2.5.4': ['DE'],
+ 'eq:2.2.5.10': ['DE'],
+ 'proposition:2.3.1.2': ['Co'],
+ 'definition:2.3.1.3': ['NB'],
+ 'proposition:2.4.1.1': ['Co'],
+ 'lemma:2.4.1.2': ['Co'],
+ 'theorem:2.4.2.1': ['Jar', 'NB'],
+ 'proposition:2.4.3.1': ['CF', 'Me']}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
                          DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
-                         ERRATA_PAPERS=ERRATA_PAPERS)
+                         ERRATA_PAPERS=ERRATA_PAPERS, CITES=CITES)

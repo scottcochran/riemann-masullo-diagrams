@@ -32,7 +32,8 @@ And:
 - Run Python with `uv run`. The generator is `uv run python diagrams/gen-diagrams.py`. Any WARNING or ERROR is a
   failure. An exit of 1 with a NOTE means anchors moved: run it again, so that the links follow.
 - The source is a sibling checkout, `../riemann-masullo`, or `RIEMANN_MASULLO`. CI's sparse checkout holds
-  `comparator.json`, `Main.lean`, `ERRATA.md`, `paper/README.md` and `lean-toolchain` (`rm.READS`).
+  `comparator.json`, `Main.lean`, `ERRATA.md`, `paper/README.md`, `lean-toolchain`, `transcription/README.md` and
+  `transcription/chapters/` (`rm.READS`).
 - To look at a poster in both themes: `tools/look.sh OUT_DIR diagrams/M1-*.svg` (headless Chrome).
 
 ## House style
@@ -50,10 +51,12 @@ by `proof-posters.toml`.
 | Skill | When |
 |---|---|
 | `proof-posters:moving-pins` | riemann-masullo moved; `MASULLO_COMMIT`, `PAPER_SHA256` or `DEPS_SHA256` fails |
+| `proof-posters:linking-papers` | B1 fails on an entry with no link record, or a record naming no entry |
 | `proof-posters:extracting-lean-deps` | `diagrams/src/deps.json` must be rebuilt (`tools/deps/README.md`) |
 | `proof-posters:recording-expectations` | a poster is added or changes what it reads, draws or says |
 | `proof-posters:cutting-releases` | a release is due (PLAN.md, Phase 6) |
 | `proof-posters:linking-posters` | posters are linked, a link lands on nothing, or a target is not framed when opened; `check-links.py` holds `[links]` in `proof-posters.toml` |
 
-`proof-posters:linking-papers` applies once a poster draws the manuscript's bibliography (PLAN.md, Phase 8);
-until then there is no `[papers]` table. The papers `ERRATA.md` itself links are carried as it gives them.
+`proof-posters:linking-papers` keeps `diagrams/src/papers.toml`, the links B1 draws for the manuscript's
+bibliography (`[papers]`); `tools/link-papers.py` is its batch, and keeps every `via = "hand"` entry. The papers
+`ERRATA.md` itself links are carried as it gives them.

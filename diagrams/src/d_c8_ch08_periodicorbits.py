@@ -65,8 +65,17 @@ ERRATA = {'eq:8.1.0.2': {'reviewed': ['R11']},
 # item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
 ERRATA_PAPERS = {}
 
+# item -> the keys of the bibliography the manuscript cites on its pages (B1)
+CITES = {'definition:8.2.0.1': ['Bou-GT', 'NB'],
+ 'definition:8.2.0.2': ['Bou-GT'],
+ 'lemma:8.2.0.3': ['Bou-GT'],
+ 'proposition:8.2.0.4': ['Bou-GT', 'CF'],
+ 'proposition:8.2.0.5': ['Bou-GT', 'CF'],
+ 'eq:8.2.0.9': ['Bou-GT', 'CF'],
+ 'eq:8.2.0.10': ['Bou-GT', 'CF']}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
                          DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
-                         ERRATA_PAPERS=ERRATA_PAPERS)
+                         ERRATA_PAPERS=ERRATA_PAPERS, CITES=CITES)
