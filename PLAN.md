@@ -322,6 +322,18 @@ carry a `Deviation:` line.
 - **The checksums match the tree at the tag.** `verify-release.py v0.2.0` found the 25 SVGs matching it, and
   `pins.json` and the site naming `v0.2.0`. Each SVG as the site serves it is byte-identical to the tag's.
 
+### Links between the posters
+
+Added 2026.11.25 at the custodian's request: every card, item, entry and poster links to where it is drawn in full
+or to its source, as `diagrams/README.md`, "Links", lists. Every chapter card is an anchor. The generator runs twice
+when anchors move, as riemann-diagrams' does, and the build fails on a link that does not resolve and on markup left
+unrendered (the second caught 19 links set inside bold on M3).
+
+**Done** (2026.11.25, on `links`, not yet merged). There are 12,219 links in the 25 posters: 3,547 within a poster,
+5,574 to another poster's cards or to the poster itself, and 3,098 to riemann-masullo at the pin. Each of M3's 1,251
+dots opens its item's card. The posters are byte-identical over two hash seeds after the second run. No expectation
+changed.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at

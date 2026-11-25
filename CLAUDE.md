@@ -29,7 +29,7 @@ And:
   signs and pushes tags. Draft the message; don't push.
 - **Stage files by name**, never a directory. Keep notes out of the tree.
 - Run Python with `uv run`. The generator is `uv run python diagrams/gen-diagrams.py`. Any WARNING or ERROR is a
-  failure.
+  failure. An exit of 1 with a NOTE means anchors moved: run it again, so that the links follow.
 - The source is a sibling checkout, `../riemann-masullo`, or `RIEMANN_MASULLO`. CI's sparse checkout holds
   `comparator.json`, `Main.lean`, `ERRATA.md`, `paper/README.md` and `lean-toolchain` (`rm.READS`).
 - To look at a poster in both themes: `tools/look.sh OUT_DIR diagrams/M1-*.svg` (headless Chrome).

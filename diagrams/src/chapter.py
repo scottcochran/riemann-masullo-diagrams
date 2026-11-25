@@ -17,7 +17,9 @@ with what the sources say and fails on a difference:
 - ERRATA: item -> Checked value -> the entries placed on it.
 """
 import collections
+import re
 
+import draw
 import items as I
 import lib
 import rm
@@ -52,6 +54,12 @@ def paper_order(it):
     kind, _, rest = it.key.partition(":")
     num = I.NUMBER.fullmatch(rest)
     return (0, I.natural(rest), kind) if num else (1, I.natural(rest), kind)
+
+
+def poster_id(chapter):
+    """The id of a directory's chapter poster: C5 for Ch05_ThetaZSpaces, CA for AppA_AlgebraicNT, L1 for ForMathlib."""
+    m1, m2 = re.match(r"Ch(\d+)_", chapter), re.match(r"App([A-E])_", chapter)
+    return f"C{int(m1.group(1))}" if m1 else f"C{m2.group(1)}" if m2 else "L1"
 
 
 def chapter_title(chapter):
@@ -110,6 +118,9 @@ def build(ident, chapter, **expected):
         W, rm.sources(m), state=rm.state(m))
     x0, x1 = c.x0, c.x1
     y = c.y
+    y += draw.nav(c, ident, y)
+    own = {it.anchor for it in its}
+    entry_line = {e["id"]: e["line"] for e in m.entries}
     intro = ("**How to read it.** One band per module of the directory, one card per paper item: the declarations "
              "whose docstrings cite it, and the helpers before them in the same file, as riemann-masullo's progress "
              "map groups them. " if chapter != "ForMathlib" else
@@ -129,19 +140,37 @@ def build(ident, chapter, **expected):
 
     def body(it):
         out = []
+        printed = (f"{it.printed} printed claim{'s' if it.printed != 1 else ''} kept" if it.printed else "")
         out.append(f"{len(it.decls)} declaration{'s' if len(it.decls) != 1 else ''}"
                    + (f", {it.deviations} deviating from the print" if it.deviations else "")
-                   + (f", {it.printed} printed claim{'s' if it.printed != 1 else ''} kept" if it.printed else ""))
+                   + (", " + draw.to_poster("M5", printed, anchor=f"refuted-{chapter}") if printed else ""))
+        if it.state != "proved":
+            own_open = sum(1 for d in it.decls if d.open)
+            below = {o.key for d in it.decls for o in m.open_below(d.i)}
+            floor = any(o.key == "RiemannMasullo.traceFormula_exteriorZeros" for d in it.decls
+                        for o in ([d] if d.open else []) + m.open_below(d.i))
+            words = (f"{plural(own_open, 'declaration')} of the item {'is' if own_open == 1 else 'are'} open"
+                     if it.state == "open" else f"rests on {plural(len(below), 'open declaration')}")
+            out.append(words[0].upper() + words[1:] + ", named on " + draw.to_poster("M2", "M2")
+                       + (" and " + draw.to_poster("M1", "M1") if floor else ""))
         if it.key in got["ERRATA"]:
-            out.append("Errata: " + "; ".join(f"{', '.join(ids)} ({chk})" for chk, ids in got["ERRATA"][it.key].items()))
+            out.append("Errata: " + "; ".join(
+                ", ".join(draw.to_url(m.errata_url(entry_line[i]), i) for i in ids) + f" ({chk})"
+                for chk, ids in got["ERRATA"][it.key].items()))
         if uses[it.key]:
-            out.append("**Uses:** " + ", ".join(by_key[u].label for u in sorted(uses[it.key], key=I.natural)))
+            out.append("**Uses:** " + ", ".join(draw.to_anchor(c, by_key[u].anchor, by_key[u].label, own)
+                                                for u in sorted(uses[it.key], key=I.natural)))
         if it.key in got["OUTSIDE"]:
-            out.append("From other directories: " + ", ".join(f"{rm.chapter_label(k)} ({n})"
-                                                               for k, n in got["OUTSIDE"][it.key].items()))
+            out.append("From other directories: " + ", ".join(
+                draw.to_poster(poster_id(k), rm.chapter_label(k)) + f" ({n})"
+                for k, n in got["OUTSIDE"][it.key].items()))
         if used_by[it.key]:
-            out.append("**Used by:** " + ", ".join(by_key[u].label for u in sorted(used_by[it.key], key=I.natural)))
+            out.append("**Used by:** " + ", ".join(draw.to_anchor(c, by_key[u].anchor, by_key[u].label, own)
+                                                   for u in sorted(used_by[it.key], key=I.natural)))
         return out
+
+    def title(it):
+        return draw.to_url(it.first.url, it.label)
 
     def sub(it):
         if it.key.startswith("file:"):
@@ -156,13 +185,15 @@ def build(ident, chapter, **expected):
         y += c.heading(x0, y, f"`{mod}` · {len(keys)} {what if len(keys) != 1 else what[:-1]}", size=17)
         for r in range(0, len(keys), COLS):
             row = [by_key[k] for k in keys[r:r + COLS]]
-            hs = [c.card(0, 0, cw, it.label, body(it), accent=ACCENT[it.state], sub=sub(it), size=12.5, tsize=14,
+            hs = [c.card(0, 0, cw, title(it), body(it), accent=ACCENT[it.state], sub=sub(it), size=12.5, tsize=14,
                          bullets=False, draw=False, pad=12) for it in row]
             h = max(hs)
             for k, it in enumerate(row):
-                c.card(x0 + k * (cw + GAP), y, cw, it.label, body(it), accent=ACCENT[it.state], sub=sub(it),
+                draw.anchored(c, it.anchor)
+                c.card(x0 + k * (cw + GAP), y, cw, title(it), body(it), accent=ACCENT[it.state], sub=sub(it),
                        size=12.5, tsize=14, bullets=False, pad=12, h=h, dash="6 4" if it.state == "open" else None)
                 c.blocks[-1] = c.blocks[-1][:4] + ("node " + it.key,)
+                c.add("</g>")
             y += h + GAP
         y += 18
     y += 10
@@ -173,6 +204,7 @@ def build(ident, chapter, **expected):
            "**What this does not say.** Nothing was built or proved by this repository: the declarations and their "
            "uses are read from riemann-masullo's compiled library at the pin. A card says what the Lean holds for an "
            "item, not that the item is right. Item numbers and pages are the Lean docstrings'; the manuscript is not "
-           "read. “Deviating from the print” counts declarations whose docstring has a `Deviation:` line.",
+           "read. “Deviating from the print” counts declarations whose docstring has a `Deviation:` line. A card's title opens "
+           "its first declaration at the pin; its other links open the cards, posters and ERRATA.md lines they name.",
            size=13.5, color="muted")
     return c

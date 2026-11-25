@@ -7,6 +7,7 @@ L1), which draws it item by item.
 """
 import collections
 
+import draw
 import items as I
 import lib
 import rm
@@ -268,6 +269,7 @@ def build():
         f"item by item.", W, rm.sources(m), state=rm.state(m))
     x0, x1 = c.x0, c.x1
     y = c.y
+    y += draw.nav(c, ID, y)
     y += c.para(x0, y, x1 - x0,
                 "**How to read it.** The directories are the Lean's (`RiemannMasullo/Ch05_ThetaZSpaces/` and so on). "
                 "An item is a paper item with the declarations that cite it and the helpers before them, as "
@@ -283,7 +285,8 @@ def build():
         v = totals[ch]
         pid, f = poster.get(ch, ("", ""))
         link = f"[[@{f}|{pid}]]" if f else "none"
-        rows.append([f"{rm.chapter_label(ch)} · `{ch}`" if rm.chapter_label(ch) != ch else f"`{ch}`", link,
+        name = f"{rm.chapter_label(ch)} · `{ch}`" if rm.chapter_label(ch) != ch else f"`{ch}`"
+        rows.append([f"[[@{f}|{name}]]" if f else name, link,
                      *[f"{n:,}" if n else "none" for n in v]])
     # an entry on items of two directories is counted in both rows, and once in the total
     n_entries = len({e for it in X.items.values() for ids in it.errata.values() for e in ids})
@@ -308,7 +311,8 @@ def build():
     mrows = []
     for ch in chapters:
         r = matrix.get(ch, {})
-        mrows.append([f"{rm.chapter_label(ch)}"] + [(f"**{r[k]:,}**" if k == ch else f"{r[k]:,}") if r.get(k) else ""
+        pid, f = poster.get(ch, ("", ""))
+        mrows.append([f"[[@{f}|{rm.chapter_label(ch)}]]" if f else rm.chapter_label(ch)] + [(f"**{r[k]:,}**" if k == ch else f"{r[k]:,}") if r.get(k) else ""
                                                     for k in chapters])
     y += c.table(x0, y, mcols, mrows, size=12, hsize=12, pad=7)
     y += 34

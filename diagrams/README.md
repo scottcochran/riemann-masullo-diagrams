@@ -3,7 +3,8 @@
 Each poster is a module `src/d_<id>_<slug>.py` with `ID`, `SLUG` and `build()`. It reads everything through
 `src/rm.py`'s `load()`, records what it expects the sources to say as module-level literals, and raises an error,
 with both values and what to re-read, when they say otherwise. `gen-diagrams.py` writes `<ID>-<slug>-<date>.svg`
-and `manifest.json`, parses every SVG as XML, and exits 1 on any `WARNING` or `ERROR`.
+and `manifest.json`, parses every SVG as XML, and exits 1 on any `WARNING` or `ERROR`, and once, with a `NOTE`,
+when a poster's anchors moved (see Links).
 
 | Poster | Shows | Reads |
 |---|---|---|
@@ -57,6 +58,29 @@ Then each poster, against its literals:
 What is not checked: the counts in `README.md` and this file are written by hand, and no build compares them;
 the page grey (`PAGE.md`) is measured, not enforced; and M2's grouping of a row rests on the declarations the row
 names in code, so a row that names its step only in prose is "not stated" here.
+
+## Links
+
+Every poster links to the others, so that a reader can follow an item from any poster to its card and to the source.
+
+| From | To |
+|---|---|
+| Every poster | the overviews, M1 to M5, by the line under the title; M4 lists every chapter poster |
+| A Lean name in code | its declaration's line in riemann-masullo at the pin |
+| A chapter card's title | the item's first declaration at the pin |
+| A card's "Uses" and "Used by" | the cards they name, on the same poster |
+| "From other directories" | those directories' chapter posters |
+| An errata entry id, or a row's line | its line of ERRATA.md at the pin |
+| "Printed claims kept" | that directory's part of M5 |
+| An open or resting item | M2, and M1 where the floor is below it |
+| A declaration card on M1 or M2, a refutation on M5, a dot on M3 | the item's card on its chapter poster |
+| A directory on M4, a row of M3 or M5 | its chapter poster |
+
+A card is an anchor (`i-<kind>-<number>`, from `items.anchor`); M5's directories are `refuted-<directory>`. A link
+to another poster is made only to an anchor the committed `manifest.json` lists, so a run that moves anchors
+updates the manifest, prints a `NOTE` and exits 1, and a second run makes the links follow. `Canvas.check` fails the
+build on a link to a poster, a card or an address that does not exist (an address must be at the pin), and the
+generator fails on markup left unrendered.
 
 ## Kinds of text
 

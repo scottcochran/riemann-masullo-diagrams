@@ -31,12 +31,23 @@ def decl_card(c, x, y, d, accent, draw=True, w=None, extra=()):
         body.append("Paper: " + pages(d.paper))
     body += list(extra)
     w = w or max([230, lib.text_width(title, 13.5, bold=True) + 34] +
-                 [min(lib.text_width(b, 12.5) + 34, 420) for b in body])
+                 [min(lib.text_width(b, 12.5) + 34, 420) for b in body if not b.startswith("Item:")])
     h = c.card(x, y, w, title, body, accent=accent, size=12.5, tsize=13.5, bullets=False, draw=draw, pad=13,
                dash="6 4" if d.open else None)
     if draw:
         c.blocks[-1] = c.blocks[-1][:4] + ("node " + d.name,)
     return w, h
+
+
+def item_line(c, d):
+    """`Item: <its card>` for a declaration that belongs to a paper item, or nothing."""
+    import items as I
+    X = I.load()
+    k = X.item_of.get(d.i)
+    if k is None:
+        return []
+    it = X.items[k]
+    return [f"Item: {to_anchor(c, it.anchor, it.label)}"]
 
 
 def layered(c, y0, layers, edges, accent, extra=None):
@@ -143,3 +154,49 @@ def quote(c, x, y, w, s, size=14, color="ink"):
         c.add(lib.render_line(x, y + size + k * lead, ln, size, color, italic=True))
     c.ymax = max(c.ymax, y + size * 0.35 + (len(lines) - 1) * lead + size)
     return (len(lines) - 1) * lead + size * 1.35
+
+
+# -- links between posters. A link is made only to what exists: an anchor of the poster being drawn, an anchor the
+# committed manifest gives another poster, or a poster the manifest lists. Anything else stays plain text, and the
+# generator's second run (when anchors moved) makes the link. Canvas.check fails the build on a link that does
+# not resolve.
+
+def to_anchor(c, anchor, text, own=()):
+    """`text` linked to the card `anchor`, on this poster (`own`, the anchors it will draw) or on the poster that
+    draws it."""
+    if anchor in own:
+        return f"[[@#{anchor}|{text}]]"
+    if anchor in lib.REGISTRY:
+        return f"[[@{lib.REGISTRY[anchor]}#{anchor}|{text}]]"
+    return text
+
+
+def to_poster(pid, text, anchor=None):
+    f = lib.POSTERS.get(pid)
+    if not f:
+        return text
+    if anchor and anchor in lib.ANCHORS_OF.get(f, ()):
+        return f"[[@{f}#{anchor}|{text}]]"
+    return f"[[@{f}|{text}]]"
+
+
+def to_url(url, text):
+    return f"[[@{url}|{text}]]"
+
+
+NAV = [("M1", "what the targets rest on"), ("M2", "the steps with no known repair"), ("M3", "the paper by depth"),
+       ("M4", "every chapter"), ("M5", "the refutations")]
+
+
+def nav(c, ident, y):
+    """The line under the title that links the overviews; M4 lists every chapter poster. Returns the height used."""
+    parts = [f"**{pid}**, {what}" if pid == ident else to_poster(pid, f"{pid}, {what}") for pid, what in NAV]
+    return c.para(c.x0, y, c.x1 - c.x0, "Posters: " + " · ".join(parts) + ". Names, items, files, entries and "
+                  "posters are links, underlined under the pointer: a card's title or a Lean name opens the source "
+                  "at the pin.", size=13.5, color="faint") + 16
+
+
+def anchored(c, anchor):
+    """Open a group with id `anchor` around what is drawn next; close it with c.add("</g>")."""
+    c.add(f'<g id="{anchor}">')
+    c.anchors.append(anchor)

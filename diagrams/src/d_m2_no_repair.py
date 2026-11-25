@@ -256,6 +256,7 @@ def build():
         W, rm.sources(m), state=rm.state(m))
     x0, x1 = c.x0, c.x1
     y = c.y
+    y += draw.nav(c, ID, y)
     y += c.para(x0, y, x1 - x0,
                 "**How to read it.** The first three columns are ERRATA.md's, quoted: the item and its pages, the "
                 "entries of the errata the row gathers, and the first sentence of what it says is missing or how it "
@@ -273,7 +274,7 @@ def build():
         y += c.heading(x0, y, f"{glabel}: {len(rows)}", accent=acc)
         trs = []
         for r in rows:
-            item = f"[[{acc}|{r.key}]] (line {r.line})"
+            item = f"[[{acc}|{r.key}]] ({draw.to_url(m.errata_url(r.line), f'line {r.line}')})"
             if gkey == "settled":
                 how, below = settled[r.key]
                 said_txt = r.settled_text + "."
@@ -291,7 +292,8 @@ def build():
                 for d in ds:
                     n, reach, iso = cones[d.key]
                     kind = "gap" if d.gap else "classical input" if d.classical else "open"
-                    s_ = f"`{d.show}` ({kind}): cone {n}"
+                    card = draw.item_line(c, d)
+                    s_ = f"`{d.show}` ({kind}{', ' + card[0][len('Item: '):] if card else ''}): cone {n}"
                     s_ += f", reaching {reach} of {len(m.targets)} targets" if reach else ", no target"
                     if iso:
                         s_ += ", all in `_Isolated` files"
@@ -322,7 +324,8 @@ def build():
         where = (f"ERRATA.md names it on line{'s' if len(lines) > 1 else ''} {', '.join(map(str, lines))}"
                  if lines else "ERRATA.md does not name it")
         hh = c.card(x0, y, x1 - x0, f"`{d.show}`", [f"`{d.where}` · {where} · cone {len(m.above(d.i))}, "
-                    f"reaching {len(m.above(d.i) & tset)} targets"], accent="grey", size=13, tsize=14,
+                    f"reaching {len(m.above(d.i) & tset)} targets"] + draw.item_line(c, d), accent="grey", size=13,
+                    tsize=14,
                     bullets=False, dash="6 4")
         c.blocks[-1] = c.blocks[-1][:4] + ("node " + d.name,)
         y += hh + 8

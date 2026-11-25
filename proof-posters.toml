@@ -12,7 +12,7 @@ docs = ["README.md", "diagrams/README.md", "tools/deps/README.md"]
 [build]
 regenerate = ["uv run python diagrams/gen-diagrams.py"]
 failure_markers = ["WARNING", "ERROR"]
-rerun_marker = "NOTE "                # never printed here: there is no map set, so no second run
+rerun_marker = "NOTE "                # a run that moves a poster's anchors exits 1 with a NOTE: run it again
 vary_env = [{ PYTHONHASHSEED = "0" }, { PYTHONHASHSEED = "1" }]
 outputs = ["diagrams/*.svg"]
 manifests = ["diagrams/manifest.json"]

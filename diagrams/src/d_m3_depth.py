@@ -11,6 +11,8 @@ number, so that `Theorem 7.3.1.6(2)` and `Theorem 7.3.1.6(3)` are one item, and 
 """
 import collections
 
+import draw
+import items as I
 import lib
 import rm
 from items import NUMBER, item_key, keys_named
@@ -152,6 +154,7 @@ def build():
         W, rm.sources(m), state=rm.state(m))
     x0, x1 = c.x0, c.x1
     y = c.y
+    y += draw.nav(c, ID, y)
     y += c.para(x0, y, x1 - x0,
                 "**How to read it.** One mark is one item (a theorem, lemma, definition, equation or section) that at "
                 "least one declaration names in its `Paper:` line. Its column is the fewest direct uses from a target "
@@ -195,7 +198,8 @@ def build():
         rh = nrows * step + 14
         c.line(x0, y, x1, y, accent="line", sw=1)
         name = chapter_name(head)
-        c.text(x0, y + 18, f"**{name}**", 13.5, "ink")
+        pid = f"C{head}" if head != "none" else None
+        c.text(x0, y + 18, draw.to_poster(pid, name) if pid else name, 13.5, "ink", bold=True)
         c.text(x0, y + 35, f"{chapters[head][1]} of {chapters[head][0]}", 12, "muted")
         for dd, v in cells.items():
             cx = (x0 + label_w + cols.index(dd) * col_w + 3) if dd is not None else last_x + 6
@@ -204,6 +208,9 @@ def build():
                 px = cx + (n % per) * step + step / 2
                 py = y + 10 + (n // per) * step + step / 2
                 acc = next(a for s, a, _ in STATES if s == state[k])
+                href = lib.REGISTRY.get(I.anchor(k))
+                if href:
+                    c.add(f'<a href="{href}#{I.anchor(k)}">')
                 c.add(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{dot / 2 - 0.4:.1f}" {lib.fs(acc, acc)} '
                       f'stroke-width="0.8"><title>{lib.escape(k)}</title></circle>')
                 if k in ring:
@@ -211,6 +218,8 @@ def build():
                     da = f' stroke-dasharray="{dash}"' if dash else ""
                     c.add(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{dot / 2 + 1.3:.1f}" '
                           f'{lib.sonly(col)} stroke-width="{sw}"{da}/>')
+                if href:
+                    c.add("</a>")
         y += max(rh, 44)
     c.line(x0, y, x1, y, accent="line", sw=1)
     y += 24
@@ -236,6 +245,7 @@ def build():
            "**What this does not say.** An item's place comes from the docstrings: an item no declaration names is not "
            "drawn, and one named by many is one mark. Depth counts direct uses between declarations, so it measures "
            "the Lean's route, not the paper's. A ring says an entry exists and how far it was checked, not that the "
-           "item is wrong; only an entry checked “Lean” rests on a proof checked by Lean. The manuscript is not read.",
+           "item is wrong; only an entry checked “Lean” rests on a proof checked by Lean. The manuscript is not read. "
+           "A mark opens its item's card on the chapter poster, and a row's name opens that chapter's poster.",
            size=13.5, color="muted")
     return c
