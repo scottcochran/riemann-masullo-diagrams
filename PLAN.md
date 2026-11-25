@@ -557,6 +557,16 @@ build does not check this, and nothing checks that a tag says what the manuscrip
 to an allowed address. `check-expectations.py`: 253 expectations under 38 names. All 47 outputs are byte-identical
 over two hash seeds. Only B1 changed. Its row of [SP] was looked at in the light theme.
 
+**`v0.5.1`**, PATCH: no pin moved and no poster was added or removed. Every expected list of `v0.5.0` stays,
+and B1 adds `SP_TAGS`. Only B1 differs from `v0.5.0`.
+
+- **The tag** is annotated and signed by the custodian, on `f36b091`, the merge of PR #16.
+- **The run** is 45607217818. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+- **The release** has 48 assets: the 46 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.5.1` found the 46 SVGs matching it, and
+  `pins.json` and the site naming `v0.5.1`. Each SVG as the site serves it, under `diagrams/`, is byte-identical
+  to the tag's.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at
