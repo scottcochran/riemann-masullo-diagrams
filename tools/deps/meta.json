@@ -1,0 +1,14 @@
+{
+ "masullo_commit": "72a10ffc48c00276d45acb98b24a10816b253c54",
+ "toolchain": "leanprover/lean4:v4.36.0",
+ "mathlib_rev": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+ "deps_lean_sha256": "7ab60c368bca34919e1aec1a3e3a1eca893705240733d96dfc710cacf2756d76",
+ "build_from": "artifact main-state 14988454572 of Main state run 45538898020 at 72a10ffc, zip sha256:2e8ab5c380a334991cf9dd15dae54f37c3b2485fcec81139700b3eb7078da281, build.tar.zst sha256:ad5c6d2c12b2543b82d1cdd44f94b6b4d761009a7f96dcfe117fd25c113bfb81",
+ "raw": {
+  "constants": 46003,
+  "sha256": "5a73f55a4e8be27749930604866add06d29b3e8c5eb9da9fc34f8d24aabd825f"
+ },
+ "decls": 21342,
+ "open": 16,
+ "deps_sha256": "de4b825b53cb5d30bc2579e9b27946e8deeb1d1a28942b0e3140f9585b6c4138"
+}
