@@ -84,7 +84,7 @@
    "i-theorem-2.4.2.1",
    "top"
   ],
-  "links_ext": 0
+  "links_ext": 1
  },
  "C3": {
   "file": "C3-ch03-ideliczeta-2026.11.25.svg",
@@ -1451,7 +1451,7 @@
    "i-terminology-E.0.0.2",
    "top"
   ],
-  "links_ext": 0
+  "links_ext": 1
  },
  "D1": {
   "file": "D1-ch01-introduction-2026.11.25.svg",
@@ -1781,7 +1781,7 @@
    "v-proposition-2.4.3.1",
    "v-theorem-2.2.3.4"
   ],
-  "links_ext": 650
+  "links_ext": 651
  },
  "D3": {
   "file": "D3-ch03-ideliczeta-2026.11.25.svg",
@@ -6795,7 +6795,7 @@
    "v-remark-E.1.1.6",
    "v-remark-E.1.1.8"
   ],
-  "links_ext": 69
+  "links_ext": 70
  },
  "DL": {
   "file": "DL-formathlib-2026.11.25.svg",

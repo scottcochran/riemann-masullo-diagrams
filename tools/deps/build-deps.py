@@ -28,7 +28,8 @@ The derived file holds, for every user declaration in name order: its name, kind
 open, its `Paper:` reference as printed, its `Gap:`, `Classical input:` and `Deviation:` text (each read from a
 line that starts with it), its docstring in full where it is
 open or has either line, and its statement and proof dependencies as indices into the list. `paper` is
-`[item, first page, last page]`, read by build.py's `PAPER` pattern from the docstring's start. Its SHA-256 is
+`[item, first page, last page]`, read by build.py's `PAPER` pattern from the docstring's start. `summary` is the
+docstring's own description, the paragraph after the `Paper:` reference (summary_of). Its SHA-256 is
 DEPS_SHA256 in diagrams/src/rm.py; meta.json records the commit, toolchain and Mathlib revision it was read at,
 and the hashes of what it was read from.
 """
@@ -54,6 +55,17 @@ LINE = {"gap": re.compile(r"^Gap:\s*(.*?)(?=\n\s*\n|\n[A-Z][A-Za-z ]+:|\Z)", re.
         "classical": re.compile(r"^Classical input:\s*(.*?)(?=\n\s*\n|\n[A-Z][A-Za-z ]+:|\Z)", re.S | re.M),
         "deviation": re.compile(r"^Deviation:\s*(.*?)(?=\n\s*\n|\n[A-Z][A-Za-z ]+:|\Z)", re.S | re.M)}
 PAPER = re.compile(r"Paper:\s*(.*?),?\s*pp?\.\s*(\d+)(?:\s*[-–]\s*(\d+))?\.?\s*", re.S)
+
+
+def summary_of(doc, pm):
+    """The docstring's own description: the paragraph after its `Paper:` reference (or from its start), cut at a
+    blank line or at a line that opens a labelled part (`Deviation:`, `Gap:`, `Reconstruction:` …); none when the
+    paragraph is itself labelled."""
+    rest = doc[pm.end():] if pm else doc
+    rest = re.split(r"\n\s*\n|\n(?=[A-Z][A-Za-z ]+:)", rest)[0]
+    if re.match(r"[A-Z][A-Za-z ]+:", rest):
+        return ""
+    return " ".join(rest.split())
 
 
 def die(msg):
@@ -182,6 +194,9 @@ def fold(checkout, rows):
         pm = PAPER.match(doc)             # build.py, paper_item: the item as printed, and its first and last page
         if pm:
             e["paper"] = [" ".join(pm.group(1).split()), int(pm.group(2)), int(pm.group(3) or pm.group(2))]
+        summary = summary_of(doc, pm)
+        if summary:
+            e["summary"] = summary
         for key, rx in LINE.items():
             m = rx.search(doc)
             if m:

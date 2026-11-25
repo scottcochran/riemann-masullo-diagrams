@@ -388,6 +388,24 @@ their links and frames. No pin moved.
 - **Counted at the tag** by the plugin's `check-links.py`: 29,217 links to an id (3,547 within a poster, 25,670 to
   another), 21,528 to riemann-masullo at the pin, 3,625 framed groups and 3,296 framed rows.
 
+### The Lean's description on every card
+
+Added 2026.11.25 at the custodian's request, as the first step before any AI-written note: some cards gave counts
+and links but not what the item is. Each chapter card now quotes, in italics, the first sentence of the docstring of
+the declaration its title opens, after its `Paper:` reference: the formalisers' own description of what the Lean
+states, under riemann-masullo's Apache-2.0, re-read at the pin on every build. A declarations block quotes the same
+sentence under its heading. `deps.json` was folded again at the same pin, twice with the same bytes, to keep each
+declaration's description (14,909 of them; 7.2 MB). `DEPS_SHA256` moves to `1b9e9843…`, with the same declarations
+and edges. The fonts gain three more characters (`ᵖᵐˢ`), and no existing width changed.
+
+**Done** (2026.11.25, on `docstrings`, not yet merged). 1,410 of the 1,463 cards quote a description. One is cut at
+280 characters and marked “…”, and one writes TeX, shown as written. No expectation changed. All 46 outputs are
+byte-identical over two hash seeds, and on Python 3.12 and 3.14. `check-links.py` with every option on finds no
+errors.
+
+Whether the 53 cards without a description want an AI-written note, kept apart, pinned by a hash of what it was
+written from, and labelled as such, is left to the custodian once these are seen.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at

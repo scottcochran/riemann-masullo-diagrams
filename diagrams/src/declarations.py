@@ -66,7 +66,8 @@ def build(ident, chapter, **expected):
     y += draw.nav(c, ident, y)
     y += c.para(x0, y, x1 - x0,
                 f"**How to read it.** The expansion of {draw.to_poster(card_poster, card_poster)}'s cards, in the same "
-                f"order: one block per item, its heading opening the card. First the declarations whose docstring "
+                f"order: one block per item, its heading opening the card, and under it, in italics, the first sentence of "
+                f"its first declaration's docstring, quoted. Then the declarations whose docstring "
                 f"states how the Lean departs from the print, each with its `Deviation:` line quoted from the Lean "
                 f"source (Apache-2.0), then every declaration of the item. A name opens its line at the pin. A "
                 f"declaration's state is read from the terms: open when it uses `sorryAx`, resting when something "
@@ -87,6 +88,9 @@ def build(ident, chapter, **expected):
                         + f"{pages} · {CH.plural(len(ds), 'declaration')}"
                         + (f", {it.deviations} deviating from the print" if it.deviations else ""), size=15,
                         bold=True) + 6
+            q = draw.described(it.first, limit=10_000)
+            if q:
+                y += draw.quote(c, x0 + 14, y, x1 - x0 - 14, q, size=13.5) + 6
             if it.deviations:
                 vmark, vy = draw.anchored(c, I.anchor(k, "v")), y
                 for d in ds:

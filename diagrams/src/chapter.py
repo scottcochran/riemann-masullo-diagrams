@@ -127,7 +127,10 @@ def build(ident, chapter, **expected):
              "**How to read it.** One card per file, and one band per directory under `ForMathlib`, with the rest "
              "of the path on the card: the paper does not number this material, so each file is one item, as "
              "riemann-masullo's progress map has it. ")
-    intro += ("“Uses” and “Used by” name the items of this directory whose declarations a card's declarations "
+    intro += ("The line in italics is quoted from the Lean source (Apache-2.0): the first sentence of the docstring of the "
+              "declaration the card's title opens, after its `Paper:` reference, cut and marked “…” where long. It is "
+              "the formalisers' description of what the Lean states, not the manuscript's. "
+              "“Uses” and “Used by” name the items of this directory whose declarations a card's declarations "
               "use directly, with each use that another path between the same items already implies left out. "
               "Uses of other directories are counted, not named. A use is what the elaborated terms reach at the "
               "pin, a fact about the Lean and not about the paper.")
@@ -198,13 +201,14 @@ def build(ident, chapter, **expected):
         for r in range(0, len(keys), COLS):
             row = [by_key[k] for k in keys[r:r + COLS]]
             hs = [c.card(0, 0, cw, title(it), body(it), accent=ACCENT[it.state], sub=sub(it), size=12.5, tsize=14,
-                         bullets=False, draw=False, pad=12) for it in row]
+                         bullets=False, draw=False, pad=12, quote=draw.described(it.first)) for it in row]
             h = max(hs)
             for k, it in enumerate(row):
                 mark = draw.anchored(c, it.anchor)
                 cx = x0 + k * (cw + GAP)
                 c.card(cx, y, cw, title(it), body(it), accent=ACCENT[it.state], sub=sub(it),
-                       size=12.5, tsize=14, bullets=False, pad=12, h=h, dash="6 4" if it.state == "open" else None)
+                       size=12.5, tsize=14, bullets=False, pad=12, h=h, dash="6 4" if it.state == "open" else None,
+                       quote=draw.described(it.first))
                 c.blocks[-1] = c.blocks[-1][:4] + ("node " + it.key,)
                 draw.close(c, mark, cx, y, cw, h)
             y += h + GAP

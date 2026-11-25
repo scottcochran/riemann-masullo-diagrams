@@ -15,7 +15,7 @@ What is read, and from where:
   proved" (what is proved, by name), and every entry of the entry tables with its Checked value.
 - **deps.json**: every user-written declaration of `RiemannMasullo`, `Statements` and `Main`, with its kind,
   module, line, whether it is open (its term names `sorryAx`), its `Paper:` reference, its `Gap:`, `Classical
-  input:` and `Deviation:` text, and its statement and proof dependencies.
+  input:` and `Deviation:` text, its docstring's own description, and its statement and proof dependencies.
 
 A closure here is what the elaborated terms reach, at the pin. It is a fact about the Lean, not about the paper.
 Standard library only.
@@ -32,7 +32,7 @@ import lib
 
 MASULLO_COMMIT = "72a10ffc48c00276d45acb98b24a10816b253c54"
 PAPER_SHA256 = "e039d3f6cf0a4b14f03c7edb85097752dd65c0a2fe543c76fe992be234f97bf5"
-DEPS_SHA256 = "92cbf6d7a29ea59158f2e3505c801f5d54251cf9ed6fa0600cc76cf80c005ee2"
+DEPS_SHA256 = "1b9e9843ac495f3ca2d80fae937f49774a60819268d83f895e0978966b188fa4"
 
 REPO = "mccorvie/riemann-masullo"
 URL = f"https://github.com/{REPO}"
@@ -121,7 +121,7 @@ def ticks(text):
 
 
 class Decl:
-    __slots__ = ("i", "name", "show", "kind", "module", "line", "open", "paper", "gap", "classical", "deviation", "doc",
+    __slots__ = ("i", "name", "show", "kind", "module", "line", "open", "paper", "gap", "classical", "deviation", "summary", "doc",
                  "stmt", "proof", "chapter", "vendored", "path")
 
     def __init__(self, i, e):
@@ -131,6 +131,7 @@ class Decl:
         self.paper = tuple(e["paper"]) if "paper" in e else None
         self.gap, self.classical, self.doc = e.get("gap"), e.get("classical"), e.get("doc")
         self.deviation = e.get("deviation")
+        self.summary = e.get("summary")
         self.stmt, self.proof = e["stmt"], e["proof"]
         self.chapter = chapter_of_module(self.module)
         self.vendored = self.chapter == "External"

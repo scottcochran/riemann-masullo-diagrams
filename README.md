@@ -41,7 +41,8 @@ https://scottcochran.github.io/riemann-masullo-diagrams/.
   checked "Lean" names a refutation with nothing open below it, as ERRATA.md's rule asks.
 - The chapter posters, one per module directory, item by item: the progress map's view of each section, pinned.
   Each module is a band and each paper item a card, with its declarations, state, deviations, errata, and the
-  items it uses and is used by.
+  items it uses and is used by. 1,410 of the 1,463 cards quote, in italics, the first sentence of the Lean's own
+  docstring for the item: the formalisers' description of what the Lean states.
   - [C1](diagrams/C1-ch01-introduction-2026.11.25.svg) to [C14](diagrams/C14-ch14-complements-2026.11.25.svg),
     the chapters.
   - [CA](diagrams/CA-appa-algebraicnt-2026.11.25.svg) to [CE](diagrams/CE-appe-topologicalstacks-2026.11.25.svg),
@@ -60,7 +61,7 @@ https://scottcochran.github.io/riemann-masullo-diagrams/.
 |---|---|---|
 | riemann-masullo | `comparator.json`, `Main.lean`, `ERRATA.md`, `paper/README.md`, `lean-toolchain` | `MASULLO_COMMIT` |
 | The manuscript | its hash only, as `paper/README.md` states it; never read | `PAPER_SHA256` |
-| The dependency data | `diagrams/src/deps.json`: 21,342 declarations, what each uses, and their `Paper:`, `Gap:`, `Classical input:` and `Deviation:` lines, read by riemann-masullo's own `Deps.lean` from its compiled library, outside the build ([tools/deps/README.md](tools/deps/README.md)) | `DEPS_SHA256` |
+| The dependency data | `diagrams/src/deps.json`: 21,342 declarations, what each uses, and their `Paper:`, `Gap:`, `Classical input:` and `Deviation:` lines and docstring descriptions, read by riemann-masullo's own `Deps.lean` from its compiled library, outside the build ([tools/deps/README.md](tools/deps/README.md)) | `DEPS_SHA256` |
 
 The pins are in `diagrams/src/rm.py`. No Lean is built here. A dependency is what the elaborated terms reach: a
 fact about the Lean, not about the paper. The errata are reported and checked by AI agents. In ERRATA.md's words,
