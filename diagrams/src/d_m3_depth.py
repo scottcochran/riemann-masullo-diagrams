@@ -10,10 +10,10 @@ Items are keyed as riemann-masullo's scripts/progress/build.py keys them (`paper
 number, so that `Theorem 7.3.1.6(2)` and `Theorem 7.3.1.6(3)` are one item, and `(7.3.1.6)` another.
 """
 import collections
-import re
 
 import lib
 import rm
+from items import NUMBER, item_key, keys_named
 
 ID = "M3"
 SLUG = "depth"
@@ -71,58 +71,11 @@ ERRATA = {'Lean': (82, 101), 'reviewed': (613, 407), 'integrator': (1, 5), 'repo
 UNPLACED = 53
 
 W = 2000
-NUMBER = re.compile(r"(?:[A-E]|\d+)(?:\.\d+)+")            # build.py's NUMBER
-PLURAL = {"Equations": "Equation", "Definitions": "Definition", "Lemmas": "Lemma", "Theorems": "Theorem",
-          "Propositions": "Proposition", "Corollaries": "Corollary", "Remarks": "Remark", "Examples": "Example"}
 STATES = [("open", "red", "open: a declaration of the item uses sorryAx"),
           ("rests", "amber", "proved, but rests on an open declaration"),
           ("proved", "teal", "proved, with nothing open below")]
 RINGS = {"Lean": ("ink", 2.4, None), "reviewed": ("muted", 1.3, None), "integrator": ("muted", 1.3, "2 2"),
          "reported": ("muted", 1.3, "2 2")}
-
-
-BUILD_PLURAL = {"Equations": "Equation", "Definitions": "Definition", "Lemmas": "Lemma"}   # build.py's
-
-
-def item_key(raw):
-    """build.py's paper_item key: `Lemma A.2.3.4(2)` -> `lemma:A.2.3.4`, `(5.4.1.19)` -> `eq:5.4.1.19`; an item
-    with no number is keyed by its text, as there."""
-    num = NUMBER.search(raw)
-    if not num:
-        return f"item:{raw}"
-    before, number = raw[:num.start()], num.group(0)
-    if before.endswith("("):
-        return f"eq:{number}"
-    if before.endswith("§"):
-        return f"text:{number}"
-    words = re.findall(r"[A-Za-z]+", before)
-    word = BUILD_PLURAL.get(words[-1], words[-1]) if words else ""
-    return f"{word.lower() or 'item'}:{number}"
-
-
-def keys_named(where):
-    """Every item an entry's Where names: each number with the kind word before it, or the kind of the number before
-    it when only `and`, a comma or a part in parentheses comes between (`Theorems 7.1.4.2(1) and 7.1.4.3(1)`)."""
-    out, kind, last = [], None, 0
-    for mt in NUMBER.finditer(where):
-        before = where[last:mt.start()]
-        if before.endswith("("):
-            k = "eq"
-        elif before.endswith("§"):
-            k = "text"
-        else:
-            words = re.findall(r"[A-Za-z]+", re.sub(r"\([^)]*\)", "", before))
-            if words and words[-1][0].isupper():
-                k = PLURAL.get(words[-1], words[-1]).lower()
-            elif kind and re.fullmatch(r"[\s,]*(?:\([^)]*\))?[\s,]*(?:and|or)?\s*", before):
-                k = kind
-            else:
-                k = None
-        if k:
-            out.append(f"{k}:{mt.group(0)}")
-            kind = k if k not in ("eq", "text") else kind
-        last = mt.end()
-    return out
 
 
 def chapter_key(key):

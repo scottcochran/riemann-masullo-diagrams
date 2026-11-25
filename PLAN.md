@@ -279,6 +279,40 @@ v0.1.0`, which now checks the site, passes: the 3 SVGs match the tree at the tag
 `pins.json` and the site name `v0.1.0`. Each poster is served as `image/svg+xml`. M1 as served has the same SHA-256
 as the file at the tag.
 
+### Phase 7: the whole formalisation, item by item
+
+Added 2026.11.25 at the custodian's request: draw as much of the formalisation as can be drawn and checked,
+duplicating riemann-masullo's own progress map where that is the way to show it. This widens the goal above,
+which set the progress map aside. The difference that stays is the pin: the progress map is redrawn about every 20
+minutes; these posters are fixed at `MASULLO_COMMIT` and checked.
+
+- **Chapter posters, one per module directory.** C1–C14 for the chapters, CA–CE for the appendices, and L1 for
+  `ForMathlib`. Each module is a band and each paper item a card.
+  - Items are grouped as the progress map groups them (`build.py`'s `group_items`): a helper joins the next item in
+    its file. In `ForMathlib` each file is one item.
+  - A card gives the item's pages, declarations, state, deviations from the print, printed claims, errata entries
+    by Checked value, and the items of the chapter it uses and is used by.
+  - Edges that another path already implies are dropped, and uses of other directories are counted.
+  - The edges are given as text on the cards, not drawn: about 2 to 244 per chapter. Arrows would need routing, and
+    text keeps every edge on the poster and checked.
+- **M4**, the chapter map: every directory's totals, and the matrix of uses between directories. It links to each
+  chapter poster.
+- **M5**, the refutations: every `Printed.<name>_false`, what it rests on, and the entries that name it. It checks
+  ERRATA.md's rule for the Checked value "Lean" against the terms.
+- **The derived file** gains each declaration's `Deviation:` text, folded again at the same pin from the same raw
+  export, so `DEPS_SHA256` moves while the declarations and edges stay.
+
+**Done** (2026.11.25, on `phase-7`, not yet merged). The new posters are 22: M4, M5 and 20 chapter posters. There
+are 1,463 items, 1,251 of them paper items, 199 `ForMathlib` files and 13 groups of helpers. M1 to M3 are
+byte-identical after the re-fold. The derived file's `DEPS_SHA256` is now `92cbf6d7…`, and 1,383 declarations
+carry a `Deviation:` line.
+
+- **M5.** 305 of the 312 refutations rest on nothing open. The other 7 rest on the gap under Theorem 10.3.2.1(1),
+  or on two of the classical inputs. Each of the 84 entries checked "Lean" names a refutation with nothing open
+  below it. 96 entries checked "reviewed" also name one, which ERRATA.md's rule does not make a disagreement.
+- **Checks.** A chapter poster fails when an item leaves its directory or an edge appears, each tried in memory on
+  C5. `check-expectations.py` finds 147 literal expectations in 25 modules. `determinism.py` passes on 26 files.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at

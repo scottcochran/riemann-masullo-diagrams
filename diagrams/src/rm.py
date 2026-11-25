@@ -14,8 +14,8 @@ What is read, and from where:
   how the row says it was settled), the file's own count of settled and open rows, the tables of "Steps since
   proved" (what is proved, by name), and every entry of the entry tables with its Checked value.
 - **deps.json**: every user-written declaration of `RiemannMasullo`, `Statements` and `Main`, with its kind,
-  module, line, whether it is open (its term names `sorryAx`), its `Paper:` reference, its `Gap:` and `Classical
-  input:` text, and its statement and proof dependencies.
+  module, line, whether it is open (its term names `sorryAx`), its `Paper:` reference, its `Gap:`, `Classical
+  input:` and `Deviation:` text, and its statement and proof dependencies.
 
 A closure here is what the elaborated terms reach, at the pin. It is a fact about the Lean, not about the paper.
 Standard library only.
@@ -32,7 +32,7 @@ import lib
 
 MASULLO_COMMIT = "72a10ffc48c00276d45acb98b24a10816b253c54"
 PAPER_SHA256 = "e039d3f6cf0a4b14f03c7edb85097752dd65c0a2fe543c76fe992be234f97bf5"
-DEPS_SHA256 = "de4b825b53cb5d30bc2579e9b27946e8deeb1d1a28942b0e3140f9585b6c4138"
+DEPS_SHA256 = "92cbf6d7a29ea59158f2e3505c801f5d54251cf9ed6fa0600cc76cf80c005ee2"
 
 REPO = "mccorvie/riemann-masullo"
 URL = f"https://github.com/{REPO}"
@@ -121,7 +121,7 @@ def ticks(text):
 
 
 class Decl:
-    __slots__ = ("i", "name", "show", "kind", "module", "line", "open", "paper", "gap", "classical", "doc",
+    __slots__ = ("i", "name", "show", "kind", "module", "line", "open", "paper", "gap", "classical", "deviation", "doc",
                  "stmt", "proof", "chapter", "vendored", "path")
 
     def __init__(self, i, e):
@@ -130,6 +130,7 @@ class Decl:
         self.open = bool(e.get("open"))
         self.paper = tuple(e["paper"]) if "paper" in e else None
         self.gap, self.classical, self.doc = e.get("gap"), e.get("classical"), e.get("doc")
+        self.deviation = e.get("deviation")
         self.stmt, self.proof = e["stmt"], e["proof"]
         self.chapter = chapter_of_module(self.module)
         self.vendored = self.chapter == "External"

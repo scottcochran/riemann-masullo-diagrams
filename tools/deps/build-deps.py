@@ -25,7 +25,8 @@ Two steps:
    warnings, which a build cache does not carry, and cross-checks them against this).
 
 The derived file holds, for every user declaration in name order: its name, kind, module, line, whether it is
-open, its `Paper:` reference as printed, its `Gap:` and `Classical input:` text, its docstring in full where it is
+open, its `Paper:` reference as printed, its `Gap:`, `Classical input:` and `Deviation:` text (each read from a
+line that starts with it), its docstring in full where it is
 open or has either line, and its statement and proof dependencies as indices into the list. `paper` is
 `[item, first page, last page]`, read by build.py's `PAPER` pattern from the docstring's start. Its SHA-256 is
 DEPS_SHA256 in diagrams/src/rm.py; meta.json records the commit, toolchain and Mathlib revision it was read at,
@@ -50,7 +51,8 @@ ROOTS = ["Statements", "Main"]
 # As in riemann-masullo's scripts/progress/build.py.
 KEYWORD = re.compile(r"\b(theorem|lemma|def|abbrev|instance|structure|class|inductive|opaque|axiom)\b")
 LINE = {"gap": re.compile(r"^Gap:\s*(.*?)(?=\n\s*\n|\n[A-Z][A-Za-z ]+:|\Z)", re.S | re.M),
-        "classical": re.compile(r"^Classical input:\s*(.*?)(?=\n\s*\n|\n[A-Z][A-Za-z ]+:|\Z)", re.S | re.M)}
+        "classical": re.compile(r"^Classical input:\s*(.*?)(?=\n\s*\n|\n[A-Z][A-Za-z ]+:|\Z)", re.S | re.M),
+        "deviation": re.compile(r"^Deviation:\s*(.*?)(?=\n\s*\n|\n[A-Z][A-Za-z ]+:|\Z)", re.S | re.M)}
 PAPER = re.compile(r"Paper:\s*(.*?),?\s*pp?\.\s*(\d+)(?:\s*[-–]\s*(\d+))?\.?\s*", re.S)
 
 

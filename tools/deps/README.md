@@ -17,7 +17,7 @@ No Lean is compiled by this repository. The data is read by riemann-masullo's ow
 | Toolchain, Mathlib | `leanprover/lean4:v4.36.0`, Mathlib `fc4f59e577fe` (`lake-manifest.json`) |
 | Compiled library | artifact `main-state` 14988454572 of riemann-masullo's "Main state" run 45538898020, built at `72a10ff` (incrementally, from the saved build of `3e154ab`). Zip 593 MB, `sha256:2e8ab5c3…`, which matched GitHub's digest; `build.tar.zst` `ad5c6d2c…`, 3.1 GB unpacked. The artifact expires after one day |
 | Read | 587 modules (585 under `RiemannMasullo/`, then `Statements`, `Main`) in one call to `Deps.lean`: 46,003 constants, 29 MB, 69 s on an Apple-silicon laptop |
-| Folded | 21,342 user declarations, 16 open; `deps.json` 4.9 MB, `DEPS_SHA256` = `de4b825b…` |
+| Folded | 21,342 user declarations, 16 open; `deps.json` 5.1 MB, `DEPS_SHA256` = `92cbf6d7…`. First folded as `de4b825b…`; folded again from the same raw export when the `Deviation:` lines were added, with the same declarations and edges |
 | Repeated | the read twice, the fold five times: the raw export and `deps.json` byte-identical each time |
 | Cross-check | riemann-masullo's own `Library` class (`build.py`) on the same rows: 21,329 declarations of the library (21,342 less the 13 of `Statements` and `Main`), 16 open, no notes |
 
@@ -65,5 +65,7 @@ No Lean is compiled by this repository. The data is read by riemann-masullo's ow
   loaded into one environment. comparator.json names the targets.
 - **`RiemannMasulloClassField` is not read**: it is a separate library that `RiemannMasullo` does not import, and
   the saved build does not include it.
+- **`Deviation:` lines** are kept for the 1,383 declarations whose docstring has a line starting with
+  `Deviation:`. Six more docstrings use the word inside a sentence; they are not counted.
 - **Vendored code** (`RiemannMasullo/External/`) is in the file, marked by its module. The posters count it apart
   and draw none of it (PLAN.md, Open, 3).
