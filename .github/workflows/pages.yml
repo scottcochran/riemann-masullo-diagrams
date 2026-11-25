@@ -100,6 +100,9 @@ jobs:
           # every newline is a hard break.
           body = subprocess.run(["gh", "api", "-X", "POST", "markdown", "-f", "mode=markdown", "-f", "text=" + md],
                                 capture_output=True, text=True, check=True).stdout
+          # The API names each heading user-content-<slug>, and only github.com's script follows #<slug> to it:
+          # on the site, a heading's permalink and the README's #links landed on nothing.
+          body = body.replace(' id="user-content-', ' id="')
           release = (f'<p class="release">The posters of release <a href="{repo}/releases/tag/{tag}">{tag}</a>, served '
                      f'as SVG: open one and zoom in. riemann-masullo-diagrams is independent of '
                      f'<a href="https://github.com/mccorvie/riemann-masullo">riemann-masullo</a> and is not maintained '
