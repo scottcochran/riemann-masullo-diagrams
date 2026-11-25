@@ -62,7 +62,8 @@ def main(argv):
             print("  WARNING", w)
             failed += 1
     if not failed:
-        manifest = {k: manifest[k] for k in sorted(manifest, key=lambda k: (k[0], int(k[1:])))}
+        manifest = {k: manifest[k] for k in sorted(manifest, key=lambda k: (k[0], (0, int(k[1:])) if k[1:].isdigit()
+                                                                     else (1, k[1:])))}
         manifest_path.write_text(json.dumps(manifest, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return 1 if failed else 0
 
