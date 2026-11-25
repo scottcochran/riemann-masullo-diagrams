@@ -302,7 +302,7 @@ minutes; these posters are fixed at `MASULLO_COMMIT` and checked.
 - **The derived file** gains each declaration's `Deviation:` text, folded again at the same pin from the same raw
   export, so `DEPS_SHA256` moves while the declarations and edges stay.
 
-**Done** (2026.11.25, on `phase-7`, not yet merged). The new posters are 22: M4, M5 and 20 chapter posters. There
+**Done** (2026.11.25, PR #6, merged as `706e768`). The new posters are 22: M4, M5 and 20 chapter posters. There
 are 1,463 items, 1,251 of them paper items, 199 `ForMathlib` files and 13 groups of helpers. M1 to M3 are
 byte-identical after the re-fold. The derived file's `DEPS_SHA256` is now `92cbf6d7…`, and 1,383 declarations
 carry a `Deviation:` line.
@@ -312,6 +312,15 @@ carry a `Deviation:` line.
   below it. 96 entries checked "reviewed" also name one, which ERRATA.md's rule does not make a disagreement.
 - **Checks.** A chapter poster fails when an item leaves its directory or an edge appears, each tried in memory on
   C5. `check-expectations.py` finds 147 literal expectations in 25 modules. `determinism.py` passes on 26 files.
+
+**`v0.2.0`**, MINOR: the 22 posters added, and `DEPS_SHA256` moved. M1 to M3 are byte-identical to `v0.1.0`'s.
+
+- **The tag** is annotated and signed by the custodian, on `706e768`.
+- **The run** is 45552331752. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+  This is the first release that published the site.
+- **The release** has 27 assets: the 25 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.2.0` found the 25 SVGs matching it, and
+  `pins.json` and the site naming `v0.2.0`. Each SVG as the site serves it is byte-identical to the tag's.
 
 ## Risks
 
