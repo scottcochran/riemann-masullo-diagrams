@@ -4,7 +4,8 @@ Taken from the TOPAK diagram family (Apache-2.0, same author) by way of riemann-
 riemann-diagrams f87256e (NOTICE). There, the brand, date, generator and state line differ from TOPAK's, the fonts
 are embedded Noto where TOPAK names system fonts, and the light theme's page is a grey matched to the content.
 Here, only BRAND, DATE, HOME_ORDER, the light page (`page`, measured again here: diagrams/PAGE.md) the style
-that shows a link's target (`.rd-target`, `.rd-row`), and `table`'s optional row anchors differ from that copy. A fix in riemann-diagrams reaches this copy only when
+that shows a link's target (`.rd-target`, `.rd-row`), `table`'s optional row anchors and `card`'s italic
+`quote` differ from that copy. A fix in riemann-diagrams reaches this copy only when
 it is copied again, on purpose.
 
 Dependency-free. Every diagram is a Canvas; primitives measure their own text with the advance
@@ -434,8 +435,9 @@ class Canvas:
         return self.pill(x, y, label + (f" · {extra}" if extra else ""), acc, size, dash, anchor=anchor)
 
     def card(self, x, y, w, title, body=(), accent="grey", status=None, status_extra="", dash=None,
-             h=None, size=14, tsize=16, tint=True, draw=True, sub=None, pad=16, bullets=True, lead=None):
-        """A titled box. body: list of rich strings (bulleted when bullets=True). Returns height."""
+             h=None, size=14, tsize=16, tint=True, draw=True, sub=None, pad=16, bullets=True, lead=None, quote=None):
+        """A titled box. body: list of rich strings (bulleted when bullets=True); quote: a quotation set in italics
+        under the subtitle, so that it reads apart from the card's own words. Returns height."""
         inner = w - 2 * pad
         lead = lead or round(size * 1.42, 1)
         tlines = wrap(title, inner - (0 if not status else 0), tsize, bold=True) if title else []
@@ -446,6 +448,10 @@ class Canvas:
             hh += len(sublines) * round((size - 1) * 1.4, 1) + 2
         else:
             sublines = []
+        qlead = round((size - 0.5) * 1.38, 1)
+        qlines = wrap(quote, inner, size - 0.5, italic=True) if quote else []
+        if qlines:
+            hh += len(qlines) * qlead + 6
         status_h = 0
         if status:
             status_h = 11.5 + 10 + 8
@@ -477,6 +483,11 @@ class Canvas:
             cy += round((size - 1) * 1.4, 1)
         if sublines:
             cy += 2
+        for ln in qlines:
+            self.add(render_line(x + pad, cy + size - 2, ln, size - 0.5, "ink", italic=True))
+            cy += qlead
+        if qlines:
+            cy += 6
         if status:
             cy += 2
             self.status(x + pad, cy, status, status_extra)

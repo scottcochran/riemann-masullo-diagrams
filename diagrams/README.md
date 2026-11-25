@@ -98,7 +98,8 @@ generator fails on markup left unrendered.
 ## Kinds of text
 
 Each sentence on a poster is one of four kinds: quoted (in italics, or a table column headed "quoted", from a file
-the footer names), computed (a template filled at build time), framing (titles, keys, "How to read it", "What this
+the footer names; a chapter card's italic line is the first sentence of its first declaration's docstring, after the
+`Paper:` reference, and is the Lean's, not the manuscript's), computed (a template filled at build time), framing (titles, keys, "How to read it", "What this
 does not say"), or an interpretation, in an amber card headed as the poster's own and guarded by a check. M1 has
 one interpretation, guarded by `FLOOR` and `AS_STRONG`, and M5 one, guarded by `SUMMARY` and `LEAN_UNNAMED`.
 

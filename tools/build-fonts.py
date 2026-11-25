@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the fonts the posters embed, and the advance widths the generator lays text out with.
 
-Copied from riemann-diagrams at f87256e (NOTICE); here WANT adds six characters the Deviation: lines use.
+Copied from riemann-diagrams at f87256e (NOTICE); here WANT adds nine characters the Lean's docstrings use.
 
     uv run --with fonttools==4.68.0 --with brotli==1.2.0 python tools/build-fonts.py SRC_DIR
 
@@ -96,7 +96,7 @@ WANT = _ranges(
     "𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩"        # bold script capitals
     "𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ"        # fraktur capitals
     "𝔸𝔹𝔻𝔼𝔽𝔾𝕀𝕁𝕂𝕃𝕄𝕆𝕊𝕋𝕌𝕍𝕎𝕏𝕐𝟙"               # double-struck capitals not in letterlike, and 𝟙
-    "ᵥᵢᵃᶻᴺ𝔭"                                 # added in riemann-masullo-diagrams: the Lean's Deviation: lines use
+    "ᵥᵢᵃᶻᴺ𝔭ᵖᵐˢ"                              # added in riemann-masullo-diagrams: the Lean's docstrings use
 )                                            # them (sub- and superscript letters, fraktur p)
 
 

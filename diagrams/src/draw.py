@@ -244,3 +244,18 @@ def m2_target(m, d):
         if not r.settled and any((x := m.resolve(n)) is not None and x.i == d.i for n in r.names):
             return f"row-{r.line}"
     return m2_card(d)
+
+
+def described(d, limit=280):
+    """The first sentence of a declaration's docstring description, to quote on a card; one longer than `limit`
+    characters is cut at a word and marked ` …`, as is one with a character the fonts lack. None when there is none."""
+    if not d.summary:
+        return None
+    first = re.split(r"(?<=[.!?])\s+(?=[A-Z(`$])", d.summary)[0]
+    if len(first) > limit:
+        cut = first[:limit].rsplit(" ", 1)[0].rstrip(",;:")
+        if cut.count("`") % 2:                  # never leave a code run open
+            cut = cut[:cut.rindex("`")].rstrip()
+        first = cut + " …"
+    text, _ = coverable(first)
+    return text if text != "…" else None
