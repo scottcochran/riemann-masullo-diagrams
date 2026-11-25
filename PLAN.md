@@ -371,9 +371,22 @@ used, each opening its card. These lists are recorded as `OUTSIDE_ITEMS`, 13,136
 for the open declaration, or its card there, and "M1" opens M1's card of the floor. A link to a whole poster opens
 its title block, `top`, which is framed too. The generator now fails on a link to a poster without a target.
 
-There are 29,157 links with a target, and each target id exists. A copy of D1 whose style frames the row
+There are 29,217 links with a target, and each target id exists (29,157 was counted here first, before
+M4's 60 links to the chapter posters were given their target). A copy of D1 whose style frames the row
 `#o-text-1.4.6--Ch03_IdelicZeta` by its id was rendered whole: the row shows its frame. A headless capture opened at
 that address paints nothing, as before.
+
+**`v0.3.0`**, MINOR: the 20 declarations posters added. The 25 posters of `v0.2.0` keep every expected list and gain
+their links and frames. No pin moved.
+
+- **The tag** is annotated and signed by the custodian, on `57a866a`.
+- **The run** is 45563275862. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+- **The release** has 47 assets: the 45 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.3.0` found the 45 SVGs matching it, and
+  `pins.json` and the site naming `v0.3.0`. Each SVG as the site serves it is byte-identical to the tag's. On the
+  site, C8's link to `#d-eq-8.1.0.1` resolves on D8.
+- **Counted at the tag** by the plugin's `check-links.py`: 29,217 links to an id (3,547 within a poster, 25,670 to
+  another), 21,528 to riemann-masullo at the pin, 3,625 framed groups and 3,296 framed rows.
 
 ## Risks
 
