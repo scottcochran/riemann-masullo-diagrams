@@ -756,7 +756,19 @@ ERRATA = {'definition:10.1.1.1': {'Lean': ['F146'], 'reviewed': ['I267']},
  'eq:10.4.3.5': {'reviewed': ['F195', 'F196']},
  'eq:10.4.3.24': {'reviewed': ['F199']}}
 
+# item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
+ERRATA_PAPERS = {'remark:10.2.1.5': {'https://arxiv.org/pdf/1002.4127': ['F158']},
+ 'eq:10.2.1.6': {'https://arxiv.org/abs/2107.03269': ['F152']},
+ 'theorem:10.2.2.1': {'https://arxiv.org/abs/2107.03269': ['F152']},
+ 'eq:10.2.2.5': {'https://arxiv.org/abs/2107.03269': ['F152']},
+ 'eq:10.4.2.24': {'https://arxiv.org/pdf/1002.4127': ['F191']},
+ 'theorem:10.2.1.1': {'https://arxiv.org/abs/2107.03269': ['F152']},
+ 'corollary:10.2.1.4': {'https://arxiv.org/abs/2107.03269': ['F152']},
+ 'theorem:10.3.1.1': {'https://arxiv.org/pdf/1002.4127': ['F180']},
+ 'theorem:10.4.2.8': {'https://arxiv.org/pdf/1002.4127': ['F191']}}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
-                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA)
+                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
+                         ERRATA_PAPERS=ERRATA_PAPERS)

@@ -37,7 +37,12 @@ ERRATA = {'eq:13.3.1.1': {'reviewed': ['F247', 'I371']},
  'eq:13.3.1.2': {'reviewed': ['I370', 'I402', 'R23']},
  'theorem:13.3.1.1': {'reviewed': ['F247', 'F248', 'I370', 'I371', 'I372']}}
 
+# item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
+ERRATA_PAPERS = {'eq:13.3.1.1': {'https://arxiv.org/abs/math/0208056': ['F247']},
+ 'theorem:13.3.1.1': {'https://arxiv.org/abs/math/0208056': ['F247']}}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
-                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA)
+                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
+                         ERRATA_PAPERS=ERRATA_PAPERS)

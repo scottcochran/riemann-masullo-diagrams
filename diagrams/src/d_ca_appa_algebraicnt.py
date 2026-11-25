@@ -429,7 +429,11 @@ ERRATA = {'definition:A.1.1.1': {'reviewed': ['I1']},
  'theorem:A.5.3.1': {'Lean': ['F221']},
  'corollary:A.5.4.3': {'Lean': ['F223']}}
 
+# item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
+ERRATA_PAPERS = {}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
-                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA)
+                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
+                         ERRATA_PAPERS=ERRATA_PAPERS)

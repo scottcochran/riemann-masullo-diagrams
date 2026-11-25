@@ -2,7 +2,8 @@
 
 A statement false as printed is kept in riemann-masullo as `Printed.<name>`, with a theorem `Printed.<name>_false`
 that proves its negation (ERRATA.md, "How this file is kept"). This poster draws every such refutation: where it
-is, what it rests on, and the ERRATA.md entries that name it in code, with their Checked values.
+is, what it rests on, and the ERRATA.md entries that name it in code, with their Checked values and the papers
+their rows link (ERRATA_PAPERS).
 
 ERRATA.md's own rule is the check: an entry is checked *Lean* when its refutation "is a proof checked by Lean that
 rests on no statement still unproved". The terms say, for each refutation, whether anything open is below it.
@@ -407,6 +408,13 @@ SUMMARY = {('Lean', 'clean'): 84, ('integrator', 'clean'): 1, ('reviewed', 'clea
 # the Checked "Lean" entries that name no refutation
 LEAN_UNNAMED = []
 
+# refutation -> the URL of each paper the ERRATA.md rows of the entries naming it link -> those entries
+ERRATA_PAPERS = {'RiemannMasullo.Printed.spectralLineMarkushevichBasis_false': {'https://arxiv.org/abs/2107.03269': ['F152']},
+ 'RiemannMasullo.Printed.spectralLineMarkushevichBasis_normalized_false': {'https://arxiv.org/abs/2107.03269': ['F152']},
+ 'RiemannMasullo.Printed.spectralLineMarkushevichBasis_primal_normalized_false': {'https://arxiv.org/pdf/1002.4127': ['F158']},
+ 'RiemannMasullo.Printed.spectralStripJet_memLp_false': {'https://arxiv.org/abs/2107.03269': ['F152']},
+ 'RiemannMasullo.Printed.spectralStripMarkushevichBasis_false': {'https://arxiv.org/abs/2107.03269': ['F152']}}
+
 W = 2400
 
 
@@ -447,6 +455,8 @@ def build():
     lean_unnamed = sorted((eid for eid, rs in named.items() if not rs and entry[eid]["checked"] == "Lean"),
                           key=lambda s: (s[0], int(s[1:])))
     rm.require("LEAN_UNNAMED", LEAN_UNNAMED, lean_unnamed, "M5's interpretation")
+    papers = {k: cited for k, (ents, _, _) in refuted.items() if (cited := m.papers_of(ents))}
+    rm.require("ERRATA_PAPERS", ERRATA_PAPERS, papers, "M5's entries column against the links in ERRATA.md")
 
     n_clean = sum(1 for v in refuted.values() if v[2] == "clean")
     n_named = sum(1 for v in refuted.values() if v[0])
@@ -466,7 +476,8 @@ def build():
                 "is the printed claim, read as the author meant it, is ERRATA.md's reading. The entries were reported "
                 "and checked by AI agents, and in ERRATA.md's words, “No entry has been reviewed by a specialist.” "
                 "Its rule for the Checked value “Lean” is quoted here: such an entry's refutation “is a proof checked "
-                "by Lean that rests on no statement still unproved”.", size=14.5, color="muted") + 26
+                "by Lean that rests on no statement still unproved”. An arXiv number after an entry is a paper its row of "
+                "ERRATA.md links; the paper was not read here.", size=14.5, color="muted") + 26
     y += c.heading(x0, y, "1 · The entries that name a refutation, by Checked value")
     cols = [("Checked (ERRATA.md)", 300), ("Every refutation it names rests on nothing open", 420),
             ("One rests on something open", 340)]
@@ -506,8 +517,9 @@ def build():
             ents, chks, below = refuted[d.key]
             card = draw.item_line(c, d)
             trs.append({"cells": [f"`{d.show}`", f"`{d.where}`", card[0][len("Item: "):] if card else "none",
-                                  ", ".join(f"{draw.to_url(m.errata_url(entry_line[e]), e)} ({ck})"
-                                            for e, ck in zip(ents, chks)) or "none",
+                                  (", ".join(f"{draw.to_url(m.errata_url(entry_line[e]), e)} ({ck})"
+                                            for e, ck in zip(ents, chks)) or "none")
+                                  + (f" · {draw.paper_links(papers[d.key])}" if d.key in papers else ""),
                                   "nothing open" if below == "clean" else
                                   "rests on " + ", ".join(f"`{rm.display_name(b.removeprefix('private '))}`"
                                                           for b in below)],

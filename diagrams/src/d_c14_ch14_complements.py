@@ -13,7 +13,11 @@ STATES = {'open': [], 'rests': []}
 DEVIATIONS = {'text:14.2': (5, 40), 'eq:14.2.0.1': (2, 18)}
 ERRATA = {'text:14.2': {'reviewed': ['I432']}}
 
+# item -> the URL of each paper its entries' ERRATA.md rows link -> the entries that link it
+ERRATA_PAPERS = {}
+
 
 def build():
     return chapter.build(ID, CHAPTER, ITEMS=ITEMS, EXPECTED=EXPECTED, OUTSIDE=OUTSIDE, STATES=STATES,
-                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA)
+                         DEVIATIONS=DEVIATIONS, ERRATA=ERRATA,
+                         ERRATA_PAPERS=ERRATA_PAPERS)

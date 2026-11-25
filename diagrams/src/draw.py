@@ -188,6 +188,27 @@ def to_url(url, text):
     return f"[[@{url}|{text}]]"
 
 
+def paper_label(url):
+    """A paper's link as ERRATA.md gives it -> its identifier: `arXiv:1002.4127`, `doi:10.1000/x`."""
+    m = re.match(r"https://arxiv\.org/(?:abs|pdf)/(.+?)(?:\.pdf)?$", url)
+    if m:
+        return f"arXiv:{m.group(1)}"
+    if url.startswith("https://doi.org/"):
+        return f"doi:{url[len('https://doi.org/'):]}"
+    raise ValueError(f"ERRATA.md links a paper at {url}, which draw.paper_label cannot name")
+
+
+def paper_links(cited):
+    """{url: entry ids} -> `arXiv:1002.4127`, each opening the paper, for a narrow cell."""
+    return ", ".join(to_url(u, paper_label(u)) for u in cited)
+
+
+def errata_papers(m, cited):
+    """{url: entry ids} -> a card line: each paper the entries' rows link, in ERRATA.md's words, and the entries."""
+    return "Papers the errata link: " + "; ".join(
+        f"{m.paper_text[u]}, {to_url(u, paper_label(u))} ({', '.join(ids)})" for u, ids in cited.items())
+
+
 NAV = [("M1", "what the targets rest on"), ("M2", "the steps with no known repair"), ("M3", "the paper by depth"),
        ("M4", "every chapter"), ("M5", "the refutations")]
 
