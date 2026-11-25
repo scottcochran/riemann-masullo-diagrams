@@ -141,8 +141,11 @@ def build(ident, chapter, **expected):
     def body(it):
         out = []
         printed = (f"{it.printed} printed claim{'s' if it.printed != 1 else ''} kept" if it.printed else "")
-        out.append(f"{len(it.decls)} declaration{'s' if len(it.decls) != 1 else ''}"
-                   + (f", {it.deviations} deviating from the print" if it.deviations else "")
+        decl_poster = "D" + poster_id(chapter)[1:] if chapter != "ForMathlib" else "DL"
+        n = plural(len(it.decls), "declaration")
+        out.append(draw.to_poster(decl_poster, n, anchor=I.anchor(it.key, "d"))
+                   + (", " + draw.to_poster(decl_poster, f"{it.deviations} deviating from the print",
+                                            anchor=I.anchor(it.key, "v")) if it.deviations else "")
                    + (", " + draw.to_poster("M5", printed, anchor=f"refuted-{chapter}") if printed else ""))
         if it.state != "proved":
             own_open = sum(1 for d in it.decls if d.open)

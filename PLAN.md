@@ -334,6 +334,26 @@ unrendered (the second caught 19 links set inside bold on M3).
 dots opens its item's card. The posters are byte-identical over two hash seeds after the second run. No expectation
 changed.
 
+### The declarations posters
+
+Added 2026.11.25 at the custodian's request, so that a chapter card's counts open what they count. There is one
+poster per directory: D1–D14, DA–DE, and DL for `ForMathlib`. Each item is a block in the chapter poster's order,
+opened by the card: its count of declarations opens the item's table, and its count of deviations the quoted
+`Deviation:` lines. A table gives every declaration with its kind, file, line and state. Each block's heading
+opens the card.
+
+- **Fonts.** The `Deviation:` lines needed six characters the subsets lacked (`ᵥᵢᵃᶻᴺ𝔭`). The subsets were rebuilt
+  from the pinned Noto sources, each checked against its SHA-256, and no existing character's width changed.
+  One more, `ᐟ` in `⁻³ᐟ²`, is in none of the four faces. That one quotation is cut before its sentence and marked
+  as abridged, and its name opens the full text.
+- **Size.** The 20 posters come to 31 MB. D7 is 62,346 px tall, one row for each of its 1,983 declarations. Every
+  regeneration adds that much to the history, which a pin move makes worth weighing.
+
+**Done** (2026.11.25, on `links`, not yet merged). The posters list 17,054 declarations and 1,383 `Deviation:`
+lines (`DECLS`, `DEVIATING`). In memory on D8, a declaration leaving its item and a `Deviation:` line going each fail
+the build. `check-expectations.py` finds 187 literal expectations in 45 modules. All 46 output files are
+byte-identical over two hash seeds, and on Python 3.12 and 3.14.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at

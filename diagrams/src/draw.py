@@ -200,3 +200,13 @@ def anchored(c, anchor):
     """Open a group with id `anchor` around what is drawn next; close it with c.add("</g>")."""
     c.add(f'<g id="{anchor}">')
     c.anchors.append(anchor)
+
+
+def coverable(text):
+    """A quotation the embedded fonts can draw: the text, or, if it has a character the fonts lack, the text cut
+    before the sentence that holds the first one and marked ` …`. Returns (text, whether it was cut)."""
+    bad = [i for i, ch in enumerate(text) if ch not in lib.COVERED and ch != "\n"]
+    if not bad:
+        return text, False
+    start = max((i for i in range(bad[0]) if text[i - 1:i + 1] in (". ", ".\n")), default=0)
+    return (text[:start].rstrip() + " …") if start else "…", True

@@ -84,9 +84,10 @@ def keys_named(where):
     return out
 
 
-def anchor(key):
-    """The id of an item's card, valid as an SVG anchor: `theorem:5.2.1.1` -> `i-theorem-5.2.1.1`."""
-    return "i-" + re.sub(r"[^\w.-]+", "_", key.replace(":", "-", 1))
+def anchor(key, prefix="i"):
+    """An id for an item, valid as an SVG anchor: its card `i-theorem-5.2.1.1`; on the declarations poster, its block
+    `d-theorem-5.2.1.1` and its deviations `v-theorem-5.2.1.1`."""
+    return f"{prefix}-" + re.sub(r"[^\w.-]+", "_", key.replace(":", "-", 1))
 
 
 def natural(s):
