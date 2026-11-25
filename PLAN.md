@@ -398,13 +398,23 @@ sentence under its heading. `deps.json` was folded again at the same pin, twice 
 declaration's description (14,909 of them; 7.2 MB). `DEPS_SHA256` moves to `1b9e9843…`, with the same declarations
 and edges. The fonts gain three more characters (`ᵖᵐˢ`), and no existing width changed.
 
-**Done** (2026.11.25, on `docstrings`, not yet merged). 1,410 of the 1,463 cards quote a description. One is cut at
+**Done** (2026.11.25, PR #10, merged as `fd2e4af`). 1,410 of the 1,463 cards quote a description. One is cut at
 280 characters and marked “…”, and one writes TeX, shown as written. No expectation changed. All 46 outputs are
 byte-identical over two hash seeds, and on Python 3.12 and 3.14. `check-links.py` with every option on finds no
 errors.
 
 Whether the 53 cards without a description want an AI-written note, kept apart, pinned by a hash of what it was
 written from, and labelled as such, is left to the custodian once these are seen.
+
+**`v0.4.0`**, MINOR: `DEPS_SHA256` moved, from `92cbf6d7…` to `1b9e9843…`. No poster was added and no expectation
+changed. Set the embedded fonts aside, and M1 to M5 are the same as in `v0.3.0`; the 40 chapter and declarations
+posters carry the quoted line.
+
+- **The tag** is annotated and signed by the custodian, on `fd2e4af`.
+- **The run** is 45565162366. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+- **The release** has 47 assets: the 45 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.4.0` found the 45 SVGs matching it, and
+  `pins.json` and the site naming `v0.4.0`. Each SVG as the site serves it is byte-identical to the tag's.
 
 ## Risks
 
