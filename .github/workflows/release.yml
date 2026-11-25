@@ -1,0 +1,95 @@
+# A release is a version tag, pushed by the custodian, never moved or reused (PLAN.md, Phase 6). This workflow
+# runs the posters check on the tag, as CI runs it on main, then writes pins.json and SHA256SUMS, and creates the
+# GitHub release with the SVGs, the two files, and notes that record what a reader needs to check a citation.
+#
+# The tag must be annotated, on main, vMAJOR.MINOR.PATCH, and pushed by the custodian. Its message is the
+# release's opening: the kind of move, what changed, and one line saying which posters a reader must re-read
+# (proof-posters:cutting-releases drafts it).
+#
+# Adapted from riemann-diagrams' release.yml at f87256e: one set of posters, no map set, and no Pages site.
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: The tag is the custodian's, annotated, and on main
+        run: |
+          tag=${GITHUB_REF#refs/tags/}
+          [ "$GITHUB_ACTOR" = scottcochran ] || { echo "release: tags are pushed by the custodian only"; exit 1; }
+          [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "release: $tag is not vMAJOR.MINOR.PATCH"; exit 1; }
+          git fetch -q origin "refs/tags/$tag:refs/tags/$tag" --force
+          [ "$(git cat-file -t "refs/tags/$tag")" = tag ] || { echo "release: $tag is not annotated"; exit 1; }
+          [ -n "$(git tag -l --format='%(contents)' "$tag" | tr -d '[:space:]')" ] || { echo "release: $tag has no message"; exit 1; }
+          git merge-base --is-ancestor HEAD origin/main || { echo "release: $tag is not on main"; exit 1; }
+
+  check:
+    needs: tag
+    uses: ./.github/workflows/posters.yml
+
+  release:
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Stage the assets
+        run: |
+          tag=${GITHUB_REF#refs/tags/}
+          # the checkout action fetches the tag peeled to its commit; the notes need the annotated tag's message
+          git fetch -q --force origin "refs/tags/$tag:refs/tags/$tag"
+          [ "$(git cat-file -t "refs/tags/$tag")" = tag ] || { echo "release: $tag is not annotated after fetch"; exit 1; }
+          mkdir -p stage
+          cp diagrams/*.svg stage/
+          python3 - "$tag" <<'PY' > stage/pins.json
+          import json, os, platform, re, sys
+          tag = sys.argv[1]
+          src = open("diagrams/src/rm.py", encoding="utf-8").read()
+          pin = lambda name, n: re.search(rf'^{name} = "([0-9a-f]{{{n}}})"', src, re.M).group(1)
+          commit = pin("MASULLO_COMMIT", 40)
+          server, repo, sha, run = (os.environ[k] for k in
+                                    ("GITHUB_SERVER_URL", "GITHUB_REPOSITORY", "GITHUB_SHA", "GITHUB_RUN_ID"))
+          print(json.dumps({
+            "tag": tag,
+            "masullo": {"commit": commit, "url": f"https://github.com/mccorvie/riemann-masullo/commit/{commit}"},
+            "paper_sha256": pin("PAPER_SHA256", 64),
+            "deps_sha256": pin("DEPS_SHA256", 64),
+            "generator": {"commit": sha, "url": f"{server}/{repo}/commit/{sha}"},
+            "python": platform.python_version(),
+            "run": {"id": run, "url": f"{server}/{repo}/actions/runs/{run}"},
+          }, indent=1))
+          PY
+          (cd stage && sha256sum *.svg pins.json > SHA256SUMS)
+          python3 tools/release-notes.py "$tag" stage/pins.json diagrams/manifest.json > notes.md
+          ls -la stage; cat stage/pins.json; head -30 notes.md
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=${GITHUB_REF#refs/tags/}
+          gh release create "$tag" --verify-tag --title "$tag" --notes-file notes.md stage/*
