@@ -273,6 +273,12 @@ release at a time to https://scottcochran.github.io/riemann-masullo-diagrams/: t
 `SHA256SUMS`, and after deploying it checks that the site's `pins.json` names the tag. `release.yml` calls it on
 each new tag, and it can be run by hand for an existing one.
 
+**First deployment.** `v0.1.0`, run by hand from `main` at `0a29ba9` (run 45549954393). Both the build and the
+deploy job passed, and the deploy job's last step found `v0.1.0` in the site's `pins.json`. `verify-release.py
+v0.1.0`, which now checks the site, passes: the 3 SVGs match the tree at the tag, and both the release's
+`pins.json` and the site name `v0.1.0`. Each poster is served as `image/svg+xml`. M1 as served has the same SHA-256
+as the file at the tag.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at
