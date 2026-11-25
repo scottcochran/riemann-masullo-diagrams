@@ -62,6 +62,7 @@ Then each poster, against its literals:
 | | `ERRATA_PAPERS` | a paper that an entry's row of ERRATA.md links, on the entries on an item, appears, goes, moves to another address or to other entries |
 | B1 | `REFERENCES` | an entry of the bibliography appears, goes, or moves in the order printed |
 | | `CITED`, `UNCITED` | a work is cited on other pages or chapters, or by no bracketed key |
+| | `SP_TAGS` | the Stacks project's tags cited (`[SP, Tag 000B]`), or the pages citing one, change |
 | | (papers.toml) | an entry has no id in the papers file, an id names no entry, or an entry lacks a url, a via, or the note `hand` and `none` need |
 | D*, DL | `DECLS` | a declaration appears in, leaves or moves between items, or changes its place in its file |
 | | `DEVIATING` | a declaration gains or loses its `Deviation:` line |
@@ -90,6 +91,7 @@ Every poster links to the others, so that a reader can follow an item from any p
 | A page in B1's "Where the text cites it" | the card on that chapter's poster whose `Paper:` pages cover it, the one with fewest pages where several do |
 | A chapter in B1's "Where the text cites it" | that chapter's poster |
 | A link in B1's Link column | the work, at the address `src/papers.toml` gives |
+| A tag in B1's row of [SP] | that tag's page on the Stacks project, when it has a tag's form (four characters, digits and capital letters) |
 | An arXiv number after an entry, or a card's "Papers the errata link" | the paper, at the address the entry's row of ERRATA.md gives (unversioned: arXiv opens its latest version) |
 | "Printed claims kept" | that directory's part of M5 |
 | An open or resting item | the row of M2 that names its open declaration (or that declaration's card on M2), and M1's card of the floor where the floor is below it |

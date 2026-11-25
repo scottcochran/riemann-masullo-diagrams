@@ -153,6 +153,20 @@ class Paper:
                 out[c.key][c.file].append(c.page)
         return {k: {f: sorted(v[f]) for f in FILES if f in v} for k, v in out.items()}
 
+    def tags(self, key):
+        """The Stacks project's tags a key's citations name (`[SP, Tag 000B]`, `[SP, Tags 00Z8, 00Z9]`) -> the pages
+        citing each, in the order first cited. A tag is written as the citation writes it, whether or not it has a
+        tag's form."""
+        out = {}
+        for c in self.cites:
+            if c.key != key:
+                continue
+            m = re.search(r"\bTags?\s+([0-9A-Za-z]{3,6}(?:,\s*[0-9A-Za-z]{3,6})*)", c.locator)
+            for t in re.split(r",\s*", m.group(1)) if m else []:
+                if c.page not in out.setdefault(t, []):
+                    out[t].append(c.page)
+        return out
+
     def keys_on(self, p0, p1):
         """The keys cited on pages p0 to p1, in the bibliography's order."""
         on = {c.key for c in self.cites if c.page is not None and p0 <= c.page <= p1}

@@ -539,6 +539,24 @@ chapter posters, M2 and M5 gained new expectations (`CITES`, `ERRATA_PAPERS`). T
   `pins.json` and the site naming `v0.5.0`. Each SVG as the site serves it, under `diagrams/`, is byte-identical
   to the tag's.
 
+### The Stacks project's tags
+
+Added 2026.11.25 at the custodian's request. The 91 citations of [SP], all in Appendix E, name 74 tags
+(`[SP, Tag 000B]`, `[SP, Tags 00Z8, 00Z9]`). B1's row of [SP] now lists them, with the pages citing each, and each
+tag opens its page on the Stacks project, `stacks.math.columbia.edu/tag/<tag>`. A tag is stable by the project's
+design. B1 records them as `SP_TAGS`, compared both ways (a tag dropped and one added each fail). The build also
+stops if [SP] is no longer the Stacks project's entry.
+
+A tag has four characters, digits and capital letters. One cited tag, `0026F` (p. 920), has five. The site calls
+it "not a valid tag", and it is drawn without a link, marked as not a tag's form; the build tells this from the
+form alone. On 2026.11.25 each of the other 73 tags was opened once, and each page's title named the tag. The
+build does not check this, and nothing checks that a tag says what the manuscript cites it for. The site answers
+200 for any tag, so a tag is checked by its page's title, not its status.
+
+**Done** (2026.11.25, not yet committed). 73 links out added: `check-links.py` finds 54,441 links, 361 of them out
+to an allowed address. `check-expectations.py`: 253 expectations under 38 names. All 47 outputs are byte-identical
+over two hash seeds. Only B1 changed. Its row of [SP] was looked at in the light theme.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at
