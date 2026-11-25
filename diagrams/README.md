@@ -10,6 +10,9 @@ and `manifest.json`, parses every SVG as XML, and exits 1 on any `WARNING` or `E
 | [M1](M1-floor-2026.11.25.svg) | what the seven targets rest on: the one open declaration below them, its cone up to the targets, the rest by chapter | comparator.json, Main.lean, ERRATA.md (the row of the floor, "Shown to be as strong as a target"), deps.json |
 | [M2](M2-no-repair-2026.11.25.svg) | the 28 rows of "Where no repair is known yet", by what the Lean shows of each; the chain to the nearest target; the open declarations no row names | ERRATA.md (rows, its count of them, its sorting of the open rows, "Steps since proved"), deps.json |
 | [M3](M3-depth-2026.11.25.svg) | the 1,251 paper items the docstrings name, by chapter and depth below the targets, with their state and their errata's Checked values | ERRATA.md (every entry), deps.json |
+| [M4](M4-chapters-2026.11.25.svg) | the 20 module directories: their items, declarations, states, deviations, printed claims and errata, and which directories' items use which | ERRATA.md (every entry), deps.json |
+| [M5](M5-refuted-2026.11.25.svg) | the 312 refutations `Printed.<name>_false`, what each rests on, the entries that name them, and their Checked values against ERRATA.md's rule for "Lean" | ERRATA.md (every entry, every column), deps.json |
+| C1 to C14, CA to CE, L1 | one module directory each, item by item: a band per module, a card per item, with the items it uses and is used by | ERRATA.md (every entry), deps.json |
 
 ## What the build checks
 
@@ -42,6 +45,14 @@ Then each poster, against its literals:
 | | `CHAINS` | the shortest chain from an open step to the nearest target changes |
 | M3 | `N_ITEMS`, `EXPECTED_DEPTHS`, `COUNTS`, `CHAPTERS` | the items, their depths, states or chapters move |
 | | `ERRATA`, `UNPLACED` | the entries placed on items, by Checked value, or those placed on none, move |
+| M4 | `TOTALS` | a directory's modules, items, declarations, open or resting items, deviating items, printed claims or errata entries change in number |
+| | `MATRIX` | the uses between two directories' items change in number |
+| M5 | `REFUTED` | a refutation appears or goes, the entries that name it or their Checked values change, or what is open below it moves |
+| | `SUMMARY`, `LEAN_UNNAMED` | the entries naming a refutation change by Checked value and state, or an entry checked "Lean" names none; and an entry checked "Lean" whose refutation rests on something open fails the build outright |
+| C*, L1 | `ITEMS` | an item appears in, leaves or moves between the bands of the directory |
+| | `EXPECTED` | an edge between two items of the directory appears or goes, after the redundant ones are dropped |
+| | `OUTSIDE` | an item's direct uses of another directory's items change in number |
+| | `STATES`, `DEVIATIONS`, `ERRATA` | an item's state, its count of deviating declarations, or the entries on it change |
 
 What is not checked: the counts in `README.md` and this file are written by hand, and no build compares them;
 the page grey (`PAGE.md`) is measured, not enforced; and M2's grouping of a row rests on the declarations the row
@@ -52,7 +63,7 @@ names in code, so a row that names its step only in prose is "not stated" here.
 Each sentence on a poster is one of four kinds: quoted (in italics, or a table column headed "quoted", from a file
 the footer names), computed (a template filled at build time), framing (titles, keys, "How to read it", "What this
 does not say"), or an interpretation, in an amber card headed as the poster's own and guarded by a check. M1 has
-the one interpretation, guarded by `FLOOR` and `AS_STRONG`.
+one interpretation, guarded by `FLOOR` and `AS_STRONG`, and M5 one, guarded by `SUMMARY` and `LEAN_UNNAMED`.
 
 ## Files
 
@@ -61,6 +72,8 @@ the one interpretation, guarded by `FLOOR` and `AS_STRONG`.
 | `gen-diagrams.py` | the generator |
 | `src/rm.py` | the pins and the reader |
 | `src/draw.py` | the shared drawing: a declaration card, a layered graph, a chain, a quotation |
+| `src/items.py` | the paper items: declarations grouped as the progress map groups them, their state, deviations, errata and uses, and the dropping of redundant edges |
+| `src/chapter.py` | the chapter posters' layout and checks; each `src/d_c*.py` and `src/d_l1_formathlib.py` holds one directory's literals |
 | `src/lib.py`, `src/metrics.py`, `src/fonts/` | the drawing library, widths and fonts, from riemann-diagrams (NOTICE) |
 | `src/deps.json` | the derived dependency data, pinned by `DEPS_SHA256` |
 | `PAGE.md` | the light page's grey, and its measurement |

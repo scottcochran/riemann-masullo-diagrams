@@ -1,4 +1,164 @@
 {
+ "C1": {
+  "file": "C1-ch01-introduction-2026.11.25.svg",
+  "title": "Chapter 1 · `Ch01_Introduction`, item by item",
+  "cards": 9,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C2": {
+  "file": "C2-ch02-adelictheta-2026.11.25.svg",
+  "title": "Chapter 2 · `Ch02_AdelicTheta`, item by item",
+  "cards": 58,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C3": {
+  "file": "C3-ch03-ideliczeta-2026.11.25.svg",
+  "title": "Chapter 3 · `Ch03_IdelicZeta`, item by item",
+  "cards": 86,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C4": {
+  "file": "C4-ch04-periodicschauderbases-2026.11.25.svg",
+  "title": "Chapter 4 · `Ch04_PeriodicSchauderBases`, item by item",
+  "cards": 90,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C5": {
+  "file": "C5-ch05-thetazspaces-2026.11.25.svg",
+  "title": "Chapter 5 · `Ch05_ThetaZSpaces`, item by item",
+  "cards": 79,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C6": {
+  "file": "C6-ch06-localglobal-2026.11.25.svg",
+  "title": "Chapter 6 · `Ch06_LocalGlobal`, item by item",
+  "cards": 27,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C7": {
+  "file": "C7-ch07-schauderbaseszeta-2026.11.25.svg",
+  "title": "Chapter 7 · `Ch07_SchauderBasesZeta`, item by item",
+  "cards": 84,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C8": {
+  "file": "C8-ch08-periodicorbits-2026.11.25.svg",
+  "title": "Chapter 8 · `Ch08_PeriodicOrbits`, item by item",
+  "cards": 11,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C9": {
+  "file": "C9-ch09-hardysobolev-2026.11.25.svg",
+  "title": "Chapter 9 · `Ch09_HardySobolev`, item by item",
+  "cards": 47,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C10": {
+  "file": "C10-ch10-tracespectral-2026.11.25.svg",
+  "title": "Chapter 10 · `Ch10_TraceSpectral`, item by item",
+  "cards": 83,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C11": {
+  "file": "C11-ch11-shellstructure-2026.11.25.svg",
+  "title": "Chapter 11 · `Ch11_ShellStructure`, item by item",
+  "cards": 52,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C12": {
+  "file": "C12-ch12-tracegeometric-2026.11.25.svg",
+  "title": "Chapter 12 · `Ch12_TraceGeometric`, item by item",
+  "cards": 47,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C13": {
+  "file": "C13-ch13-zeroshecke-2026.11.25.svg",
+  "title": "Chapter 13 · `Ch13_ZerosHecke`, item by item",
+  "cards": 4,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "C14": {
+  "file": "C14-ch14-complements-2026.11.25.svg",
+  "title": "Chapter 14 · `Ch14_Complements`, item by item",
+  "cards": 2,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "CA": {
+  "file": "CA-appa-algebraicnt-2026.11.25.svg",
+  "title": "Appendix A · `AppA_AlgebraicNT`, item by item",
+  "cards": 121,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "CB": {
+  "file": "CB-appb-analyticnt-2026.11.25.svg",
+  "title": "Appendix B · `AppB_AnalyticNT`, item by item",
+  "cards": 119,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "CC": {
+  "file": "CC-appc-lctvs-2026.11.25.svg",
+  "title": "Appendix C · `AppC_LCTVS`, item by item",
+  "cards": 190,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "CD": {
+  "file": "CD-appd-schwartzbruhat-2026.11.25.svg",
+  "title": "Appendix D · `AppD_SchwartzBruhat`, item by item",
+  "cards": 144,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "CE": {
+  "file": "CE-appe-topologicalstacks-2026.11.25.svg",
+  "title": "Appendix E · `AppE_TopologicalStacks`, item by item",
+  "cards": 11,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "L1": {
+  "file": "L1-formathlib-2026.11.25.svg",
+  "title": "`ForMathlib`, file by file",
+  "cards": 199,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
  "M1": {
   "file": "M1-floor-2026.11.25.svg",
   "title": "What the seven target theorems rest on",
@@ -22,5 +182,21 @@
   "arrows": 0,
   "anchors": [],
   "links_ext": 1
+ },
+ "M4": {
+  "file": "M4-chapters-2026.11.25.svg",
+  "title": "The formalisation by chapter, and which chapters use which",
+  "cards": 0,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 0
+ },
+ "M5": {
+  "file": "M5-refuted-2026.11.25.svg",
+  "title": "The printed claims the Lean refutes",
+  "cards": 0,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 319
  }
 }
