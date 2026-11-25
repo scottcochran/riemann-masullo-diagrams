@@ -175,9 +175,18 @@ declarations (`N_BELOW`, `BY_CHAPTER`). A name taken from a row and an edge adde
 table above), regenerate with Python 3.12, fail on a `WARNING`, an `ERROR` or a differing byte. Tested both ways,
 as `riemann-diagrams`' Phase 2 was: a pin moved without regenerating fails, a regenerated pin passes.
 
-**Not done.** The workflow is written, and its steps were run locally: the sparse checkout of `rm.READS` at the
-pin builds clean, the outputs are byte-identical on Python 3.12 and 3.14, and `determinism.py` passes. It has
-not run on GitHub, so it is not yet tested both ways.
+**Done** (2026.11.25, on `build-posters`, PR #1). Tested both ways on GitHub:
+
+- **At the pin, it passes.** Run 45546522507, at `40ab580`, the first push with the workflow: every step passed,
+  and the committed SVGs were byte-identical to the regenerated ones.
+- **A moved pin, not regenerated, fails.** Run 45546651229, at `5883253`, which moves `MASULLO_COMMIT` to
+  `3e154ab` and changes nothing else. It failed in "Regenerate the posters": each of M1, M2 and M3 printed
+  `ERROR … deps.json was read at 72a10ffc48c0 (meta.json: 72a10ffc48c0), MASULLO_COMMIT is 3e154ab`.
+- **The revert passes.** Run 45546722676, at `519d2fc`, which reverts that commit.
+
+The test moved the pin, so the first check to stop it is the derived file's commit, not a poster's
+expectations. The test commit and its revert were taken out of the branch afterwards, since together they change
+nothing. `5883253` and `519d2fc` are no longer in its history, but the runs still show them. Locally, the outputs are also byte-identical on Python 3.12 and 3.14, and `determinism.py` passes.
 
 ### Phase 4: M2, the steps with no known repair
 
