@@ -1,0 +1,26 @@
+{
+ "M1": {
+  "file": "M1-floor-2026.11.25.svg",
+  "title": "What the seven target theorems rest on",
+  "cards": 24,
+  "arrows": 23,
+  "anchors": [],
+  "links_ext": 24
+ },
+ "M2": {
+  "file": "M2-no-repair-2026.11.25.svg",
+  "title": "The steps with no known repair, and what the Lean shows of each",
+  "cards": 6,
+  "arrows": 3,
+  "anchors": [],
+  "links_ext": 52
+ },
+ "M3": {
+  "file": "M3-depth-2026.11.25.svg",
+  "title": "The paper by depth below the targets",
+  "cards": 0,
+  "arrows": 0,
+  "anchors": [],
+  "links_ext": 1
+ }
+}

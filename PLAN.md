@@ -107,6 +107,13 @@ module in `diagrams/src/` holding `MASULLO_COMMIT`, `PAPER_SHA256` and `DEPS_SHA
 **Done when** `uv run python diagrams/gen-diagrams.py` runs against a checkout of `riemann-masullo` and fails,
 naming the pin, when the checkout is at another commit.
 
+**Done** (2026.11.25, not yet committed). `MASULLO_COMMIT` = `72a10ffc48c0` (2026-11-24 19:17 −08:00), the head of
+`main` when read, and not the `3ac04f8` this plan was read at. A clone at its parent `3e154ab` fails each poster with
+"MASULLO_COMMIT: … is at 3e154ab16098, the pin is 72a10ff". At the pin, a sparse checkout of the five files in
+`rm.READS` builds clean. `lib.py`, `metrics.py`, the fonts, `build-fonts.py` and `measure-page.py` are copied
+from riemann-diagrams at `f87256e` (NOTICE). Only `BRAND`, `DATE`, `HOME_ORDER` and the light page differ there.
+The pins module is `diagrams/src/rm.py`, the reader too.
+
 ### Phase 1: the reader and the derived file
 
 - **A runbook in `tools/deps/README.md`:** check out `riemann-masullo` at `MASULLO_COMMIT`, `lake exe cache
@@ -130,6 +137,22 @@ naming the pin, when the checkout is at another commit.
 the same commit, with any difference explained in the done note; and two runs of the runbook at the pin give the
 same file.
 
+**Done** (2026.11.25, not yet committed). Open 1 is taken as the plan assumed: `Deps.lean` run at the pin. But the
+compiled library came from riemann-masullo's own CI, not a local build: the `main-state` artifact of its "Main
+state" run 45538898020 at `72a10ff` (593 MB, digest checked; kept one day). `lake exe cache get` gave Mathlib. The
+read takes 69 s. Its 46,003 constants fold to 21,342 declarations, 16 of them open (`DEPS_SHA256` = `de4b825b…`).
+The runbook is `tools/deps/README.md`, and the tool is `tools/deps/build-deps.py`. The read was run twice and the
+fold five times, and both files were byte-identical each time.
+
+Against the progress map: its own `Library` class from `scripts/progress/build.py`, run on the same rows, gives
+21,329 declarations of the library and 16 open, with no notes. The fold is a port of that class. The 13 more here
+are `Statements.lean`'s and `Main.lean`'s. The published page itself was not compared: it needs the issue tracker
+and is replaced about every 20 minutes. `Main` and `Challenge` cannot share one run (same seven root names), so
+`Main` and `Statements` are read and `Challenge` is not.
+
+The counts from the write-up are stale at this pin. 311 open theorems at `d37dfd7` are 16 open declarations
+here (`grep` finds 16 `sorry`), 10 with a `Gap:` line and 6 classical inputs. 17,204 declarations are 21,342.
+
 ### Phase 2: M1, what the targets rest on
 
 For each of the seven targets, the open declarations in its closure, grouped by chapter and section, each with
@@ -140,11 +163,21 @@ poster draws the union and marks which target reaches what.
 **Done when** M1 builds clean at the pin, its `EXPECTED` lists every open declaration below each target, and a
 missing or extra one fails the build.
 
+**Done** (2026.11.25, not yet committed): `d_m1_floor.py`, `M1-floor-2026.11.25.svg`. Every target rests on one
+open declaration, `traceFormula_exteriorZeros` (`FLOOR`), so one poster draws the union. Its cone is 22
+declarations with 23 edges (`CONE`, `EXPECTED`), and the targets' closure is 1,513 project and 92 vendored
+declarations (`N_BELOW`, `BY_CHAPTER`). A name taken from a row and an edge added, each in memory, fail the build
+(`GAPS`, `CONE`).
+
 ### Phase 3: CI
 
 `.github/workflows/posters.yml`: sparse checkout of `riemann-masullo` at `MASULLO_COMMIT` (the files in the
 table above), regenerate with Python 3.12, fail on a `WARNING`, an `ERROR` or a differing byte. Tested both ways,
 as `riemann-diagrams`' Phase 2 was: a pin moved without regenerating fails, a regenerated pin passes.
+
+**Not done.** The workflow is written, and its steps were run locally: the sparse checkout of `rm.READS` at the
+pin builds clean, the outputs are byte-identical on Python 3.12 and 3.14, and `determinism.py` passes. It has
+not run on GitHub, so it is not yet tested both ways.
 
 ### Phase 4: M2, the steps with no known repair
 
@@ -165,12 +198,28 @@ the gaps for most open rows itself.
 **Done when** M2 builds at the pin with every row in a band, each `GAPS` entry traced to a line of `ERRATA.md`,
 and each cone's size and targets recorded.
 
+**Done** (2026.11.25, not yet committed): `d_m2_no_repair.py`, `M2-no-repair-2026.11.25.svg`. The poster has one
+table row per ERRATA row, in five groups: 1 the targets rest on, 3 named, 2 isolated, 6 not stated, 16 settled.
+It prints each row's line in ERRATA.md. The groups are checked against ERRATA.md's own sorting sentence. For
+each settled row, the theorems "Steps since proved" names are checked for what they rest on (`SETTLED`). The
+11 rows settled by another route rest on nothing open. The 4 settled from another step rest on that step's open
+declaration only, or on the classical input under it. Lemma 5.3.1.5 rests on Meyer's theorem only. Two open
+declarations are named by no open row, both classical inputs (`UNNAMED`). The shortest chain from the floor to a
+target has 4 declarations (`CHAINS`).
+
 ### Phase 5: M3, the paper by depth
 
 `riemann-diagrams`' F6 wheel for the 1,617 paper items (at `d37dfd7`): an item's depth is its distance below the
 targets through the Lean. The marks are an item's state (proved, resting on something open, open) and its errata
 with their Checked values. At this scale an item is a mark, not a card. Whether the wheel holds 1,617 legibly,
 or a chapter per sector with items as ticks, is decided once Phase 1 gives the numbers.
+
+**Done** (2026.11.25, not yet committed): `d_m3_depth.py`, `M3-depth-2026.11.25.svg`. It is a grid, not a wheel:
+chapters as rows, depth as columns (1 to 24, then "not below a target"), each item a dot. The numbers settled it:
+188 of the 1,251 items (keyed as `build.py` keys them) are below a target, and 1,063 are not, since the floor has
+no proof term. Fill is the item's state (7 open, 37 resting on an open declaration, 1,207 proved). The ring is the
+most-checked erratum on the item: 696 entries are placed by the item numbers their "Where" names, and 53 name no
+item a `Paper:` line names.
 
 ### Phase 6: releases
 
