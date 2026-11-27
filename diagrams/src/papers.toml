@@ -18,8 +18,9 @@ via = "none"
 note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
 
 ["ABR"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1007/978-1-4757-8137-3"
+via = "hand"
+note = "the second edition (2001), the later of the two that Crossref and zbMATH hold; the entry's 2020 is the year of neither. Checked against the DOI's own record"
 
 ["Ac"]
 via = "none"
@@ -62,8 +63,9 @@ url = "https://arxiv.org/abs/math/0407054"
 via = "zbmath"
 
 ["AT"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3281871"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's (W. A. Benjamin, 1968 on the record, 1967 in the entry)"
 
 ["AtChe"]
 url = "https://doi.org/10.1093/imrn/rnt003"
@@ -126,8 +128,9 @@ url = "https://doi.org/10.2307/2371057"
 via = "crossref"
 
 ["BJL"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1090/mmono/005"
+via = "hand"
+note = "Translations of Mathematical Monographs 5, whose revised edition the entry cites; the DOI's record gives the first edition's year, 1964. Checked against the DOI's own record"
 
 ["BJM"]
 url = "https://doi.org/10.1007/pl00012457"
@@ -150,8 +153,9 @@ url = "https://zbmath.org/1846845"
 via = "zbmath"
 
 ["Bog"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1007/978-3-540-34514-5"
+via = "hand"
+note = "Crossref's record of the book; the entry's author is printed before a comma, which the batch read as the title. Checked against the DOI's own record"
 
 ["Bohr"]
 url = "https://doi.org/10.1007/bf02418541"
@@ -170,8 +174,9 @@ url = "https://doi.org/10.1007/bf02543846"
 via = "crossref"
 
 ["Bohr4"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3006501"
+via = "hand"
+note = "zbMATH's record of the book, Springer's Ergebnisse 1, No. 5 (1932), of which Chelsea's is the English edition the entry cites; zbMATH holds no record of Chelsea's"
 
 ["Bor1"]
 url = "https://doi.org/10.1017/cbo9780511525858"
@@ -214,8 +219,9 @@ url = "https://doi.org/10.1093/qmath/15.1.238"
 via = "crossref"
 
 ["Br4"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/5018137"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's; the record gives the author as publisher, with the CreateSpace ISBN"
 
 ["Bris-a"]
 url = "https://doi.org/10.2140/pjm.1991.150.229"
@@ -234,8 +240,9 @@ url = "https://doi.org/10.1007/978-1-4757-3951-0"
 via = "crossref"
 
 ["Car"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/2606411"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's (Ark. Mat. Astron. Fys. 15, No. 20; 1921 on the record, 1920 in the entry)"
 
 ["Carleson"]
 url = "https://doi.org/10.1007/bf02392815"
@@ -246,8 +253,9 @@ url = "https://zbmath.org/1515267"
 via = "zbmath"
 
 ["CF"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/6807004"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's: the London Mathematical Society's edition of 2010"
 
 ["CFSS"]
 url = "https://doi.org/10.1007/978-1-4615-6927-5"
@@ -336,16 +344,18 @@ url = "https://doi.org/10.1515/crll.1993.441.1"
 via = "zbmath"
 
 ["DiM"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3608570"
+via = "hand"
+note = "the entry gives no venue or year; zbMATH's one work of these authors with this title, in French: Bull. Sci. Math. (2) 102 (1978), 305-330, with no DOI"
 
 ["Dix"]
 url = "https://zbmath.org/3135894"
 via = "zbmath"
 
 ["DS"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.5802/aif.8"
+via = "hand"
+note = "Ann. Inst. Fourier 1 (1949), 61-101, the one paper of these authors with this title in zbMATH; the entry reads t.2, 1950. Checked against the DOI's own record, whose title is in MathML"
 
 ["DU"]
 url = "https://doi.org/10.1090/surv/015"
@@ -556,8 +566,9 @@ url = "https://zbmath.org/3432917"
 via = "zbmath"
 
 ["GS"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1090/surv/014"
+via = "hand"
+note = "Mathematical Surveys 14, whose revised edition of 1990 the entry cites; the DOI's record gives the first edition's year, 1977. Checked against the DOI's own record"
 
 ["H"]
 url = "https://zbmath.org/2601351"
@@ -568,8 +579,9 @@ url = "https://doi.org/10.1007/978-3-662-59155-0"
 via = "crossref"
 
 ["Hig"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3358760"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's"
 
 ["HK"]
 url = "https://doi.org/10.1017/cbo9780511998188"
@@ -628,8 +640,9 @@ via = "none"
 note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
 
 ["Hunt"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3256656"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's, pp. 235-255"
 
 ["HuWe"]
 url = "https://doi.org/10.1090/s0002-9939-1964-0169038-4"
@@ -706,12 +719,14 @@ url = "https://doi.org/10.1112/plms/s3-22.1.91"
 via = "crossref"
 
 ["Katzn"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1017/CBO9781139165372"
+via = "hand"
+note = "the third edition, Cambridge Mathematical Library, which the entry cites; the DOI's record gives 2004, the entry 2012. Checked against the DOI's own record"
 
 ["Katzn (2)"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1017/CBO9781139165372"
+via = "hand"
+note = "the third edition, Cambridge Mathematical Library, which the entry cites; the DOI's record gives 2004, the entry 2012. Checked against the DOI's own record"
 
 ["Ke"]
 url = "https://zbmath.org/3112450"
@@ -731,8 +746,9 @@ url = "https://doi.org/10.1007/978-1-4612-4190-4"
 via = "crossref"
 
 ["Kel"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/2172008"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's: Reprints in Theory and Applications of Categories, No. 10 (2005)"
 
 ["KG"]
 url = "https://doi.org/10.1007/978-1-4613-8153-2"
@@ -756,8 +772,9 @@ url = "https://doi.org/10.2140/pjm.1983.106.129"
 via = "crossref"
 
 ["Kol"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/2586338"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's: C. R. 183, 1327-1328 (1926)"
 
 ["Kothe-I"]
 url = "https://doi.org/10.1007/978-3-642-64988-2"
@@ -839,8 +856,9 @@ via = "none"
 note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
 
 ["Lit-I"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://arxiv.org/abs/1108.1721"
+via = "hand"
+note = "the arXiv copy that zbMATH Open's record of the translation, Sel. Math. Sov. 11, No. 1, 25-40 (1992), links; arXiv's journal reference gives the same"
 
 ["Lit-II"]
 url = "https://doi.org/10.1007/bf01076447"
@@ -863,16 +881,18 @@ url = "https://doi.org/10.1016/0022-1236(91)90048-a"
 via = "crossref"
 
 ["M"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/5358709"
+via = "hand"
+note = "the Tata Institute's edition with Hindustan Book Agency (2008), xii and 263 pages, the entry's 263; the entry's 2012 and 13 match no edition in zbMATH"
 
 ["MacL"]
 url = "https://doi.org/10.1007/978-1-4757-4721-8"
 via = "crossref"
 
 ["MacL2"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3385867"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's: Rice Univ. Stud. 49, No. 4, 28-46 (1963)"
 
 ["Mar"]
 url = "https://doi.org/10.4153/cjm-1965-076-0"
@@ -943,8 +963,9 @@ url = "https://doi.org/10.1007/978-1-4613-9592-8"
 via = "crossref"
 
 ["Mu"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/48445"
+via = "hand"
+note = "zbMATH holds only the Addison-Wesley edition (1991), which Westview reprinted as an Advanced Book Classic, the edition the entry cites"
 
 ["Murty"]
 url = "https://zbmath.org/1771883"
@@ -1078,8 +1099,9 @@ url = "https://doi.org/10.1002/cpa.3160340602"
 via = "crossref"
 
 ["Sch-a"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3127869"
+via = "hand"
+note = "zbMATH Open's record, found on the author and the title; its venue agrees with the entry's: the second edition, Hermann (1957)"
 
 ["Sch-b"]
 url = "https://doi.org/10.1007/bf02787718"
@@ -1103,12 +1125,14 @@ url = "https://doi.org/10.1112/jlms/s2-31.1.69"
 via = "crossref"
 
 ["SGA1"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1007/BFb0058656"
+via = "hand"
+note = "Lecture Notes in Mathematics 224, the entry's. Checked against the DOI's own record"
 
 ["SGA3"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1007/BFb0058993"
+via = "hand"
+note = "Lecture Notes in Mathematics 151, the entry's Tome 1, whose record is titled by its subtitle, Propriétés générales des schémas en groupes. Checked against the DOI's own record"
 
 ["SGA4"]
 url = "https://doi.org/10.1007/bfb0081551"
@@ -1119,8 +1143,9 @@ url = "https://doi.org/10.3792/pja/1195524458"
 via = "crossref"
 
 ["Silverman"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.1007/978-1-4612-0851-8"
+via = "hand"
+note = "Graduate Texts in Mathematics 151; the DOI's record gives 1994, the first printing, the entry 1999. Checked against the DOI's own record"
 
 ["Simon"]
 url = "https://doi.org/10.1063/1.1665472"
@@ -1188,8 +1213,9 @@ url = "https://doi.org/10.1007/BF01360917"
 via = "zbmath"
 
 ["Tre"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3272562"
+via = "hand"
+note = "the entry gives only the author and a shortened title; Trèves' Topological vector spaces, distributions and kernels, Academic Press (1967)"
 
 ["TsV"]
 url = "https://doi.org/10.1007/978-94-011-3810-9"
@@ -1236,8 +1262,9 @@ url = "https://doi.org/10.1070/im1975v009n03abeh001485"
 via = "crossref"
 
 ["W"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://zbmath.org/3108056"
+via = "hand"
+note = "Princeton Mathematical Series 6 (1941); the entry's 1946, with Oxford University Press, is a later printing, which zbMATH does not hold"
 
 ["Wa"]
 url = "https://doi.org/10.4064/cm-19-2-305-318"
@@ -1269,8 +1296,9 @@ url = "https://doi.org/10.2969/jmsj/00310001"
 via = "crossref"
 
 ["Wi"]
-via = "none"
-note = "found by neither Crossref nor zbMATH Open on the entry's title, first author and year"
+url = "https://doi.org/10.2307/2316017"
+via = "hand"
+note = "Amer. Math. Monthly 74 (1967), 261-266, the entry's, whose title the entry writes in TeX. Checked against the DOI's own record"
 
 ["Wil"]
 url = "https://zbmath.org/3326329"

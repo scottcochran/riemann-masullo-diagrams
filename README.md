@@ -55,7 +55,7 @@ https://scottcochran.github.io/riemann-masullo-diagrams/.
   chapter cards: a card's count of declarations opens its item's table, and its count of deviations the quoted
   lines.
 - [B1, the works the manuscript cites](diagrams/B1-bibliography-2026.11.25.svg). The manuscript's bibliography, as
-  riemann-masullo transcribes it: 319 entries under 317 keys, 270 of them with a link to the work,
+  riemann-masullo transcribes it: 319 entries under 317 keys, 298 of them with a link to the work,
   and the pages whose text cites it, 2,381 bracketed citations of 229 keys. A cited page opens the card that covers
   it; a chapter card's "Its pages cite" opens the works' rows. These are the paper's citations: the Lean cites none
   of these works.

@@ -567,6 +567,38 @@ and B1 adds `SP_TAGS`. Only B1 differs from `v0.5.0`.
   `pins.json` and the site naming `v0.5.1`. Each SVG as the site serves it, under `diagrams/`, is byte-identical
   to the tag's.
 
+### The entries the batch did not link
+
+Added 2026.11.27 at the custodian's request. Of the 49 entries Phase 8 left without a link, 28 now have one,
+found by searching zbMATH Open on the author and the title without the year, since most are books cited in a later
+edition or printing than the record's. Each is `via = "hand"`, with a note saying what was chosen and why:
+
+- 3 DOIs the batch missed, each checked against the DOI's own record (`Bog`, `SGA1`, `Wi`);
+- 11 zbMATH Open records whose venue agrees with the entry's (`AT`, `Br4`, `Car`, `CF`, `Hig`, `Hunt`, `Kel`,
+  `Kol`, `Lit-I`, `MacL2`, `Sch-a`); `Lit-I` links the arXiv copy its record names, which gives the Selecta
+  reference;
+- 14 that needed more: the edition cited where its DOI's record gives an earlier year (`ABR`, `BJL`, `GS`,
+  `Katzn`, `Katzn (2)`, `Silverman`), a record whose title is the subtitle (`SGA3`), a volume and year that differ
+  from the entry's (`DS`), an entry with no venue or a shortened title (`DiM`, `Tre`), and a book whose cited
+  edition zbMATH does not hold, linked to the edition it does (`Bohr4`, `M`, `Mu`, `W`).
+
+21 stay without a link: the six entries that print only an author (`Cl`, `IK`, `Iw`, `Ke-a`, `Ke-b`, `Za`); eight
+theses and the BRICS notes (`Ac`, `Ba1`, `Br1`, `Gao`, `Hu1`, `Hu2`, `LGL`, `MLei`, `Ng`, `vO`), with no DOI and no
+zbMATH record; `ABM`, in a bulletin zbMATH does not index; `Langlands`, an unpublished preprint; and the three
+"available online" notes (`nLab1`, `Rezk`, `Str`). Where a copy exists for these, it is on a host B1 does not
+name (`HOSTS`), such as a university repository or an author's page, and none was added. `MLei`'s title is also
+that of an arXiv preprint by the same author (1907.06712), which was not taken for the thesis.
+
+They are `hand` so that a rerun of `tools/link-papers.py` keeps them: it searches every other entry again, on the
+author and the year, and would find none of these.
+
+**Done** (2026.11.27). B1 now reads 298 of 319 entries linked: 186 via Crossref, 65 via zbMATH
+Open, 47 by hand, 21 by neither. `check-links.py` finds 54,469 links, 389 of them out to an allowed address (28
+more). `check-expectations.py`: 253 expectations under 38 names, unchanged. All 47 outputs are byte-identical over
+two hash seeds. Only B1 changed. Each new link was opened once: the DOIs and the arXiv copy answer 200, or redirect
+to the publisher; zbMATH answers 403 to a script, as it does for the links already recorded, and its API returns
+each record.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at
