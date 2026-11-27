@@ -619,6 +619,7 @@ def build():
                 f"**The links** are this repository's, not the manuscript's (diagrams/src/papers.toml): "
                 f"{via['crossref']} found on Crossref and checked against the DOI's own record, {via['zbmath']} on "
                 f"zbMATH Open, {via['hand']} settled by hand, and {via['none']} found by neither, drawn without one. "
+                f"An entry with a link opens the work too, as its Link column does. "
                 f"A link is to the work the entry names, matched on its title, first author and year; that it is the "
                 f"edition the manuscript used is not checked. The Stacks project's tags its citations name each open "
                 f"the tag's page there, a tag being stable by the project's design; that a tag says what the "
@@ -648,6 +649,8 @@ def build():
             where.append(f"the tags cited, each opening its page on the Stacks project: {', '.join(tags)}")
         e = papers[ident(r)]
         text, cut = draw.coverable(r.plain)
+        if "url" in e:              # the entry opens the work, as its Link column does
+            text = draw.to_url(e["url"], text)
         rows.append({"cells": [f"[{r.key}]" + (f" ({r.n})" if r.n > 1 else ""),
                                text + (" (abridged: the rest uses a character the fonts lack)" if cut else ""),
                                draw.to_url(e["url"], host(e["url"])) if "url" in e else "none found",
