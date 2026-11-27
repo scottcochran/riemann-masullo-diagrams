@@ -567,6 +567,32 @@ and B1 adds `SP_TAGS`. Only B1 differs from `v0.5.0`.
   `pins.json` and the site naming `v0.5.1`. Each SVG as the site serves it, under `diagrams/`, is byte-identical
   to the tag's.
 
+### The Pages index
+
+Two releases changed only `diagrams/README.md`, which `pages.yml` renders as the site's index, and no poster.
+
+**`v0.5.2`**, PATCH: no pin moved and no poster was added or removed. Every expected list of `v0.5.1` stays.
+The 46 SVGs are byte-identical to `v0.5.1`'s; `diagrams/README.md`, the Pages index, links every poster, file
+and section it names, and `pages.yml` keeps a heading's id as GitHub's Markdown API gives it, without its
+`user-content-` prefix.
+
+- **The tag** is annotated and signed by the custodian, on `c071df6`, the merge of PR #18.
+- **The run** is 45643680885. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+- **The release** has 48 assets: the 46 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.5.2`, run on 2026.11.27, found the 46 SVGs
+  matching it and `pins.json` naming `v0.5.2`; the site by then served `v0.5.5`, as Pages holds one release at a
+  time.
+
+**`v0.5.3`**, PATCH: no pin moved and no poster was added or removed. Every expected list of `v0.5.2` stays.
+The 46 SVGs are byte-identical to `v0.5.2`'s; `diagrams/README.md`, the Pages index, is laid out as
+riemann-diagrams' is.
+
+- **The tag** is annotated and signed by the custodian, on `373f23f`, the merge of PR #19.
+- **The run** is 45993645255. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+- **The release** has 48 assets: the 46 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.5.3` found the 46 SVGs matching it, and
+  `pins.json` and the site naming `v0.5.3`.
+
 ### The entries the batch did not link
 
 Added 2026.11.27 at the custodian's request. Of the 49 entries Phase 8 left without a link, 28 now have one,
@@ -599,6 +625,15 @@ two hash seeds. Only B1 changed. Each new link was opened once: the DOIs and the
 to the publisher; zbMATH answers 403 to a script, as it does for the links already recorded, and its API returns
 each record.
 
+**`v0.5.4`**, PATCH: no pin moved and no poster was added or removed. Every expected list of `v0.5.3` stays.
+Only B1 differs from `v0.5.3`: 28 more entries link to the work.
+
+- **The tag** is annotated and signed by the custodian, on `effd216`, the merge of PR #20.
+- **The run** is 45998549728. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+- **The release** has 48 assets: the 46 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.5.4` found the 46 SVGs matching it, and
+  `pins.json` and the site naming `v0.5.4`.
+
 ### The entry opens the work
 
 Added 2026.11.27 at the custodian's request. On B1, the text of each of the 298 entries with a link opens the
@@ -610,6 +645,16 @@ it to the same hosts.
 per linked entry, and one for each of the 14 further lines their text wraps to). `check-expectations.py`: 253
 expectations under 38 names, unchanged. Only B1 changed; its rows were looked at in both themes, and their layout
 is as before.
+
+**`v0.5.5`**, PATCH: no pin moved and no poster was added or removed. Every expected list of `v0.5.4` stays.
+Only B1 differs from `v0.5.4`: each linked entry's text opens the work.
+
+- **The tag** is annotated and signed by the custodian, on `ea5aa66`, the merge of PR #21.
+- **The run** is 46000423388. All five jobs passed: tag, `check / regenerate`, release, and Pages' build and deploy.
+- **The release** has 48 assets: the 46 SVGs, `pins.json` and `SHA256SUMS`.
+- **The checksums match the tree at the tag.** `verify-release.py v0.5.5` found the 46 SVGs matching it, and
+  `pins.json` and the site naming `v0.5.5`. Each SVG as the site serves it, under `diagrams/`, is byte-identical
+  to the tag's.
 
 ## Risks
 
