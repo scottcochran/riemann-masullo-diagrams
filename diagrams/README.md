@@ -162,7 +162,7 @@ source.
 | A key in a card's "Its pages cite" | that work's row on B1 |
 | A page in B1's "Where the text cites it" | the card on that chapter's poster whose `Paper:` pages cover it, the one with fewest pages where several do |
 | A chapter in B1's "Where the text cites it" | that chapter's poster |
-| A link in B1's Link column | the work, at the address `src/papers.toml` gives |
+| An entry of B1, and the link in its Link column | the work, at the address `src/papers.toml` gives |
 | A tag in B1's row of [SP] | that tag's page on the Stacks project, when it has a tag's form (four characters, digits and capital letters) |
 | An arXiv number after an entry, or a card's "Papers the errata link" | the paper, at the address the entry's row of ERRATA.md gives (unversioned: arXiv opens its latest version) |
 | "Printed claims kept" | that directory's part of M5 |

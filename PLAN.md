@@ -599,6 +599,18 @@ two hash seeds. Only B1 changed. Each new link was opened once: the DOIs and the
 to the publisher; zbMATH answers 403 to a script, as it does for the links already recorded, and its API returns
 each record.
 
+### The entry opens the work
+
+Added 2026.11.27 at the custodian's request. On B1, the text of each of the 298 entries with a link opens the
+work, at the address its Link column opens; the 21 without one are drawn as before. "The links" says so on the
+poster. Nothing else is read or checked: the address is the one `src/papers.toml` gives, and `Canvas.check` holds
+it to the same hosts.
+
+**Done** (2026.11.27). `check-links.py` finds 54,781 links, 701 of them out to an allowed address (312 more: one
+per linked entry, and one for each of the 14 further lines their text wraps to). `check-expectations.py`: 253
+expectations under 38 names, unchanged. Only B1 changed; its rows were looked at in both themes, and their layout
+is as before.
+
 ## Risks
 
 - **The source moves fast.** At `5c81fc0` (2026.11.23) `ERRATA.md` marked none of its 28 rows settled; at
